@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sahil Kavishka • Portfolio</title>
+  <meta name="description" content="Personal portfolio of Sahil Kavishka — projects, skills, and contact." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0b0f1a;
+      --panel:#0f1524;
+      --panel-2:#101827;
+      --text:#e6e8ee;
+      --muted:#b8c0d4;
+      --brand:#6ee7ff;
+      --brand-2:#7c3aed;
+      --accent:#22d3ee;
+      --ring:rgba(110,231,255,.25);
+      --shadow:0 10px 30px rgba(0,0,0,.35);
+      --radius:22px;
+      --radius-sm:14px;
+    }
+    /* Reset / base */
+    *,*::before,*::after{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,"Helvetica Neue",Arial,"Apple Color Emoji","Segoe UI Emoji";background:
+      radial-gradient(1200px 800px at 10% -20%,rgba(124,58,237,.25),transparent 60%),
+      radial-gradient(900px 600px at 90% 10%,rgba(34,211,238,.18),transparent 55%),
+      var(--bg);
+      color:var(--text); line-height:1.6}
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;height:auto;display:block}
+    .container{max-width:1100px;margin-inline:auto;padding:0 1rem}
+
+    /* Profile pic */
+    .profile-pic{width:82px;height:82px;border-radius:50%;object-fit:cover;border:2px solid var(--accent) }
+
+    /* Skip link */
+    .skip{position:absolute;left:-9999px;top:auto}
+    .skip:focus{left:1rem;top:1rem;background:#000;color:#fff;padding:.5rem .75rem;border-radius:10px}
+
+    /* Topbar */
+    header{position:sticky;top:0;z-index:50;backdrop-filter:saturate(180%) blur(10px)}
+    .nav-wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:0.9rem 0}
+    .brand{display:flex;align-items:center;gap:.7rem;font-weight:800;letter-spacing:.3px}
+    .logo{width:36px;height:36px;border-radius:10px;background:
+      linear-gradient(135deg,var(--accent),var(--brand-2));
+      box-shadow:inset 0 0 0 2px rgba(255,255,255,.08), 0 8px 20px rgba(124,58,237,.35)}
+
+    /* Nav */
+    #nav-toggle{display:none}
+    .nav{display:flex;gap:1.2rem;align-items:center}
+    .nav a{padding:.55rem .9rem;border-radius:999px;color:var(--muted);font-weight:600}
+    .nav a:hover,.nav a:focus{color:var(--text);background:rgba(255,255,255,.06);outline:2px solid transparent}
+    .cta{background:linear-gradient(135deg,var(--accent),var(--brand-2)); color:#0a0d16 !important; box-shadow:var(--shadow);}
+    .cta:hover{filter:saturate(110%)}
+
+    /* Mobile menu */
+    .hamb{display:none;cursor:pointer;border:1px solid rgba(255,255,255,.08);padding:.55rem .7rem;border-radius:12px}
+    .hamb span{display:block;width:22px;height:2px;background:#cfd7ee;margin:4px 0}
+
+    @media (max-width: 800px){
+      .nav{position:fixed;inset:64px 1rem auto 1rem;flex-direction:column;background:linear-gradient(180deg,var(--panel),var(--panel-2));padding:1rem;border-radius:16px;border:1px solid rgba(255,255,255,.06);box-shadow:var(--shadow);display:none}
+      .hamb{display:block}
+      #nav-toggle:checked ~ .nav{display:flex}
+      .cta{width:100%;text-align:center}
+    }
+
+    /* Hero */
+    .hero{padding:6rem 0 4rem}
+    .hero-inner{display:grid;grid-template-columns:1.2fr .8fr;gap:2rem;align-items:center}
+    .eyebrow{display:inline-flex;align-items:center;gap:.5rem;padding:.35rem .6rem;border-radius:999px;border:1px solid rgba(255,255,255,.08);background:rgba(255,255,255,.03);color:var(--muted);font-weight:600}
+    .eyebrow .dot{width:6px;height:6px;border-radius:999px;background:var(--accent);box-shadow:0 0 0 3px var(--ring)}
+    h1{font-size:clamp(2rem,4.5vw,3.4rem);line-height:1.1;margin:.7rem 0 1rem}
+    .lead{font-size:clamp(1rem,2.2vw,1.15rem);color:#ccd3ea;max-width:60ch}
+    .hero-card{border:1px solid rgba(255,255,255,.08);background:linear-gradient(180deg,var(--panel),rgba(16,24,39,.85));padding:1rem;border-radius:var(--radius);box-shadow:var(--shadow)}
+    .badges{display:flex;gap:.7rem;flex-wrap:wrap;margin-top:1.25rem}
+    .badge{font-size:.9rem;color:#111827;background:linear-gradient(135deg,var(--brand),var(--accent));padding:.45rem .7rem;border-radius:999px;font-weight:800}
+
+    @media (max-width:900px){
+      .hero-inner{grid-template-columns:1fr}
+    }
+
+    /* Section */
+    section{padding:4rem 0}
+    .section-head{display:flex;align-items:end;justify-content:space-between;gap:1rem;margin-bottom:1.5rem}
+    .section-head h2{font-size:clamp(1.4rem,3vw,2rem);margin:0}
+    .muted{color:var(--muted)}
+
+    /* Cards */
+    .grid{display:grid;gap:1rem}
+    .grid-3{grid-template-columns:repeat(3,1fr)}
+    .grid-2{grid-template-columns:repeat(2,1fr)}
+    @media (max-width:1000px){.grid-3{grid-template-columns:repeat(2,1fr)}}
+    @media (max-width:700px){.grid-3,.grid-2{grid-template-columns:1fr}}
+
+    .card{background:linear-gradient(180deg,var(--panel),var(--panel-2));border:1px solid rgba(255,255,255,.08);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column}
+    .card .thumb{aspect-ratio:16/9;background:linear-gradient(135deg,rgba(124,58,237,.35),rgba(34,211,238,.25));border-bottom:1px solid rgba(255,255,255,.06)}
+    .card .content{padding:1rem}
+    .card h3{margin:.2rem 0 .5rem;font-size:1.1rem}
+    .pill{display:inline-flex;gap:.4rem;align-items:center;padding:.25rem .6rem;border:1px solid rgba(255,255,255,.08);border-radius:999px;color:var(--muted);font-weight:600;font-size:.86rem}
+
+    /* Skills */
+    .skills{display:flex;flex-wrap:wrap;gap:.6rem}
+    .skill{padding:.55rem .75rem;border-radius:12px;border:1px dashed rgba(255,255,255,.15);background:rgba(255,255,255,.03);font-weight:700;color:#d7def2}
+
+    /* Contact */
+    .contact{display:grid;grid-template-columns:1fr .9fr;gap:1rem}
+    @media (max-width:900px){.contact{grid-template-columns:1fr}}
+    .panel{background:linear-gradient(180deg,var(--panel),var(--panel-2));border:1px solid rgba(255,255,255,.08);border-radius:var(--radius);padding:1rem;box-shadow:var(--shadow)}
+    .contact .list{display:grid;gap:.6rem}
+    .contact .list a{display:flex;justify-content:space-between;align-items:center;border:1px solid rgba(255,255,255,.08);padding:.7rem .9rem;border-radius:14px;color:#dfe6fb;background:rgba(255,255,255,.03)}
+    .contact .list a:hover{background:rgba(255,255,255,.07)}
+
+    /* Footer */
+    footer{padding:2.5rem 0;color:var(--muted)}
+    .foot{display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap;border-top:1px solid rgba(255,255,255,.08);padding-top:1.2rem}
+
+    /* Utility */
+    .sr{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header>
+    <div class="container nav-wrap">
+      <a class="brand" href="#top" aria-label="Homepage">
+        <img src='https://scontent-bom2-3.xx.fbcdn.net/v/t39.30808-6/492952303_1473285073637090_2138458153126618177_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=833d8c&_nc_ohc=xRpPVdRbl24Q7kNvwFVe_6H&_nc_oc=Adkk6o19ThKW3ElL6AoD0LV371WxDgfyK3AK7ZhjN-X11-Icl4bZ4TgiOg_3SwbtvMQ&_nc_zt=23&_nc_ht=scontent-bom2-3.xx&_nc_gid=4ouzLGtSO4WRjrQKcY5N7g&oh=00_AfWURnuXoDeRq9TWu3_zuzudzvzWGGQFH8uHD0ehWzVLIw&oe=68B73C89'class='profile-pic'>
+    
+        <span>Sahil Kavishka</span>
+      </a>
+
+      <label class="hamb" for="nav-toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </label>
+      <input type="checkbox" id="nav-toggle" aria-hidden="true" />
+
+      <nav class="nav" aria-label="Primary">
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#about">About</a>
+        <a href="#contact" class="cta">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Hero -->
+    <section class="hero" id="top">
+      <div class="container hero-inner">
+        <div>
+          <span class="eyebrow"><span class="dot" aria-hidden="true"></span> Available for freelance</span>
+          <h1>Designer & Developer crafting clean, fast, and accessible web experiences.</h1>
+          <p class="lead">I build things for the web. Passionate about sleek UIs, performance, and turning ideas into delightful products. Based in Sri Lanka.</p>
+
+          <div class="badges">
+            <a class="badge" href="#projects">See my work</a>
+            <a class="badge" href="#contact">Hire me</a>
+          </div>
+        </div>
+        <div class="hero-card" aria-label="Quick stats">
+          <div class="grid grid-2">
+            <div class="panel">
+              <div class="pill"><span aria-hidden="true">✨</span> Highlight</div>
+              <h3 style="margin:.5rem 0 0">Sports Tournaments System</h3>
+              <p class="muted" style="margin:.4rem 0 0">Django app with teams, fixtures, live scores, and leaderboards.</p>
+            </div>
+            <div class="panel">
+              <div class="pill"><span aria-hidden="true">🚀</span> Focus</div>
+              <p style="margin:.5rem 0 0">Frontend polish, clean architecture, and user-first details.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects">
+      <div class="container">
+        <div class="section-head">
+          <h2>Featured Projects</h2>
+          <p class="muted">A few things I've built recently.</p>
+        </div>
+        <div class="grid grid-3">
+          <article class="card">
+            <div class="thumb" role="img" aria-label="Project thumbnail"></div>
+            <div class="content">
+              <h3>Sports Tournaments Manager</h3>
+              <p class="muted">End-to-end tournament platform with roles (Organizer, Player, Spectator), fixtures, and real-time updates.</p>
+              <p class="muted">Stack: Django · MySQL · AJAX</p>
+              <p><a class="pill" href="#" aria-label="Open project 1 repo">View Repo →</a></p>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="thumb" role="img" aria-label="Project thumbnail"></div>
+            <div class="content">
+              <h3>Math Quiz App</h3>
+              <p class="muted">Timed quizzes, separate leaderboard page, and clean UI.</p>
+              <p class="muted">Stack: HTML · CSS · JS</p>
+              <p><a class="pill" href="#" aria-label="Open project 2 repo">Live Demo →</a></p>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="thumb" role="img" aria-label="Project thumbnail"></div>
+            <div class="content">
+              <h3>Portfolio v2</h3>
+              <p class="muted">Single-file site (this one!) built with semantic HTML and modern CSS only.</p>
+              <p class="muted">Stack: HTML · CSS</p>
+              <p><a class="pill" href="#" aria-label="Open project 3 repo">Read Case Study →</a></p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills">
+      <div class="container">
+        <div class="section-head">
+          <h2>Skills</h2>
+          <p class="muted">A toolbox I reach for often.</p>
+        </div>
+        <div class="skills">
+          <span class="skill">HTML5</span>
+          <span class="skill">CSS3</span>
+          <span class="skill">Tailwind (CSS)</span>
+          <span class="skill">JavaScript</span>
+          <span class="skill">React</span>
+          <span class="skill">Django</span>
+          <span class="skill">MySQL</span>
+          <span class="skill">Git & GitHub</span>
+          <span class="skill">Figma</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about">
+      <div class="container">
+        <div class="section-head">
+          <h2>About</h2>
+          <p class="muted">A little bit about me.</p>
+        </div>
+        <div class="grid grid-2">
+          <div class="panel">
+            <h3 style="margin-top:0">Hi, I'm Sahil 👋</h3>
+            <p>I'm a developer from Anuradhapura who enjoys building sports and education apps. I care about clean UI, accessibility, and making products that feel great to use.</p>
+            <p>Currently exploring real-time features (WebSockets) and better data visualizations for match stats.</p>
+          </div>
+          <div class="panel">
+            <h3 style="margin-top:0">Quick Facts</h3>
+            <ul>
+              <li>🏐 Favorite sport: Volleyball</li>
+              <li>🛠️ Building: Sports Tournament System</li>
+              <li>🎯 Goal: Ship polished, fast web apps</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <div class="container">
+        <div class="section-head">
+          <h2>Contact</h2>
+          <p class="muted">Let's build something together.</p>
+        </div>
+        <div class="contact">
+          <div class="panel">
+            <h3 style="margin-top:0">Get in touch</h3>
+            <p class="muted">I'm open to freelance and collaborations. The fastest way to reach me is via email or LinkedIn.</p>
+            <div class="list" role="list">
+              <a href="mailto:sahilkavishka@example.com"><span>Email</span><span>→</span></a>
+              <a href="https://github.com/sahilkavishka" target="_blank" rel="noreferrer noopener"><span>GitHub</span><span>→</span></a>
+              <a href="https://www.linkedin.com/in/" target="_blank" rel="noreferrer noopener"><span>LinkedIn</span><span>→</span></a>
+              <a href="https://sahilkavishka.dev" target="_blank" rel="noreferrer noopener"><span>Website</span><span>→</span></a>
+            </div>
+          </div>
+          <div class="panel">
+            <h3 style="margin-top:0">Credits & Notes</h3>
+            <p class="muted">Built with semantic HTML and modern CSS variables. No JavaScript required. Fully responsive and accessible.</p>
+            <ul>
+              <li>📦 Single file: <code>index.html</code></li>
+              <li>🎨 Themeable: edit <code>:root</code> variables</li>
+              <li>🔗 Update links above to your real profiles</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container foot">
+      <p>© <span id="year">2025</span> Sahil Kavishka. All rights reserved.</p>
+      <p>Made with ♥ in Sri Lanka.</p>
+    </div>
+  </footer>
+</body>
+</html>
