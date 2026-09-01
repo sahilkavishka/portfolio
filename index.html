@@ -4,7 +4,7 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Sahil Kavishka — Full-Stack Developer &amp; Data Scientist</title>
-<meta name="description" content="Sahil Kavishka builds sports platforms and data products — Django, React, Python, and ML. Based in Anuradhapura, Sri Lanka." />
+<meta name="description" content="Sahil Kavishka builds full-stack platforms, ML pipelines, and BI dashboards — from a sports prediction engine to an AI construction estimator. Based in Anuradhapura, Sri Lanka." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
@@ -19,6 +19,7 @@
     --accent:#ffb020;
     --accent-ink:#221602;
     --accent-2:#33d6ac;
+    --danger:#ff6b6b;
     --line:rgba(237,242,238,.10);
     --line-strong:rgba(237,242,238,.18);
     --shadow:0 18px 40px rgba(0,0,0,.45);
@@ -59,13 +60,13 @@
   }
   a{color:inherit;text-decoration:none}
   img{max-width:100%;height:auto;display:block}
-  .container{max-width:1120px;margin-inline:auto;padding:0 1.25rem}
+  .container{max-width:1160px;margin-inline:auto;padding:0 1.25rem}
   .mono{font-family:'Space Mono',ui-monospace,SFMono-Regular,Menlo,monospace}
   .display{font-family:'Barlow Condensed',Inter,sans-serif;font-weight:800;letter-spacing:.2px}
+  button{font-family:inherit}
 
   .skip{position:absolute;left:-9999px;top:auto}
   .skip:focus{left:1rem;top:1rem;z-index:100;background:var(--accent);color:var(--accent-ink);padding:.6rem .9rem;border-radius:8px;font-weight:700}
-
   :focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
 
   /* Header */
@@ -90,7 +91,7 @@
   .hamb{display:none;cursor:pointer;border:1px solid var(--line-strong);padding:.5rem .65rem;border-radius:10px;background:var(--panel)}
   .hamb span{display:block;width:20px;height:2px;background:var(--ink);margin:4px 0;border-radius:2px}
 
-  @media (max-width: 820px){
+  @media (max-width: 860px){
     .nav{position:fixed;inset:64px 1rem auto 1rem;flex-direction:column;align-items:stretch;background:var(--panel);padding:.8rem;border-radius:14px;border:1px solid var(--line-strong);box-shadow:var(--shadow);display:none;gap:.25rem}
     .hamb{display:block}
     #nav-toggle:checked ~ .nav{display:flex}
@@ -100,7 +101,7 @@
   }
 
   /* Hero */
-  .hero{padding:4.5rem 0 3rem}
+  .hero{padding:4rem 0 0}
   .hero-inner{display:grid;grid-template-columns:1.15fr .85fr;gap:2.2rem;align-items:stretch}
   @media (max-width:900px){.hero-inner{grid-template-columns:1fr}}
 
@@ -109,15 +110,14 @@
   .status .dot.live{animation:pulse 1.8s ease-in-out infinite}
   @keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
 
-  h1{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:clamp(2.6rem,6.4vw,4.4rem);line-height:.98;margin:.9rem 0 .8rem;letter-spacing:.2px}
-  h1 em{font-style:normal;color:var(--accent)}
-  .lead{font-size:clamp(1rem,2vw,1.12rem);color:var(--muted);max-width:52ch}
+  h1{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:clamp(2.3rem,5.6vw,3.9rem);line-height:1.02;margin:.9rem 0 .8rem;letter-spacing:.2px}
+  .lead{font-size:clamp(1rem,2vw,1.12rem);color:var(--muted);max-width:56ch}
 
   .hero-actions{display:flex;gap:.7rem;flex-wrap:wrap;margin-top:1.4rem}
-  .btn{display:inline-flex;align-items:center;gap:.5rem;padding:.7rem 1.1rem;border-radius:11px;font-weight:700;font-size:.95rem;border:1px solid transparent}
+  .btn{display:inline-flex;align-items:center;gap:.5rem;padding:.7rem 1.1rem;border-radius:11px;font-weight:700;font-size:.95rem;border:1px solid transparent;cursor:pointer}
   .btn-primary{background:var(--accent);color:var(--accent-ink);box-shadow:var(--shadow)}
   .btn-primary:hover{filter:brightness(1.06)}
-  .btn-ghost{border-color:var(--line-strong);color:var(--ink)}
+  .btn-ghost{border-color:var(--line-strong);color:var(--ink);background:transparent}
   .btn-ghost:hover{background:var(--panel)}
 
   /* Scoreboard card */
@@ -127,15 +127,78 @@
   .board-rows{padding:.4rem 1.1rem;flex:1}
   .board-row{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:.85rem 0;border-bottom:1px solid var(--line)}
   .board-row:last-child{border-bottom:none}
-  .board-row .k{color:var(--muted);font-size:.85rem}
-  .board-row .v{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1.15rem;text-align:right}
+  .board-row .k{color:var(--muted);font-size:.85rem;white-space:nowrap}
+  .board-row .v{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1.08rem;text-align:right}
   .board-foot{padding:.9rem 1.1rem;border-top:1px dashed var(--line-strong);color:var(--muted);font-size:.82rem}
+
+  /* Marquee goals ticker */
+  .ticker-wrap{margin-top:2.6rem;border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--panel);overflow:hidden}
+  .ticker-track{display:flex;gap:2.5rem;white-space:nowrap;padding:.65rem 0;animation:scroll 32s linear infinite}
+  .ticker-track span{font-family:'Space Mono',monospace;font-size:.82rem;color:var(--muted);display:inline-flex;align-items:center;gap:.5rem}
+  .ticker-track span::before{content:"▸";color:var(--accent)}
+  @keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+  /* Stats bar */
+  .stats-bar{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;margin:2.4rem 0 0}
+  @media (max-width:700px){.stats-bar{grid-template-columns:repeat(2,1fr)}}
+  .stat-cell{background:var(--panel);padding:1.2rem 1rem;text-align:center}
+  .stat-cell b{display:block;font-family:'Barlow Condensed',sans-serif;font-size:2rem;font-weight:800;color:var(--accent)}
+  .stat-cell span{font-size:.78rem;color:var(--muted)}
 
   /* Section shell */
   section{padding:3.6rem 0}
-  .section-head{display:flex;align-items:end;justify-content:space-between;gap:1rem;margin-bottom:1.6rem;border-bottom:1px solid var(--line);padding-bottom:1rem}
+  .section-head{display:flex;align-items:end;justify-content:space-between;gap:1rem;margin-bottom:1.6rem;border-bottom:1px solid var(--line);padding-bottom:1rem;flex-wrap:wrap}
   .section-head h2{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:clamp(1.6rem,3.4vw,2.3rem);margin:0}
   .section-tag{font-family:'Space Mono',monospace;font-size:.78rem;color:var(--muted)}
+
+  /* Featured project spotlight */
+  .spotlight{border:1px solid var(--line-strong);border-radius:var(--radius);background:linear-gradient(150deg,var(--panel),var(--panel-2));box-shadow:var(--shadow);padding:1.6rem;display:grid;grid-template-columns:1.1fr .9fr;gap:1.6rem;margin-bottom:1.6rem}
+  @media (max-width:860px){.spotlight{grid-template-columns:1fr}}
+  .spotlight-tag{display:inline-flex;align-items:center;gap:.5rem;font-family:'Space Mono',monospace;font-size:.72rem;color:var(--accent);letter-spacing:.06em;margin-bottom:.6rem}
+  .spotlight h3{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:clamp(1.6rem,3vw,2.1rem);margin:0 0 .6rem}
+  .spotlight p{color:var(--muted);margin:0 0 1rem}
+  .spotlight-pillars{list-style:none;margin:0 0 1.2rem;padding:0;display:grid;gap:.55rem}
+  .spotlight-pillars li{display:flex;gap:.6rem;font-size:.92rem}
+  .spotlight-pillars li::before{content:"◆";color:var(--accent-2);font-size:.7rem;margin-top:.35rem}
+  .spotlight-links{display:flex;gap:.7rem;flex-wrap:wrap}
+  .spotlight-stack{display:flex;flex-wrap:wrap;gap:.5rem;align-content:start}
+  .spotlight-stack span{font-family:'Space Mono',monospace;font-size:.74rem;color:var(--ink);border:1px solid var(--line-strong);border-radius:8px;padding:.35rem .6rem;background:var(--panel-2);height:fit-content}
+  .spotlight-side{display:flex;flex-direction:column;justify-content:space-between;gap:1rem}
+  .spotlight-arch{border:1px dashed var(--line-strong);border-radius:var(--radius-sm);padding:.9rem;font-family:'Space Mono',monospace;font-size:.72rem;color:var(--muted);line-height:1.7}
+
+  /* Filter tabs + search */
+  .filter-row{display:flex;gap:.9rem;flex-wrap:wrap;align-items:center;justify-content:space-between;margin-bottom:1.4rem}
+  .tabs{display:flex;gap:.5rem;flex-wrap:wrap}
+  .tab{padding:.5rem .9rem;border-radius:999px;border:1px solid var(--line-strong);background:var(--panel);color:var(--muted);font-weight:700;font-size:.85rem;cursor:pointer}
+  .tab:hover{color:var(--ink)}
+  .tab.active{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+  .search-box{position:relative}
+  .search-box input{padding:.55rem .9rem .55rem 2.1rem;border-radius:999px;border:1px solid var(--line-strong);background:var(--panel);color:var(--ink);font-size:.86rem;width:200px}
+  .search-box input:focus{outline:2px solid var(--accent);outline-offset:1px}
+  .search-box::before{content:"⌕";position:absolute;left:.75rem;top:50%;transform:translateY(-50%);color:var(--muted)}
+
+  /* Projects */
+  .grid-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem}
+  @media (max-width:980px){.grid-cards{grid-template-columns:repeat(2,1fr)}}
+  @media (max-width:680px){.grid-cards{grid-template-columns:1fr}}
+
+  .card{border:1px solid var(--line-strong);border-radius:var(--radius);background:linear-gradient(180deg,var(--panel),var(--panel-2));display:flex;flex-direction:column;overflow:hidden;box-shadow:var(--shadow);transition:opacity .2s ease, transform .2s ease}
+  .card.hide{display:none}
+  .card-top{display:flex;justify-content:space-between;align-items:flex-start;padding:1rem 1.1rem .5rem}
+  .card-top h3{margin:0;font-family:'Barlow Condensed',sans-serif;font-size:1.3rem;font-weight:800}
+  .pill{font-family:'Space Mono',monospace;font-size:.66rem;letter-spacing:.05em;padding:.28rem .55rem;border-radius:6px;white-space:nowrap;border:1px solid transparent}
+  .pill.active{background:color-mix(in srgb, var(--accent) 20%, transparent);color:var(--accent);border-color:color-mix(in srgb, var(--accent) 45%, transparent)}
+  .pill.live{background:color-mix(in srgb, var(--accent-2) 20%, transparent);color:var(--accent-2);border-color:color-mix(in srgb, var(--accent-2) 45%, transparent)}
+  .pill.complete{background:var(--line);color:var(--muted);border-color:var(--line-strong)}
+  .pill.planning{color:var(--muted);border-color:var(--line-strong);border-style:dashed}
+
+  .card p{margin:.4rem 0 0;padding:0 1.1rem;color:var(--muted);font-size:.9rem}
+  .card .stack{display:flex;flex-wrap:wrap;gap:.4rem;padding:.9rem 1.1rem}
+  .card .stack span{font-family:'Space Mono',monospace;font-size:.7rem;color:var(--muted);border:1px solid var(--line);border-radius:6px;padding:.2rem .45rem}
+  .card .link{margin-top:auto;display:flex;justify-content:space-between;align-items:center;padding:.85rem 1.1rem;border-top:1px solid var(--line);font-weight:700;font-size:.86rem;color:var(--ink)}
+  .card .link:hover{background:var(--line)}
+  .no-results{grid-column:1/-1;text-align:center;padding:2.4rem 1rem;color:var(--muted);border:1px dashed var(--line-strong);border-radius:var(--radius-sm);display:none}
+  .no-results.show{display:block}
 
   /* Roster / skills */
   .roster{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}
@@ -143,27 +206,16 @@
   .position{border:1px solid var(--line);border-radius:var(--radius-sm);padding:1rem 1.1rem;background:var(--panel)}
   .position h3{margin:0 0 .7rem;font-size:.82rem;letter-spacing:.05em;color:var(--muted);font-weight:700;text-transform:uppercase}
   .chips{display:flex;flex-wrap:wrap;gap:.5rem}
-  .chip{padding:.4rem .7rem;border-radius:8px;border:1px solid var(--line-strong);font-size:.88rem;font-weight:600;color:var(--ink);background:var(--panel-2)}
+  .chip{padding:.4rem .7rem;border-radius:8px;border:1px solid var(--line-strong);font-size:.86rem;font-weight:600;color:var(--ink);background:var(--panel-2)}
 
-  /* Projects */
-  .grid-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem}
-  @media (max-width:980px){.grid-cards{grid-template-columns:repeat(2,1fr)}}
-  @media (max-width:680px){.grid-cards{grid-template-columns:1fr}}
-
-  .card{border:1px solid var(--line-strong);border-radius:var(--radius);background:linear-gradient(180deg,var(--panel),var(--panel-2));display:flex;flex-direction:column;overflow:hidden;box-shadow:var(--shadow)}
-  .card-top{display:flex;justify-content:space-between;align-items:flex-start;padding:1rem 1.1rem .5rem}
-  .card-top h3{margin:0;font-family:'Barlow Condensed',sans-serif;font-size:1.35rem;font-weight:800}
-  .pill{font-family:'Space Mono',monospace;font-size:.68rem;letter-spacing:.05em;padding:.28rem .55rem;border-radius:6px;white-space:nowrap;border:1px solid transparent}
-  .pill.active{background:color-mix(in srgb, var(--accent) 20%, transparent);color:var(--accent);border-color:color-mix(in srgb, var(--accent) 45%, transparent)}
-  .pill.live{background:color-mix(in srgb, var(--accent-2) 20%, transparent);color:var(--accent-2);border-color:color-mix(in srgb, var(--accent-2) 45%, transparent)}
-  .pill.complete{background:var(--line);color:var(--muted);border-color:var(--line-strong)}
-  .pill.planning{color:var(--muted);border-color:var(--line-strong);border-style:dashed}
-
-  .card p{margin:.4rem 0 0;padding:0 1.1rem;color:var(--muted);font-size:.93rem}
-  .card .stack{display:flex;flex-wrap:wrap;gap:.4rem;padding:.9rem 1.1rem}
-  .card .stack span{font-family:'Space Mono',monospace;font-size:.72rem;color:var(--muted);border:1px solid var(--line);border-radius:6px;padding:.2rem .45rem}
-  .card .link{margin-top:auto;display:flex;justify-content:space-between;align-items:center;padding:.85rem 1.1rem;border-top:1px solid var(--line);font-weight:700;font-size:.88rem;color:var(--ink)}
-  .card .link:hover{background:var(--line)}
+  /* Timeline */
+  .timeline{position:relative;padding-left:1.6rem;border-left:2px solid var(--line-strong)}
+  .tl-item{position:relative;padding-bottom:1.8rem}
+  .tl-item:last-child{padding-bottom:0}
+  .tl-item::before{content:"";position:absolute;left:-2.02rem;top:.25rem;width:12px;height:12px;border-radius:50%;background:var(--accent);border:3px solid var(--bg)}
+  .tl-item h4{margin:0 0 .3rem;font-family:'Barlow Condensed',sans-serif;font-size:1.2rem;font-weight:800}
+  .tl-item .tl-when{font-family:'Space Mono',monospace;font-size:.72rem;color:var(--accent-2);display:block;margin-bottom:.25rem}
+  .tl-item p{margin:0;color:var(--muted);font-size:.92rem;max-width:60ch}
 
   /* About */
   .about-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:1.1rem}
@@ -196,10 +248,11 @@
   footer{padding:2rem 0;color:var(--muted)}
   .foot{display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:1.1rem;font-size:.9rem}
 
-  /* One orchestrated entrance for the hero */
   .reveal{opacity:0;transform:translateY(10px)}
   .reveal.in{animation:rise .6s ease forwards}
   @keyframes rise{to{opacity:1;transform:translateY(0)}}
+
+  ::selection{background:var(--accent);color:var(--accent-ink)}
 </style>
 </head>
 <body>
@@ -222,6 +275,7 @@
     <nav class="nav" aria-label="Primary">
       <a href="#projects">Projects</a>
       <a href="#skills">Skills</a>
+      <a href="#journey">Journey</a>
       <a href="#about">About</a>
       <button class="icon-btn theme-btn" id="theme-toggle" type="button" aria-label="Switch between day and night theme" title="Toggle day/night theme">◐</button>
       <a href="#contact" class="cta">Contact</a>
@@ -235,8 +289,8 @@
     <div class="container hero-inner">
       <div class="reveal" id="hero-copy">
         <span class="status"><span class="dot live" aria-hidden="true"></span> Open to freelance &amp; collaborations</span>
-        <h1>Building the systems<br>behind the <em>scoreboard.</em></h1>
-        <p class="lead">Full-stack developer and data scientist from Anuradhapura, Sri Lanka. I ship Django/React platforms and turn match data into predictions people actually check.</p>
+        <h1>Systems that turn raw data into decisions.</h1>
+        <p class="lead">Full-stack developer and data scientist from Anuradhapura, Sri Lanka. I've shipped a sports platform with live ML predictions, a BI dashboard on Sri Lanka's medicine supply chain, an NLP sentiment engine with its own Chrome extension, and an AI-assisted construction estimator — usually chasing all four interests at once.</p>
         <div class="hero-actions">
           <a class="btn btn-primary" href="#projects">See the projects</a>
           <a class="btn btn-ghost" href="https://github.com/sahilkavishka" target="_blank" rel="noreferrer noopener">GitHub profile</a>
@@ -244,14 +298,43 @@
       </div>
 
       <div class="board reveal" id="hero-board" aria-label="Quick stats">
-        <div class="board-head"><span class="mono">CURRENT · MATCH SHEET</span><span class="mono">SK</span></div>
+        <div class="board-head"><span class="mono">CURRENT · BUILD LOG</span><span class="mono">SK</span></div>
         <div class="board-rows">
-          <div class="board-row"><span class="k">Building</span><span class="v">Tournament platform + ML engine</span></div>
-          <div class="board-row"><span class="k">Core stack</span><span class="v">Django · React · Python</span></div>
-          <div class="board-row"><span class="k">Exploring</span><span class="v">WebSockets · MLOps</span></div>
+          <div class="board-row"><span class="k">Now building</span><span class="v">SmartBuild AI</span></div>
+          <div class="board-row"><span class="k">Recently shipped</span><span class="v">Medicine supply BI · NLP engine</span></div>
+          <div class="board-row"><span class="k">Core stack</span><span class="v">Python · FastAPI · Django</span></div>
           <div class="board-row"><span class="k">Based in</span><span class="v">Anuradhapura, LK</span></div>
         </div>
         <div class="board-foot mono">Without data, you're just another person with an opinion. — W. E. Deming</div>
+      </div>
+    </div>
+
+    <div class="ticker-wrap" aria-label="Current goals">
+      <div class="ticker-track" id="ticker">
+        <span>Top 20% finish in a Kaggle competition</span>
+        <span>Ship 3 end-to-end ML projects to production</span>
+        <span>Earn a Google Data Analytics or AWS ML Specialty cert</span>
+        <span>Publish write-ups on project decisions &amp; learnings</span>
+        <span>Make meaningful open-source contributions</span>
+        <span>Build &amp; publish a Sri Lankan sports analytics dataset</span>
+        <span>Launch real-time WebSocket features in the tournament app</span>
+        <!-- duplicated for seamless loop -->
+        <span>Top 20% finish in a Kaggle competition</span>
+        <span>Ship 3 end-to-end ML projects to production</span>
+        <span>Earn a Google Data Analytics or AWS ML Specialty cert</span>
+        <span>Publish write-ups on project decisions &amp; learnings</span>
+        <span>Make meaningful open-source contributions</span>
+        <span>Build &amp; publish a Sri Lankan sports analytics dataset</span>
+        <span>Launch real-time WebSocket features in the tournament app</span>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="stats-bar">
+        <div class="stat-cell"><b id="stat-repos">18</b><span>Public repos</span></div>
+        <div class="stat-cell"><b>8</b><span>Featured projects</span></div>
+        <div class="stat-cell"><b>4</b><span>Domains — web, ML, NLP, BI</span></div>
+        <div class="stat-cell"><b>1</b><span>Chrome extension shipped</span></div>
       </div>
     </div>
   </section>
@@ -261,11 +344,56 @@
     <div class="container">
       <div class="section-head">
         <h2>Projects</h2>
-        <span class="section-tag mono">4 tracked · live from the roster</span>
+        <span class="section-tag mono">8 shipped · filter by domain</span>
       </div>
 
-      <div class="grid-cards">
-        <article class="card">
+      <!-- Featured spotlight -->
+      <div class="spotlight">
+        <div>
+          <span class="spotlight-tag">◆ FLAGSHIP · IN PROGRESS</span>
+          <h3>SmartBuild AI — Construction Intelligence Platform</h3>
+          <p>An AI-powered architectural CAD and cost-estimation platform for Sri Lanka's residential construction market — bridging design, CIDA-indexed quantity surveying, and bank loan feasibility in one workflow.</p>
+          <ul class="spotlight-pillars">
+            <li>2D/3D architectural studio (Three.js) generated from land size and room counts, plus a computer-vision floor-plan analyzer</li>
+            <li>CIDA-indexed Bill of Quantities with XGBoost price forecasting across all 25 districts</li>
+            <li>45% DSR bank-loan feasibility matrix comparing BOC, Commercial Bank, HNB, Sampath &amp; NSB</li>
+            <li>Bilingual (Sinhala/English) Gemini-powered civil engineering consultant</li>
+          </ul>
+          <div class="spotlight-links">
+            <a class="btn btn-primary" href="https://github.com/sahilkavishka/smartbuild_ai" target="_blank" rel="noreferrer noopener">View on GitHub</a>
+          </div>
+        </div>
+        <div class="spotlight-side">
+          <div class="spotlight-stack">
+            <span>Python</span><span>FastAPI</span><span>XGBoost</span><span>Three.js</span><span>TailwindCSS</span><span>Gemini API</span><span>Docker</span>
+          </div>
+          <div class="spotlight-arch mono">
+            Client (Tailwind / Three.js)<br>
+            &nbsp;&nbsp;↓ REST<br>
+            FastAPI Gateway<br>
+            &nbsp;&nbsp;├─ Plan Generator (2D/3D)<br>
+            &nbsp;&nbsp;├─ Estimator Engine (XGBoost)<br>
+            &nbsp;&nbsp;├─ Finance Engine (DSR / S-Curve)<br>
+            &nbsp;&nbsp;└─ Agentic AI (Gemini)
+          </div>
+        </div>
+      </div>
+
+      <div class="filter-row">
+        <div class="tabs" id="tabs" role="tablist" aria-label="Filter projects by domain">
+          <button class="tab active" data-filter="all" type="button">All</button>
+          <button class="tab" data-filter="ai" type="button">AI &amp; ML</button>
+          <button class="tab" data-filter="data" type="button">Data &amp; BI</button>
+          <button class="tab" data-filter="web" type="button">Web</button>
+          <button class="tab" data-filter="nlp" type="button">NLP</button>
+        </div>
+        <div class="search-box">
+          <input type="search" id="project-search" placeholder="Search projects…" aria-label="Search projects" />
+        </div>
+      </div>
+
+      <div class="grid-cards" id="project-grid">
+        <article class="card" data-cat="ai web">
           <div class="card-top">
             <h3>Sports Tournaments System</h3>
             <span class="pill active">ACTIVE</span>
@@ -275,9 +403,39 @@
           <a class="link" href="https://github.com/sahilkavishka?tab=repositories&q=tournament" target="_blank" rel="noreferrer noopener"><span>View on GitHub</span><span aria-hidden="true">↗</span></a>
         </article>
 
-        <article class="card">
+        <article class="card" data-cat="ai nlp">
           <div class="card-top">
-            <h3>Math Quiz Analytics</h3>
+            <h3>Smartphone Review Sentiment: ML vs. BERT</h3>
+            <span class="pill complete">COMPLETE</span>
+          </div>
+          <p>End-to-end NLP pipeline comparing traditional ML (Naive Bayes, SVM, Random Forest) against fine-tuned BERT on scraped GSMArena reviews — shipped with a Chrome extension that live-analyzes Daraz.lk product reviews.</p>
+          <div class="stack"><span>PyTorch</span><span>Hugging Face</span><span>Scikit-learn</span><span>NLTK</span><span>FastAPI</span><span>Chrome Ext.</span></div>
+          <a class="link" href="https://github.com/sahilkavishka/mini-NLP-project" target="_blank" rel="noreferrer noopener"><span>View on GitHub</span><span aria-hidden="true">↗</span></a>
+        </article>
+
+        <article class="card" data-cat="data">
+          <div class="card-top">
+            <h3>Sri Lanka Medicine Supply Chain BI</h3>
+            <span class="pill complete">COMPLETE</span>
+          </div>
+          <p>Star-schema dataset and Power BI dashboard tracking pharmaceutical imports, USD/LKR swings, and hospital stockout rates from 2020–2026, including the 2022 economic crisis.</p>
+          <div class="stack"><span>Power BI</span><span>Python</span><span>Star Schema</span><span>SQL</span></div>
+          <a class="link" href="https://github.com/sahilkavishka/SL_Medicine_Supply_Chain" target="_blank" rel="noreferrer noopener"><span>View on GitHub</span><span aria-hidden="true">↗</span></a>
+        </article>
+
+        <article class="card" data-cat="data">
+          <div class="card-top">
+            <h3>EdTech Market Intelligence Pipeline</h3>
+            <span class="pill complete">COMPLETE</span>
+          </div>
+          <p>Automated data-engineering pipeline over the YouTube Data API v3 analyzing Sri Lanka's EdTech content market — view velocity, channel authority, and engagement rate, feeding a Power BI dashboard.</p>
+          <div class="stack"><span>Python</span><span>YouTube API</span><span>Pandas</span><span>Power BI</span></div>
+          <a class="link" href="https://github.com/sahilkavishka/-EdTech-Analytics" target="_blank" rel="noreferrer noopener"><span>View on GitHub</span><span aria-hidden="true">↗</span></a>
+        </article>
+
+        <article class="card" data-cat="data web">
+          <div class="card-top">
+            <h3>Math Quiz Analytics Dashboard</h3>
             <span class="pill complete">COMPLETE</span>
           </div>
           <p>Educator dashboard for timed quizzes with cohort analysis, skill-gap detection, and a dedicated leaderboard page.</p>
@@ -285,17 +443,27 @@
           <a class="link" href="https://github.com/sahilkavishka?tab=repositories&q=quiz" target="_blank" rel="noreferrer noopener"><span>View on GitHub</span><span aria-hidden="true">↗</span></a>
         </article>
 
-        <article class="card">
+        <article class="card" data-cat="web">
+          <div class="card-top">
+            <h3>Salon Booking &amp; Management System</h3>
+            <span class="pill complete">COMPLETE</span>
+          </div>
+          <p>Full-stack appointment booking and management system for a salon business, with an admin dashboard and customer-facing scheduling.</p>
+          <div class="stack"><span>PHP</span><span>MySQL</span></div>
+          <a class="link" href="https://github.com/sahilkavishka/salon" target="_blank" rel="noreferrer noopener"><span>View on GitHub</span><span aria-hidden="true">↗</span></a>
+        </article>
+
+        <article class="card" data-cat="web">
           <div class="card-top">
             <h3>Portfolio v2</h3>
             <span class="pill live">LIVE</span>
           </div>
-          <p>This site. Semantic markup, CSS custom properties for theming, and a day/night toggle — no framework required.</p>
+          <p>This site. Semantic markup, CSS custom properties for theming, a day/night toggle, and a filterable project grid — no framework required.</p>
           <div class="stack"><span>HTML5</span><span>CSS3</span><span>Vanilla JS</span></div>
           <a class="link" href="https://sahilkavishka.github.io/portfolio/" target="_blank" rel="noreferrer noopener"><span>Open live site</span><span aria-hidden="true">↗</span></a>
         </article>
 
-        <article class="card">
+        <article class="card" data-cat="data">
           <div class="card-top">
             <h3>SL Sports Analytics</h3>
             <span class="pill planning">PLANNING</span>
@@ -304,6 +472,8 @@
           <div class="stack"><span>Python</span><span>Pandas</span><span>Plotly</span><span>Open Data</span></div>
           <a class="link" href="https://github.com/sahilkavishka" target="_blank" rel="noreferrer noopener"><span>Follow along</span><span aria-hidden="true">↗</span></a>
         </article>
+
+        <p class="no-results" id="no-results">No projects match that filter — try a different tab or search term.</p>
       </div>
     </div>
   </section>
@@ -320,7 +490,8 @@
           <h3>Web development</h3>
           <div class="chips">
             <span class="chip">HTML5</span><span class="chip">CSS3</span><span class="chip">JavaScript</span>
-            <span class="chip">React</span><span class="chip">Tailwind</span><span class="chip">Django</span><span class="chip">FastAPI</span>
+            <span class="chip">React</span><span class="chip">Tailwind</span><span class="chip">Django</span>
+            <span class="chip">FastAPI</span><span class="chip">PHP</span><span class="chip">Three.js</span>
           </div>
         </div>
         <div class="position">
@@ -330,18 +501,51 @@
           </div>
         </div>
         <div class="position">
-          <h3>ML &amp; data science</h3>
+          <h3>ML, NLP &amp; AI</h3>
           <div class="chips">
-            <span class="chip">Scikit-learn</span><span class="chip">TensorFlow</span><span class="chip">PyTorch</span>
-            <span class="chip">Pandas</span><span class="chip">NumPy</span><span class="chip">Plotly</span><span class="chip">XGBoost</span>
+            <span class="chip">Scikit-learn</span><span class="chip">XGBoost</span><span class="chip">TensorFlow</span>
+            <span class="chip">PyTorch</span><span class="chip">Hugging Face / BERT</span><span class="chip">Gemini API</span>
           </div>
         </div>
         <div class="position">
-          <h3>Databases &amp; tools</h3>
+          <h3>Data, BI &amp; tools</h3>
           <div class="chips">
+            <span class="chip">Power BI</span><span class="chip">Plotly</span><span class="chip">Pandas</span><span class="chip">NumPy</span>
             <span class="chip">PostgreSQL</span><span class="chip">MySQL</span><span class="chip">MongoDB</span>
             <span class="chip">Docker</span><span class="chip">Git</span><span class="chip">Figma</span>
           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Journey -->
+  <section id="journey">
+    <div class="container">
+      <div class="section-head">
+        <h2>Journey</h2>
+        <span class="section-tag mono">full-stack dev → data scientist</span>
+      </div>
+      <div class="timeline">
+        <div class="tl-item">
+          <span class="tl-when">STAGE 1</span>
+          <h4>Full-stack foundations</h4>
+          <p>Started with practical, client-facing web apps — a PHP &amp; MySQL salon booking system taught me the fundamentals of CRUD, auth, and admin dashboards.</p>
+        </div>
+        <div class="tl-item">
+          <span class="tl-when">STAGE 2</span>
+          <h4>Role-based platforms at scale</h4>
+          <p>Moved to Django and React to build the Sports Tournaments System — multi-role access, fixtures, and live scoring for organizers, players, and spectators.</p>
+        </div>
+        <div class="tl-item">
+          <span class="tl-when">STAGE 3</span>
+          <h4>Into data science</h4>
+          <p>Layered machine learning onto existing platforms — match-outcome prediction, quiz cohort analysis, and a full BI dashboard on Sri Lanka's medicine supply chain.</p>
+        </div>
+        <div class="tl-item">
+          <span class="tl-when">STAGE 4 · NOW</span>
+          <h4>AI-agentic platforms</h4>
+          <p>Currently combining LLM agents, computer vision, and forecasting models into SmartBuild AI — while exploring WebSockets, MLOps, and fine-tuning for what's next.</p>
         </div>
       </div>
     </div>
@@ -352,12 +556,12 @@
     <div class="container">
       <div class="section-head">
         <h2>About</h2>
-        <span class="section-tag mono">the person behind the repo</span>
+        <span class="section-tag mono">the person behind the repos</span>
       </div>
       <div class="about-grid">
         <div class="panel">
           <h3>Hi, I'm Sahil</h3>
-          <p>I'm a developer and data scientist from Anuradhapura, Sri Lanka. My work sits where the two meet: web platforms that need to feel fast and clean, and the data pipelines and models that make them useful — like predicting a match outcome instead of just displaying a score.</p>
+          <p>I'm a developer and data scientist from Anuradhapura, Sri Lanka. My work sits where full-stack engineering meets data science: platforms that need to feel fast and clean, plus the pipelines and models that make them useful — predicting a match outcome instead of just displaying a score, or turning a pile of import data into a BI dashboard a hospital planner could actually use.</p>
           <p>Right now I'm deepening my work in deep learning, MLOps, and real-time features, while keeping an eye on accessibility and UI polish in everything I ship.</p>
         </div>
         <div class="panel">
@@ -367,7 +571,7 @@
             <div class="stat"><b>18</b><span>Public repos</span></div>
             <div class="stat"><b>🇱🇰</b><span>Anuradhapura, LK</span></div>
           </div>
-          <p style="margin-top:1rem;font-size:.92rem;color:var(--muted)">Goal for this year: ship three end-to-end ML projects to production and publish a write-up on each.</p>
+          <p style="margin-top:1rem;font-size:.92rem;color:var(--muted)">Goal for this year: ship three end-to-end ML projects to production and publish a write-up on each — see the scrolling ticker up top for the full list.</p>
         </div>
       </div>
 
@@ -403,15 +607,6 @@
             <a href="https://www.linkedin.com/in/sahil-kavishka-439b07369/" target="_blank" rel="noreferrer noopener"><span>LinkedIn</span><span class="k">sahil-kavishka</span></a>
             <a href="https://sahilkavishka.github.io/portfolio/" target="_blank" rel="noreferrer noopener"><span>Live site</span><span class="k">sahilkavishka.github.io</span></a>
           </div>
-        </div>
-        <div class="panel">
-          <h3>Notes</h3>
-          <p style="color:var(--muted)">Single-file build: semantic HTML, CSS custom properties, a little vanilla JS for the theme toggle and copy button.</p>
-          <ul style="color:var(--muted);padding-left:1.1rem;margin:0">
-            <li>Themeable — edit the <code class="mono">:root</code> / <code class="mono">[data-theme="day"]</code> variables</li>
-            <li>Respects reduced-motion preferences</li>
-            <li>Fully keyboard-navigable, visible focus states</li>
-          </ul>
         </div>
       </div>
     </div>
@@ -464,6 +659,48 @@
     document.getElementById('hero-copy').classList.add('in');
     setTimeout(()=> document.getElementById('hero-board').classList.add('in'), 120);
   });
+
+  // Project filter tabs + search
+  const tabs = document.querySelectorAll('.tab');
+  const cards = document.querySelectorAll('#project-grid .card');
+  const searchInput = document.getElementById('project-search');
+  const noResults = document.getElementById('no-results');
+  let activeFilter = 'all';
+
+  function applyFilters(){
+    const q = searchInput.value.trim().toLowerCase();
+    let visible = 0;
+    cards.forEach(card=>{
+      const cats = card.dataset.cat.split(' ');
+      const matchesCat = activeFilter === 'all' || cats.includes(activeFilter);
+      const text = card.textContent.toLowerCase();
+      const matchesSearch = q === '' || text.includes(q);
+      const show = matchesCat && matchesSearch;
+      card.classList.toggle('hide', !show);
+      if(show) visible++;
+    });
+    noResults.classList.toggle('show', visible === 0);
+  }
+
+  tabs.forEach(tab=>{
+    tab.addEventListener('click', ()=>{
+      tabs.forEach(t=>t.classList.remove('active'));
+      tab.classList.add('active');
+      activeFilter = tab.dataset.filter;
+      applyFilters();
+    });
+  });
+  searchInput.addEventListener('input', applyFilters);
+
+  // Live-ish repo count from GitHub API (visitor's own browser, graceful fallback)
+  fetch('https://api.github.com/users/sahilkavishka')
+    .then(r => r.ok ? r.json() : Promise.reject())
+    .then(data => {
+      if(data && typeof data.public_repos === 'number'){
+        document.getElementById('stat-repos').textContent = data.public_repos;
+      }
+    })
+    .catch(()=>{ /* keep static fallback value */ });
 </script>
 </body>
 </html>
