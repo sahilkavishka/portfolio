@@ -404,10 +404,53 @@
 
   ::selection{background:var(--accent);color:var(--accent-ink)}
 
+  #lang-toggle{font-family:'Space Mono',monospace;font-weight:700;font-size:.72rem}
+  #lang-toggle.si-active{color:var(--accent);border-color:var(--accent)}
+  [lang="si"] :is(h1,.lead,.status span){font-family:'Inter',system-ui,sans-serif}
+
+  /* Right-edge section rail */
+  .side-rail{position:fixed;right:1.3rem;top:50%;transform:translateY(-50%);z-index:55;display:flex;flex-direction:column;gap:.55rem}
+  .side-rail a{width:9px;height:9px;border-radius:50%;background:var(--line-strong);display:block;position:relative;transition:background .2s ease, transform .2s ease}
+  .side-rail a:hover{transform:scale(1.3)}
+  .side-rail a.active{background:var(--accent);transform:scale(1.3)}
+  .side-rail a .rail-label{position:absolute;right:1.4rem;top:50%;transform:translateY(-50%);white-space:nowrap;background:var(--panel);border:1px solid var(--line-strong);color:var(--ink);font-size:.72rem;padding:.25rem .55rem;border-radius:6px;opacity:0;pointer-events:none;transition:opacity .15s ease;box-shadow:var(--shadow)}
+  .side-rail a:hover .rail-label, .side-rail a:focus-visible .rail-label{opacity:1}
+  @media (max-width:900px){.side-rail{display:none}}
+
+  /* Stack frequency chart */
+  .stack-chart{margin-top:1.4rem;border:1px solid var(--line-strong);border-radius:var(--radius-sm);padding:1.1rem;background:var(--panel)}
+  .stack-chart h3{margin:0 0 .2rem;font-size:.82rem;letter-spacing:.05em;color:var(--muted);font-weight:700;text-transform:uppercase}
+  .stack-chart .sc-note{font-size:.8rem;color:var(--muted);margin:0 0 .9rem}
+  .sc-row{display:grid;grid-template-columns:9rem 1fr auto;align-items:center;gap:.7rem;margin-bottom:.55rem}
+  .sc-row .sc-name{font-size:.85rem;font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .sc-row .sc-track{height:9px;border-radius:999px;background:var(--line);overflow:hidden}
+  .sc-row .sc-fill{height:100%;border-radius:999px;background:linear-gradient(90deg,var(--accent),var(--accent-2));transform-origin:left;transform:scaleX(0);transition:transform .7s cubic-bezier(.2,.8,.2,1)}
+  .sc-row.in .sc-fill{transform:scaleX(1)}
+  .sc-row .sc-count{font-family:'Space Mono',monospace;font-size:.74rem;color:var(--muted);width:2.6em;text-align:right}
+
+  /* How I work / process */
+  .process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
+  @media (max-width:900px){.process-grid{grid-template-columns:repeat(2,1fr)}}
+  @media (max-width:560px){.process-grid{grid-template-columns:1fr}}
+  .process-step{border:1px solid var(--line);border-radius:var(--radius-sm);padding:1.1rem;background:var(--panel);position:relative}
+  .process-step .ps-num{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:1.7rem;color:var(--accent);display:block;margin-bottom:.3rem}
+  .process-step h3{margin:0 0 .4rem;font-size:1rem;font-weight:700}
+  .process-step p{margin:0;font-size:.85rem;color:var(--muted)}
+
+  /* Shortcuts overlay (shares palette look) */
+  #shortcuts-overlay{position:fixed;inset:0;background:rgba(3,6,14,.6);backdrop-filter:blur(3px);z-index:150;display:none;align-items:center;justify-content:center;padding:1rem}
+  #shortcuts-overlay.open{display:flex}
+  .shortcuts-card{width:100%;max-width:420px;background:var(--panel);border:1px solid var(--line-strong);border-radius:var(--radius);box-shadow:var(--shadow);padding:1.3rem}
+  .shortcuts-card h3{margin:0 0 1rem;font-family:'Barlow Condensed',sans-serif;font-size:1.3rem;font-weight:800}
+  .shortcuts-card .sk-row{display:flex;justify-content:space-between;align-items:center;padding:.5rem 0;border-bottom:1px solid var(--line);font-size:.88rem}
+  .shortcuts-card .sk-row:last-child{border-bottom:none}
+  .shortcuts-card kbd{font-family:'Space Mono',monospace;background:var(--panel-2);border:1px solid var(--line-strong);border-radius:5px;padding:.15rem .45rem;font-size:.76rem;margin-left:.3rem}
+  .shortcuts-card .sk-close{margin-top:1rem;width:100%}
+
   @media print{
-    header, footer, #progress-bar, #back-to-top, #toast-region, #palette-overlay, .hero-actions, .ticker-wrap, .filter-row, .theme-btn, .kbd-btn, .card .details-toggle, .quick-form { display:none !important; }
+    header, footer, #progress-bar, #back-to-top, #toast-region, #palette-overlay, #shortcuts-overlay, .side-rail, .hero-actions, .ticker-wrap, .filter-row, .theme-btn, .kbd-btn, .card .details-toggle, .quick-form { display:none !important; }
     body{background:#fff;color:#111}
-    .panel, .card, .board, .spotlight, .learn-item, .write-card{box-shadow:none;border:1px solid #ccc}
+    .panel, .card, .board, .spotlight, .learn-item, .write-card, .process-step{box-shadow:none;border:1px solid #ccc}
     a{text-decoration:underline}
   }
 </style>
@@ -435,12 +478,15 @@
       <a href="#skills" data-section="skills">Skills</a>
       <a href="#journey" data-section="journey">Journey</a>
       <a href="#toolkit" data-section="toolkit">Toolkit</a>
+      <a href="#process" data-section="process">Process</a>
       <a href="#learning" data-section="learning">Learning</a>
       <a href="#writings" data-section="writings">Writings</a>
       <a href="#about" data-section="about">About</a>
       <button class="kbd-btn" id="palette-open" type="button" aria-label="Open command palette">
         Jump to… <kbd>Ctrl</kbd><kbd>K</kbd>
       </button>
+      <button class="icon-btn" id="lang-toggle" type="button" aria-label="Switch language: English or Sinhala" title="EN / සිං">EN</button>
+      <button class="icon-btn" id="shortcuts-open" type="button" aria-label="Show keyboard shortcuts" title="Keyboard shortcuts">?</button>
       <button class="icon-btn theme-btn" id="theme-toggle" type="button" aria-label="Switch between day and night theme" title="Toggle day/night theme">◐</button>
       <a href="#contact" class="cta">Contact</a>
     </nav>
@@ -452,9 +498,9 @@
   <section class="hero" id="top">
     <div class="container hero-inner">
       <div class="reveal" id="hero-copy">
-        <span class="status"><span class="dot live" aria-hidden="true"></span> Open to freelance &amp; collaborations</span>
-        <h1>Systems that turn raw data into decisions.</h1>
-        <p class="lead">Full-stack developer and data scientist from Anuradhapura, Sri Lanka. I've shipped a sports platform with live ML predictions, a BI dashboard on Sri Lanka's medicine supply chain, an NLP sentiment engine with its own Chrome extension, and an AI-assisted construction estimator — usually chasing all four interests at once.</p>
+        <span class="status"><span class="dot live" aria-hidden="true"></span> <span data-en="Open to freelance &amp; collaborations" data-si="නිදහස් රැකියා සහ සහයෝගීතාවලට විවෘතයි">Open to freelance &amp; collaborations</span></span>
+        <h1 data-en="Systems that turn raw data into decisions." data-si="අමු දත්ත තීරණවලට හරවන පද්ධති.">Systems that turn raw data into decisions.</h1>
+        <p class="lead" data-en="Full-stack developer and data scientist from Anuradhapura, Sri Lanka. I've shipped a sports platform with live ML predictions, a BI dashboard on Sri Lanka's medicine supply chain, an NLP sentiment engine with its own Chrome extension, and an AI-assisted construction estimator — usually chasing all four interests at once." data-si="අනුරාධපුරයේ සිට full-stack සංවර්ධකයෙක් සහ දත්ත විද්‍යාඥයෙක්. සජීවී ML අනාවැකි සහිත ක්‍රීඩා වේදිකාවක්, ශ්‍රී ලංකාවේ බෙහෙත් සැපයුම් දාමය පිළිබඳ BI dashboard එකක්, Chrome extension එකක් සහිත NLP විශ්ලේෂණයක්, සහ AI-සහායක ඉදිකිරීම් ඇස්තමේන්තුකරුවෙක් නිර්මාණය කර ඇත — බොහෝවිට මේ හතරම එකවර.">Full-stack developer and data scientist from Anuradhapura, Sri Lanka. I've shipped a sports platform with live ML predictions, a BI dashboard on Sri Lanka's medicine supply chain, an NLP sentiment engine with its own Chrome extension, and an AI-assisted construction estimator — usually chasing all four interests at once.</p>
         <div class="hero-actions">
           <a class="btn btn-primary" href="#projects">See the projects</a>
           <a class="btn btn-ghost" href="https://github.com/sahilkavishka" target="_blank" rel="noreferrer noopener">GitHub profile</a>
@@ -774,6 +820,12 @@
           </div>
         </div>
       </div>
+
+      <div class="stack-chart reveal-up" id="stack-chart">
+        <h3>Stack frequency</h3>
+        <p class="sc-note">Counted straight from the project grid above — what actually ships the most, not just what's listed.</p>
+        <div id="stack-chart-rows"></div>
+      </div>
     </div>
   </section>
 
@@ -825,6 +877,38 @@
         <div class="tool-item"><span class="tool-cat">DASHBOARDS</span><span class="tool-name">Power BI</span><span class="tool-note">Client-facing BI deliverables</span></div>
         <div class="tool-item"><span class="tool-cat">DESIGN</span><span class="tool-name">Figma</span><span class="tool-note">Wireframes before I write CSS</span></div>
         <div class="tool-item"><span class="tool-cat">TERMINAL</span><span class="tool-name">WSL2 + zsh</span><span class="tool-note">Linux-first workflow on Windows</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How I work -->
+  <section id="process">
+    <div class="container">
+      <div class="section-head reveal-up">
+        <h2>How I work</h2>
+        <span class="section-tag mono">from first call to handover</span>
+      </div>
+      <div class="process-grid reveal-up">
+        <div class="process-step">
+          <span class="ps-num">01</span>
+          <h3>Scope the real problem</h3>
+          <p>A short call or written brief to pin down what the data or platform actually needs to do — not just the feature list.</p>
+        </div>
+        <div class="process-step">
+          <span class="ps-num">02</span>
+          <h3>Build in thin slices</h3>
+          <p>Working software early — a rough API or dashboard you can react to, rather than a big reveal at the end.</p>
+        </div>
+        <div class="process-step">
+          <span class="ps-num">03</span>
+          <h3>Test against real data</h3>
+          <p>Models and dashboards get checked against messy, real inputs, not just clean samples, before anything ships.</p>
+        </div>
+        <div class="process-step">
+          <span class="ps-num">04</span>
+          <h3>Hand over cleanly</h3>
+          <p>Documented code, a short walkthrough, and a plan for who maintains it — so the project outlives the handoff call.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -975,6 +1059,7 @@
           </div>
           <div class="contact-actions">
             <a class="btn btn-ghost" href="resume.pdf" download>Download résumé</a>
+            <button class="btn btn-ghost" id="save-contact" type="button">Save contact (vCard)</button>
             <button class="btn btn-ghost" id="print-page" type="button">Print / Save as PDF</button>
             <button class="btn btn-ghost" id="copy-page-link" type="button">Copy portfolio link</button>
           </div>
@@ -1035,6 +1120,22 @@
 <button id="back-to-top" type="button" aria-label="Back to top">↑</button>
 <div id="toast-region" aria-live="polite" aria-atomic="true"></div>
 
+<!-- Right-edge section rail -->
+<nav class="side-rail" id="side-rail" aria-label="Section quick-nav"></nav>
+
+<!-- Keyboard shortcuts help -->
+<div id="shortcuts-overlay" role="dialog" aria-modal="true" aria-label="Keyboard shortcuts">
+  <div class="shortcuts-card">
+    <h3>Keyboard shortcuts</h3>
+    <div class="sk-row"><span>Open command palette</span><span><kbd>Ctrl</kbd>/<kbd>⌘</kbd><kbd>K</kbd></span></div>
+    <div class="sk-row"><span>Search projects</span><span><kbd>/</kbd></span></div>
+    <div class="sk-row"><span>Show this panel</span><span><kbd>?</kbd></span></div>
+    <div class="sk-row"><span>Close any overlay</span><span><kbd>Esc</kbd></span></div>
+    <div class="sk-row"><span>Move in palette</span><span><kbd>↑</kbd><kbd>↓</kbd></span></div>
+    <button class="btn btn-primary sk-close" id="shortcuts-close" type="button">Got it</button>
+  </div>
+</div>
+
 <!-- Command palette -->
 <div id="palette-overlay" role="dialog" aria-modal="true" aria-label="Command palette">
   <div class="palette">
@@ -1080,6 +1181,27 @@
     else { root.setAttribute('data-theme','day'); localStorage.setItem('sk-theme','day'); themeBtn.textContent = '◑'; }
   }
   themeBtn.addEventListener('click', toggleTheme);
+
+  // EN / Sinhala toggle for the hero copy
+  const langBtn = document.getElementById('lang-toggle');
+  let currentLang = localStorage.getItem('sk-lang') || 'en';
+  function applyLang(lang){
+    currentLang = lang;
+    document.documentElement.setAttribute('lang', lang);
+    document.querySelectorAll('[data-en][data-si]').forEach(el=>{
+      el.innerHTML = lang === 'si' ? el.dataset.si : el.dataset.en;
+    });
+    if(langBtn){
+      langBtn.textContent = lang === 'si' ? 'සිං' : 'EN';
+      langBtn.classList.toggle('si-active', lang === 'si');
+      langBtn.setAttribute('aria-label', lang === 'si' ? 'Switch to English' : 'Switch to Sinhala');
+    }
+    localStorage.setItem('sk-lang', lang);
+  }
+  applyLang(currentLang);
+  if(langBtn){
+    langBtn.addEventListener('click', ()=> applyLang(currentLang === 'si' ? 'en' : 'si'));
+  }
 
   // Toast helper
   const toastRegion = document.getElementById('toast-region');
@@ -1155,19 +1277,36 @@
   updateProgress();
   updateBackToTop();
 
-  // Scroll-spy active nav link
+  // Scroll-spy active nav link + side rail
   const navLinks = Array.from(document.querySelectorAll('.nav a[data-section]'));
   const spySections = navLinks
     .map(l => document.getElementById(l.dataset.section))
     .filter(Boolean);
+
+  const sideRail = document.getElementById('side-rail');
+  if(sideRail){
+    navLinks.forEach(l=>{
+      const dot = document.createElement('a');
+      dot.href = l.getAttribute('href');
+      dot.dataset.section = l.dataset.section;
+      dot.setAttribute('aria-label', l.textContent.trim());
+      const label = document.createElement('span');
+      label.className = 'rail-label';
+      label.textContent = l.textContent.trim();
+      dot.appendChild(label);
+      sideRail.appendChild(dot);
+    });
+  }
+  const railDots = sideRail ? Array.from(sideRail.querySelectorAll('a')) : [];
+
   if('IntersectionObserver' in window && spySections.length){
     const spyObserver = new IntersectionObserver((entries)=>{
       entries.forEach(entry=>{
         const link = navLinks.find(l => l.dataset.section === entry.target.id);
-        if(!link) return;
+        const dot = railDots.find(d => d.dataset.section === entry.target.id);
         if(entry.isIntersecting){
-          navLinks.forEach(l => l.classList.remove('active-link'));
-          link.classList.add('active-link');
+          if(link){ navLinks.forEach(l => l.classList.remove('active-link')); link.classList.add('active-link'); }
+          if(dot){ railDots.forEach(d => d.classList.remove('active')); dot.classList.add('active'); }
         }
       });
     }, { rootMargin: '-40% 0px -50% 0px', threshold: 0 });
@@ -1300,6 +1439,41 @@
   searchInput.addEventListener('input', applyFilters);
   applyFilters();
 
+  // Stack frequency chart — tallied live from each project card's .stack tags
+  (function buildStackChart(){
+    const rowsEl = document.getElementById('stack-chart-rows');
+    if(!rowsEl) return;
+    const counts = {};
+    cards.forEach(card=>{
+      card.querySelectorAll('.stack span').forEach(tagEl=>{
+        const name = tagEl.textContent.trim();
+        counts[name] = (counts[name] || 0) + 1;
+      });
+    });
+    const sorted = Object.entries(counts).sort((a,b)=> b[1]-a[1]).slice(0, 8);
+    const max = sorted.length ? sorted[0][1] : 1;
+    sorted.forEach(([name, count])=>{
+      const row = document.createElement('div');
+      row.className = 'sc-row';
+      const pct = Math.round((count / max) * 100);
+      row.innerHTML = `<span class="sc-name"></span><span class="sc-track"><span class="sc-fill" style="width:${pct}%"></span></span><span class="sc-count"></span>`;
+      row.querySelector('.sc-name').textContent = name;
+      row.querySelector('.sc-count').textContent = `${count} project${count === 1 ? '' : 's'}`;
+      rowsEl.appendChild(row);
+    });
+    const scRows = rowsEl.querySelectorAll('.sc-row');
+    if('IntersectionObserver' in window && scRows.length){
+      const scObs = new IntersectionObserver((entries)=>{
+        entries.forEach(entry=>{
+          if(entry.isIntersecting){ entry.target.classList.add('in'); scObs.unobserve(entry.target); }
+        });
+      }, { threshold: 0.3 });
+      scRows.forEach(r => scObs.observe(r));
+    } else {
+      scRows.forEach(r => r.classList.add('in'));
+    }
+  })();
+
   // One orchestrated hero entrance
   requestAnimationFrame(()=>{
     document.getElementById('hero-copy').classList.add('in');
@@ -1339,13 +1513,52 @@
     });
   }
 
+  // Save contact as vCard (.vcf)
+  const saveContactBtn = document.getElementById('save-contact');
+  if(saveContactBtn){
+    saveContactBtn.addEventListener('click', ()=>{
+      const vcard = [
+        'BEGIN:VCARD','VERSION:3.0',
+        'N:Kavishka;Sahil;;;','FN:Sahil Kavishka',
+        'TITLE:Full-Stack Developer & Data Scientist',
+        'EMAIL;TYPE=INTERNET:sahilkavishka428@gmail.com',
+        'URL:https://sahilkavishka.github.io/portfolio/',
+        'URL:https://github.com/sahilkavishka',
+        'ADR;TYPE=WORK:;;Anuradhapura;;;;Sri Lanka',
+        'END:VCARD'
+      ].join('\n');
+      const blob = new Blob([vcard], { type: 'text/vcard' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url; a.download = 'sahil-kavishka.vcf';
+      document.body.appendChild(a); a.click(); a.remove();
+      URL.revokeObjectURL(url);
+      showToast('Contact card downloaded');
+    });
+  }
+
+  // Keyboard shortcuts help overlay
+  const shortcutsOverlay = document.getElementById('shortcuts-overlay');
+  const shortcutsOpenBtn = document.getElementById('shortcuts-open');
+  const shortcutsCloseBtn = document.getElementById('shortcuts-close');
+  function openShortcuts(){ shortcutsOverlay.classList.add('open'); }
+  function closeShortcuts(){ shortcutsOverlay.classList.remove('open'); }
+  if(shortcutsOpenBtn) shortcutsOpenBtn.addEventListener('click', openShortcuts);
+  if(shortcutsCloseBtn) shortcutsCloseBtn.addEventListener('click', closeShortcuts);
+  if(shortcutsOverlay) shortcutsOverlay.addEventListener('click', (e)=>{ if(e.target === shortcutsOverlay) closeShortcuts(); });
+
   // Per-project deep links: click a project title to copy a shareable link
   document.querySelectorAll('.card-top h3.copyable').forEach(h3=>{
     const card = h3.closest('.card');
     if(!card || !card.id) return;
     function copyCardLink(){
       const url = `${location.origin}${location.pathname}#${card.id}`;
+      const title = card.querySelector('h3').textContent.trim();
       history.replaceState(null, '', `#${card.id}`);
+      if(navigator.share){
+        navigator.share({ title: `${title} — Sahil Kavishka`, url }).catch(()=>{ /* user cancelled */ });
+        return;
+      }
       navigator.clipboard.writeText(url).then(()=>{
         showToast('Link copied — share this project directly');
       }).catch(()=>{
@@ -1405,8 +1618,27 @@
         action: ()=>{ location.hash = '#' + card.id; highlightFromHash(); }
       });
     });
+    document.querySelectorAll('.tool-item').forEach(tool=>{
+      entries.push({
+        title: tool.querySelector('.tool-name').textContent.trim(),
+        sub: 'Toolkit · ' + tool.querySelector('.tool-cat').textContent.trim(),
+        tag: 'GO',
+        action: ()=> document.getElementById('toolkit').scrollIntoView({behavior: prefersReducedMotion ? 'auto':'smooth'})
+      });
+    });
+    document.querySelectorAll('.learn-item').forEach(item=>{
+      entries.push({
+        title: item.querySelector('h3').textContent.trim(),
+        sub: 'Learning goal',
+        tag: 'GO',
+        action: ()=> item.scrollIntoView({behavior: prefersReducedMotion ? 'auto':'smooth', block:'center'})
+      });
+    });
     entries.push({ title:'Toggle day / night theme', sub:'Preference', tag:'RUN', action: toggleTheme });
+    entries.push({ title:'Switch language (EN / සිං)', sub:'Preference', tag:'RUN', action: ()=> langBtn && langBtn.click() });
     entries.push({ title:'Copy email address', sub:'sahilkavishka428@gmail.com', tag:'RUN', action: ()=> copyBtn.click() });
+    entries.push({ title:'Save contact as vCard', sub:'sahil-kavishka.vcf', tag:'RUN', action: ()=> saveContactBtn && saveContactBtn.click() });
+    entries.push({ title:'Show keyboard shortcuts', sub:'Help', tag:'RUN', action: openShortcuts });
     entries.push({ title:'Download résumé', sub:'resume.pdf', tag:'GO', action: ()=>{ window.location.href = 'resume.pdf'; } });
     entries.push({ title:'Open GitHub profile', sub:'github.com/sahilkavishka', tag:'GO', action: ()=> window.open('https://github.com/sahilkavishka','_blank','noreferrer noopener') });
     return entries;
@@ -1483,10 +1715,17 @@
       e.preventDefault();
       searchInput.focus();
     }
-    if(e.key === 'Escape' && document.activeElement === searchInput){
-      searchInput.value = '';
-      applyFilters();
-      searchInput.blur();
+    if(e.key === '?' && !isTyping){
+      e.preventDefault();
+      shortcutsOverlay.classList.contains('open') ? closeShortcuts() : openShortcuts();
+    }
+    if(e.key === 'Escape'){
+      if(shortcutsOverlay && shortcutsOverlay.classList.contains('open')) closeShortcuts();
+      if(document.activeElement === searchInput){
+        searchInput.value = '';
+        applyFilters();
+        searchInput.blur();
+      }
     }
   });
 
