@@ -5,6 +5,37 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Sahil Kavishka — Full-Stack Developer &amp; Data Scientist</title>
 <meta name="description" content="Sahil Kavishka builds full-stack platforms, ML pipelines, and BI dashboards — from a sports prediction engine to an AI construction estimator. Based in Anuradhapura, Sri Lanka." />
+<meta name="theme-color" content="#0b0f0d" />
+<link rel="canonical" href="https://sahilkavishka.github.io/portfolio/" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b0f0d'/%3E%3Ctext x='32' y='43' font-family='Arial,sans-serif' font-weight='800' font-size='26' fill='%23ffb020' text-anchor='middle'%3ESK%3C/text%3E%3C/svg%3E" />
+
+<!-- Social / Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Sahil Kavishka — Full-Stack Developer & Data Scientist" />
+<meta property="og:description" content="Full-stack platforms, ML pipelines, and BI dashboards — from a sports prediction engine to an AI construction estimator." />
+<meta property="og:url" content="https://sahilkavishka.github.io/portfolio/" />
+<meta property="og:image" content="https://avatars.githubusercontent.com/u/184890150?v=4" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Sahil Kavishka — Full-Stack Developer & Data Scientist" />
+<meta name="twitter:description" content="Full-stack platforms, ML pipelines, and BI dashboards, built from Anuradhapura, Sri Lanka." />
+<meta name="twitter:image" content="https://avatars.githubusercontent.com/u/184890150?v=4" />
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Sahil Kavishka",
+  "url": "https://sahilkavishka.github.io/portfolio/",
+  "image": "https://avatars.githubusercontent.com/u/184890150?v=4",
+  "jobTitle": "Full-Stack Developer & Data Scientist",
+  "address": { "@type": "PostalAddress", "addressLocality": "Anuradhapura", "addressCountry": "LK" },
+  "sameAs": [
+    "https://github.com/sahilkavishka",
+    "https://www.linkedin.com/in/sahil-kavishka-439b07369/"
+  ]
+}
+</script>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
@@ -66,8 +97,12 @@
   button{font-family:inherit}
 
   .skip{position:absolute;left:-9999px;top:auto}
-  .skip:focus{left:1rem;top:1rem;z-index:100;background:var(--accent);color:var(--accent-ink);padding:.6rem .9rem;border-radius:8px;font-weight:700}
+  .skip:focus{left:1rem;top:1rem;z-index:200;background:var(--accent);color:var(--accent-ink);padding:.6rem .9rem;border-radius:8px;font-weight:700}
   :focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+  .visually-hidden{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+
+  /* Scroll progress bar */
+  #progress-bar{position:fixed;top:0;left:0;height:3px;width:0%;background:linear-gradient(90deg,var(--accent),var(--accent-2));z-index:120;transition:width .1s linear}
 
   /* Header */
   header{position:sticky;top:0;z-index:50;background:color-mix(in srgb, var(--bg) 82%, transparent);backdrop-filter:saturate(160%) blur(10px);border-bottom:1px solid var(--line)}
@@ -82,6 +117,7 @@
   .nav{display:flex;gap:.3rem;align-items:center}
   .nav a:not(.cta):not(.icon-btn){padding:.5rem .8rem;border-radius:999px;color:var(--muted);font-weight:600;font-size:.94rem;transition:color .15s ease, background-color .15s ease}
   .nav a:not(.cta):not(.icon-btn):hover{color:var(--ink);background:var(--line)}
+  .nav a.active-link{color:var(--ink);background:var(--line)}
   .cta{background:var(--accent);color:var(--accent-ink);padding:.55rem .95rem;border-radius:10px;font-weight:700;font-size:.94rem;box-shadow:var(--shadow)}
   .cta:hover{filter:brightness(1.06)}
 
@@ -92,7 +128,7 @@
   .hamb span{display:block;width:20px;height:2px;background:var(--ink);margin:4px 0;border-radius:2px}
 
   @media (max-width: 860px){
-    .nav{position:fixed;inset:64px 1rem auto 1rem;flex-direction:column;align-items:stretch;background:var(--panel);padding:.8rem;border-radius:14px;border:1px solid var(--line-strong);box-shadow:var(--shadow);display:none;gap:.25rem}
+    .nav{position:fixed;inset:64px 1rem auto 1rem;flex-direction:column;align-items:stretch;background:var(--panel);padding:.8rem;border-radius:14px;border:1px solid var(--line-strong);box-shadow:var(--shadow);display:none;gap:.25rem;max-height:calc(100vh - 90px);overflow:auto}
     .hamb{display:block}
     #nav-toggle:checked ~ .nav{display:flex}
     .nav a:not(.icon-btn){text-align:center}
@@ -119,6 +155,7 @@
   .btn-primary:hover{filter:brightness(1.06)}
   .btn-ghost{border-color:var(--line-strong);color:var(--ink);background:transparent}
   .btn-ghost:hover{background:var(--panel)}
+  .btn:disabled{opacity:.5;cursor:not-allowed}
 
   /* Scoreboard card */
   .board{background:linear-gradient(180deg,var(--panel),var(--panel-2));border:1px solid var(--line-strong);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden;display:flex;flex-direction:column}
@@ -134,6 +171,7 @@
   /* Marquee goals ticker */
   .ticker-wrap{margin-top:2.6rem;border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--panel);overflow:hidden}
   .ticker-track{display:flex;gap:2.5rem;white-space:nowrap;padding:.65rem 0;animation:scroll 32s linear infinite}
+  .ticker-wrap:hover .ticker-track{animation-play-state:paused}
   .ticker-track span{font-family:'Space Mono',monospace;font-size:.82rem;color:var(--muted);display:inline-flex;align-items:center;gap:.5rem}
   .ticker-track span::before{content:"▸";color:var(--accent)}
   @keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
@@ -150,6 +188,10 @@
   .section-head{display:flex;align-items:end;justify-content:space-between;gap:1rem;margin-bottom:1.6rem;border-bottom:1px solid var(--line);padding-bottom:1rem;flex-wrap:wrap}
   .section-head h2{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:clamp(1.6rem,3.4vw,2.3rem);margin:0}
   .section-tag{font-family:'Space Mono',monospace;font-size:.78rem;color:var(--muted)}
+  section{scroll-margin-top:80px}
+
+  .reveal-up{opacity:0;transform:translateY(14px);transition:opacity .5s ease, transform .5s ease}
+  .reveal-up.in{opacity:1;transform:translateY(0)}
 
   /* Featured project spotlight */
   .spotlight{border:1px solid var(--line-strong);border-radius:var(--radius);background:linear-gradient(150deg,var(--panel),var(--panel-2));box-shadow:var(--shadow);padding:1.6rem;display:grid;grid-template-columns:1.1fr .9fr;gap:1.6rem;margin-bottom:1.6rem}
@@ -166,12 +208,20 @@
   .spotlight-side{display:flex;flex-direction:column;justify-content:space-between;gap:1rem}
   .spotlight-arch{border:1px dashed var(--line-strong);border-radius:var(--radius-sm);padding:.9rem;font-family:'Space Mono',monospace;font-size:.72rem;color:var(--muted);line-height:1.7}
 
+  .details-toggle{display:inline-flex;align-items:center;gap:.4rem;background:none;border:1px solid var(--line-strong);color:var(--ink);border-radius:8px;padding:.5rem .8rem;font-size:.82rem;font-weight:700;cursor:pointer}
+  .details-toggle:hover{background:var(--line)}
+  .details-toggle[aria-expanded="true"] .chevron{transform:rotate(180deg)}
+  .chevron{display:inline-block;transition:transform .2s ease}
+  .details-panel{overflow:hidden;max-height:0;transition:max-height .35s ease}
+  .details-panel.open{max-height:400px}
+  .details-panel-inner{padding-top:.9rem;color:var(--muted);font-size:.9rem;display:grid;gap:.5rem}
+
   /* Filter tabs + search */
   .filter-row{display:flex;gap:.9rem;flex-wrap:wrap;align-items:center;justify-content:space-between;margin-bottom:1.4rem}
   .tabs{display:flex;gap:.5rem;flex-wrap:wrap}
   .tab{padding:.5rem .9rem;border-radius:999px;border:1px solid var(--line-strong);background:var(--panel);color:var(--muted);font-weight:700;font-size:.85rem;cursor:pointer}
   .tab:hover{color:var(--ink)}
-  .tab.active{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+  .tab[aria-pressed="true"]{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
   .search-box{position:relative}
   .search-box input{padding:.55rem .9rem .55rem 2.1rem;border-radius:999px;border:1px solid var(--line-strong);background:var(--panel);color:var(--ink);font-size:.86rem;width:200px}
   .search-box input:focus{outline:2px solid var(--accent);outline-offset:1px}
@@ -182,15 +232,20 @@
   @media (max-width:980px){.grid-cards{grid-template-columns:repeat(2,1fr)}}
   @media (max-width:680px){.grid-cards{grid-template-columns:1fr}}
 
-  .card{border:1px solid var(--line-strong);border-radius:var(--radius);background:linear-gradient(180deg,var(--panel),var(--panel-2));display:flex;flex-direction:column;overflow:hidden;box-shadow:var(--shadow);transition:opacity .2s ease, transform .2s ease}
+  .card{border:1px solid var(--line-strong);border-radius:var(--radius);background:linear-gradient(180deg,var(--panel),var(--panel-2));display:flex;flex-direction:column;overflow:hidden;box-shadow:var(--shadow);transition:opacity .2s ease, transform .2s ease, outline-color .3s ease;scroll-margin-top:100px;outline:2px solid transparent;outline-offset:3px}
   .card.hide{display:none}
-  .card-top{display:flex;justify-content:space-between;align-items:flex-start;padding:1rem 1.1rem .5rem}
-  .card-top h3{margin:0;font-family:'Barlow Condensed',sans-serif;font-size:1.3rem;font-weight:800}
+  .card.pulse{outline-color:var(--accent)}
+  .card-top{display:flex;justify-content:space-between;align-items:flex-start;padding:1rem 1.1rem .5rem;gap:.6rem}
+  .card-top h3{margin:0;font-family:'Barlow Condensed',sans-serif;font-size:1.3rem;font-weight:800;cursor:pointer}
+  .card-top h3:hover{text-decoration:underline;text-underline-offset:3px}
+  .card-top h3:hover::after{content:" ⧉";font-size:.8em;opacity:.6}
   .pill{font-family:'Space Mono',monospace;font-size:.66rem;letter-spacing:.05em;padding:.28rem .55rem;border-radius:6px;white-space:nowrap;border:1px solid transparent}
   .pill.active{background:color-mix(in srgb, var(--accent) 20%, transparent);color:var(--accent);border-color:color-mix(in srgb, var(--accent) 45%, transparent)}
   .pill.live{background:color-mix(in srgb, var(--accent-2) 20%, transparent);color:var(--accent-2);border-color:color-mix(in srgb, var(--accent-2) 45%, transparent)}
   .pill.complete{background:var(--line);color:var(--muted);border-color:var(--line-strong)}
   .pill.planning{color:var(--muted);border-color:var(--line-strong);border-style:dashed}
+  .pill.progress{background:color-mix(in srgb, var(--accent) 14%, transparent);color:var(--accent);border-color:color-mix(in srgb, var(--accent) 35%, transparent);border-style:dashed}
+  .pill.soon{color:var(--muted);border-color:var(--line-strong);border-style:dotted}
 
   .card p{margin:.4rem 0 0;padding:0 1.1rem;color:var(--muted);font-size:.9rem}
   .card .stack{display:flex;flex-wrap:wrap;gap:.4rem;padding:.9rem 1.1rem}
@@ -217,6 +272,25 @@
   .tl-item .tl-when{font-family:'Space Mono',monospace;font-size:.72rem;color:var(--accent-2);display:block;margin-bottom:.25rem}
   .tl-item p{margin:0;color:var(--muted);font-size:.92rem;max-width:60ch}
 
+  /* Learning / certifications */
+  .learn-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+  @media (max-width:900px){.learn-grid{grid-template-columns:repeat(2,1fr)}}
+  @media (max-width:620px){.learn-grid{grid-template-columns:1fr}}
+  .learn-item{border:1px solid var(--line-strong);border-radius:var(--radius-sm);padding:1rem 1.1rem;background:var(--panel);display:flex;flex-direction:column;gap:.5rem}
+  .learn-item .learn-top{display:flex;justify-content:space-between;align-items:flex-start;gap:.6rem}
+  .learn-item h3{margin:0;font-size:1rem;font-weight:700}
+  .learn-item p{margin:0;font-size:.85rem;color:var(--muted)}
+  .progress-track{height:6px;border-radius:999px;background:var(--line);overflow:hidden;margin-top:.2rem}
+  .progress-fill{height:100%;background:linear-gradient(90deg,var(--accent),var(--accent-2));border-radius:999px}
+
+  /* Writings */
+  .writings-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+  @media (max-width:900px){.writings-grid{grid-template-columns:1fr}}
+  .write-card{border:1px dashed var(--line-strong);border-radius:var(--radius-sm);padding:1.1rem;background:var(--panel);display:flex;flex-direction:column;gap:.6rem;position:relative}
+  .write-card h3{margin:0;font-family:'Barlow Condensed',sans-serif;font-size:1.15rem;font-weight:800}
+  .write-card p{margin:0;color:var(--muted);font-size:.88rem}
+  .writings-cta{margin-top:1.2rem;display:flex;align-items:center;gap:.7rem;flex-wrap:wrap;color:var(--muted);font-size:.9rem}
+
   /* About */
   .about-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:1.1rem}
   @media (max-width:900px){.about-grid{grid-template-columns:1fr}}
@@ -230,7 +304,7 @@
   /* GitHub stats */
   .stats-imgs{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:.5rem}
   @media (max-width:700px){.stats-imgs{grid-template-columns:1fr}}
-  .stats-imgs img{border-radius:var(--radius-sm);border:1px solid var(--line-strong)}
+  .stats-imgs img{border-radius:var(--radius-sm);border:1px solid var(--line-strong);background:var(--panel-2);min-height:180px}
 
   /* Contact */
   .contact-grid{display:grid;grid-template-columns:1fr .85fr;gap:1.1rem}
@@ -245,6 +319,28 @@
   .copy-btn:hover{background:var(--line)}
   .copy-btn.copied{color:var(--accent-2);border-color:var(--accent-2)}
 
+  .quick-form{display:grid;gap:.7rem;margin-top:.4rem}
+  .quick-form label{font-size:.78rem;color:var(--muted);font-weight:700;letter-spacing:.03em;text-transform:uppercase}
+  .field{display:grid;gap:.35rem}
+  .field input, .field textarea{background:var(--panel-2);border:1px solid var(--line-strong);border-radius:10px;color:var(--ink);padding:.65rem .8rem;font-family:inherit;font-size:.92rem;resize:vertical}
+  .field input:focus, .field textarea:focus{outline:2px solid var(--accent);outline-offset:1px}
+  .form-note{font-size:.76rem;color:var(--muted)}
+
+  .avail-row{display:flex;flex-wrap:wrap;align-items:center;gap:.6rem;margin-top:.9rem}
+  .clock-badge{font-family:'Space Mono',monospace;font-size:.78rem;background:var(--panel-2);border:1px solid var(--line-strong);border-radius:999px;padding:.35rem .7rem;color:var(--ink)}
+  .avail-note{font-size:.8rem;color:var(--muted)}
+  .contact-actions{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1rem}
+  .contact-actions .btn{font-size:.85rem;padding:.55rem .85rem}
+
+  /* Back to top */
+  #back-to-top{position:fixed;right:1.1rem;bottom:1.1rem;width:44px;height:44px;border-radius:50%;background:var(--accent);color:var(--accent-ink);border:none;font-size:1.1rem;font-weight:800;cursor:pointer;box-shadow:var(--shadow);opacity:0;pointer-events:none;transform:translateY(8px);transition:opacity .2s ease, transform .2s ease;z-index:60}
+  #back-to-top.show{opacity:1;pointer-events:auto;transform:translateY(0)}
+
+  /* Toast */
+  #toast-region{position:fixed;left:1.1rem;bottom:1.1rem;display:flex;flex-direction:column;gap:.5rem;z-index:130}
+  .toast{background:var(--panel-2);border:1px solid var(--line-strong);color:var(--ink);padding:.7rem 1rem;border-radius:10px;box-shadow:var(--shadow);font-size:.85rem;opacity:0;transform:translateY(6px);transition:opacity .25s ease, transform .25s ease}
+  .toast.show{opacity:1;transform:translateY(0)}
+
   footer{padding:2rem 0;color:var(--muted)}
   .foot{display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:1.1rem;font-size:.9rem}
 
@@ -253,10 +349,18 @@
   @keyframes rise{to{opacity:1;transform:translateY(0)}}
 
   ::selection{background:var(--accent);color:var(--accent-ink)}
+
+  @media print{
+    header, footer, #progress-bar, #back-to-top, #toast-region, .hero-actions, .ticker-wrap, .filter-row, .theme-btn, .card .link, .details-toggle, .quick-form { display:none !important; }
+    body{background:#fff;color:#111}
+    .panel, .card, .board, .spotlight, .learn-item, .write-card{box-shadow:none;border:1px solid #ccc}
+    a{text-decoration:underline}
+  }
 </style>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
+<div id="progress-bar" aria-hidden="true"></div>
 
 <header>
   <div class="container nav-wrap">
@@ -273,10 +377,12 @@
     <input type="checkbox" id="nav-toggle" aria-hidden="true" />
 
     <nav class="nav" aria-label="Primary">
-      <a href="#projects">Projects</a>
-      <a href="#skills">Skills</a>
-      <a href="#journey">Journey</a>
-      <a href="#about">About</a>
+      <a href="#projects" data-section="projects">Projects</a>
+      <a href="#skills" data-section="skills">Skills</a>
+      <a href="#journey" data-section="journey">Journey</a>
+      <a href="#learning" data-section="learning">Learning</a>
+      <a href="#writings" data-section="writings">Writings</a>
+      <a href="#about" data-section="about">About</a>
       <button class="icon-btn theme-btn" id="theme-toggle" type="button" aria-label="Switch between day and night theme" title="Toggle day/night theme">◐</button>
       <a href="#contact" class="cta">Contact</a>
     </nav>
@@ -294,6 +400,7 @@
         <div class="hero-actions">
           <a class="btn btn-primary" href="#projects">See the projects</a>
           <a class="btn btn-ghost" href="https://github.com/sahilkavishka" target="_blank" rel="noreferrer noopener">GitHub profile</a>
+          <a class="btn btn-ghost" href="resume.pdf" download>Download résumé</a>
         </div>
       </div>
 
@@ -331,10 +438,10 @@
 
     <div class="container">
       <div class="stats-bar">
-        <div class="stat-cell"><b id="stat-repos">18</b><span>Public repos</span></div>
-        <div class="stat-cell"><b>8</b><span>Featured projects</span></div>
-        <div class="stat-cell"><b>4</b><span>Domains — web, ML, NLP, BI</span></div>
-        <div class="stat-cell"><b>1</b><span>Chrome extension shipped</span></div>
+        <div class="stat-cell"><b id="stat-repos" data-count="18">18</b><span>Public repos</span></div>
+        <div class="stat-cell"><b data-count="8">8</b><span>Featured projects</span></div>
+        <div class="stat-cell"><b data-count="4">4</b><span>Domains — web, ML, NLP, BI</span></div>
+        <div class="stat-cell"><b data-count="1">1</b><span>Chrome extension shipped</span></div>
       </div>
     </div>
   </section>
@@ -342,13 +449,13 @@
   <!-- Projects -->
   <section id="projects">
     <div class="container">
-      <div class="section-head">
+      <div class="section-head reveal-up">
         <h2>Projects</h2>
         <span class="section-tag mono">8 shipped · filter by domain</span>
       </div>
 
       <!-- Featured spotlight -->
-      <div class="spotlight">
+      <div class="spotlight reveal-up">
         <div>
           <span class="spotlight-tag">◆ FLAGSHIP · IN PROGRESS</span>
           <h3>SmartBuild AI — Construction Intelligence Platform</h3>
@@ -361,6 +468,16 @@
           </ul>
           <div class="spotlight-links">
             <a class="btn btn-primary" href="https://github.com/sahilkavishka/smartbuild_ai" target="_blank" rel="noreferrer noopener">View on GitHub</a>
+            <button class="details-toggle" id="spotlight-toggle" type="button" aria-expanded="false" aria-controls="spotlight-details">
+              Challenges &amp; decisions <span class="chevron" aria-hidden="true">▾</span>
+            </button>
+          </div>
+          <div class="details-panel" id="spotlight-details">
+            <div class="details-panel-inner">
+              <p><strong>Why XGBoost over a simpler model:</strong> district-level material costs move non-linearly with distance from Colombo ports and local supply constraints — gradient boosting handled that better than linear regression in testing.</p>
+              <p><strong>Why a rules-based DSR matrix instead of one blended rate:</strong> each bank prices risk differently, so a single "average" feasibility number would hide the deals that are actually financeable.</p>
+              <p><strong>Open question:</strong> keeping the floor-plan computer-vision analyzer accurate across hand-drawn vs. CAD-exported plans is still the hardest part of this build.</p>
+            </div>
           </div>
         </div>
         <div class="spotlight-side">
@@ -379,23 +496,24 @@
         </div>
       </div>
 
-      <div class="filter-row">
-        <div class="tabs" id="tabs" role="tablist" aria-label="Filter projects by domain">
-          <button class="tab active" data-filter="all" type="button">All</button>
-          <button class="tab" data-filter="ai" type="button">AI &amp; ML</button>
-          <button class="tab" data-filter="data" type="button">Data &amp; BI</button>
-          <button class="tab" data-filter="web" type="button">Web</button>
-          <button class="tab" data-filter="nlp" type="button">NLP</button>
+      <div class="filter-row reveal-up">
+        <div class="tabs" id="tabs" role="group" aria-label="Filter projects by domain">
+          <button class="tab" data-filter="all" type="button" aria-pressed="true">All</button>
+          <button class="tab" data-filter="ai" type="button" aria-pressed="false">AI &amp; ML</button>
+          <button class="tab" data-filter="data" type="button" aria-pressed="false">Data &amp; BI</button>
+          <button class="tab" data-filter="web" type="button" aria-pressed="false">Web</button>
+          <button class="tab" data-filter="nlp" type="button" aria-pressed="false">NLP</button>
         </div>
         <div class="search-box">
           <input type="search" id="project-search" placeholder="Search projects…" aria-label="Search projects" />
         </div>
       </div>
+      <p id="filter-status" class="visually-hidden" role="status" aria-live="polite"></p>
 
       <div class="grid-cards" id="project-grid">
-        <article class="card" data-cat="ai web">
+        <article class="card reveal-up" data-cat="ai web" id="proj-sports-tournaments-system">
           <div class="card-top">
-            <h3>Sports Tournaments System</h3>
+            <h3 class="copyable" role="button" tabindex="0" title="Click to copy a link to this project">Sports Tournaments System</h3>
             <span class="pill active">ACTIVE</span>
           </div>
           <p>Role-based platform for organizers, players and spectators — fixtures, live scores, leaderboards, and a match-prediction model exposed over a REST API.</p>
@@ -403,9 +521,9 @@
           <a class="link" href="https://github.com/sahilkavishka?tab=repositories&q=tournament" target="_blank" rel="noreferrer noopener"><span>View on GitHub</span><span aria-hidden="true">↗</span></a>
         </article>
 
-        <article class="card" data-cat="ai nlp">
+        <article class="card reveal-up" data-cat="ai nlp" id="proj-smartphone-review-sentiment-ml-vs-bert">
           <div class="card-top">
-            <h3>Smartphone Review Sentiment: ML vs. BERT</h3>
+            <h3 class="copyable" role="button" tabindex="0" title="Click to copy a link to this project">Smartphone Review Sentiment: ML vs. BERT</h3>
             <span class="pill complete">COMPLETE</span>
           </div>
           <p>End-to-end NLP pipeline comparing traditional ML (Naive Bayes, SVM, Random Forest) against fine-tuned BERT on scraped GSMArena reviews — shipped with a Chrome extension that live-analyzes Daraz.lk product reviews.</p>
@@ -413,9 +531,9 @@
           <a class="link" href="https://github.com/sahilkavishka/mini-NLP-project" target="_blank" rel="noreferrer noopener"><span>View on GitHub</span><span aria-hidden="true">↗</span></a>
         </article>
 
-        <article class="card" data-cat="data">
+        <article class="card reveal-up" data-cat="data" id="proj-sri-lanka-medicine-supply-chain-bi">
           <div class="card-top">
-            <h3>Sri Lanka Medicine Supply Chain BI</h3>
+            <h3 class="copyable" role="button" tabindex="0" title="Click to copy a link to this project">Sri Lanka Medicine Supply Chain BI</h3>
             <span class="pill complete">COMPLETE</span>
           </div>
           <p>Star-schema dataset and Power BI dashboard tracking pharmaceutical imports, USD/LKR swings, and hospital stockout rates from 2020–2026, including the 2022 economic crisis.</p>
@@ -423,9 +541,9 @@
           <a class="link" href="https://github.com/sahilkavishka/SL_Medicine_Supply_Chain" target="_blank" rel="noreferrer noopener"><span>View on GitHub</span><span aria-hidden="true">↗</span></a>
         </article>
 
-        <article class="card" data-cat="data">
+        <article class="card reveal-up" data-cat="data" id="proj-edtech-market-intelligence-pipeline">
           <div class="card-top">
-            <h3>EdTech Market Intelligence Pipeline</h3>
+            <h3 class="copyable" role="button" tabindex="0" title="Click to copy a link to this project">EdTech Market Intelligence Pipeline</h3>
             <span class="pill complete">COMPLETE</span>
           </div>
           <p>Automated data-engineering pipeline over the YouTube Data API v3 analyzing Sri Lanka's EdTech content market — view velocity, channel authority, and engagement rate, feeding a Power BI dashboard.</p>
@@ -433,9 +551,9 @@
           <a class="link" href="https://github.com/sahilkavishka/-EdTech-Analytics" target="_blank" rel="noreferrer noopener"><span>View on GitHub</span><span aria-hidden="true">↗</span></a>
         </article>
 
-        <article class="card" data-cat="data web">
+        <article class="card reveal-up" data-cat="data web" id="proj-math-quiz-analytics-dashboard">
           <div class="card-top">
-            <h3>Math Quiz Analytics Dashboard</h3>
+            <h3 class="copyable" role="button" tabindex="0" title="Click to copy a link to this project">Math Quiz Analytics Dashboard</h3>
             <span class="pill complete">COMPLETE</span>
           </div>
           <p>Educator dashboard for timed quizzes with cohort analysis, skill-gap detection, and a dedicated leaderboard page.</p>
@@ -443,9 +561,9 @@
           <a class="link" href="https://github.com/sahilkavishka?tab=repositories&q=quiz" target="_blank" rel="noreferrer noopener"><span>View on GitHub</span><span aria-hidden="true">↗</span></a>
         </article>
 
-        <article class="card" data-cat="web">
+        <article class="card reveal-up" data-cat="web" id="proj-salon-booking-and-management-system">
           <div class="card-top">
-            <h3>Salon Booking &amp; Management System</h3>
+            <h3 class="copyable" role="button" tabindex="0" title="Click to copy a link to this project">Salon Booking &amp; Management System</h3>
             <span class="pill complete">COMPLETE</span>
           </div>
           <p>Full-stack appointment booking and management system for a salon business, with an admin dashboard and customer-facing scheduling.</p>
@@ -453,9 +571,9 @@
           <a class="link" href="https://github.com/sahilkavishka/salon" target="_blank" rel="noreferrer noopener"><span>View on GitHub</span><span aria-hidden="true">↗</span></a>
         </article>
 
-        <article class="card" data-cat="web">
+        <article class="card reveal-up" data-cat="web" id="proj-portfolio-v2">
           <div class="card-top">
-            <h3>Portfolio v2</h3>
+            <h3 class="copyable" role="button" tabindex="0" title="Click to copy a link to this project">Portfolio v2</h3>
             <span class="pill live">LIVE</span>
           </div>
           <p>This site. Semantic markup, CSS custom properties for theming, a day/night toggle, and a filterable project grid — no framework required.</p>
@@ -463,9 +581,9 @@
           <a class="link" href="https://sahilkavishka.github.io/portfolio/" target="_blank" rel="noreferrer noopener"><span>Open live site</span><span aria-hidden="true">↗</span></a>
         </article>
 
-        <article class="card" data-cat="data">
+        <article class="card reveal-up" data-cat="data" id="proj-sl-sports-analytics">
           <div class="card-top">
-            <h3>SL Sports Analytics</h3>
+            <h3 class="copyable" role="button" tabindex="0" title="Click to copy a link to this project">SL Sports Analytics</h3>
             <span class="pill planning">PLANNING</span>
           </div>
           <p>An open Sri Lankan sports dataset with public prediction models and interactive visualizations — a resource for local sports tech.</p>
@@ -481,11 +599,11 @@
   <!-- Skills -->
   <section id="skills">
     <div class="container">
-      <div class="section-head">
+      <div class="section-head reveal-up">
         <h2>Roster</h2>
         <span class="section-tag mono">tools I start every project with</span>
       </div>
-      <div class="roster">
+      <div class="roster reveal-up">
         <div class="position">
           <h3>Web development</h3>
           <div class="chips">
@@ -522,11 +640,11 @@
   <!-- Journey -->
   <section id="journey">
     <div class="container">
-      <div class="section-head">
+      <div class="section-head reveal-up">
         <h2>Journey</h2>
         <span class="section-tag mono">full-stack dev → data scientist</span>
       </div>
-      <div class="timeline">
+      <div class="timeline reveal-up">
         <div class="tl-item">
           <span class="tl-when">STAGE 1</span>
           <h4>Full-stack foundations</h4>
@@ -551,14 +669,105 @@
     </div>
   </section>
 
+  <!-- Learning & Certifications -->
+  <section id="learning">
+    <div class="container">
+      <div class="section-head reveal-up">
+        <h2>Learning goals &amp; certifications</h2>
+        <span class="section-tag mono">what I'm working toward right now</span>
+      </div>
+      <div class="learn-grid reveal-up">
+        <div class="learn-item">
+          <div class="learn-top">
+            <h3>AWS Certified Machine Learning – Specialty</h3>
+            <span class="pill progress">IN PROGRESS</span>
+          </div>
+          <p>Studying toward this alongside SmartBuild AI's forecasting work, so the exam prep and the project reinforce each other.</p>
+          <div class="progress-track" role="progressbar" aria-label="AWS ML Specialty progress" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"><div class="progress-fill" style="width:40%"></div></div>
+        </div>
+        <div class="learn-item">
+          <div class="learn-top">
+            <h3>Google Data Analytics Professional Certificate</h3>
+            <span class="pill soon">PLANNED</span>
+          </div>
+          <p>Queued up next to formalize the BI/analytics side of my work — dashboards and SQL I already use daily, structured into a credential.</p>
+          <div class="progress-track" role="progressbar" aria-label="Google Data Analytics progress" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"><div class="progress-fill" style="width:10%"></div></div>
+        </div>
+        <div class="learn-item">
+          <div class="learn-top">
+            <h3>Kaggle competition — top 20%</h3>
+            <span class="pill progress">ONGOING</span>
+          </div>
+          <p>Entering tabular and NLP competitions to stress-test modeling decisions outside of client and personal projects.</p>
+          <div class="progress-track" role="progressbar" aria-label="Kaggle competition goal progress" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><div class="progress-fill" style="width:25%"></div></div>
+        </div>
+        <div class="learn-item">
+          <div class="learn-top">
+            <h3>Open-source contributions</h3>
+            <span class="pill progress">ONGOING</span>
+          </div>
+          <p>Looking for meaningful issues in Python data-tooling repos rather than drive-by pull requests.</p>
+          <div class="progress-track" role="progressbar" aria-label="Open source contribution goal progress" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"><div class="progress-fill" style="width:15%"></div></div>
+        </div>
+        <div class="learn-item">
+          <div class="learn-top">
+            <h3>Sri Lankan sports analytics dataset</h3>
+            <span class="pill soon">PLANNED</span>
+          </div>
+          <p>Public dataset and models — a resource for local sports tech. See "SL Sports Analytics" in Projects.</p>
+          <div class="progress-track" role="progressbar" aria-label="Sports analytics dataset progress" aria-valuenow="5" aria-valuemin="0" aria-valuemax="100"><div class="progress-fill" style="width:5%"></div></div>
+        </div>
+        <div class="learn-item">
+          <div class="learn-top">
+            <h3>Real-time features via WebSockets</h3>
+            <span class="pill progress">IN PROGRESS</span>
+          </div>
+          <p>Adding live score/fixture updates to the Sports Tournaments System without a full page refresh.</p>
+          <div class="progress-track" role="progressbar" aria-label="WebSocket feature progress" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"><div class="progress-fill" style="width:30%"></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Writings -->
+  <section id="writings">
+    <div class="container">
+      <div class="section-head reveal-up">
+        <h2>Writings</h2>
+        <span class="section-tag mono">notes on decisions, not just demos</span>
+      </div>
+      <div class="writings-grid reveal-up">
+        <article class="write-card">
+          <span class="pill soon" style="width:fit-content">COMING SOON</span>
+          <h3>Building SmartBuild AI: what agentic actually means in a construction estimator</h3>
+          <p>Why the finance engine and the AI consultant are separate services instead of one big prompt — and what broke when I first tried it the other way.</p>
+        </article>
+        <article class="write-card">
+          <span class="pill soon" style="width:fit-content">COMING SOON</span>
+          <h3>Classic ML vs. BERT for sentiment: what actually moved the needle</h3>
+          <p>A practical comparison from the smartphone review project — where fine-tuned BERT earned its extra latency, and where a Random Forest was good enough.</p>
+        </article>
+        <article class="write-card">
+          <span class="pill soon" style="width:fit-content">COMING SOON</span>
+          <h3>Turning import data into a dashboard someone will actually use</h3>
+          <p>Notes from the medicine supply chain BI project on designing a star schema for a dashboard that has to survive a hospital planner's first five clicks.</p>
+        </article>
+      </div>
+      <div class="writings-cta">
+        <span>Want a note when the first one's up?</span>
+        <a class="btn btn-ghost" id="notify-me" href="mailto:sahilkavishka428@gmail.com?subject=Notify%20me%20about%20new%20writing">Get notified by email</a>
+      </div>
+    </div>
+  </section>
+
   <!-- About -->
   <section id="about">
     <div class="container">
-      <div class="section-head">
+      <div class="section-head reveal-up">
         <h2>About</h2>
         <span class="section-tag mono">the person behind the repos</span>
       </div>
-      <div class="about-grid">
+      <div class="about-grid reveal-up">
         <div class="panel">
           <h3>Hi, I'm Sahil</h3>
           <p>I'm a developer and data scientist from Anuradhapura, Sri Lanka. My work sits where full-stack engineering meets data science: platforms that need to feel fast and clean, plus the pipelines and models that make them useful — predicting a match outcome instead of just displaying a score, or turning a pile of import data into a BI dashboard a hospital planner could actually use.</p>
@@ -567,15 +776,15 @@
         <div class="panel">
           <h3>Quick facts</h3>
           <div class="statline">
-            <div class="stat"><b>🏐</b><span>Volleyball fan</span></div>
-            <div class="stat"><b>18</b><span>Public repos</span></div>
-            <div class="stat"><b>🇱🇰</b><span>Anuradhapura, LK</span></div>
+            <div class="stat"><b data-count="18">18</b><span>Public repos</span></div>
+            <div class="stat"><b>GMT+5:30</b><span>Timezone</span></div>
+            <div class="stat"><b>&lt;24h</b><span>Avg. reply time</span></div>
           </div>
           <p style="margin-top:1rem;font-size:.92rem;color:var(--muted)">Goal for this year: ship three end-to-end ML projects to production and publish a write-up on each — see the scrolling ticker up top for the full list.</p>
         </div>
       </div>
 
-      <div class="panel" style="margin-top:1.1rem">
+      <div class="panel reveal-up" style="margin-top:1.1rem">
         <h3>GitHub activity</h3>
         <p style="margin:0 0 .2rem;font-size:.92rem;color:var(--muted)">Live stats, pulled straight from GitHub.</p>
         <div class="stats-imgs">
@@ -589,14 +798,23 @@
   <!-- Contact -->
   <section id="contact">
     <div class="container">
-      <div class="section-head">
+      <div class="section-head reveal-up">
         <h2>Contact</h2>
         <span class="section-tag mono">let's build something together</span>
       </div>
-      <div class="contact-grid">
+      <div class="contact-grid reveal-up">
         <div class="panel">
           <h3>Get in touch</h3>
           <p style="color:var(--muted);margin:0">Open to freelance work and meaningful collaborations. Email is the fastest way to reach me.</p>
+          <div class="avail-row">
+            <span class="clock-badge" id="local-clock">Local time: —</span>
+            <span class="avail-note">Usually replies within 24 hours</span>
+          </div>
+          <div class="contact-actions">
+            <a class="btn btn-ghost" href="resume.pdf" download>Download résumé</a>
+            <button class="btn btn-ghost" id="print-page" type="button">Print / Save as PDF</button>
+            <button class="btn btn-ghost" id="copy-page-link" type="button">Copy portfolio link</button>
+          </div>
           <div class="copy-row">
             <code id="email-text">sahilkavishka428@gmail.com</code>
             <button class="copy-btn" id="copy-email" type="button">Copy email</button>
@@ -607,6 +825,23 @@
             <a href="https://www.linkedin.com/in/sahil-kavishka-439b07369/" target="_blank" rel="noreferrer noopener"><span>LinkedIn</span><span class="k">sahil-kavishka</span></a>
             <a href="https://sahilkavishka.github.io/portfolio/" target="_blank" rel="noreferrer noopener"><span>Live site</span><span class="k">sahilkavishka.github.io</span></a>
           </div>
+        </div>
+
+        <div class="panel">
+          <h3>Quick message</h3>
+          <p style="color:var(--muted);margin:0;font-size:.92rem">Fill this in and it opens a pre-filled email in your mail app — nothing is sent from this page.</p>
+          <form class="quick-form" id="quick-contact-form">
+            <div class="field">
+              <label for="qc-name">Your name</label>
+              <input id="qc-name" name="name" type="text" required autocomplete="name" />
+            </div>
+            <div class="field">
+              <label for="qc-message">Message</label>
+              <textarea id="qc-message" name="message" rows="4" required></textarea>
+            </div>
+            <button class="btn btn-primary" type="submit">Open email to send</button>
+            <span class="form-note">Opens: <span id="qc-preview-to">sahilkavishka428@gmail.com</span></span>
+          </form>
         </div>
       </div>
     </div>
@@ -620,7 +855,12 @@
   </div>
 </footer>
 
+<button id="back-to-top" type="button" aria-label="Back to top">↑</button>
+<div id="toast-region" aria-live="polite" aria-atomic="true"></div>
+
 <script>
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
   // Footer year
   document.getElementById('year').textContent = new Date().getFullYear();
 
@@ -629,17 +869,38 @@
   document.querySelectorAll('.nav a').forEach(link=>{
     link.addEventListener('click', ()=>{ if(navToggle) navToggle.checked = false; });
   });
+  document.addEventListener('keydown', (e)=>{
+    if(e.key === 'Escape' && navToggle) navToggle.checked = false;
+  });
 
-  // Day/night theme toggle, persisted
+  // Day/night theme toggle, persisted, with system-preference fallback
   const root = document.documentElement;
   const themeBtn = document.getElementById('theme-toggle');
   const saved = localStorage.getItem('sk-theme');
-  if(saved === 'day'){ root.setAttribute('data-theme','day'); themeBtn.textContent = '◑'; }
+  if(saved === 'day'){
+    root.setAttribute('data-theme','day'); themeBtn.textContent = '◑';
+  } else if(!saved && window.matchMedia('(prefers-color-scheme: light)').matches){
+    root.setAttribute('data-theme','day'); themeBtn.textContent = '◑';
+  }
   themeBtn.addEventListener('click', ()=>{
     const isDay = root.getAttribute('data-theme') === 'day';
     if(isDay){ root.removeAttribute('data-theme'); localStorage.setItem('sk-theme','night'); themeBtn.textContent = '◐'; }
     else { root.setAttribute('data-theme','day'); localStorage.setItem('sk-theme','day'); themeBtn.textContent = '◑'; }
   });
+
+  // Toast helper
+  const toastRegion = document.getElementById('toast-region');
+  function showToast(message){
+    const el = document.createElement('div');
+    el.className = 'toast';
+    el.textContent = message;
+    toastRegion.appendChild(el);
+    requestAnimationFrame(()=> el.classList.add('show'));
+    setTimeout(()=>{
+      el.classList.remove('show');
+      setTimeout(()=> el.remove(), 300);
+    }, 2600);
+  }
 
   // Copy email
   const copyBtn = document.getElementById('copy-email');
@@ -648,23 +909,139 @@
       await navigator.clipboard.writeText('sahilkavishka428@gmail.com');
       copyBtn.textContent = 'Copied!';
       copyBtn.classList.add('copied');
+      showToast('Email copied to clipboard');
       setTimeout(()=>{ copyBtn.textContent = 'Copy email'; copyBtn.classList.remove('copied'); }, 1800);
     }catch(e){
       copyBtn.textContent = 'Ctrl/Cmd+C to copy';
     }
   });
 
-  // One orchestrated hero entrance
-  requestAnimationFrame(()=>{
-    document.getElementById('hero-copy').classList.add('in');
-    setTimeout(()=> document.getElementById('hero-board').classList.add('in'), 120);
+  // Quick contact form -> mailto
+  const qcForm = document.getElementById('quick-contact-form');
+  qcForm.addEventListener('submit', (e)=>{
+    e.preventDefault();
+    const name = document.getElementById('qc-name').value.trim();
+    const message = document.getElementById('qc-message').value.trim();
+    if(!name || !message) return;
+    const subject = encodeURIComponent('Portfolio contact from ' + name);
+    const body = encodeURIComponent(message + '\n\n— ' + name);
+    window.location.href = `mailto:sahilkavishka428@gmail.com?subject=${subject}&body=${body}`;
+    showToast('Opening your email app…');
   });
 
-  // Project filter tabs + search
-  const tabs = document.querySelectorAll('.tab');
+  // Scroll progress bar
+  const progressBar = document.getElementById('progress-bar');
+  function updateProgress(){
+    const h = document.documentElement;
+    const scrolled = h.scrollTop;
+    const height = h.scrollHeight - h.clientHeight;
+    progressBar.style.width = height > 0 ? (scrolled / height * 100) + '%' : '0%';
+  }
+
+  // Back to top button
+  const backToTop = document.getElementById('back-to-top');
+  function updateBackToTop(){
+    backToTop.classList.toggle('show', window.scrollY > 600);
+  }
+  backToTop.addEventListener('click', ()=>{
+    window.scrollTo({ top: 0, behavior: prefersReducedMotion ? 'auto' : 'smooth' });
+  });
+
+  let scrollTicking = false;
+  window.addEventListener('scroll', ()=>{
+    if(!scrollTicking){
+      requestAnimationFrame(()=>{
+        updateProgress();
+        updateBackToTop();
+        scrollTicking = false;
+      });
+      scrollTicking = true;
+    }
+  });
+  updateProgress();
+  updateBackToTop();
+
+  // Scroll-spy active nav link
+  const navLinks = Array.from(document.querySelectorAll('.nav a[data-section]'));
+  const spySections = navLinks
+    .map(l => document.getElementById(l.dataset.section))
+    .filter(Boolean);
+  if('IntersectionObserver' in window && spySections.length){
+    const spyObserver = new IntersectionObserver((entries)=>{
+      entries.forEach(entry=>{
+        const link = navLinks.find(l => l.dataset.section === entry.target.id);
+        if(!link) return;
+        if(entry.isIntersecting){
+          navLinks.forEach(l => l.classList.remove('active-link'));
+          link.classList.add('active-link');
+        }
+      });
+    }, { rootMargin: '-40% 0px -50% 0px', threshold: 0 });
+    spySections.forEach(s => spyObserver.observe(s));
+  }
+
+  // Reveal-on-scroll for sections/cards
+  const revealEls = document.querySelectorAll('.reveal-up');
+  if('IntersectionObserver' in window && revealEls.length){
+    const revealObserver = new IntersectionObserver((entries)=>{
+      entries.forEach(entry=>{
+        if(entry.isIntersecting){
+          entry.target.classList.add('in');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    revealEls.forEach(el => revealObserver.observe(el));
+  } else {
+    revealEls.forEach(el => el.classList.add('in'));
+  }
+
+  // Animated counters
+  function animateCount(el){
+    const target = parseInt(el.dataset.count, 10);
+    if(isNaN(target)) return;
+    if(prefersReducedMotion){ el.textContent = target; return; }
+    const duration = 900;
+    const start = performance.now();
+    el.textContent = '0';
+    function step(now){
+      const p = Math.min((now - start) / duration, 1);
+      el.textContent = Math.round(target * p);
+      if(p < 1) requestAnimationFrame(step);
+      else el.textContent = target;
+    }
+    requestAnimationFrame(step);
+  }
+  const countEls = document.querySelectorAll('[data-count]');
+  if('IntersectionObserver' in window && countEls.length){
+    const countObserver = new IntersectionObserver((entries)=>{
+      entries.forEach(entry=>{
+        if(entry.isIntersecting){
+          animateCount(entry.target);
+          countObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.4 });
+    countEls.forEach(el => countObserver.observe(el));
+  } else {
+    countEls.forEach(el => { el.textContent = el.dataset.count; });
+  }
+
+  // Spotlight details toggle
+  const spotlightToggle = document.getElementById('spotlight-toggle');
+  const spotlightDetails = document.getElementById('spotlight-details');
+  spotlightToggle.addEventListener('click', ()=>{
+    const expanded = spotlightToggle.getAttribute('aria-expanded') === 'true';
+    spotlightToggle.setAttribute('aria-expanded', String(!expanded));
+    spotlightDetails.classList.toggle('open', !expanded);
+  });
+
+  // Project filter tabs + search (accessible toolbar pattern, keyboard-navigable)
+  const tabs = Array.from(document.querySelectorAll('.tab'));
   const cards = document.querySelectorAll('#project-grid .card');
   const searchInput = document.getElementById('project-search');
   const noResults = document.getElementById('no-results');
+  const filterStatus = document.getElementById('filter-status');
   let activeFilter = 'all';
 
   function applyFilters(){
@@ -680,17 +1057,124 @@
       if(show) visible++;
     });
     noResults.classList.toggle('show', visible === 0);
+    filterStatus.textContent = visible === 0
+      ? 'No projects match that filter.'
+      : `Showing ${visible} project${visible === 1 ? '' : 's'}.`;
   }
 
-  tabs.forEach(tab=>{
+  tabs.forEach((tab, i)=>{
     tab.addEventListener('click', ()=>{
-      tabs.forEach(t=>t.classList.remove('active'));
-      tab.classList.add('active');
+      tabs.forEach(t=>t.setAttribute('aria-pressed','false'));
+      tab.setAttribute('aria-pressed','true');
       activeFilter = tab.dataset.filter;
       applyFilters();
     });
+    tab.addEventListener('keydown', (e)=>{
+      let nextIndex = null;
+      if(e.key === 'ArrowRight') nextIndex = (i + 1) % tabs.length;
+      if(e.key === 'ArrowLeft') nextIndex = (i - 1 + tabs.length) % tabs.length;
+      if(e.key === 'Home') nextIndex = 0;
+      if(e.key === 'End') nextIndex = tabs.length - 1;
+      if(nextIndex !== null){
+        e.preventDefault();
+        tabs[nextIndex].focus();
+        tabs[nextIndex].click();
+      }
+    });
   });
   searchInput.addEventListener('input', applyFilters);
+  applyFilters();
+
+  // One orchestrated hero entrance
+  requestAnimationFrame(()=>{
+    document.getElementById('hero-copy').classList.add('in');
+    setTimeout(()=> document.getElementById('hero-board').classList.add('in'), 120);
+  });
+
+  // Live local clock (Anuradhapura, Sri Lanka)
+  const clockEl = document.getElementById('local-clock');
+  function updateClock(){
+    if(!clockEl) return;
+    try{
+      const fmt = new Intl.DateTimeFormat('en-US', {
+        timeZone: 'Asia/Colombo', hour: 'numeric', minute: '2-digit', hour12: true
+      });
+      clockEl.textContent = `Local time: ${fmt.format(new Date())} (GMT+5:30)`;
+    }catch(e){ /* leave placeholder */ }
+  }
+  updateClock();
+  setInterval(updateClock, 30000);
+
+  // Print / Save as PDF
+  const printBtn = document.getElementById('print-page');
+  if(printBtn) printBtn.addEventListener('click', ()=> window.print());
+
+  // Copy portfolio link
+  const copyPageBtn = document.getElementById('copy-page-link');
+  if(copyPageBtn){
+    copyPageBtn.addEventListener('click', async ()=>{
+      try{
+        await navigator.clipboard.writeText('https://sahilkavishka.github.io/portfolio/');
+        showToast('Portfolio link copied');
+      }catch(e){
+        showToast('Copy this page\'s URL from your address bar');
+      }
+    });
+  }
+
+  // Per-project deep links: click a project title to copy a shareable link
+  document.querySelectorAll('.card-top h3.copyable').forEach(h3=>{
+    const card = h3.closest('.card');
+    if(!card || !card.id) return;
+    function copyCardLink(){
+      const url = `${location.origin}${location.pathname}#${card.id}`;
+      history.replaceState(null, '', `#${card.id}`);
+      navigator.clipboard.writeText(url).then(()=>{
+        showToast('Link copied — share this project directly');
+      }).catch(()=>{
+        showToast(`Link: #${card.id}`);
+      });
+    }
+    h3.addEventListener('click', copyCardLink);
+    h3.addEventListener('keydown', (e)=>{
+      if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); copyCardLink(); }
+    });
+  });
+
+  // Highlight a project card if the page was opened with a #proj-... hash
+  function highlightFromHash(){
+    const id = location.hash.replace('#','');
+    if(!id) return;
+    const target = document.getElementById(id);
+    if(!target || !target.classList.contains('card')) return;
+    // Make sure it's visible regardless of active filter
+    tabs.forEach(t=>t.setAttribute('aria-pressed', t.dataset.filter === 'all' ? 'true' : 'false'));
+    activeFilter = 'all';
+    searchInput.value = '';
+    applyFilters();
+    setTimeout(()=>{
+      target.scrollIntoView({ behavior: prefersReducedMotion ? 'auto' : 'smooth', block: 'center' });
+      target.classList.add('pulse');
+      setTimeout(()=> target.classList.remove('pulse'), 2200);
+    }, 50);
+  }
+  highlightFromHash();
+  window.addEventListener('hashchange', highlightFromHash);
+
+  // Keyboard shortcut: "/" focuses project search, Escape clears it
+  document.addEventListener('keydown', (e)=>{
+    const tag = (document.activeElement && document.activeElement.tagName) || '';
+    const isTyping = tag === 'INPUT' || tag === 'TEXTAREA';
+    if(e.key === '/' && !isTyping){
+      e.preventDefault();
+      searchInput.focus();
+    }
+    if(e.key === 'Escape' && document.activeElement === searchInput){
+      searchInput.value = '';
+      applyFilters();
+      searchInput.blur();
+    }
+  });
 
   // Live-ish repo count from GitHub API (visitor's own browser, graceful fallback)
   fetch('https://api.github.com/users/sahilkavishka')
