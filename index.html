@@ -261,6 +261,7 @@
   .pill.planning{color:var(--muted);border-color:var(--line-strong);border-style:dashed}
   .pill.progress{background:color-mix(in srgb, var(--accent) 14%, transparent);color:var(--accent-2);border-color:color-mix(in srgb, var(--accent) 35%, transparent);border-style:dashed}
   .pill.soon{color:var(--muted);border-color:var(--line-strong);border-style:dotted}
+  .pill.collab{background:color-mix(in srgb, #8b6bff 24%, transparent);color:#c4b5fd;border-color:color-mix(in srgb, #8b6bff 55%, transparent);font-weight:700}
 
   .card p{margin:.4rem 0 0;padding:0 1.1rem;color:var(--muted);font-size:.9rem}
   .card .stack{display:flex;flex-wrap:wrap;gap:.4rem;padding:.9rem 1.1rem}
@@ -605,11 +606,12 @@
 
       <div class="filter-row reveal-up">
         <div class="tabs" id="tabs" role="group" aria-label="Filter projects by domain">
-          <button class="tab" data-filter="all" type="button" aria-pressed="true">All <span class="tab-count">8</span></button>
-          <button class="tab" data-filter="ai" type="button" aria-pressed="false">AI &amp; ML <span class="tab-count">2</span></button>
-          <button class="tab" data-filter="data" type="button" aria-pressed="false">Data &amp; BI <span class="tab-count">4</span></button>
+          <button class="tab" data-filter="all" type="button" aria-pressed="true">All <span class="tab-count">10</span></button>
+          <button class="tab" data-filter="ai" type="button" aria-pressed="false">AI &amp; ML <span class="tab-count">4</span></button>
+          <button class="tab" data-filter="data" type="button" aria-pressed="false">Data &amp; BI <span class="tab-count">5</span></button>
           <button class="tab" data-filter="web" type="button" aria-pressed="false">Web <span class="tab-count">4</span></button>
-          <button class="tab" data-filter="nlp" type="button" aria-pressed="false">NLP <span class="tab-count">1</span></button>
+          <button class="tab" data-filter="nlp" type="button" aria-pressed="false">NLP <span class="tab-count">2</span></button>
+          <button class="tab" data-filter="collab" type="button" aria-pressed="false">Team Collab <span class="tab-count">2</span></button>
         </div>
         <div class="search-box">
           <input type="search" id="project-search" placeholder="Search projects… ( / )" aria-label="Search projects" />
@@ -618,6 +620,44 @@
       <p id="filter-status" class="visually-hidden" role="status" aria-live="polite"></p>
 
       <div class="grid-cards" id="project-grid">
+        <article class="card reveal-up" data-cat="ai nlp collab" id="proj-codexsabra-resoveai">
+          <div class="card-top">
+            <h3 class="copyable" role="button" tabindex="0" title="Click to copy a link to this project">codeXsabra — ResoveAI</h3>
+            <span class="pill collab">COLLABORATIVE</span>
+          </div>
+          <p>AI-powered telecom customer query triage and resolution platform engineered during the Hutch AI hackathon with NLP categorization, priority scoring and automated FastAPI routing.</p>
+          <div class="stack"><span>NLP</span><span>FastAPI</span><span>PyTorch</span><span>Scikit-Learn</span><span>Hutch AI</span></div>
+          <div class="card-actions">
+            <a class="link" href="https://github.com/kavishanimsara/codeXsabra-ResoveAI" target="_blank" rel="noreferrer noopener"><span>View Shared Repo</span><span aria-hidden="true">↗</span></a>
+            <button class="details-toggle" type="button" aria-expanded="false" aria-controls="details-resoveai">Details <span class="chevron" aria-hidden="true">▾</span></button>
+          </div>
+          <div class="details-panel" id="details-resoveai">
+            <div class="details-panel-inner">
+              <p><strong>Team collaboration:</strong> Engineered with a collaborative hackathon team to address telecom support ticket bottlenecks.</p>
+              <p><strong>My contribution:</strong> Led the NLP classification engine, text preprocessing pipelines, and FastAPI inference microservice integration.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="card reveal-up" data-cat="ai data collab" id="proj-aws-churn-predictor">
+          <div class="card-top">
+            <h3 class="copyable" role="button" tabindex="0" title="Click to copy a link to this project">AWS Customer Churn Predictor</h3>
+            <span class="pill collab">COLLABORATIVE</span>
+          </div>
+          <p>Cloud-integrated customer churn prediction engine utilizing advanced feature engineering, tree-based ensemble models, and AWS deployment pipelines.</p>
+          <div class="stack"><span>AWS</span><span>Python</span><span>XGBoost</span><span>Flask</span><span>Scikit-Learn</span></div>
+          <div class="card-actions">
+            <a class="link" href="https://github.com/Dilharajay/churn_predictor" target="_blank" rel="noreferrer noopener"><span>View Shared Repo</span><span aria-hidden="true">↗</span></a>
+            <button class="details-toggle" type="button" aria-expanded="false" aria-controls="details-churn">Details <span class="chevron" aria-hidden="true">▾</span></button>
+          </div>
+          <div class="details-panel" id="details-churn">
+            <div class="details-panel-inner">
+              <p><strong>Team collaboration:</strong> Collaborative cloud-native data science project designed for scalable predictive analytics.</p>
+              <p><strong>My contribution:</strong> Feature engineering, model evaluation with XGBoost &amp; Random Forest, and cloud-ready data pipelines.</p>
+            </div>
+          </div>
+        </article>
+
         <article class="card reveal-up" data-cat="ai web" id="proj-sports-tournaments-system">
           <div class="card-top">
             <h3 class="copyable" role="button" tabindex="0" title="Click to copy a link to this project">Sports Tournaments System</h3>
