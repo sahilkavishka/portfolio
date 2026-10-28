@@ -1,0 +1,1869 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Sahil Kavishka — Full-Stack Developer &amp; Data Scientist</title>
+<meta name="description" content="Sahil Kavishka builds full-stack platforms, ML pipelines, and BI dashboards — from a sports prediction engine to an AI construction estimator. Based in Anuradhapura, Sri Lanka." />
+<meta name="theme-color" content="#050912" />
+<link rel="canonical" href="https://sahilkavishka.github.io/portfolio/" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23081020'/%3E%3Ctext x='32' y='43' font-family='Arial,sans-serif' font-weight='800' font-size='26' fill='%233d7fff' text-anchor='middle'%3ESK%3C/text%3E%3C/svg%3E" />
+
+<!-- Social / Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Sahil Kavishka — Full-Stack Developer & Data Scientist" />
+<meta property="og:description" content="Full-stack platforms, ML pipelines, and BI dashboards — from a sports prediction engine to an AI construction estimator." />
+<meta property="og:url" content="https://sahilkavishka.github.io/portfolio/" />
+<meta property="og:image" content="https://avatars.githubusercontent.com/u/184890150?v=4" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Sahil Kavishka — Full-Stack Developer & Data Scientist" />
+<meta name="twitter:description" content="Full-stack platforms, ML pipelines, and BI dashboards, built from Anuradhapura, Sri Lanka." />
+<meta name="twitter:image" content="https://avatars.githubusercontent.com/u/184890150?v=4" />
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Sahil Kavishka",
+  "url": "https://sahilkavishka.github.io/portfolio/",
+  "image": "https://avatars.githubusercontent.com/u/184890150?v=4",
+  "jobTitle": "Full-Stack Developer & Data Scientist",
+  "address": { "@type": "PostalAddress", "addressLocality": "Anuradhapura", "addressCountry": "LK" },
+  "sameAs": [
+    "https://github.com/sahilkavishka",
+    "https://www.linkedin.com/in/sahilkavishka/"
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    color-scheme: dark;
+    --bg:#050912;
+    --bg-2:#070d1a;
+    --panel:#0d1526;
+    --panel-2:#111b30;
+    --ink:#e9eefb;
+    --muted:#7f92b8;
+    --accent:#3d7fff;
+    --accent-ink:#03091a;
+    --accent-2:#5fd0ff;
+    --accent-3:#8b6bff;
+    --danger:#ff6b6b;
+    --line:rgba(233,238,251,.09);
+    --line-strong:rgba(233,238,251,.17);
+    --shadow:0 18px 44px rgba(2,6,16,.55);
+    --radius:18px;
+    --radius-sm:10px;
+  }
+  [data-theme="day"]{
+    color-scheme: light;
+    --bg:#eef3fc;
+    --bg-2:#e7eefb;
+    --panel:#ffffff;
+    --panel-2:#f5f8ff;
+    --ink:#0b1730;
+    --muted:#4b5d80;
+    --accent:#1a56db;
+    --accent-ink:#f4f8ff;
+    --accent-2:#0891b2;
+    --accent-3:#6d4fe0;
+    --line:rgba(11,23,48,.09);
+    --line-strong:rgba(11,23,48,.18);
+    --shadow:0 16px 34px rgba(20,40,80,.10);
+  }
+
+  *,*::before,*::after{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto}
+    *,*::before,*::after{animation-duration:.001ms !important;animation-iteration-count:1 !important;transition-duration:.001ms !important;}
+  }
+  body{
+    margin:0;
+    font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Arial,sans-serif;
+    background:
+      radial-gradient(1000px 620px at 8% -10%, color-mix(in srgb, var(--accent-3) 14%, transparent), transparent 60%),
+      radial-gradient(900px 560px at 96% 0%, color-mix(in srgb, var(--accent) 16%, transparent), transparent 55%),
+      radial-gradient(700px 460px at 50% 110%, color-mix(in srgb, var(--accent-2) 8%, transparent), transparent 60%),
+      var(--bg);
+    color:var(--ink);
+    line-height:1.6;
+    transition:background-color .3s ease, color .3s ease;
+  }
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;height:auto;display:block}
+  .container{max-width:1160px;margin-inline:auto;padding:0 1.25rem}
+  .mono{font-family:'Space Mono',ui-monospace,SFMono-Regular,Menlo,monospace}
+  .display{font-family:'Barlow Condensed',Inter,sans-serif;font-weight:800;letter-spacing:.2px}
+  button{font-family:inherit}
+
+  .skip{position:absolute;left:-9999px;top:auto}
+  .skip:focus{left:1rem;top:1rem;z-index:200;background:var(--accent);color:var(--accent-ink);padding:.6rem .9rem;border-radius:8px;font-weight:700}
+  :focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+  .visually-hidden{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+
+  /* Scroll progress bar */
+  #progress-bar{position:fixed;top:0;left:0;height:3px;width:0%;background:linear-gradient(90deg,var(--accent),var(--accent-2));z-index:120;transition:width .1s linear}
+
+  /* Header */
+  header{position:sticky;top:0;z-index:50;background:color-mix(in srgb, var(--bg) 82%, transparent);backdrop-filter:saturate(160%) blur(10px);border-bottom:1px solid var(--line)}
+  .nav-wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.8rem 0}
+  .brand{display:flex;align-items:center;gap:.7rem;font-weight:700}
+  .avatar{width:40px;height:40px;border-radius:9px;object-fit:cover;border:1px solid var(--line-strong)}
+  .brand-name{display:flex;flex-direction:column;line-height:1.15}
+  .brand-name strong{font-size:1rem}
+  .brand-name span{font-size:.72rem;color:var(--muted);letter-spacing:.03em}
+
+  #nav-toggle{display:none}
+  .nav{display:flex;gap:.3rem;align-items:center}
+  .nav a:not(.cta):not(.icon-btn){padding:.5rem .8rem;border-radius:999px;color:var(--muted);font-weight:600;font-size:.94rem;transition:color .15s ease, background-color .15s ease}
+  .nav a:not(.cta):not(.icon-btn):hover{color:var(--ink);background:var(--line)}
+  .nav a.active-link{color:var(--ink);background:var(--line)}
+  .cta{background:var(--accent);color:var(--accent-ink);padding:.55rem .95rem;border-radius:10px;font-weight:700;font-size:.94rem;box-shadow:var(--shadow)}
+  .cta:hover{filter:brightness(1.08)}
+
+  .icon-btn{display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;border-radius:10px;border:1px solid var(--line-strong);background:var(--panel);cursor:pointer;color:var(--ink);font-size:.95rem}
+  .icon-btn:hover{background:var(--panel-2)}
+  .kbd-btn{display:inline-flex;align-items:center;gap:.4rem;height:38px;padding:0 .7rem;border-radius:10px;border:1px solid var(--line-strong);background:var(--panel);cursor:pointer;color:var(--muted);font-size:.82rem}
+  .kbd-btn:hover{background:var(--panel-2);color:var(--ink)}
+  .kbd-btn kbd{font-family:'Space Mono',monospace;background:var(--panel-2);border:1px solid var(--line-strong);border-radius:5px;padding:.1rem .35rem;font-size:.72rem;color:var(--ink)}
+
+  .hamb{display:none;cursor:pointer;border:1px solid var(--line-strong);padding:.5rem .65rem;border-radius:10px;background:var(--panel)}
+  .hamb span{display:block;width:20px;height:2px;background:var(--ink);margin:4px 0;border-radius:2px}
+
+  @media (max-width: 980px){
+    .kbd-btn{display:none}
+  }
+  @media (max-width: 860px){
+    .nav{position:fixed;inset:64px 1rem auto 1rem;flex-direction:column;align-items:stretch;background:var(--panel);padding:.8rem;border-radius:14px;border:1px solid var(--line-strong);box-shadow:var(--shadow);display:none;gap:.25rem;max-height:calc(100vh - 90px);overflow:auto}
+    .hamb{display:block}
+    #nav-toggle:checked ~ .nav{display:flex}
+    .nav a:not(.icon-btn){text-align:center}
+    .cta{width:100%;text-align:center}
+    .theme-btn{align-self:center}
+  }
+
+  /* Hero */
+  .hero{padding:4rem 0 0}
+  .hero-inner{display:grid;grid-template-columns:1.15fr .85fr;gap:2.2rem;align-items:stretch}
+  @media (max-width:900px){.hero-inner{grid-template-columns:1fr}}
+
+  .status{display:inline-flex;align-items:center;gap:.5rem;padding:.4rem .7rem;border-radius:999px;border:1px solid var(--line-strong);background:var(--panel);color:var(--muted);font-weight:600;font-size:.85rem}
+  .status .dot{width:7px;height:7px;border-radius:999px;background:var(--accent-2);box-shadow:0 0 0 3px color-mix(in srgb, var(--accent-2) 30%, transparent)}
+  .status .dot.live{animation:pulse 1.8s ease-in-out infinite}
+  @keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
+
+  h1{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:clamp(2.3rem,5.6vw,3.9rem);line-height:1.02;margin:.9rem 0 .8rem;letter-spacing:.2px}
+  .lead{font-size:clamp(1rem,2vw,1.12rem);color:var(--muted);max-width:56ch}
+
+  .hero-actions{display:flex;gap:.7rem;flex-wrap:wrap;margin-top:1.4rem}
+  .btn{display:inline-flex;align-items:center;gap:.5rem;padding:.7rem 1.1rem;border-radius:11px;font-weight:700;font-size:.95rem;border:1px solid transparent;cursor:pointer}
+  .btn-primary{background:var(--accent);color:var(--accent-ink);box-shadow:var(--shadow)}
+  .btn-primary:hover{filter:brightness(1.08)}
+  .btn-ghost{border-color:var(--line-strong);color:var(--ink);background:transparent}
+  .btn-ghost:hover{background:var(--panel)}
+  .btn:disabled{opacity:.5;cursor:not-allowed}
+
+  /* Scoreboard card */
+  .board{background:linear-gradient(180deg,var(--panel),var(--panel-2));border:1px solid var(--line-strong);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden;display:flex;flex-direction:column}
+  .board-head{display:flex;justify-content:space-between;align-items:center;padding:.85rem 1.1rem;border-bottom:1px dashed var(--line-strong);background:color-mix(in srgb, var(--panel-2) 60%, transparent)}
+  .board-head span{font-size:.78rem;letter-spacing:.06em;color:var(--muted)}
+  .board-rows{padding:.4rem 1.1rem;flex:1}
+  .board-row{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:.85rem 0;border-bottom:1px solid var(--line)}
+  .board-row:last-child{border-bottom:none}
+  .board-row .k{color:var(--muted);font-size:.85rem;white-space:nowrap}
+  .board-row .v{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1.08rem;text-align:right}
+  .board-foot{padding:.9rem 1.1rem;border-top:1px dashed var(--line-strong);color:var(--muted);font-size:.82rem}
+
+  /* Marquee goals ticker */
+  .ticker-wrap{margin-top:2.6rem;border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--panel);overflow:hidden}
+  .ticker-track{display:flex;gap:2.5rem;white-space:nowrap;padding:.65rem 0;animation:scroll 32s linear infinite}
+  .ticker-wrap:hover .ticker-track{animation-play-state:paused}
+  .ticker-track span{font-family:'Space Mono',monospace;font-size:.82rem;color:var(--muted);display:inline-flex;align-items:center;gap:.5rem}
+  .ticker-track span::before{content:"▸";color:var(--accent)}
+  @keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+  /* Stats bar */
+  .stats-bar{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;margin:2.4rem 0 0}
+  @media (max-width:900px){.stats-bar{grid-template-columns:repeat(3,1fr)}}
+  @media (max-width:560px){.stats-bar{grid-template-columns:repeat(2,1fr)}}
+  .stat-cell{background:var(--panel);padding:1.2rem 1rem;text-align:center}
+  .stat-cell b{display:block;font-family:'Barlow Condensed',sans-serif;font-size:2rem;font-weight:800;color:var(--accent)}
+  .stat-cell span{font-size:.78rem;color:var(--muted)}
+
+  /* Section shell */
+  section{padding:3.6rem 0}
+  .section-head{display:flex;align-items:end;justify-content:space-between;gap:1rem;margin-bottom:1.6rem;border-bottom:1px solid var(--line);padding-bottom:1rem;flex-wrap:wrap}
+  .section-head h2{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:clamp(1.6rem,3.4vw,2.3rem);margin:0}
+  .section-tag{font-family:'Space Mono',monospace;font-size:.78rem;color:var(--muted)}
+  section{scroll-margin-top:80px}
+
+  .reveal-up{opacity:0;transform:translateY(14px);transition:opacity .5s ease, transform .5s ease}
+  .reveal-up.in{opacity:1;transform:translateY(0)}
+
+  /* Featured project spotlight */
+  .spotlight{border:1px solid var(--line-strong);border-radius:var(--radius);background:linear-gradient(150deg,var(--panel),var(--panel-2));box-shadow:var(--shadow);padding:1.6rem;display:grid;grid-template-columns:1.1fr .9fr;gap:1.6rem;margin-bottom:1.6rem}
+  @media (max-width:860px){.spotlight{grid-template-columns:1fr}}
+  .spotlight-tag{display:inline-flex;align-items:center;gap:.5rem;font-family:'Space Mono',monospace;font-size:.72rem;color:var(--accent-2);letter-spacing:.06em;margin-bottom:.6rem}
+  .spotlight h3{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:clamp(1.6rem,3vw,2.1rem);margin:0 0 .6rem}
+  .spotlight p{color:var(--muted);margin:0 0 1rem}
+  .spotlight-pillars{list-style:none;margin:0 0 1.2rem;padding:0;display:grid;gap:.55rem}
+  .spotlight-pillars li{display:flex;gap:.6rem;font-size:.92rem}
+  .spotlight-pillars li::before{content:"◆";color:var(--accent-2);font-size:.7rem;margin-top:.35rem}
+  .spotlight-links{display:flex;gap:.7rem;flex-wrap:wrap}
+  .spotlight-stack{display:flex;flex-wrap:wrap;gap:.5rem;align-content:start}
+  .spotlight-stack span{font-family:'Space Mono',monospace;font-size:.74rem;color:var(--ink);border:1px solid var(--line-strong);border-radius:8px;padding:.35rem .6rem;background:var(--panel-2);height:fit-content}
+  .spotlight-side{display:flex;flex-direction:column;justify-content:space-between;gap:1rem}
+  .spotlight-arch{border:1px dashed var(--line-strong);border-radius:var(--radius-sm);padding:.9rem;font-family:'Space Mono',monospace;font-size:.72rem;color:var(--muted);line-height:1.7}
+
+  .details-toggle{display:inline-flex;align-items:center;gap:.4rem;background:none;border:1px solid var(--line-strong);color:var(--ink);border-radius:8px;padding:.5rem .8rem;font-size:.82rem;font-weight:700;cursor:pointer}
+  .details-toggle:hover{background:var(--line)}
+  .details-toggle[aria-expanded="true"] .chevron{transform:rotate(180deg)}
+  .chevron{display:inline-block;transition:transform .2s ease}
+  .details-panel{overflow:hidden;max-height:0;transition:max-height .35s ease}
+  .details-panel.open{max-height:600px}
+  .details-panel-inner{padding-top:.9rem;color:var(--muted);font-size:.9rem;display:grid;gap:.5rem}
+  .details-panel-inner strong{color:var(--ink)}
+
+  /* Filter tabs + search */
+  .filter-row{display:flex;gap:.9rem;flex-wrap:wrap;align-items:center;justify-content:space-between;margin-bottom:1.4rem}
+  .tabs{display:flex;gap:.5rem;flex-wrap:wrap}
+  .tab{display:inline-flex;align-items:center;gap:.4rem;padding:.5rem .9rem;border-radius:999px;border:1px solid var(--line-strong);background:var(--panel);color:var(--muted);font-weight:700;font-size:.85rem;cursor:pointer}
+  .tab:hover{color:var(--ink)}
+  .tab .tab-count{font-family:'Space Mono',monospace;font-size:.7rem;background:var(--line);border-radius:999px;padding:.05rem .4rem}
+  .tab[aria-pressed="true"]{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+  .tab[aria-pressed="true"] .tab-count{background:color-mix(in srgb, var(--accent-ink) 18%, transparent);color:var(--accent-ink)}
+  .search-box{position:relative}
+  .search-box input{padding:.55rem .9rem .55rem 2.1rem;border-radius:999px;border:1px solid var(--line-strong);background:var(--panel);color:var(--ink);font-size:.86rem;width:200px}
+  .search-box input:focus{outline:2px solid var(--accent);outline-offset:1px}
+  .search-box::before{content:"⌕";position:absolute;left:.75rem;top:50%;transform:translateY(-50%);color:var(--muted)}
+
+  /* Projects */
+  .grid-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem}
+  @media (max-width:980px){.grid-cards{grid-template-columns:repeat(2,1fr)}}
+  @media (max-width:680px){.grid-cards{grid-template-columns:1fr}}
+
+  .card{border:1px solid var(--line-strong);border-radius:var(--radius);background:linear-gradient(180deg,var(--panel),var(--panel-2));display:flex;flex-direction:column;overflow:hidden;box-shadow:var(--shadow);transition:opacity .2s ease, transform .2s ease, outline-color .3s ease;scroll-margin-top:100px;outline:2px solid transparent;outline-offset:3px}
+  .card.hide{display:none}
+  .card.pulse{outline-color:var(--accent)}
+  .card-top{display:flex;justify-content:space-between;align-items:flex-start;padding:1rem 1.1rem .5rem;gap:.6rem}
+  .card-top h3{margin:0;font-family:'Barlow Condensed',sans-serif;font-size:1.3rem;font-weight:800;cursor:pointer}
+  .card-top h3:hover{text-decoration:underline;text-underline-offset:3px}
+  .card-top h3:hover::after{content:" ⧉";font-size:.8em;opacity:.6}
+  .pill{font-family:'Space Mono',monospace;font-size:.66rem;letter-spacing:.05em;padding:.28rem .55rem;border-radius:6px;white-space:nowrap;border:1px solid transparent}
+  .pill.active{background:color-mix(in srgb, var(--accent) 20%, transparent);color:var(--accent-2);border-color:color-mix(in srgb, var(--accent) 45%, transparent)}
+  .pill.live{background:color-mix(in srgb, var(--accent-2) 20%, transparent);color:var(--accent-2);border-color:color-mix(in srgb, var(--accent-2) 45%, transparent)}
+  .pill.complete{background:var(--line);color:var(--muted);border-color:var(--line-strong)}
+  .pill.planning{color:var(--muted);border-color:var(--line-strong);border-style:dashed}
+  .pill.progress{background:color-mix(in srgb, var(--accent) 14%, transparent);color:var(--accent-2);border-color:color-mix(in srgb, var(--accent) 35%, transparent);border-style:dashed}
+  .pill.soon{color:var(--muted);border-color:var(--line-strong);border-style:dotted}
+  .pill.collab{background:color-mix(in srgb, #8b6bff 24%, transparent);color:#c4b5fd;border-color:color-mix(in srgb, #8b6bff 55%, transparent);font-weight:700}
+  .pill.lead{background:color-mix(in srgb, #6366f1 22%, transparent);color:#a5b4fc;border-color:color-mix(in srgb, #6366f1 50%, transparent);font-weight:700}
+  .pill.award{background:color-mix(in srgb, #f59e0b 22%, transparent);color:#fcd34d;border-color:color-mix(in srgb, #f59e0b 50%, transparent);font-weight:700}
+
+  /* Leadership & Community */
+  .leadership-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem}
+  @media (max-width:980px){.leadership-grid{grid-template-columns:repeat(2,1fr)}}
+  @media (max-width:620px){.leadership-grid{grid-template-columns:1fr}}
+  .lead-card{border:1px solid var(--line-strong);border-radius:var(--radius-sm);padding:1.2rem;background:var(--panel);display:flex;flex-direction:column;gap:.6rem;transition:transform .2s ease,border-color .2s ease}
+  .lead-card:hover{transform:translateY(-2px);border-color:var(--accent)}
+  .lead-top{display:flex;justify-content:space-between;align-items:center;gap:.6rem;flex-wrap:wrap}
+  .lead-date{font-size:.72rem;color:var(--muted)}
+  .lead-card h3{margin:0;font-size:1.05rem;font-weight:700;line-height:1.35}
+  .lead-org{font-size:.78rem;color:var(--accent-2);margin:0}
+  .lead-card p{margin:0;font-size:.86rem;color:var(--muted);line-height:1.55}
+
+  .card p{margin:.4rem 0 0;padding:0 1.1rem;color:var(--muted);font-size:.9rem}
+  .card .stack{display:flex;flex-wrap:wrap;gap:.4rem;padding:.9rem 1.1rem}
+  .card .stack span{font-family:'Space Mono',monospace;font-size:.7rem;color:var(--muted);border:1px solid var(--line);border-radius:6px;padding:.2rem .45rem}
+  .card .card-actions{margin-top:auto;display:flex;flex-direction:column;border-top:1px solid var(--line)}
+  .card .link{display:flex;justify-content:space-between;align-items:center;padding:.85rem 1.1rem;font-weight:700;font-size:.86rem;color:var(--ink)}
+  .card .link:hover{background:var(--line)}
+  .card .details-toggle{border:none;border-top:1px dashed var(--line);border-radius:0;justify-content:center;background:transparent;padding:.6rem;font-size:.78rem;color:var(--muted)}
+  .card .details-toggle:hover{background:var(--line);color:var(--ink)}
+  .card .details-panel-inner{padding:0 1.1rem .95rem}
+  .no-results{grid-column:1/-1;text-align:center;padding:2.4rem 1rem;color:var(--muted);border:1px dashed var(--line-strong);border-radius:var(--radius-sm);display:none}
+  .no-results.show{display:block}
+
+  /* Roster / skills */
+  .roster{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}
+  @media (max-width:760px){.roster{grid-template-columns:1fr}}
+  .position{border:1px solid var(--line);border-radius:var(--radius-sm);padding:1rem 1.1rem;background:var(--panel)}
+  .position h3{margin:0 0 .8rem;font-size:.82rem;letter-spacing:.05em;color:var(--muted);font-weight:700;text-transform:uppercase}
+  .skill-rows{display:grid;gap:.65rem}
+  .skill-row{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:.6rem}
+  .skill-row .name{font-size:.87rem;font-weight:600;white-space:nowrap}
+  .skill-row .bar{height:6px;border-radius:999px;background:var(--line);overflow:hidden}
+  .skill-row .bar i{display:block;height:100%;background:linear-gradient(90deg,var(--accent),var(--accent-2));border-radius:999px;transform-origin:left;transform:scaleX(0);transition:transform .8s cubic-bezier(.2,.8,.2,1)}
+  .skill-row.in .bar i{transform:scaleX(1)}
+  .skill-row .lvl{font-family:'Space Mono',monospace;font-size:.7rem;color:var(--muted);width:2.4em;text-align:right}
+
+  /* Timeline */
+  .timeline{position:relative;padding-left:1.6rem;border-left:2px solid var(--line-strong)}
+  .tl-item{position:relative;padding-bottom:1.8rem}
+  .tl-item:last-child{padding-bottom:0}
+  .tl-item::before{content:"";position:absolute;left:-2.02rem;top:.25rem;width:12px;height:12px;border-radius:50%;background:var(--accent);border:3px solid var(--bg)}
+  .tl-item h4{margin:0 0 .3rem;font-family:'Barlow Condensed',sans-serif;font-size:1.2rem;font-weight:800}
+  .tl-item .tl-when{font-family:'Space Mono',monospace;font-size:.72rem;color:var(--accent-2);display:block;margin-bottom:.25rem}
+  .tl-item p{margin:0;color:var(--muted);font-size:.92rem;max-width:60ch}
+
+  /* Toolkit */
+  .toolkit-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
+  @media (max-width:900px){.toolkit-grid{grid-template-columns:repeat(2,1fr)}}
+  @media (max-width:520px){.toolkit-grid{grid-template-columns:1fr}}
+  .tool-item{border:1px solid var(--line);border-radius:var(--radius-sm);padding:1rem;background:var(--panel);display:flex;flex-direction:column;gap:.35rem}
+  .tool-item .tool-cat{font-family:'Space Mono',monospace;font-size:.66rem;color:var(--accent-2);letter-spacing:.05em}
+  .tool-item .tool-name{font-weight:700;font-size:.98rem}
+  .tool-item .tool-note{font-size:.82rem;color:var(--muted)}
+
+  /* Learning / certifications */
+  .learn-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+  @media (max-width:900px){.learn-grid{grid-template-columns:repeat(2,1fr)}}
+  @media (max-width:620px){.learn-grid{grid-template-columns:1fr}}
+  .learn-item{border:1px solid var(--line-strong);border-radius:var(--radius-sm);padding:1rem 1.1rem;background:var(--panel);display:flex;flex-direction:column;gap:.5rem}
+  .learn-item .learn-top{display:flex;justify-content:space-between;align-items:flex-start;gap:.6rem}
+  .learn-item h3{margin:0;font-size:1rem;font-weight:700}
+  .learn-item p{margin:0;font-size:.85rem;color:var(--muted)}
+  .progress-track{height:6px;border-radius:999px;background:var(--line);overflow:hidden;margin-top:.2rem}
+  .progress-fill{height:100%;background:linear-gradient(90deg,var(--accent),var(--accent-2));border-radius:999px}
+
+  /* Writings */
+  .writings-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+  @media (max-width:900px){.writings-grid{grid-template-columns:1fr}}
+  .write-card{border:1px dashed var(--line-strong);border-radius:var(--radius-sm);padding:1.1rem;background:var(--panel);display:flex;flex-direction:column;gap:.6rem;position:relative}
+  .write-card h3{margin:0;font-family:'Barlow Condensed',sans-serif;font-size:1.15rem;font-weight:800}
+  .write-card p{margin:0;color:var(--muted);font-size:.88rem}
+  .writings-cta{margin-top:1.2rem;display:flex;align-items:center;gap:.7rem;flex-wrap:wrap;color:var(--muted);font-size:.9rem}
+
+  /* About */
+  .about-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:1.1rem}
+  @media (max-width:900px){.about-grid{grid-template-columns:1fr}}
+  .panel{background:var(--panel);border:1px solid var(--line-strong);border-radius:var(--radius);padding:1.4rem;box-shadow:var(--shadow)}
+  .panel h3{margin-top:0;font-family:'Barlow Condensed',sans-serif;font-size:1.3rem;font-weight:800}
+  .statline{display:grid;grid-template-columns:repeat(3,1fr);gap:.8rem;margin-top:.6rem}
+  .stat{border:1px solid var(--line);border-radius:var(--radius-sm);padding:.8rem;text-align:center;background:var(--panel-2)}
+  .stat b{display:block;font-family:'Barlow Condensed',sans-serif;font-size:1.5rem;font-weight:800;color:var(--accent)}
+  .stat span{font-size:.76rem;color:var(--muted)}
+
+  /* GitHub stats */
+  .stats-imgs{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:.5rem}
+  @media (max-width:700px){.stats-imgs{grid-template-columns:1fr}}
+  .stats-imgs img{border-radius:var(--radius-sm);border:1px solid var(--line-strong);background:var(--panel-2);min-height:180px}
+  .contrib-wrap{margin-top:1rem;border:1px solid var(--line-strong);border-radius:var(--radius-sm);padding:.9rem;background:var(--panel-2);overflow-x:auto}
+  .contrib-wrap img{min-height:140px;filter:saturate(1.1)}
+
+  /* Contact */
+  .contact-grid{display:grid;grid-template-columns:1fr .85fr;gap:1.1rem}
+  @media (max-width:900px){.contact-grid{grid-template-columns:1fr}}
+  .list{display:grid;gap:.6rem;margin-top:.9rem}
+  .list a{display:flex;justify-content:space-between;align-items:center;border:1px solid var(--line-strong);padding:.75rem .95rem;border-radius:12px;background:var(--panel-2)}
+  .list a:hover{background:var(--line)}
+  .list a .k{color:var(--muted);font-size:.85rem}
+  .copy-row{display:flex;gap:.6rem;align-items:center;margin-top:.9rem;flex-wrap:wrap}
+  .copy-row code{font-family:'Space Mono',monospace;background:var(--panel-2);border:1px solid var(--line-strong);padding:.5rem .7rem;border-radius:8px;font-size:.85rem}
+  .copy-btn{border:1px solid var(--line-strong);background:var(--panel-2);color:var(--ink);padding:.5rem .8rem;border-radius:8px;font-weight:700;font-size:.82rem;cursor:pointer}
+  .copy-btn:hover{background:var(--line)}
+  .copy-btn.copied{color:var(--accent-2);border-color:var(--accent-2)}
+
+  .quick-form{display:grid;gap:.7rem;margin-top:.4rem}
+  .quick-form label{font-size:.78rem;color:var(--muted);font-weight:700;letter-spacing:.03em;text-transform:uppercase}
+  .field{display:grid;gap:.35rem}
+  .field input, .field textarea, .field select{background:var(--panel-2);border:1px solid var(--line-strong);border-radius:10px;color:var(--ink);padding:.65rem .8rem;font-family:inherit;font-size:.92rem;resize:vertical}
+  .field input:focus, .field textarea:focus, .field select:focus{outline:2px solid var(--accent);outline-offset:1px}
+  .form-note{font-size:.76rem;color:var(--muted)}
+
+  .avail-row{display:flex;flex-wrap:wrap;align-items:center;gap:.6rem;margin-top:.9rem}
+  .clock-badge{font-family:'Space Mono',monospace;font-size:.78rem;background:var(--panel-2);border:1px solid var(--line-strong);border-radius:999px;padding:.35rem .7rem;color:var(--ink)}
+  .avail-note{font-size:.8rem;color:var(--muted)}
+  .contact-actions{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1rem}
+  .contact-actions .btn{font-size:.85rem;padding:.55rem .85rem}
+
+  /* Back to top */
+  #back-to-top{position:fixed;right:1.1rem;bottom:1.1rem;width:44px;height:44px;border-radius:50%;background:var(--accent);color:var(--accent-ink);border:none;font-size:1.1rem;font-weight:800;cursor:pointer;box-shadow:var(--shadow);opacity:0;pointer-events:none;transform:translateY(8px);transition:opacity .2s ease, transform .2s ease;z-index:60}
+  #back-to-top.show{opacity:1;pointer-events:auto;transform:translateY(0)}
+
+  /* Toast */
+  #toast-region{position:fixed;left:1.1rem;bottom:1.1rem;display:flex;flex-direction:column;gap:.5rem;z-index:130}
+  .toast{background:var(--panel-2);border:1px solid var(--line-strong);color:var(--ink);padding:.7rem 1rem;border-radius:10px;box-shadow:var(--shadow);font-size:.85rem;opacity:0;transform:translateY(6px);transition:opacity .25s ease, transform .25s ease}
+  .toast.show{opacity:1;transform:translateY(0)}
+
+  /* Command palette */
+  #palette-overlay{position:fixed;inset:0;background:rgba(3,6,14,.6);backdrop-filter:blur(3px);z-index:150;display:none;align-items:flex-start;justify-content:center;padding:12vh 1rem 1rem}
+  #palette-overlay.open{display:flex}
+  .palette{width:100%;max-width:560px;background:var(--panel);border:1px solid var(--line-strong);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden}
+  .palette-input-row{display:flex;align-items:center;gap:.6rem;padding:.9rem 1.1rem;border-bottom:1px solid var(--line)}
+  .palette-input-row span{color:var(--muted)}
+  .palette-input-row input{flex:1;background:none;border:none;color:var(--ink);font-size:1rem;outline:none}
+  .palette-list{max-height:52vh;overflow-y:auto;padding:.5rem}
+  .palette-item{display:flex;align-items:center;justify-content:space-between;gap:.7rem;padding:.65rem .75rem;border-radius:10px;cursor:pointer;color:var(--ink)}
+  .palette-item .pi-main{display:flex;flex-direction:column}
+  .palette-item .pi-title{font-weight:600;font-size:.92rem}
+  .palette-item .pi-sub{font-size:.76rem;color:var(--muted)}
+  .palette-item .pi-tag{font-family:'Space Mono',monospace;font-size:.68rem;color:var(--muted)}
+  .palette-item.active{background:var(--line-strong)}
+  .palette-empty{padding:1.2rem;text-align:center;color:var(--muted);font-size:.88rem}
+  .palette-foot{display:flex;justify-content:space-between;padding:.6rem 1.1rem;border-top:1px solid var(--line);font-size:.72rem;color:var(--muted)}
+  .palette-foot kbd{font-family:'Space Mono',monospace;background:var(--panel-2);border:1px solid var(--line-strong);border-radius:5px;padding:.05rem .35rem}
+
+  footer{padding:2rem 0;color:var(--muted)}
+  .foot{display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:1.1rem;font-size:.9rem}
+  .foot-links{display:flex;gap:1rem;flex-wrap:wrap}
+
+  .reveal{opacity:0;transform:translateY(10px)}
+  .reveal.in{animation:rise .6s ease forwards}
+  @keyframes rise{to{opacity:1;transform:translateY(0)}}
+
+  ::selection{background:var(--accent);color:var(--accent-ink)}
+
+  #lang-toggle{font-family:'Space Mono',monospace;font-weight:700;font-size:.72rem}
+  #lang-toggle.si-active{color:var(--accent);border-color:var(--accent)}
+  [lang="si"] :is(h1,.lead,.status span){font-family:'Inter',system-ui,sans-serif}
+
+  /* Right-edge section rail */
+  .side-rail{position:fixed;right:1.3rem;top:50%;transform:translateY(-50%);z-index:55;display:flex;flex-direction:column;gap:.55rem}
+  .side-rail a{width:9px;height:9px;border-radius:50%;background:var(--line-strong);display:block;position:relative;transition:background .2s ease, transform .2s ease}
+  .side-rail a:hover{transform:scale(1.3)}
+  .side-rail a.active{background:var(--accent);transform:scale(1.3)}
+  .side-rail a .rail-label{position:absolute;right:1.4rem;top:50%;transform:translateY(-50%);white-space:nowrap;background:var(--panel);border:1px solid var(--line-strong);color:var(--ink);font-size:.72rem;padding:.25rem .55rem;border-radius:6px;opacity:0;pointer-events:none;transition:opacity .15s ease;box-shadow:var(--shadow)}
+  .side-rail a:hover .rail-label, .side-rail a:focus-visible .rail-label{opacity:1}
+  @media (max-width:900px){.side-rail{display:none}}
+
+  /* Stack frequency chart */
+  .stack-chart{margin-top:1.4rem;border:1px solid var(--line-strong);border-radius:var(--radius-sm);padding:1.1rem;background:var(--panel)}
+  .stack-chart h3{margin:0 0 .2rem;font-size:.82rem;letter-spacing:.05em;color:var(--muted);font-weight:700;text-transform:uppercase}
+  .stack-chart .sc-note{font-size:.8rem;color:var(--muted);margin:0 0 .9rem}
+  .sc-row{display:grid;grid-template-columns:9rem 1fr auto;align-items:center;gap:.7rem;margin-bottom:.55rem}
+  .sc-row .sc-name{font-size:.85rem;font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .sc-row .sc-track{height:9px;border-radius:999px;background:var(--line);overflow:hidden}
+  .sc-row .sc-fill{height:100%;border-radius:999px;background:linear-gradient(90deg,var(--accent),var(--accent-2));transform-origin:left;transform:scaleX(0);transition:transform .7s cubic-bezier(.2,.8,.2,1)}
+  .sc-row.in .sc-fill{transform:scaleX(1)}
+  .sc-row .sc-count{font-family:'Space Mono',monospace;font-size:.74rem;color:var(--muted);width:2.6em;text-align:right}
+
+  /* How I work / process */
+  .process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
+  @media (max-width:900px){.process-grid{grid-template-columns:repeat(2,1fr)}}
+  @media (max-width:560px){.process-grid{grid-template-columns:1fr}}
+  .process-step{border:1px solid var(--line);border-radius:var(--radius-sm);padding:1.1rem;background:var(--panel);position:relative}
+  .process-step .ps-num{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:1.7rem;color:var(--accent);display:block;margin-bottom:.3rem}
+  .process-step h3{margin:0 0 .4rem;font-size:1rem;font-weight:700}
+  .process-step p{margin:0;font-size:.85rem;color:var(--muted)}
+
+  /* Shortcuts overlay (shares palette look) */
+  #shortcuts-overlay{position:fixed;inset:0;background:rgba(3,6,14,.6);backdrop-filter:blur(3px);z-index:150;display:none;align-items:center;justify-content:center;padding:1rem}
+  #shortcuts-overlay.open{display:flex}
+  .shortcuts-card{width:100%;max-width:420px;background:var(--panel);border:1px solid var(--line-strong);border-radius:var(--radius);box-shadow:var(--shadow);padding:1.3rem}
+  .shortcuts-card h3{margin:0 0 1rem;font-family:'Barlow Condensed',sans-serif;font-size:1.3rem;font-weight:800}
+  .shortcuts-card .sk-row{display:flex;justify-content:space-between;align-items:center;padding:.5rem 0;border-bottom:1px solid var(--line);font-size:.88rem}
+  .shortcuts-card .sk-row:last-child{border-bottom:none}
+  .shortcuts-card kbd{font-family:'Space Mono',monospace;background:var(--panel-2);border:1px solid var(--line-strong);border-radius:5px;padding:.15rem .45rem;font-size:.76rem;margin-left:.3rem}
+  .shortcuts-card .sk-close{margin-top:1rem;width:100%}
+
+  @media print{
+    header, footer, #progress-bar, #back-to-top, #toast-region, #palette-overlay, #shortcuts-overlay, .side-rail, .hero-actions, .ticker-wrap, .filter-row, .theme-btn, .kbd-btn, .card .details-toggle, .quick-form { display:none !important; }
+    body{background:#fff;color:#111}
+    .panel, .card, .board, .spotlight, .learn-item, .write-card, .process-step{box-shadow:none;border:1px solid #ccc}
+    a{text-decoration:underline}
+  }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div id="progress-bar" aria-hidden="true"></div>
+
+<header>
+  <div class="container nav-wrap">
+    <a class="brand" href="#top" aria-label="Home">
+      <img class="avatar" alt="Sahil Kavishka"
+           src="https://avatars.githubusercontent.com/u/184890150?v=4"
+           onerror="this.onerror=null;this.src='https://scontent-bom2-3.xx.fbcdn.net/v/t39.30808-6/492952303_1473285073637090_2138458153126618177_n.jpg';" />
+      <span class="brand-name"><strong>Sahil Kavishka</strong><span>Full-Stack Dev · Data Scientist</span></span>
+    </a>
+
+    <label class="hamb" for="nav-toggle" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </label>
+    <input type="checkbox" id="nav-toggle" aria-hidden="true" />
+
+    <nav class="nav" aria-label="Primary">
+      <a href="#projects" data-section="projects">Projects</a>
+      <a href="#skills" data-section="skills">Skills</a>
+      <a href="#journey" data-section="journey">Journey</a>
+      <a href="#leadership" data-section="leadership">Leadership</a>
+      <a href="#toolkit" data-section="toolkit">Toolkit</a>
+      <a href="#process" data-section="process">Process</a>
+      <a href="#learning" data-section="learning">Learning</a>
+      <a href="#writings" data-section="writings">Writings</a>
+      <a href="#about" data-section="about">About</a>
+      <button class="kbd-btn" id="palette-open" type="button" aria-label="Open command palette">
+        Jump to… <kbd>Ctrl</kbd><kbd>K</kbd>
+      </button>
+      <button class="icon-btn" id="lang-toggle" type="button" aria-label="Switch language: English or Sinhala" title="EN / සිං">EN</button>
+      <button class="icon-btn" id="shortcuts-open" type="button" aria-label="Show keyboard shortcuts" title="Keyboard shortcuts">?</button>
+      <button class="icon-btn theme-btn" id="theme-toggle" type="button" aria-label="Switch between day and night theme" title="Toggle day/night theme">◐</button>
+      <a href="#contact" class="cta">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <!-- Hero -->
+  <section class="hero" id="top">
+    <div class="container hero-inner">
+      <div class="reveal" id="hero-copy">
+        <span class="status"><span class="dot live" aria-hidden="true"></span> <span data-en="Open to freelance &amp; collaborations" data-si="නිදහස් රැකියා සහ සහයෝගීතාවලට විවෘතයි">Open to freelance &amp; collaborations</span></span>
+        <h1 data-en="Systems that turn raw data into decisions." data-si="අමු දත්ත තීරණවලට හරවන පද්ධති.">Systems that turn raw data into decisions.</h1>
+        <p class="lead" data-en="Full-stack developer and data scientist from Anuradhapura, Sri Lanka. I've shipped a sports platform with live ML predictions, a BI dashboard on Sri Lanka's medicine supply chain, an NLP sentiment engine with its own Chrome extension, and an AI-assisted construction estimator — usually chasing all four interests at once." data-si="අනුරාධපුරයේ සිට full-stack සංවර්ධකයෙක් සහ දත්ත විද්‍යාඥයෙක්. සජීවී ML අනාවැකි සහිත ක්‍රීඩා වේදිකාවක්, ශ්‍රී ලංකාවේ බෙහෙත් සැපයුම් දාමය පිළිබඳ BI dashboard එකක්, Chrome extension එකක් සහිත NLP විශ්ලේෂණයක්, සහ AI-සහායක ඉදිකිරීම් ඇස්තමේන්තුකරුවෙක් නිර්මාණය කර ඇත — බොහෝවිට මේ හතරම එකවර.">Full-stack developer and data scientist from Anuradhapura, Sri Lanka. I've shipped a sports platform with live ML predictions, a BI dashboard on Sri Lanka's medicine supply chain, an NLP sentiment engine with its own Chrome extension, and an AI-assisted construction estimator — usually chasing all four interests at once.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#projects">See the projects</a>
+          <a class="btn btn-ghost" href="https://github.com/sahilkavishka" target="_blank" rel="noreferrer noopener">GitHub profile</a>
+          <a class="btn btn-ghost" href="resume.pdf" download>Download résumé</a>
+          <button class="btn btn-ghost" id="palette-open-2" type="button">Search everything</button>
+        </div>
+      </div>
+
+      <div class="board reveal" id="hero-board" aria-label="Quick stats">
+        <div class="board-head"><span class="mono">CURRENT · BUILD LOG</span><span class="mono">SK</span></div>
+        <div class="board-rows">
+          <div class="board-row"><span class="k">Now building</span><span class="v">SmartBuild AI</span></div>
+          <div class="board-row"><span class="k">Recently shipped</span><span class="v">Medicine supply BI · NLP engine</span></div>
+          <div class="board-row"><span class="k">Core stack</span><span class="v">Python · FastAPI · Django</span></div>
+          <div class="board-row"><span class="k">Based in</span><span class="v">Anuradhapura, LK</span></div>
+          <div class="board-row"><span class="k">Local time</span><span class="v mono" id="hero-clock">—</span></div>
+        </div>
+        <div class="board-foot mono">Without data, you're just another person with an opinion. — W. E. Deming</div>
+      </div>
+    </div>
+
+    <div class="ticker-wrap" aria-label="Current goals">
+      <div class="ticker-track" id="ticker">
+        <span>Top 20% finish in a Kaggle competition</span>
+        <span>Ship 3 end-to-end ML projects to production</span>
+        <span>Earn a Google Data Analytics or AWS ML Specialty cert</span>
+        <span>Publish write-ups on project decisions &amp; learnings</span>
+        <span>Make meaningful open-source contributions</span>
+        <span>Build &amp; publish a Sri Lankan sports analytics dataset</span>
+        <span>Launch real-time WebSocket features in the tournament app</span>
+        <!-- duplicated for seamless loop -->
+        <span>Top 20% finish in a Kaggle competition</span>
+        <span>Ship 3 end-to-end ML projects to production</span>
+        <span>Earn a Google Data Analytics or AWS ML Specialty cert</span>
+        <span>Publish write-ups on project decisions &amp; learnings</span>
+        <span>Make meaningful open-source contributions</span>
+        <span>Build &amp; publish a Sri Lankan sports analytics dataset</span>
+        <span>Launch real-time WebSocket features in the tournament app</span>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="stats-bar">
+        <div class="stat-cell"><b id="stat-repos" data-count="18">18</b><span>Public repos</span></div>
+        <div class="stat-cell"><b data-count="8">8</b><span>Featured projects</span></div>
+        <div class="stat-cell"><b data-count="4">4</b><span>Domains — web, ML, NLP, BI</span></div>
+        <div class="stat-cell"><b data-count="1">1</b><span>Chrome extension shipped</span></div>
+        <div class="stat-cell"><b data-count="25">25</b><span>Districts modeled in SmartBuild AI</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects">
+    <div class="container">
+      <div class="section-head reveal-up">
+        <h2>Projects</h2>
+        <span class="section-tag mono">8 shipped · filter by domain</span>
+      </div>
+
+      <!-- Featured spotlight -->
+      <div class="spotlight reveal-up">
+        <div>
+          <span class="spotlight-tag">◆ FLAGSHIP · IN PROGRESS</span>
+          <h3>SmartBuild AI — Construction Intelligence Platform</h3>
+          <p>An AI-powered architectural CAD and cost-estimation platform for Sri Lanka's residential construction market — bridging design, CIDA-indexed quantity surveying, and bank loan feasibility in one workflow.</p>
+          <ul class="spotlight-pillars">
+            <li>2D/3D architectural studio (Three.js) generated from land size and room counts, plus a computer-vision floor-plan analyzer</li>
+            <li>CIDA-indexed Bill of Quantities with XGBoost price forecasting across all 25 districts</li>
+            <li>45% DSR bank-loan feasibility matrix comparing BOC, Commercial Bank, HNB, Sampath &amp; NSB</li>
+            <li>Bilingual (Sinhala/English) Gemini-powered civil engineering consultant</li>
+          </ul>
+          <div class="spotlight-links">
+            <a class="btn btn-primary" href="https://github.com/sahilkavishka/smartbuild_ai" target="_blank" rel="noreferrer noopener">View on GitHub</a>
+            <button class="details-toggle" type="button" aria-expanded="false" aria-controls="spotlight-details">
+              Challenges &amp; decisions <span class="chevron" aria-hidden="true">▾</span>
+            </button>
+          </div>
+          <div class="details-panel" id="spotlight-details">
+            <div class="details-panel-inner">
+              <p><strong>Why XGBoost over a simpler model:</strong> district-level material costs move non-linearly with distance from Colombo ports and local supply constraints — gradient boosting handled that better than linear regression in testing.</p>
+              <p><strong>Why a rules-based DSR matrix instead of one blended rate:</strong> each bank prices risk differently, so a single "average" feasibility number would hide the deals that are actually financeable.</p>
+              <p><strong>Open question:</strong> keeping the floor-plan computer-vision analyzer accurate across hand-drawn vs. CAD-exported plans is still the hardest part of this build.</p>
+            </div>
+          </div>
+        </div>
+        <div class="spotlight-side">
+          <div class="spotlight-stack">
+            <span>Python</span><span>FastAPI</span><span>XGBoost</span><span>Three.js</span><span>TailwindCSS</span><span>Gemini API</span><span>Docker</span>
+          </div>
+          <div class="spotlight-arch mono">
+            Client (Tailwind / Three.js)<br>
+            &nbsp;&nbsp;↓ REST<br>
+            FastAPI Gateway<br>
+            &nbsp;&nbsp;├─ Plan Generator (2D/3D)<br>
+            &nbsp;&nbsp;├─ Estimator Engine (XGBoost)<br>
+            &nbsp;&nbsp;├─ Finance Engine (DSR / S-Curve)<br>
+            &nbsp;&nbsp;└─ Agentic AI (Gemini)
+          </div>
+        </div>
+      </div>
+
+      <div class="filter-row reveal-up">
+        <div class="tabs" id="tabs" role="group" aria-label="Filter projects by domain">
+          <button class="tab" data-filter="all" type="button" aria-pressed="true">All <span class="tab-count">10</span></button>
+          <button class="tab" data-filter="ai" type="button" aria-pressed="false">AI &amp; ML <span class="tab-count">4</span></button>
+          <button class="tab" data-filter="data" type="button" aria-pressed="false">Data &amp; BI <span class="tab-count">5</span></button>
+          <button class="tab" data-filter="web" type="button" aria-pressed="false">Web <span class="tab-count">4</span></button>
+          <button class="tab" data-filter="nlp" type="button" aria-pressed="false">NLP <span class="tab-count">2</span></button>
+          <button class="tab" data-filter="collab" type="button" aria-pressed="false">Team Collab <span class="tab-count">2</span></button>
+        </div>
+        <div class="search-box">
+          <input type="search" id="project-search" placeholder="Search projects… ( / )" aria-label="Search projects" />
+        </div>
+      </div>
+      <p id="filter-status" class="visually-hidden" role="status" aria-live="polite"></p>
+
+      <div class="grid-cards" id="project-grid">
+        <article class="card reveal-up" data-cat="ai nlp collab" id="proj-codexsabra-resoveai">
+          <div class="card-top">
+            <h3 class="copyable" role="button" tabindex="0" title="Click to copy a link to this project">codeXsabra — ResoveAI</h3>
+            <span class="pill collab">COLLABORATIVE</span>
+          </div>
+          <p>AI-powered telecom customer query triage and resolution platform engineered during the Hutch AI hackathon with NLP categorization, priority scoring and automated FastAPI routing.</p>
+          <div class="stack"><span>NLP</span><span>FastAPI</span><span>PyTorch</span><span>Scikit-Learn</span><span>Hutch AI</span></div>
+          <div class="card-actions">
+            <a class="link" href="https://github.com/kavishanimsara/codeXsabra-ResoveAI" target="_blank" rel="noreferrer noopener"><span>View Shared Repo</span><span aria-hidden="true">↗</span></a>
+            <button class="details-toggle" type="button" aria-expanded="false" aria-controls="details-resoveai">Details <span class="chevron" aria-hidden="true">▾</span></button>
+          </div>
+          <div class="details-panel" id="details-resoveai">
+            <div class="details-panel-inner">
+              <p><strong>Team collaboration:</strong> Engineered with a collaborative hackathon team to address telecom support ticket bottlenecks.</p>
+              <p><strong>My contribution:</strong> Led the NLP classification engine, text preprocessing pipelines, and FastAPI inference microservice integration.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="card reveal-up" data-cat="ai data collab" id="proj-aws-churn-predictor">
+          <div class="card-top">
+            <h3 class="copyable" role="button" tabindex="0" title="Click to copy a link to this project">AWS Customer Churn Predictor</h3>
+            <span class="pill collab">COLLABORATIVE</span>
+          </div>
+          <p>Cloud-integrated customer churn prediction engine utilizing advanced feature engineering, tree-based ensemble models, and AWS deployment pipelines.</p>
+          <div class="stack"><span>AWS</span><span>Python</span><span>XGBoost</span><span>Flask</span><span>Scikit-Learn</span></div>
+          <div class="card-actions">
+            <a class="link" href="https://github.com/Dilharajay/churn_predictor" target="_blank" rel="noreferrer noopener"><span>View Shared Repo</span><span aria-hidden="true">↗</span></a>
+            <button class="details-toggle" type="button" aria-expanded="false" aria-controls="details-churn">Details <span class="chevron" aria-hidden="true">▾</span></button>
+          </div>
+          <div class="details-panel" id="details-churn">
+            <div class="details-panel-inner">
+              <p><strong>Team collaboration:</strong> Collaborative cloud-native data science project designed for scalable predictive analytics.</p>
+              <p><strong>My contribution:</strong> Feature engineering, model evaluation with XGBoost &amp; Random Forest, and cloud-ready data pipelines.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="card reveal-up" data-cat="ai web" id="proj-sports-tournaments-system">
+          <div class="card-top">
+            <h3 class="copyable" role="button" tabindex="0" title="Click to copy a link to this project">Sports Tournaments System</h3>
+            <span class="pill active">ACTIVE</span>
+          </div>
+          <p>Role-based platform for organizers, players and spectators — fixtures, live scores, leaderboards, and a match-prediction model exposed over a REST API.</p>
+          <div class="stack"><span>Django</span><span>MySQL</span><span>Scikit-learn</span><span>AJAX</span><span>Python</span></div>
+          <div class="card-actions">
+            <a class="link" href="https://github.com/sahilkavishka?tab=repositories&q=tournament" target="_blank" rel="noreferrer noopener"><span>View on GitHub</span><span aria-hidden="true">↗</span></a>
+            <button class="details-toggle" type="button" aria-expanded="false" aria-controls="details-sports">Details <span class="chevron" aria-hidden="true">▾</span></button>
+          </div>
+          <div class="details-panel" id="details-sports">
+            <div class="details-panel-inner">
+              <p><strong>Why role-based access:</strong> organizers, players and spectators need different write permissions on the same fixture data, so permissions are enforced at the API layer, not just hidden in the UI.</p>
+              <p><strong>Next up:</strong> replacing the AJAX polling for live scores with WebSockets — see the "Toolkit" and "Learning" sections.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="card reveal-up" data-cat="ai nlp" id="proj-smartphone-review-sentiment-ml-vs-bert">
+          <div class="card-top">
+            <h3 class="copyable" role="button" tabindex="0" title="Click to copy a link to this project">Smartphone Review Sentiment: ML vs. BERT</h3>
+            <span class="pill complete">COMPLETE</span>
+          </div>
+          <p>End-to-end NLP pipeline comparing traditional ML (Naive Bayes, SVM, Random Forest) against fine-tuned BERT on scraped GSMArena reviews — shipped with a Chrome extension that live-analyzes Daraz.lk product reviews.</p>
+          <div class="stack"><span>PyTorch</span><span>Hugging Face</span><span>Scikit-learn</span><span>NLTK</span><span>FastAPI</span><span>Chrome Ext.</span></div>
+          <div class="card-actions">
+            <a class="link" href="https://github.com/sahilkavishka/mini-NLP-project" target="_blank" rel="noreferrer noopener"><span>View on GitHub</span><span aria-hidden="true">↗</span></a>
+            <button class="details-toggle" type="button" aria-expanded="false" aria-controls="details-nlp">Details <span class="chevron" aria-hidden="true">▾</span></button>
+          </div>
+          <div class="details-panel" id="details-nlp">
+            <div class="details-panel-inner">
+              <p><strong>Why compare instead of jumping straight to BERT:</strong> classic ML is cheap to run at Chrome-extension latency; BERT only earns its keep where accuracy gains are worth the extra inference time.</p>
+              <p><strong>Shipped surface:</strong> a Chrome extension that scores Daraz.lk reviews live, not just a notebook result.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="card reveal-up" data-cat="data" id="proj-sri-lanka-medicine-supply-chain-bi">
+          <div class="card-top">
+            <h3 class="copyable" role="button" tabindex="0" title="Click to copy a link to this project">Sri Lanka Medicine Supply Chain BI</h3>
+            <span class="pill complete">COMPLETE</span>
+          </div>
+          <p>Star-schema dataset and Power BI dashboard tracking pharmaceutical imports, USD/LKR swings, and hospital stockout rates from 2020–2026, including the 2022 economic crisis.</p>
+          <div class="stack"><span>Power BI</span><span>Python</span><span>Star Schema</span><span>SQL</span></div>
+          <div class="card-actions">
+            <a class="link" href="https://github.com/sahilkavishka/SL_Medicine_Supply_Chain" target="_blank" rel="noreferrer noopener"><span>View on GitHub</span><span aria-hidden="true">↗</span></a>
+            <button class="details-toggle" type="button" aria-expanded="false" aria-controls="details-medbi">Details <span class="chevron" aria-hidden="true">▾</span></button>
+          </div>
+          <div class="details-panel" id="details-medbi">
+            <div class="details-panel-inner">
+              <p><strong>Why a star schema:</strong> import volumes, currency rates and stockouts all roll up differently by district and month — a star schema keeps those facts fast to slice without duplicating dimension data.</p>
+              <p><strong>Hardest part:</strong> aligning three inconsistent public data sources onto one clean date/district key before the 2022 crisis period could be modeled at all.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="card reveal-up" data-cat="data" id="proj-edtech-market-intelligence-pipeline">
+          <div class="card-top">
+            <h3 class="copyable" role="button" tabindex="0" title="Click to copy a link to this project">EdTech Market Intelligence Pipeline</h3>
+            <span class="pill complete">COMPLETE</span>
+          </div>
+          <p>Automated data-engineering pipeline over the YouTube Data API v3 analyzing Sri Lanka's EdTech content market — view velocity, channel authority, and engagement rate, feeding a Power BI dashboard.</p>
+          <div class="stack"><span>Python</span><span>YouTube API</span><span>Pandas</span><span>Power BI</span></div>
+          <div class="card-actions">
+            <a class="link" href="https://github.com/sahilkavishka/-EdTech-Analytics" target="_blank" rel="noreferrer noopener"><span>View on GitHub</span><span aria-hidden="true">↗</span></a>
+            <button class="details-toggle" type="button" aria-expanded="false" aria-controls="details-edtech">Details <span class="chevron" aria-hidden="true">▾</span></button>
+          </div>
+          <div class="details-panel" id="details-edtech">
+            <div class="details-panel-inner">
+              <p><strong>Why view velocity over raw views:</strong> a channel with fewer, faster-climbing views signals current relevance better than lifetime totals skewed by one old viral video.</p>
+              <p><strong>Runs on a schedule:</strong> a Python job refreshes the underlying tables so the Power BI dashboard doesn't go stale between manual pulls.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="card reveal-up" data-cat="data web" id="proj-math-quiz-analytics-dashboard">
+          <div class="card-top">
+            <h3 class="copyable" role="button" tabindex="0" title="Click to copy a link to this project">Math Quiz Analytics Dashboard</h3>
+            <span class="pill complete">COMPLETE</span>
+          </div>
+          <p>Educator dashboard for timed quizzes with cohort analysis, skill-gap detection, and a dedicated leaderboard page.</p>
+          <div class="stack"><span>HTML/CSS/JS</span><span>Plotly</span><span>SQL</span><span>Python</span></div>
+          <div class="card-actions">
+            <a class="link" href="https://github.com/sahilkavishka?tab=repositories&q=quiz" target="_blank" rel="noreferrer noopener"><span>View on GitHub</span><span aria-hidden="true">↗</span></a>
+            <button class="details-toggle" type="button" aria-expanded="false" aria-controls="details-quiz">Details <span class="chevron" aria-hidden="true">▾</span></button>
+          </div>
+          <div class="details-panel" id="details-quiz">
+            <div class="details-panel-inner">
+              <p><strong>Why skill-gap detection, not just scores:</strong> a raw percentage tells a teacher a student struggled; per-topic breakdowns tell them what to reteach.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="card reveal-up" data-cat="web" id="proj-salon-booking-and-management-system">
+          <div class="card-top">
+            <h3 class="copyable" role="button" tabindex="0" title="Click to copy a link to this project">Salon Booking &amp; Management System</h3>
+            <span class="pill complete">COMPLETE</span>
+          </div>
+          <p>Full-stack appointment booking and management system for a salon business, with an admin dashboard and customer-facing scheduling.</p>
+          <div class="stack"><span>PHP</span><span>MySQL</span></div>
+          <div class="card-actions">
+            <a class="link" href="https://github.com/sahilkavishka/salon" target="_blank" rel="noreferrer noopener"><span>View on GitHub</span><span aria-hidden="true">↗</span></a>
+            <button class="details-toggle" type="button" aria-expanded="false" aria-controls="details-salon">Details <span class="chevron" aria-hidden="true">▾</span></button>
+          </div>
+          <div class="details-panel" id="details-salon">
+            <div class="details-panel-inner">
+              <p><strong>Where it started:</strong> the first project where I owned the full stack solo — CRUD, auth, and an admin dashboard, for a real small business.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="card reveal-up" data-cat="web" id="proj-portfolio-v2">
+          <div class="card-top">
+            <h3 class="copyable" role="button" tabindex="0" title="Click to copy a link to this project">Portfolio v3</h3>
+            <span class="pill live">LIVE</span>
+          </div>
+          <p>This site. Semantic markup, CSS custom properties for theming, a command palette, animated skill bars, and a filterable project grid — no framework required.</p>
+          <div class="stack"><span>HTML5</span><span>CSS3</span><span>Vanilla JS</span></div>
+          <div class="card-actions">
+            <a class="link" href="https://sahilkavishka.github.io/portfolio/" target="_blank" rel="noreferrer noopener"><span>Open live site</span><span aria-hidden="true">↗</span></a>
+            <button class="details-toggle" type="button" aria-expanded="false" aria-controls="details-portfolio">Details <span class="chevron" aria-hidden="true">▾</span></button>
+          </div>
+          <div class="details-panel" id="details-portfolio">
+            <div class="details-panel-inner">
+              <p><strong>Why no framework:</strong> a portfolio doesn't need a build step — keeping it to plain HTML/CSS/JS keeps it fast and trivially easy to host on GitHub Pages.</p>
+              <p>Press <strong>Ctrl/Cmd + K</strong> anywhere on this page to jump to any section or project.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="card reveal-up" data-cat="data" id="proj-sl-sports-analytics">
+          <div class="card-top">
+            <h3 class="copyable" role="button" tabindex="0" title="Click to copy a link to this project">SL Sports Analytics</h3>
+            <span class="pill planning">PLANNING</span>
+          </div>
+          <p>An open Sri Lankan sports dataset with public prediction models and interactive visualizations — a resource for local sports tech.</p>
+          <div class="stack"><span>Python</span><span>Pandas</span><span>Plotly</span><span>Open Data</span></div>
+          <div class="card-actions">
+            <a class="link" href="https://github.com/sahilkavishka" target="_blank" rel="noreferrer noopener"><span>Follow along</span><span aria-hidden="true">↗</span></a>
+            <button class="details-toggle" type="button" aria-expanded="false" aria-controls="details-slsports">Details <span class="chevron" aria-hidden="true">▾</span></button>
+          </div>
+          <div class="details-panel" id="details-slsports">
+            <div class="details-panel-inner">
+              <p><strong>Why it's worth building:</strong> most Sri Lankan sports data lives locked in broadcast graphics, not open, structured datasets — this aims to fix that.</p>
+            </div>
+          </div>
+        </article>
+
+        <p class="no-results" id="no-results">No projects match that filter — try a different tab or search term.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills">
+    <div class="container">
+      <div class="section-head reveal-up">
+        <h2>Roster</h2>
+        <span class="section-tag mono">tools I start every project with · self-rated</span>
+      </div>
+      <div class="roster reveal-up">
+        <div class="position">
+          <h3>Web development</h3>
+          <div class="skill-rows">
+            <div class="skill-row"><span class="name">Django</span><span class="bar"><i style="width:90%"></i></span><span class="lvl">90%</span></div>
+            <div class="skill-row"><span class="name">FastAPI</span><span class="bar"><i style="width:88%"></i></span><span class="lvl">88%</span></div>
+            <div class="skill-row"><span class="name">JavaScript</span><span class="bar"><i style="width:82%"></i></span><span class="lvl">82%</span></div>
+            <div class="skill-row"><span class="name">React</span><span class="bar"><i style="width:70%"></i></span><span class="lvl">70%</span></div>
+            <div class="skill-row"><span class="name">Three.js</span><span class="bar"><i style="width:60%"></i></span><span class="lvl">60%</span></div>
+          </div>
+        </div>
+        <div class="position">
+          <h3>ML, NLP &amp; AI</h3>
+          <div class="skill-rows">
+            <div class="skill-row"><span class="name">Scikit-learn</span><span class="bar"><i style="width:88%"></i></span><span class="lvl">88%</span></div>
+            <div class="skill-row"><span class="name">XGBoost</span><span class="bar"><i style="width:80%"></i></span><span class="lvl">80%</span></div>
+            <div class="skill-row"><span class="name">PyTorch</span><span class="bar"><i style="width:72%"></i></span><span class="lvl">72%</span></div>
+            <div class="skill-row"><span class="name">Hugging Face / BERT</span><span class="bar"><i style="width:68%"></i></span><span class="lvl">68%</span></div>
+            <div class="skill-row"><span class="name">Gemini API</span><span class="bar"><i style="width:65%"></i></span><span class="lvl">65%</span></div>
+          </div>
+        </div>
+        <div class="position">
+          <h3>Data, BI &amp; tools</h3>
+          <div class="skill-rows">
+            <div class="skill-row"><span class="name">Power BI</span><span class="bar"><i style="width:86%"></i></span><span class="lvl">86%</span></div>
+            <div class="skill-row"><span class="name">Pandas</span><span class="bar"><i style="width:90%"></i></span><span class="lvl">90%</span></div>
+            <div class="skill-row"><span class="name">SQL</span><span class="bar"><i style="width:84%"></i></span><span class="lvl">84%</span></div>
+            <div class="skill-row"><span class="name">PostgreSQL</span><span class="bar"><i style="width:76%"></i></span><span class="lvl">76%</span></div>
+            <div class="skill-row"><span class="name">Docker</span><span class="bar"><i style="width:64%"></i></span><span class="lvl">64%</span></div>
+          </div>
+        </div>
+        <div class="position">
+          <h3>Languages</h3>
+          <div class="skill-rows">
+            <div class="skill-row"><span class="name">Python</span><span class="bar"><i style="width:92%"></i></span><span class="lvl">92%</span></div>
+            <div class="skill-row"><span class="name">SQL</span><span class="bar"><i style="width:84%"></i></span><span class="lvl">84%</span></div>
+            <div class="skill-row"><span class="name">R</span><span class="bar"><i style="width:55%"></i></span><span class="lvl">55%</span></div>
+            <div class="skill-row"><span class="name">Bash</span><span class="bar"><i style="width:60%"></i></span><span class="lvl">60%</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="stack-chart reveal-up" id="stack-chart">
+        <h3>Stack frequency</h3>
+        <p class="sc-note">Counted straight from the project grid above — what actually ships the most, not just what's listed.</p>
+        <div id="stack-chart-rows"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Journey -->
+  <section id="journey">
+    <div class="container">
+      <div class="section-head reveal-up">
+        <h2>Journey</h2>
+        <span class="section-tag mono">full-stack dev → data scientist</span>
+      </div>
+      <div class="timeline reveal-up">
+        <div class="tl-item">
+          <span class="tl-when">STAGE 1</span>
+          <h4>Full-stack foundations</h4>
+          <p>Started with practical, client-facing web apps — a PHP &amp; MySQL salon booking system taught me the fundamentals of CRUD, auth, and admin dashboards.</p>
+        </div>
+        <div class="tl-item">
+          <span class="tl-when">STAGE 2</span>
+          <h4>Role-based platforms at scale</h4>
+          <p>Moved to Django and React to build the Sports Tournaments System — multi-role access, fixtures, and live scoring for organizers, players, and spectators.</p>
+        </div>
+        <div class="tl-item">
+          <span class="tl-when">STAGE 3</span>
+          <h4>Into data science</h4>
+          <p>Layered machine learning onto existing platforms — match-outcome prediction, quiz cohort analysis, and a full BI dashboard on Sri Lanka's medicine supply chain.</p>
+        </div>
+        <div class="tl-item">
+          <span class="tl-when">STAGE 4 · NOW</span>
+          <h4>AI-agentic platforms</h4>
+          <p>Currently combining LLM agents, computer vision, and forecasting models into SmartBuild AI — while exploring WebSockets, MLOps, and fine-tuning for what's next.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Leadership & Community -->
+  <section id="leadership">
+    <div class="container">
+      <div class="section-head reveal-up">
+        <h2>Leadership &amp; Community</h2>
+        <span class="section-tag mono">student leadership · stem volunteering · competitive achievements</span>
+      </div>
+      <div class="leadership-grid reveal-up">
+        <div class="lead-card">
+          <div class="lead-top">
+            <span class="pill lead">EXECUTIVE LEADERSHIP</span>
+            <span class="mono lead-date">2025 – Present</span>
+          </div>
+          <h3>Secretary — Society of Computer Sciences</h3>
+          <p class="lead-org mono">Sabaragamuwa University of Sri Lanka</p>
+          <p>Leading executive student governance, faculty communications, technology workshops, and industry networking initiatives for the university computing and data science student community.</p>
+        </div>
+
+        <div class="lead-card">
+          <div class="lead-top">
+            <span class="pill award">HONOR &amp; AWARD</span>
+            <span class="mono lead-date">AWS Community</span>
+          </div>
+          <h3>Certificate of Outstanding Achievement</h3>
+          <p class="lead-org mono">AWS Student Builder Group · SUSL</p>
+          <p>Awarded for valuable contributions, active engagement, and community leadership in promoting AWS cloud computing, peer learning, and tech innovation among undergraduates.</p>
+        </div>
+
+        <div class="lead-card">
+          <div class="lead-top">
+            <span class="pill active">ORGANIZING TEAM</span>
+            <span class="mono lead-date">NEXORA 1.0</span>
+          </div>
+          <h3>Program Team Member — NEXORA 1.0</h3>
+          <p class="lead-org mono">IEEE Student Branch · IEEE CS · IEEE WIE SUSL</p>
+          <p>Contributed to program conceptualization, session logistics, and event coordination for NEXORA 1.0, a premier technology leadership conference. Received Certificate of Appreciation.</p>
+        </div>
+
+        <div class="lead-card">
+          <div class="lead-top">
+            <span class="pill collab">STEM OUTREACH</span>
+            <span class="mono lead-date">HOPE 2.0</span>
+          </div>
+          <h3>STEM &amp; Micro:bit Coding Trainer</h3>
+          <p class="lead-org mono">IEEE WIE Affinity Group · Karagasthalawa School</p>
+          <p>Conducted hands-on physical computing sessions with BBC Micro:bit boards for school students, introducing algorithmic thinking, sensor interactions, and block coding to inspire young innovators.</p>
+        </div>
+
+        <div class="lead-card">
+          <div class="lead-top">
+            <span class="pill progress">TECH MENTORSHIP</span>
+            <span class="mono lead-date">Code Club</span>
+          </div>
+          <h3>Volunteer Coding Mentor</h3>
+          <p class="lead-org mono">Code Club Sri Lanka · Ratnapura Library</p>
+          <p>Mentored school learners at the National Library Services Board in foundational programming, visual problem-solving, and digital literacy to empower youth through accessible tech education.</p>
+        </div>
+
+        <div class="lead-card">
+          <div class="lead-top">
+            <span class="pill live">COMPETITIVE FINALS</span>
+            <span class="mono lead-date">Team Code Wave</span>
+          </div>
+          <h3>Competitive Programming Finalist</h3>
+          <p class="lead-org mono">J'Pura Xtreme 3.0 &amp; CodeRally 7.0</p>
+          <p>Qualified as University Category Finalist in J'Pura Xtreme 3.0 (IEEE USJ / Buildr Labs) and 24-Hour Grand Finale Finalist in CodeRally 7.0 (IEEE CS SUSL) solving complex algorithmic challenges.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Toolkit -->
+  <section id="toolkit">
+    <div class="container">
+      <div class="section-head reveal-up">
+        <h2>Toolkit</h2>
+        <span class="section-tag mono">what's actually open while I work</span>
+      </div>
+      <div class="toolkit-grid reveal-up">
+        <div class="tool-item"><span class="tool-cat">EDITOR</span><span class="tool-name">VS Code</span><span class="tool-note">Pylance, ESLint, GitLens</span></div>
+        <div class="tool-item"><span class="tool-cat">VERSIONING</span><span class="tool-name">Git + GitHub</span><span class="tool-note">Feature branches, PR review habit</span></div>
+        <div class="tool-item"><span class="tool-cat">API TESTING</span><span class="tool-name">Postman</span><span class="tool-note">Collections per project</span></div>
+        <div class="tool-item"><span class="tool-cat">CONTAINERS</span><span class="tool-name">Docker</span><span class="tool-note">Local parity for FastAPI services</span></div>
+        <div class="tool-item"><span class="tool-cat">NOTEBOOKS</span><span class="tool-name">Jupyter</span><span class="tool-note">Model iteration before it hits FastAPI</span></div>
+        <div class="tool-item"><span class="tool-cat">DASHBOARDS</span><span class="tool-name">Power BI</span><span class="tool-note">Client-facing BI deliverables</span></div>
+        <div class="tool-item"><span class="tool-cat">DESIGN</span><span class="tool-name">Figma</span><span class="tool-note">Wireframes before I write CSS</span></div>
+        <div class="tool-item"><span class="tool-cat">TERMINAL</span><span class="tool-name">WSL2 + zsh</span><span class="tool-note">Linux-first workflow on Windows</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How I work -->
+  <section id="process">
+    <div class="container">
+      <div class="section-head reveal-up">
+        <h2>How I work</h2>
+        <span class="section-tag mono">from first call to handover</span>
+      </div>
+      <div class="process-grid reveal-up">
+        <div class="process-step">
+          <span class="ps-num">01</span>
+          <h3>Scope the real problem</h3>
+          <p>A short call or written brief to pin down what the data or platform actually needs to do — not just the feature list.</p>
+        </div>
+        <div class="process-step">
+          <span class="ps-num">02</span>
+          <h3>Build in thin slices</h3>
+          <p>Working software early — a rough API or dashboard you can react to, rather than a big reveal at the end.</p>
+        </div>
+        <div class="process-step">
+          <span class="ps-num">03</span>
+          <h3>Test against real data</h3>
+          <p>Models and dashboards get checked against messy, real inputs, not just clean samples, before anything ships.</p>
+        </div>
+        <div class="process-step">
+          <span class="ps-num">04</span>
+          <h3>Hand over cleanly</h3>
+          <p>Documented code, a short walkthrough, and a plan for who maintains it — so the project outlives the handoff call.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Learning & Certifications -->
+  <section id="learning">
+    <div class="container">
+      <div class="section-head reveal-up">
+        <h2>Learning goals &amp; certifications</h2>
+        <span class="section-tag mono">what I'm working toward right now</span>
+      </div>
+      <div class="learn-grid reveal-up">
+        <div class="learn-item">
+          <div class="learn-top">
+            <h3>AWS Certified Machine Learning – Specialty</h3>
+            <span class="pill progress">IN PROGRESS</span>
+          </div>
+          <p>Studying toward this alongside SmartBuild AI's forecasting work, so the exam prep and the project reinforce each other.</p>
+          <div class="progress-track" role="progressbar" aria-label="AWS ML Specialty progress" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"><div class="progress-fill" style="width:40%"></div></div>
+        </div>
+        <div class="learn-item">
+          <div class="learn-top">
+            <h3>Google Data Analytics Professional Certificate</h3>
+            <span class="pill soon">PLANNED</span>
+          </div>
+          <p>Queued up next to formalize the BI/analytics side of my work — dashboards and SQL I already use daily, structured into a credential.</p>
+          <div class="progress-track" role="progressbar" aria-label="Google Data Analytics progress" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"><div class="progress-fill" style="width:10%"></div></div>
+        </div>
+        <div class="learn-item">
+          <div class="learn-top">
+            <h3>Kaggle competition — top 20%</h3>
+            <span class="pill progress">ONGOING</span>
+          </div>
+          <p>Entering tabular and NLP competitions to stress-test modeling decisions outside of client and personal projects.</p>
+          <div class="progress-track" role="progressbar" aria-label="Kaggle competition goal progress" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><div class="progress-fill" style="width:25%"></div></div>
+        </div>
+        <div class="learn-item">
+          <div class="learn-top">
+            <h3>Open-source contributions</h3>
+            <span class="pill progress">ONGOING</span>
+          </div>
+          <p>Looking for meaningful issues in Python data-tooling repos rather than drive-by pull requests.</p>
+          <div class="progress-track" role="progressbar" aria-label="Open source contribution goal progress" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"><div class="progress-fill" style="width:15%"></div></div>
+        </div>
+        <div class="learn-item">
+          <div class="learn-top">
+            <h3>Sri Lankan sports analytics dataset</h3>
+            <span class="pill soon">PLANNED</span>
+          </div>
+          <p>Public dataset and models — a resource for local sports tech. See "SL Sports Analytics" in Projects.</p>
+          <div class="progress-track" role="progressbar" aria-label="Sports analytics dataset progress" aria-valuenow="5" aria-valuemin="0" aria-valuemax="100"><div class="progress-fill" style="width:5%"></div></div>
+        </div>
+        <div class="learn-item">
+          <div class="learn-top">
+            <h3>Real-time features via WebSockets</h3>
+            <span class="pill progress">IN PROGRESS</span>
+          </div>
+          <p>Adding live score/fixture updates to the Sports Tournaments System without a full page refresh.</p>
+          <div class="progress-track" role="progressbar" aria-label="WebSocket feature progress" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"><div class="progress-fill" style="width:30%"></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Writings -->
+  <section id="writings">
+    <div class="container">
+      <div class="section-head reveal-up">
+        <h2>Writings</h2>
+        <span class="section-tag mono">notes on decisions, not just demos</span>
+      </div>
+      <div class="writings-grid reveal-up">
+        <article class="write-card">
+          <span class="pill soon" style="width:fit-content">COMING SOON</span>
+          <h3>Building SmartBuild AI: what agentic actually means in a construction estimator</h3>
+          <p>Why the finance engine and the AI consultant are separate services instead of one big prompt — and what broke when I first tried it the other way.</p>
+        </article>
+        <article class="write-card">
+          <span class="pill soon" style="width:fit-content">COMING SOON</span>
+          <h3>Classic ML vs. BERT for sentiment: what actually moved the needle</h3>
+          <p>A practical comparison from the smartphone review project — where fine-tuned BERT earned its extra latency, and where a Random Forest was good enough.</p>
+        </article>
+        <article class="write-card">
+          <span class="pill soon" style="width:fit-content">COMING SOON</span>
+          <h3>Turning import data into a dashboard someone will actually use</h3>
+          <p>Notes from the medicine supply chain BI project on designing a star schema for a dashboard that has to survive a hospital planner's first five clicks.</p>
+        </article>
+      </div>
+      <div class="writings-cta">
+        <span>Want a note when the first one's up?</span>
+        <a class="btn btn-ghost" id="notify-me" href="mailto:sahilkavishka428@gmail.com?subject=Notify%20me%20about%20new%20writing">Get notified by email</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about">
+    <div class="container">
+      <div class="section-head reveal-up">
+        <h2>About</h2>
+        <span class="section-tag mono">the person behind the repos</span>
+      </div>
+      <div class="about-grid reveal-up">
+        <div class="panel">
+          <h3>Hi, I'm Sahil</h3>
+          <p>I'm a developer and data scientist from Anuradhapura, Sri Lanka. My work sits where full-stack engineering meets data science: platforms that need to feel fast and clean, plus the pipelines and models that make them useful — predicting a match outcome instead of just displaying a score, or turning a pile of import data into a BI dashboard a hospital planner could actually use.</p>
+          <p>Right now I'm deepening my work in deep learning, MLOps, and real-time features, while keeping an eye on accessibility and UI polish in everything I ship.</p>
+        </div>
+        <div class="panel">
+          <h3>Quick facts</h3>
+          <div class="statline">
+            <div class="stat"><b data-count="18">18</b><span>Public repos</span></div>
+            <div class="stat"><b>GMT+5:30</b><span>Timezone</span></div>
+            <div class="stat"><b>&lt;24h</b><span>Avg. reply time</span></div>
+          </div>
+          <p style="margin-top:1rem;font-size:.92rem;color:var(--muted)">Goal for this year: ship three end-to-end ML projects to production and publish a write-up on each — see the scrolling ticker up top for the full list.</p>
+        </div>
+      </div>
+
+      <div class="panel reveal-up" style="margin-top:1.1rem">
+        <h3>GitHub activity</h3>
+        <p style="margin:0 0 .2rem;font-size:.92rem;color:var(--muted)">Live stats and contribution history, pulled straight from GitHub.</p>
+        <div class="stats-imgs">
+          <img loading="lazy" alt="Sahil Kavishka's GitHub stats" src="https://github-readme-stats.vercel.app/api?username=sahilkavishka&show_icons=true&theme=transparent&hide_border=true&bg_color=00000000&title_color=3d7fff&icon_color=5fd0ff&text_color=7f92b8&ring_color=3d7fff" />
+          <img loading="lazy" alt="Sahil Kavishka's most used languages" src="https://github-readme-stats.vercel.app/api/top-langs/?username=sahilkavishka&layout=compact&theme=transparent&hide_border=true&bg_color=00000000&title_color=3d7fff&text_color=7f92b8&langs_count=8" />
+        </div>
+        <div class="contrib-wrap">
+          <img loading="lazy" alt="Sahil Kavishka's GitHub contribution calendar" src="https://ghchart.rshah.org/3d7fff/sahilkavishka" style="width:100%;height:auto" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-head reveal-up">
+        <h2>Contact</h2>
+        <span class="section-tag mono">let's build something together</span>
+      </div>
+      <div class="contact-grid reveal-up">
+        <div class="panel">
+          <h3>Get in touch</h3>
+          <p style="color:var(--muted);margin:0">Open to freelance work and meaningful collaborations. Email is the fastest way to reach me.</p>
+          <div class="avail-row">
+            <span class="clock-badge" id="local-clock">Local time: —</span>
+            <span class="avail-note">Usually replies within 24 hours</span>
+          </div>
+          <div class="contact-actions">
+            <a class="btn btn-ghost" href="resume.pdf" download>Download résumé</a>
+            <button class="btn btn-ghost" id="save-contact" type="button">Save contact (vCard)</button>
+            <button class="btn btn-ghost" id="print-page" type="button">Print / Save as PDF</button>
+            <button class="btn btn-ghost" id="copy-page-link" type="button">Copy portfolio link</button>
+          </div>
+          <div class="copy-row">
+            <code id="email-text">sahilkavishka428@gmail.com</code>
+            <button class="copy-btn" id="copy-email" type="button">Copy email</button>
+          </div>
+          <div class="list" role="list">
+            <a href="mailto:sahilkavishka428@gmail.com"><span>Email</span><span class="k">sahilkavishka428@gmail.com</span></a>
+            <a href="https://github.com/sahilkavishka" target="_blank" rel="noreferrer noopener"><span>GitHub</span><span class="k">@sahilkavishka</span></a>
+            <a href="https://www.linkedin.com/in/sahilkavishka/" target="_blank" rel="noreferrer noopener"><span>LinkedIn</span><span class="k">sahilkavishka</span></a>
+            <a href="https://sahilkavishka.github.io/portfolio/" target="_blank" rel="noreferrer noopener"><span>Live site</span><span class="k">sahilkavishka.github.io</span></a>
+          </div>
+        </div>
+
+        <div class="panel">
+          <h3>Quick message</h3>
+          <p style="color:var(--muted);margin:0;font-size:.92rem">Fill this in and it opens a pre-filled email in your mail app — nothing is sent from this page.</p>
+          <form class="quick-form" id="quick-contact-form">
+            <div class="field">
+              <label for="qc-name">Your name</label>
+              <input id="qc-name" name="name" type="text" required autocomplete="name" />
+            </div>
+            <div class="field">
+              <label for="qc-reason">What's this about</label>
+              <select id="qc-reason" name="reason">
+                <option>Freelance project</option>
+                <option>Full-time role</option>
+                <option>Collaboration / open source</option>
+                <option>Just saying hi</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="qc-message">Message</label>
+              <textarea id="qc-message" name="message" rows="4" required></textarea>
+            </div>
+            <button class="btn btn-primary" type="submit">Open email to send</button>
+            <span class="form-note">Opens: <span id="qc-preview-to">sahilkavishka428@gmail.com</span></span>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container foot">
+    <p>© <span id="year"></span> Sahil Kavishka. All rights reserved.</p>
+    <div class="foot-links">
+      <a href="#top">Back to top</a>
+      <a href="https://github.com/sahilkavishka" target="_blank" rel="noreferrer noopener">GitHub</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <p>Made in Anuradhapura, Sri Lanka.</p>
+  </div>
+</footer>
+
+<button id="back-to-top" type="button" aria-label="Back to top">↑</button>
+<div id="toast-region" aria-live="polite" aria-atomic="true"></div>
+
+<!-- Right-edge section rail -->
+<nav class="side-rail" id="side-rail" aria-label="Section quick-nav"></nav>
+
+<!-- Keyboard shortcuts help -->
+<div id="shortcuts-overlay" role="dialog" aria-modal="true" aria-label="Keyboard shortcuts">
+  <div class="shortcuts-card">
+    <h3>Keyboard shortcuts</h3>
+    <div class="sk-row"><span>Open command palette</span><span><kbd>Ctrl</kbd>/<kbd>⌘</kbd><kbd>K</kbd></span></div>
+    <div class="sk-row"><span>Search projects</span><span><kbd>/</kbd></span></div>
+    <div class="sk-row"><span>Show this panel</span><span><kbd>?</kbd></span></div>
+    <div class="sk-row"><span>Close any overlay</span><span><kbd>Esc</kbd></span></div>
+    <div class="sk-row"><span>Move in palette</span><span><kbd>↑</kbd><kbd>↓</kbd></span></div>
+    <button class="btn btn-primary sk-close" id="shortcuts-close" type="button">Got it</button>
+  </div>
+</div>
+
+<!-- Command palette -->
+<div id="palette-overlay" role="dialog" aria-modal="true" aria-label="Command palette">
+  <div class="palette">
+    <div class="palette-input-row">
+      <span aria-hidden="true">⌕</span>
+      <input type="text" id="palette-input" placeholder="Jump to a section or project…" autocomplete="off" />
+    </div>
+    <div class="palette-list" id="palette-list" role="listbox"></div>
+    <div class="palette-foot">
+      <span><kbd>↑</kbd><kbd>↓</kbd> navigate · <kbd>Enter</kbd> go</span>
+      <span><kbd>Esc</kbd> close</span>
+    </div>
+  </div>
+</div>
+
+<script>
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // Footer year
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Close mobile nav after tapping a link
+  const navToggle = document.getElementById('nav-toggle');
+  document.querySelectorAll('.nav a').forEach(link=>{
+    link.addEventListener('click', ()=>{ if(navToggle) navToggle.checked = false; });
+  });
+  document.addEventListener('keydown', (e)=>{
+    if(e.key === 'Escape' && navToggle) navToggle.checked = false;
+  });
+
+  // Day/night theme toggle, persisted, with system-preference fallback
+  const root = document.documentElement;
+  const themeBtn = document.getElementById('theme-toggle');
+  const saved = localStorage.getItem('sk-theme');
+  if(saved === 'day'){
+    root.setAttribute('data-theme','day'); themeBtn.textContent = '◑';
+  } else if(!saved && window.matchMedia('(prefers-color-scheme: light)').matches){
+    root.setAttribute('data-theme','day'); themeBtn.textContent = '◑';
+  }
+  function toggleTheme(){
+    const isDay = root.getAttribute('data-theme') === 'day';
+    if(isDay){ root.removeAttribute('data-theme'); localStorage.setItem('sk-theme','night'); themeBtn.textContent = '◐'; }
+    else { root.setAttribute('data-theme','day'); localStorage.setItem('sk-theme','day'); themeBtn.textContent = '◑'; }
+  }
+  themeBtn.addEventListener('click', toggleTheme);
+
+  // EN / Sinhala toggle for the hero copy
+  const langBtn = document.getElementById('lang-toggle');
+  let currentLang = localStorage.getItem('sk-lang') || 'en';
+  function applyLang(lang){
+    currentLang = lang;
+    document.documentElement.setAttribute('lang', lang);
+    document.querySelectorAll('[data-en][data-si]').forEach(el=>{
+      el.innerHTML = lang === 'si' ? el.dataset.si : el.dataset.en;
+    });
+    if(langBtn){
+      langBtn.textContent = lang === 'si' ? 'සිං' : 'EN';
+      langBtn.classList.toggle('si-active', lang === 'si');
+      langBtn.setAttribute('aria-label', lang === 'si' ? 'Switch to English' : 'Switch to Sinhala');
+    }
+    localStorage.setItem('sk-lang', lang);
+  }
+  applyLang(currentLang);
+  if(langBtn){
+    langBtn.addEventListener('click', ()=> applyLang(currentLang === 'si' ? 'en' : 'si'));
+  }
+
+  // Toast helper
+  const toastRegion = document.getElementById('toast-region');
+  function showToast(message){
+    const el = document.createElement('div');
+    el.className = 'toast';
+    el.textContent = message;
+    toastRegion.appendChild(el);
+    requestAnimationFrame(()=> el.classList.add('show'));
+    setTimeout(()=>{
+      el.classList.remove('show');
+      setTimeout(()=> el.remove(), 300);
+    }, 2600);
+  }
+
+  // Copy email
+  const copyBtn = document.getElementById('copy-email');
+  copyBtn.addEventListener('click', async ()=>{
+    try{
+      await navigator.clipboard.writeText('sahilkavishka428@gmail.com');
+      copyBtn.textContent = 'Copied!';
+      copyBtn.classList.add('copied');
+      showToast('Email copied to clipboard');
+      setTimeout(()=>{ copyBtn.textContent = 'Copy email'; copyBtn.classList.remove('copied'); }, 1800);
+    }catch(e){
+      copyBtn.textContent = 'Ctrl/Cmd+C to copy';
+    }
+  });
+
+  // Quick contact form -> mailto
+  const qcForm = document.getElementById('quick-contact-form');
+  qcForm.addEventListener('submit', (e)=>{
+    e.preventDefault();
+    const name = document.getElementById('qc-name').value.trim();
+    const reason = document.getElementById('qc-reason').value;
+    const message = document.getElementById('qc-message').value.trim();
+    if(!name || !message) return;
+    const subject = encodeURIComponent(`Portfolio contact — ${reason} — from ${name}`);
+    const body = encodeURIComponent(message + '\n\n— ' + name);
+    window.location.href = `mailto:sahilkavishka428@gmail.com?subject=${subject}&body=${body}`;
+    showToast('Opening your email app…');
+  });
+
+  // Scroll progress bar
+  const progressBar = document.getElementById('progress-bar');
+  function updateProgress(){
+    const h = document.documentElement;
+    const scrolled = h.scrollTop;
+    const height = h.scrollHeight - h.clientHeight;
+    progressBar.style.width = height > 0 ? (scrolled / height * 100) + '%' : '0%';
+  }
+
+  // Back to top button
+  const backToTop = document.getElementById('back-to-top');
+  function updateBackToTop(){
+    backToTop.classList.toggle('show', window.scrollY > 600);
+  }
+  backToTop.addEventListener('click', ()=>{
+    window.scrollTo({ top: 0, behavior: prefersReducedMotion ? 'auto' : 'smooth' });
+  });
+
+  let scrollTicking = false;
+  window.addEventListener('scroll', ()=>{
+    if(!scrollTicking){
+      requestAnimationFrame(()=>{
+        updateProgress();
+        updateBackToTop();
+        scrollTicking = false;
+      });
+      scrollTicking = true;
+    }
+  });
+  updateProgress();
+  updateBackToTop();
+
+  // Scroll-spy active nav link + side rail
+  const navLinks = Array.from(document.querySelectorAll('.nav a[data-section]'));
+  const spySections = navLinks
+    .map(l => document.getElementById(l.dataset.section))
+    .filter(Boolean);
+
+  const sideRail = document.getElementById('side-rail');
+  if(sideRail){
+    navLinks.forEach(l=>{
+      const dot = document.createElement('a');
+      dot.href = l.getAttribute('href');
+      dot.dataset.section = l.dataset.section;
+      dot.setAttribute('aria-label', l.textContent.trim());
+      const label = document.createElement('span');
+      label.className = 'rail-label';
+      label.textContent = l.textContent.trim();
+      dot.appendChild(label);
+      sideRail.appendChild(dot);
+    });
+  }
+  const railDots = sideRail ? Array.from(sideRail.querySelectorAll('a')) : [];
+
+  if('IntersectionObserver' in window && spySections.length){
+    const spyObserver = new IntersectionObserver((entries)=>{
+      entries.forEach(entry=>{
+        const link = navLinks.find(l => l.dataset.section === entry.target.id);
+        const dot = railDots.find(d => d.dataset.section === entry.target.id);
+        if(entry.isIntersecting){
+          if(link){ navLinks.forEach(l => l.classList.remove('active-link')); link.classList.add('active-link'); }
+          if(dot){ railDots.forEach(d => d.classList.remove('active')); dot.classList.add('active'); }
+        }
+      });
+    }, { rootMargin: '-40% 0px -50% 0px', threshold: 0 });
+    spySections.forEach(s => spyObserver.observe(s));
+  }
+
+  // Reveal-on-scroll for sections/cards
+  const revealEls = document.querySelectorAll('.reveal-up');
+  if('IntersectionObserver' in window && revealEls.length){
+    const revealObserver = new IntersectionObserver((entries)=>{
+      entries.forEach(entry=>{
+        if(entry.isIntersecting){
+          entry.target.classList.add('in');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    revealEls.forEach(el => revealObserver.observe(el));
+  } else {
+    revealEls.forEach(el => el.classList.add('in'));
+  }
+
+  // Animated counters
+  function animateCount(el){
+    const target = parseInt(el.dataset.count, 10);
+    if(isNaN(target)) return;
+    if(prefersReducedMotion){ el.textContent = target; return; }
+    const duration = 900;
+    const start = performance.now();
+    el.textContent = '0';
+    function step(now){
+      const p = Math.min((now - start) / duration, 1);
+      el.textContent = Math.round(target * p);
+      if(p < 1) requestAnimationFrame(step);
+      else el.textContent = target;
+    }
+    requestAnimationFrame(step);
+  }
+  const countEls = document.querySelectorAll('[data-count]');
+  if('IntersectionObserver' in window && countEls.length){
+    const countObserver = new IntersectionObserver((entries)=>{
+      entries.forEach(entry=>{
+        if(entry.isIntersecting){
+          animateCount(entry.target);
+          countObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.4 });
+    countEls.forEach(el => countObserver.observe(el));
+  } else {
+    countEls.forEach(el => { el.textContent = el.dataset.count; });
+  }
+
+  // Animated skill bars
+  const skillRows = document.querySelectorAll('.skill-row');
+  if('IntersectionObserver' in window && skillRows.length){
+    const skillObserver = new IntersectionObserver((entries)=>{
+      entries.forEach(entry=>{
+        if(entry.isIntersecting){
+          entry.target.classList.add('in');
+          skillObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.3 });
+    skillRows.forEach(el => skillObserver.observe(el));
+  } else {
+    skillRows.forEach(el => el.classList.add('in'));
+  }
+
+  // Generic details-toggle handler (spotlight + every project card)
+  document.querySelectorAll('.details-toggle').forEach(btn=>{
+    const panel = document.getElementById(btn.getAttribute('aria-controls'));
+    if(!panel) return;
+    btn.addEventListener('click', ()=>{
+      const expanded = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', String(!expanded));
+      panel.classList.toggle('open', !expanded);
+      const chev = btn.querySelector('.chevron');
+      if(!expanded && chev) chev.textContent = '▴';
+      else if(chev) chev.textContent = '▾';
+    });
+  });
+
+  // Project filter tabs + search (accessible toolbar pattern, keyboard-navigable)
+  const tabs = Array.from(document.querySelectorAll('.tab'));
+  const cards = document.querySelectorAll('#project-grid .card');
+  const searchInput = document.getElementById('project-search');
+  const noResults = document.getElementById('no-results');
+  const filterStatus = document.getElementById('filter-status');
+  let activeFilter = 'all';
+
+  function applyFilters(){
+    const q = searchInput.value.trim().toLowerCase();
+    let visible = 0;
+    cards.forEach(card=>{
+      const cats = card.dataset.cat.split(' ');
+      const matchesCat = activeFilter === 'all' || cats.includes(activeFilter);
+      const text = card.textContent.toLowerCase();
+      const matchesSearch = q === '' || text.includes(q);
+      const show = matchesCat && matchesSearch;
+      card.classList.toggle('hide', !show);
+      if(show) visible++;
+    });
+    noResults.classList.toggle('show', visible === 0);
+    filterStatus.textContent = visible === 0
+      ? 'No projects match that filter.'
+      : `Showing ${visible} project${visible === 1 ? '' : 's'}.`;
+  }
+
+  tabs.forEach((tab, i)=>{
+    tab.addEventListener('click', ()=>{
+      tabs.forEach(t=>t.setAttribute('aria-pressed','false'));
+      tab.setAttribute('aria-pressed','true');
+      activeFilter = tab.dataset.filter;
+      applyFilters();
+    });
+    tab.addEventListener('keydown', (e)=>{
+      let nextIndex = null;
+      if(e.key === 'ArrowRight') nextIndex = (i + 1) % tabs.length;
+      if(e.key === 'ArrowLeft') nextIndex = (i - 1 + tabs.length) % tabs.length;
+      if(e.key === 'Home') nextIndex = 0;
+      if(e.key === 'End') nextIndex = tabs.length - 1;
+      if(nextIndex !== null){
+        e.preventDefault();
+        tabs[nextIndex].focus();
+        tabs[nextIndex].click();
+      }
+    });
+  });
+  searchInput.addEventListener('input', applyFilters);
+  applyFilters();
+
+  // Stack frequency chart — tallied live from each project card's .stack tags
+  (function buildStackChart(){
+    const rowsEl = document.getElementById('stack-chart-rows');
+    if(!rowsEl) return;
+    const counts = {};
+    cards.forEach(card=>{
+      card.querySelectorAll('.stack span').forEach(tagEl=>{
+        const name = tagEl.textContent.trim();
+        counts[name] = (counts[name] || 0) + 1;
+      });
+    });
+    const sorted = Object.entries(counts).sort((a,b)=> b[1]-a[1]).slice(0, 8);
+    const max = sorted.length ? sorted[0][1] : 1;
+    sorted.forEach(([name, count])=>{
+      const row = document.createElement('div');
+      row.className = 'sc-row';
+      const pct = Math.round((count / max) * 100);
+      row.innerHTML = `<span class="sc-name"></span><span class="sc-track"><span class="sc-fill" style="width:${pct}%"></span></span><span class="sc-count"></span>`;
+      row.querySelector('.sc-name').textContent = name;
+      row.querySelector('.sc-count').textContent = `${count} project${count === 1 ? '' : 's'}`;
+      rowsEl.appendChild(row);
+    });
+    const scRows = rowsEl.querySelectorAll('.sc-row');
+    if('IntersectionObserver' in window && scRows.length){
+      const scObs = new IntersectionObserver((entries)=>{
+        entries.forEach(entry=>{
+          if(entry.isIntersecting){ entry.target.classList.add('in'); scObs.unobserve(entry.target); }
+        });
+      }, { threshold: 0.3 });
+      scRows.forEach(r => scObs.observe(r));
+    } else {
+      scRows.forEach(r => r.classList.add('in'));
+    }
+  })();
+
+  // One orchestrated hero entrance
+  requestAnimationFrame(()=>{
+    document.getElementById('hero-copy').classList.add('in');
+    setTimeout(()=> document.getElementById('hero-board').classList.add('in'), 120);
+  });
+
+  // Live local clocks (Anuradhapura, Sri Lanka)
+  const clockEl = document.getElementById('local-clock');
+  const heroClockEl = document.getElementById('hero-clock');
+  function updateClock(){
+    try{
+      const fmt = new Intl.DateTimeFormat('en-US', {
+        timeZone: 'Asia/Colombo', hour: 'numeric', minute: '2-digit', hour12: true
+      });
+      const text = fmt.format(new Date());
+      if(clockEl) clockEl.textContent = `Local time: ${text} (GMT+5:30)`;
+      if(heroClockEl) heroClockEl.textContent = `${text} GMT+5:30`;
+    }catch(e){ /* leave placeholder */ }
+  }
+  updateClock();
+  setInterval(updateClock, 30000);
+
+  // Print / Save as PDF
+  const printBtn = document.getElementById('print-page');
+  if(printBtn) printBtn.addEventListener('click', ()=> window.print());
+
+  // Copy portfolio link
+  const copyPageBtn = document.getElementById('copy-page-link');
+  if(copyPageBtn){
+    copyPageBtn.addEventListener('click', async ()=>{
+      try{
+        await navigator.clipboard.writeText('https://sahilkavishka.github.io/portfolio/');
+        showToast('Portfolio link copied');
+      }catch(e){
+        showToast('Copy this page\'s URL from your address bar');
+      }
+    });
+  }
+
+  // Save contact as vCard (.vcf)
+  const saveContactBtn = document.getElementById('save-contact');
+  if(saveContactBtn){
+    saveContactBtn.addEventListener('click', ()=>{
+      const vcard = [
+        'BEGIN:VCARD','VERSION:3.0',
+        'N:Kavishka;Sahil;;;','FN:Sahil Kavishka',
+        'TITLE:Full-Stack Developer & Data Scientist',
+        'EMAIL;TYPE=INTERNET:sahilkavishka428@gmail.com',
+        'URL:https://sahilkavishka.github.io/portfolio/',
+        'URL:https://github.com/sahilkavishka',
+        'ADR;TYPE=WORK:;;Anuradhapura;;;;Sri Lanka',
+        'END:VCARD'
+      ].join('\n');
+      const blob = new Blob([vcard], { type: 'text/vcard' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url; a.download = 'sahil-kavishka.vcf';
+      document.body.appendChild(a); a.click(); a.remove();
+      URL.revokeObjectURL(url);
+      showToast('Contact card downloaded');
+    });
+  }
+
+  // Keyboard shortcuts help overlay
+  const shortcutsOverlay = document.getElementById('shortcuts-overlay');
+  const shortcutsOpenBtn = document.getElementById('shortcuts-open');
+  const shortcutsCloseBtn = document.getElementById('shortcuts-close');
+  function openShortcuts(){ shortcutsOverlay.classList.add('open'); }
+  function closeShortcuts(){ shortcutsOverlay.classList.remove('open'); }
+  if(shortcutsOpenBtn) shortcutsOpenBtn.addEventListener('click', openShortcuts);
+  if(shortcutsCloseBtn) shortcutsCloseBtn.addEventListener('click', closeShortcuts);
+  if(shortcutsOverlay) shortcutsOverlay.addEventListener('click', (e)=>{ if(e.target === shortcutsOverlay) closeShortcuts(); });
+
+  // Per-project deep links: click a project title to copy a shareable link
+  document.querySelectorAll('.card-top h3.copyable').forEach(h3=>{
+    const card = h3.closest('.card');
+    if(!card || !card.id) return;
+    function copyCardLink(){
+      const url = `${location.origin}${location.pathname}#${card.id}`;
+      const title = card.querySelector('h3').textContent.trim();
+      history.replaceState(null, '', `#${card.id}`);
+      if(navigator.share){
+        navigator.share({ title: `${title} — Sahil Kavishka`, url }).catch(()=>{ /* user cancelled */ });
+        return;
+      }
+      navigator.clipboard.writeText(url).then(()=>{
+        showToast('Link copied — share this project directly');
+      }).catch(()=>{
+        showToast(`Link: #${card.id}`);
+      });
+    }
+    h3.addEventListener('click', copyCardLink);
+    h3.addEventListener('keydown', (e)=>{
+      if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); copyCardLink(); }
+    });
+  });
+
+  // Highlight a project card if the page was opened with a #proj-... hash
+  function highlightFromHash(){
+    const id = location.hash.replace('#','');
+    if(!id) return;
+    const target = document.getElementById(id);
+    if(!target || !target.classList.contains('card')) return;
+    // Make sure it's visible regardless of active filter
+    tabs.forEach(t=>t.setAttribute('aria-pressed', t.dataset.filter === 'all' ? 'true' : 'false'));
+    activeFilter = 'all';
+    searchInput.value = '';
+    applyFilters();
+    setTimeout(()=>{
+      target.scrollIntoView({ behavior: prefersReducedMotion ? 'auto' : 'smooth', block: 'center' });
+      target.classList.add('pulse');
+      setTimeout(()=> target.classList.remove('pulse'), 2200);
+    }, 50);
+  }
+  highlightFromHash();
+  window.addEventListener('hashchange', highlightFromHash);
+
+  // ---- Command palette ----
+  const paletteOverlay = document.getElementById('palette-overlay');
+  const paletteInput = document.getElementById('palette-input');
+  const paletteList = document.getElementById('palette-list');
+  let paletteIndex = 0;
+  let paletteItems = [];
+
+  function buildPaletteEntries(){
+    const entries = [];
+    navLinks.forEach(l=>{
+      const sec = document.getElementById(l.dataset.section);
+      entries.push({
+        title: l.textContent.trim(),
+        sub: 'Section',
+        tag: 'GO',
+        action: ()=> sec && sec.scrollIntoView({behavior: prefersReducedMotion ? 'auto':'smooth'})
+      });
+    });
+    cards.forEach(card=>{
+      const title = card.querySelector('h3').textContent.trim();
+      entries.push({
+        title,
+        sub: 'Project',
+        tag: 'OPEN',
+        action: ()=>{ location.hash = '#' + card.id; highlightFromHash(); }
+      });
+    });
+    document.querySelectorAll('.tool-item').forEach(tool=>{
+      entries.push({
+        title: tool.querySelector('.tool-name').textContent.trim(),
+        sub: 'Toolkit · ' + tool.querySelector('.tool-cat').textContent.trim(),
+        tag: 'GO',
+        action: ()=> document.getElementById('toolkit').scrollIntoView({behavior: prefersReducedMotion ? 'auto':'smooth'})
+      });
+    });
+    document.querySelectorAll('.learn-item').forEach(item=>{
+      entries.push({
+        title: item.querySelector('h3').textContent.trim(),
+        sub: 'Learning goal',
+        tag: 'GO',
+        action: ()=> item.scrollIntoView({behavior: prefersReducedMotion ? 'auto':'smooth', block:'center'})
+      });
+    });
+    entries.push({ title:'Toggle day / night theme', sub:'Preference', tag:'RUN', action: toggleTheme });
+    entries.push({ title:'Switch language (EN / සිං)', sub:'Preference', tag:'RUN', action: ()=> langBtn && langBtn.click() });
+    entries.push({ title:'Copy email address', sub:'sahilkavishka428@gmail.com', tag:'RUN', action: ()=> copyBtn.click() });
+    entries.push({ title:'Save contact as vCard', sub:'sahil-kavishka.vcf', tag:'RUN', action: ()=> saveContactBtn && saveContactBtn.click() });
+    entries.push({ title:'Show keyboard shortcuts', sub:'Help', tag:'RUN', action: openShortcuts });
+    entries.push({ title:'Download résumé', sub:'resume.pdf', tag:'GO', action: ()=>{ window.location.href = 'resume.pdf'; } });
+    entries.push({ title:'Open GitHub profile', sub:'github.com/sahilkavishka', tag:'GO', action: ()=> window.open('https://github.com/sahilkavishka','_blank','noreferrer noopener') });
+    return entries;
+  }
+  const paletteEntries = buildPaletteEntries();
+
+  function renderPalette(){
+    const q = paletteInput.value.trim().toLowerCase();
+    paletteItems = paletteEntries.filter(e => !q || e.title.toLowerCase().includes(q) || e.sub.toLowerCase().includes(q));
+    paletteIndex = 0;
+    paletteList.innerHTML = '';
+    if(paletteItems.length === 0){
+      const empty = document.createElement('div');
+      empty.className = 'palette-empty';
+      empty.textContent = 'Nothing matches that — try a section or project name.';
+      paletteList.appendChild(empty);
+      return;
+    }
+    paletteItems.forEach((item, i)=>{
+      const row = document.createElement('div');
+      row.className = 'palette-item' + (i === 0 ? ' active' : '');
+      row.setAttribute('role','option');
+      row.innerHTML = `<span class="pi-main"><span class="pi-title"></span><span class="pi-sub"></span></span><span class="pi-tag mono"></span>`;
+      row.querySelector('.pi-title').textContent = item.title;
+      row.querySelector('.pi-sub').textContent = item.sub;
+      row.querySelector('.pi-tag').textContent = item.tag;
+      row.addEventListener('click', ()=> runPaletteItem(i));
+      row.addEventListener('mousemove', ()=> setActive(i));
+      paletteList.appendChild(row);
+    });
+  }
+  function setActive(i){
+    paletteIndex = i;
+    Array.from(paletteList.children).forEach((el, idx)=> el.classList.toggle('active', idx === i));
+  }
+  function runPaletteItem(i){
+    const item = paletteItems[i];
+    if(!item) return;
+    closePalette();
+    setTimeout(()=> item.action(), prefersReducedMotion ? 0 : 120);
+  }
+  function openPalette(){
+    paletteOverlay.classList.add('open');
+    paletteInput.value = '';
+    renderPalette();
+    setTimeout(()=> paletteInput.focus(), 10);
+  }
+  function closePalette(){
+    paletteOverlay.classList.remove('open');
+  }
+  document.getElementById('palette-open').addEventListener('click', openPalette);
+  const paletteOpen2 = document.getElementById('palette-open-2');
+  if(paletteOpen2) paletteOpen2.addEventListener('click', openPalette);
+  paletteOverlay.addEventListener('click', (e)=>{ if(e.target === paletteOverlay) closePalette(); });
+  paletteInput.addEventListener('input', renderPalette);
+  paletteInput.addEventListener('keydown', (e)=>{
+    if(e.key === 'ArrowDown'){ e.preventDefault(); setActive(Math.min(paletteIndex+1, paletteItems.length-1)); }
+    if(e.key === 'ArrowUp'){ e.preventDefault(); setActive(Math.max(paletteIndex-1, 0)); }
+    if(e.key === 'Enter'){ e.preventDefault(); runPaletteItem(paletteIndex); }
+    if(e.key === 'Escape'){ closePalette(); }
+  });
+
+  // Keyboard shortcuts: Ctrl/Cmd+K opens palette, "/" focuses search, Escape clears search
+  document.addEventListener('keydown', (e)=>{
+    const tag = (document.activeElement && document.activeElement.tagName) || '';
+    const isTyping = tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT';
+
+    if((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k'){
+      e.preventDefault();
+      paletteOverlay.classList.contains('open') ? closePalette() : openPalette();
+      return;
+    }
+    if(e.key === '/' && !isTyping){
+      e.preventDefault();
+      searchInput.focus();
+    }
+    if(e.key === '?' && !isTyping){
+      e.preventDefault();
+      shortcutsOverlay.classList.contains('open') ? closeShortcuts() : openShortcuts();
+    }
+    if(e.key === 'Escape'){
+      if(shortcutsOverlay && shortcutsOverlay.classList.contains('open')) closeShortcuts();
+      if(document.activeElement === searchInput){
+        searchInput.value = '';
+        applyFilters();
+        searchInput.blur();
+      }
+    }
+  });
+
+  // Live-ish repo count from GitHub API (visitor's own browser, graceful fallback)
+  fetch('https://api.github.com/users/sahilkavishka')
+    .then(r => r.ok ? r.json() : Promise.reject())
+    .then(data => {
+      if(data && typeof data.public_repos === 'number'){
+        document.getElementById('stat-repos').textContent = data.public_repos;
+      }
+    })
+    .catch(()=>{ /* keep static fallback value */ });
+</script>
+</body>
+</html>

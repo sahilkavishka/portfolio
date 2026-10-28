@@ -1,43 +1,51 @@
-# 🌐 Sahil Kavishka — Personal Data Science & AI Portfolio
+# 🔬 SAHIL — THE INTELLIGENCE LAB
+> Interactive AI & Data Science Portfolio Experience
 
-[![Live Site](https://img.shields.io/badge/Live_Portfolio-sahilkavishka.github.io-blue?style=for-the-badge&logo=githubpages&logoColor=white)](https://sahilkavishka.github.io/portfolio/)
+[![Live Site](https://img.shields.io/badge/Live_Lab-sahilkavishka.github.io-00f0ff?style=for-the-badge&logo=githubpages&logoColor=040711)](https://sahilkavishka.github.io/portfolio/)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Sahil_Kavishka-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/sahilkavishka)
+[![Kaggle](https://img.shields.io/badge/Kaggle-Sahil_Kavishka-20BEFF?style=for-the-badge&logo=kaggle&logoColor=white)](https://www.kaggle.com/sahilkavishkakumara)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](LICENSE)
 
-An interactive, responsive, and performance-optimized personal portfolio showcasing projects, technical competencies, machine learning models, and achievements in **Data Science, Artificial Intelligence, Natural Language Processing, and Full-Stack Engineering**.
+An immersive, research-laboratory web environment showcasing technical systems, machine learning workflows, and interactive scientific demonstrations in **Data Science, Artificial Intelligence, Natural Language Processing, and Full-Stack Engineering**.
 
 ---
 
-## 🚀 Live Demo
+## 🌐 Live Experience
 
-Experience the live portfolio website at:  
+Visit the live website at:  
 👉 **[https://sahilkavishka.github.io/portfolio/](https://sahilkavishka.github.io/portfolio/)**
 
 ---
 
-## ✨ Features & Highlights
+## ⚡ Key Highlights & Interactive Architecture
 
-- ⚡ **Lightweight & High Performance**: 100% pure vanilla HTML5, CSS3, and JavaScript — zero heavy external framework overhead.
-- 🎨 **Modern Glassmorphic UI**: Clean dark theme with smooth gradients, responsive navigation, micro-interactions, and accessible typography.
-- 📂 **Dynamic Project Filtering**: Interactive categorizations for:
-  - 🧠 Machine Learning & Deep Learning
-  - 💬 Natural Language Processing (NLP) & LLMs
-  - 📊 Data Science, Analytics & Power BI
-  - 🤝 Collaborative & Hackathon Initiatives
-  - 🌐 Full-Stack Web Applications
-- 🏆 **Interactive Experience & Certifications Grid**: Visual credentials showcasing verified coursework, hackathons, and certifications.
-- 📱 **Fully Responsive**: Seamless layout adaptation across mobile phones, tablets, and ultrawide desktop monitors.
-- 📬 **Direct Contact & Social Integration**: Direct connectivity with LinkedIn, GitHub, Kaggle, and email.
+- 🧬 **Interactive Neural Synapse Canvas**: Real-time particle network rendered on HTML5 Canvas responding organically to pointer physics and touch.
+- 🌌 **Interactive Data Universe**: Connected knowledge graph linking 7 core domains:
+  - *Artificial Intelligence*
+  - *Machine Learning*
+  - *Data Science*
+  - *Natural Language Processing (NLP)*
+  - *Data Analytics & BI*
+  - *Web Development*
+  - *Robotics & IoT Exploration*
+- 🧪 **Mini AI Laboratory (Genuinely Functional Demonstrations)**:
+  - **NLP Sentiment & Emotion Engine**: In-browser real-time lexical parser, polarity scoring, confidence metrics, emotion vectors (Joy, Urgency, Analytical, Skepticism), and salient n-gram extraction.
+  - **2D Decision Boundary Classifier**: Interactive spatial playground on Canvas using K-Nearest Neighbors (KNN) to dynamically compute decision partitions and training accuracy.
+- 📐 **Inside the Model (ML Lifecycle Pipeline)**: Interactive 7-stage ML engineering pipeline (Problem Formulation → Ingestion → Preprocessing → Feature Engineering → Training → Error Analysis → Deployment) featuring actual case studies from Sahil's verified projects and Python snippets.
+- 📂 **Experimental Project Explorer**: Filterable repository showcase with instant search and architectural deep-dive modals detailing Problem, Approach, Tech Stack, Contribution, and Verified Results.
+- 📜 **Exploration Log**: Continuous tracking of active builds (SmartBuild AI), learning vectors (AWS ML Specialty, PyTorch), and robotics/physical computing horizons (BBC Micro:bit, ROS).
+- ⌨️ **Command Console**: `Ctrl+K` / `⌘K` global command palette with fuzzy section and project navigation.
 
 ---
 
-## 🛠️ Tech Stack
+## 🛠️ Technology Stack
 
-| Domain | Technologies |
+| Layer | Technologies |
 |---|---|
-| **Frontend Core** | HTML5, Modern CSS3 (CSS Variables, Flexbox, CSS Grid), Vanilla JavaScript (ES6+) |
-| **Icons & Fonts** | Font Awesome, Google Fonts (Inter / Outfit) |
-| **Hosting & Deployment** | GitHub Pages (Automated static deployment on `main` branch) |
+| **Core Architecture** | Vanilla HTML5 (Semantic, Accessible), CSS3 (Custom Properties, Glassmorphism, Responsive Grid), Vanilla JavaScript (ES6+) |
+| **Interactive Visuals** | HTML5 Canvas (Neural Particles & 2D ML Field), SVG Interactive Graphs |
+| **Typography** | Google Fonts (*Plus Jakarta Sans*, *Space Mono*) |
+| **Hosting & Routing** | GitHub Pages (Automated static deployment on `main` branch with relative subpath support) |
 
 ---
 
@@ -45,38 +53,43 @@ Experience the live portfolio website at:
 
 ```plaintext
 portfolio/
-├── index.html       # Primary single-page portfolio layout, styles & interactive logic
-└── README.md        # Technical documentation & project overview
+├── index.html                   # Core semantic layout & SEO metadata
+├── index.backup.html            # Pre-redesign archive
+├── README.md                    # Technical documentation & project overview
+├── css/
+│   └── intelligence-lab.css     # Research laboratory design system & responsive styling
+└── js/
+    ├── neural-canvas.js         # Interactive GPU-efficient neural particle canvas
+    ├── data-universe.js         # Interactive SVG knowledge topology & telemetry
+    ├── ai-lab-demos.js          # NLP engine & 2D decision boundary classifier
+    └── intelligence-lab.js      # Main coordinator, ML lifecycle, explorer & command console
 ```
 
 ---
 
-## 💻 Local Setup & Development
+## 💻 Local Testing & Development
 
-To clone and run the portfolio locally:
+Run locally using Python's built-in HTTP server or open directly in any browser:
 
 ```bash
-# 1. Clone the repository
+# 1. Clone repository
 git clone https://github.com/sahilkavishka/portfolio.git
-
-# 2. Navigate to project root
 cd portfolio
 
-# 3. Open index.html in your preferred browser
-# On Windows:
-start index.html
-
-# Or run using Python local server:
+# 2. Run local server
 python -m http.server 8000
+
+# 3. Open in browser:
+# http://localhost:8000
 ```
-Open `http://localhost:8000` in your web browser.
 
 ---
 
 ## 👤 Author
 
 **Sahil Kavishka**  
-*Undergraduate in Data Science | Sabaragamuwa University of Sri Lanka*  
+*BSc (Hons) in Data Science Undergraduate | Sabaragamuwa University of Sri Lanka*  
 - **GitHub**: [@sahilkavishka](https://github.com/sahilkavishka)  
 - **LinkedIn**: [linkedin.com/in/sahilkavishka](https://www.linkedin.com/in/sahilkavishka)  
+- **Kaggle**: [kaggle.com/sahilkavishkakumara](https://www.kaggle.com/sahilkavishkakumara)  
 - **Portfolio**: [sahilkavishka.github.io/portfolio](https://sahilkavishka.github.io/portfolio/)  
