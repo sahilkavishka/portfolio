@@ -56,6 +56,8 @@ portfolio/
 ├── index.html                   # Core semantic layout & SEO metadata
 ├── index.backup.html            # Pre-redesign archive
 ├── README.md                    # Technical documentation & project overview
+├── images/
+│   └── sahil-kavishka.jpg       # Profile photo & research identity asset
 ├── css/
 │   └── intelligence-lab.css     # Research laboratory design system & responsive styling
 └── js/

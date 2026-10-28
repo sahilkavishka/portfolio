@@ -2046,14 +2046,16 @@ img, svg {
    =================================================================== */
 .about-two-col {
   display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
-  gap: 2rem;
+  grid-template-columns: 320px 1fr;
+  gap: 2.25rem;
+  align-items: start;
   margin-bottom: 2.5rem;
 }
 
 @media (max-width: 900px) {
   .about-two-col {
     grid-template-columns: 1fr;
+    justify-items: center;
   }
 }
 
@@ -2688,4 +2690,646 @@ img, svg {
 .reveal-up.in {
   opacity: 1;
   transform: translateY(0);
+}
+
+
+/* ===================================================================
+   PROFILE PHOTO CARD — About Section
+   =================================================================== */
+.about-photo-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.photo-frame {
+  position: relative;
+  width: 260px;
+  height: 260px;
+  border-radius: var(--lab-radius-lg);
+  overflow: hidden;
+  border: 2px solid var(--lab-border-strong);
+  box-shadow: var(--lab-shadow), 0 0 40px rgba(0, 240, 255, 0.12);
+  background: var(--lab-surface);
+}
+
+.profile-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: saturate(0.9) contrast(1.05);
+  transition: filter 0.4s ease, transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.photo-frame:hover .profile-photo {
+  filter: saturate(1) contrast(1.08);
+  transform: scale(1.03);
+}
+
+.photo-scan-line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--lab-cyan), transparent);
+  opacity: 0.5;
+  animation: photo-scan 4s ease-in-out infinite;
+}
+
+@keyframes photo-scan {
+  0%, 100% { top: 0; opacity: 0; }
+  10% { opacity: 0.5; }
+  90% { opacity: 0.5; }
+  50% { top: calc(100% - 2px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .photo-scan-line { animation: none; opacity: 0; }
+}
+
+.photo-frame::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 240, 255, 0.08) 0%,
+    transparent 40%,
+    transparent 60%,
+    rgba(129, 140, 248, 0.06) 100%
+  );
+  pointer-events: none;
+}
+
+.photo-id-badge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2rem;
+  padding: 0.75rem 1.25rem;
+  background: var(--lab-panel);
+  border: 1px solid var(--lab-border);
+  border-radius: var(--lab-radius-sm);
+  backdrop-filter: blur(12px);
+  width: 100%;
+}
+
+.photo-badge-name {
+  font-weight: 800;
+  font-size: 0.95rem;
+  color: var(--lab-text);
+  letter-spacing: 0.06em;
+}
+
+.photo-badge-role {
+  font-size: 0.76rem;
+  color: var(--lab-cyan);
+}
+
+.photo-badge-loc {
+  font-size: 0.72rem;
+  color: var(--lab-text-muted);
+}
+
+/* ===================================================================
+   HUD AVATAR — Header Telemetry Panel
+   =================================================================== */
+.hud-header-left {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.hud-avatar {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1.5px solid var(--lab-cyan);
+  box-shadow: 0 0 8px rgba(0, 240, 255, 0.2);
+  flex-shrink: 0;
+}
+
+/* ===================================================================
+   GITHUB ACTIVITY SECTION — Stats, Languages, Calendar
+   =================================================================== */
+.github-activity-section {
+  margin-top: 2.5rem;
+  padding: 1.75rem;
+  background: var(--lab-panel);
+  border: 1px solid var(--lab-border);
+  border-radius: var(--lab-radius);
+  backdrop-filter: blur(12px);
+}
+
+.github-stats-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.github-telemetry-tile {
+  background: var(--lab-surface);
+  border: 1px solid var(--lab-border-dim);
+  border-radius: var(--lab-radius-sm);
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  transition: border-color 0.3s ease, transform 0.25s ease;
+}
+
+.github-telemetry-tile:hover {
+  border-color: var(--lab-border-strong);
+  transform: translateY(-2px);
+}
+
+.tile-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--lab-border-dim);
+  padding-bottom: 0.5rem;
+}
+
+.gh-stat-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.85rem;
+  gap: 0.5rem;
+}
+
+.gh-stat-label {
+  color: var(--lab-text-muted);
+}
+
+.gh-stat-val {
+  color: var(--lab-text);
+  font-weight: 600;
+  text-align: right;
+}
+
+.lang-bars-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.lang-bar-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.lang-bar-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.github-contribution-calendar {
+  background: var(--lab-surface);
+  border: 1px solid var(--lab-border-dim);
+  border-radius: var(--lab-radius-sm);
+  padding: 1rem;
+  overflow-x: auto;
+}
+
+.github-calendar-img {
+  width: 100%;
+  height: auto;
+  min-width: 680px;
+  display: block;
+}
+
+/* ===================================================================
+   TELEMETRY CARD STANDALONE — Below GitHub Stats
+   =================================================================== */
+.about-telemetry-card-standalone {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background: var(--lab-panel);
+  border: 1px solid var(--lab-border);
+  border-radius: var(--lab-radius);
+  backdrop-filter: blur(12px);
+}
+
+.about-telemetry-card-standalone .about-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.about-telemetry-card-standalone .about-stat-box {
+  text-align: center;
+  padding: 1rem 0.5rem;
+  background: var(--lab-surface);
+  border: 1px solid var(--lab-border-dim);
+  border-radius: var(--lab-radius-sm);
+}
+
+.about-telemetry-card-standalone .about-stat-num {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--lab-cyan);
+}
+
+.about-telemetry-card-standalone .about-stat-label {
+  font-size: 0.76rem;
+  color: var(--lab-text-muted);
+  font-family: var(--lab-font-mono);
+  text-transform: uppercase;
+  margin-top: 0.25rem;
+}
+
+/* ===================================================================
+   RESPONSIVE OVERRIDES — Profile Photo & GitHub Stats
+   =================================================================== */
+@media (max-width: 860px) {
+  .about-two-col {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+  .about-photo-card {
+    width: 100%;
+    max-width: 320px;
+  }
+  .photo-frame {
+    width: 220px;
+    height: 220px;
+  }
+  .github-stats-grid {
+    grid-template-columns: 1fr;
+  }
+  .about-telemetry-card-standalone .about-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 520px) {
+  .photo-frame {
+    width: 180px;
+    height: 180px;
+  }
+  .photo-id-badge {
+    padding: 0.6rem 1rem;
+  }
+  .about-telemetry-card-standalone .about-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.6rem;
+  }
+}
+
+/* ===================================================================
+   LIGHT THEME OVERRIDES — Profile Photo & GitHub
+   =================================================================== */
+.lab-day .photo-frame {
+  border-color: rgba(0, 120, 200, 0.3);
+  box-shadow: var(--lab-shadow), 0 0 30px rgba(0, 120, 200, 0.1);
+}
+
+.lab-day .photo-id-badge {
+  background: rgba(255, 255, 255, 0.7);
+  border-color: rgba(0, 120, 200, 0.15);
+}
+
+.lab-day .photo-badge-name {
+  color: var(--lab-text);
+}
+
+.lab-day .github-activity-section,
+.lab-day .about-telemetry-card-standalone {
+  background: rgba(255, 255, 255, 0.6);
+  border-color: rgba(0, 120, 200, 0.15);
+}
+
+.lab-day .github-telemetry-tile,
+.lab-day .github-contribution-calendar,
+.lab-day .about-telemetry-card-standalone .about-stat-box {
+  background: rgba(255, 255, 255, 0.8);
+  border-color: rgba(0, 120, 200, 0.1);
+}
+
+.lab-day .hud-avatar {
+  border-color: var(--lab-cyan-muted);
+}
+
+
+/* ===================================================================
+   ENGINEERING JOURNEY TIMELINE — Evolution Conduits
+   =================================================================== */
+.journey-timeline {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+  margin-top: 2rem;
+  position: relative;
+}
+
+.journey-step {
+  background: var(--lab-panel);
+  border: 1px solid var(--lab-border);
+  border-radius: var(--lab-radius);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  position: relative;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  backdrop-filter: blur(12px);
+}
+
+.journey-step:hover {
+  transform: translateY(-4px);
+  border-color: var(--lab-border-strong);
+  box-shadow: var(--lab-shadow-glow);
+}
+
+.journey-step.active-stage {
+  border-color: var(--lab-cyan);
+  background: linear-gradient(160deg, rgba(0, 240, 255, 0.08), var(--lab-panel));
+  box-shadow: 0 0 24px rgba(0, 240, 255, 0.15);
+}
+
+.journey-step-badge {
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  color: var(--lab-cyan);
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.journey-step.active-stage .journey-step-badge {
+  color: var(--lab-emerald);
+  font-weight: 700;
+}
+
+.journey-step-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--lab-text);
+  line-height: 1.35;
+}
+
+.journey-step-desc {
+  font-size: 0.86rem;
+  color: var(--lab-text-secondary);
+  line-height: 1.6;
+  flex-grow: 1;
+}
+
+.journey-step-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin-top: auto;
+}
+
+.tag-sm {
+  font-family: var(--lab-font-mono);
+  font-size: 0.7rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  background: var(--lab-surface);
+  border: 1px solid var(--lab-border-dim);
+  color: var(--lab-text-muted);
+}
+
+/* ===================================================================
+   ACTIVE TOOLKIT — Daily Operational Environment
+   =================================================================== */
+.toolkit-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.1rem;
+  margin-top: 2rem;
+}
+
+.toolkit-card {
+  background: var(--lab-panel);
+  border: 1px solid var(--lab-border-dim);
+  border-radius: var(--lab-radius-sm);
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  transition: transform 0.25s ease, border-color 0.25s ease;
+  backdrop-filter: blur(8px);
+}
+
+.toolkit-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--lab-cyan-muted);
+  box-shadow: var(--lab-shadow-sm);
+}
+
+.toolkit-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tool-cat {
+  font-size: 0.68rem;
+  color: var(--lab-cyan);
+  letter-spacing: 0.08em;
+}
+
+.tool-status {
+  font-size: 0.64rem;
+  padding: 0.15rem 0.4rem;
+  border-radius: 3px;
+  background: var(--lab-surface-alt);
+  border: 1px solid var(--lab-border-dim);
+  color: var(--lab-text-muted);
+}
+
+.tool-name {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--lab-text);
+  margin: 0;
+}
+
+.tool-note {
+  font-size: 0.8rem;
+  color: var(--lab-text-secondary);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* ===================================================================
+   RESEARCH DISPATCHES & FIELD NOTES
+   =================================================================== */
+.dispatches-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.dispatch-card {
+  background: linear-gradient(165deg, var(--lab-panel), var(--lab-surface));
+  border: 1px solid var(--lab-border);
+  border-radius: var(--lab-radius);
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  position: relative;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  backdrop-filter: blur(12px);
+}
+
+.dispatch-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--lab-cyan);
+  box-shadow: var(--lab-shadow-glow);
+}
+
+.dispatch-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dispatch-tag {
+  font-size: 0.7rem;
+  color: var(--lab-violet);
+  letter-spacing: 0.06em;
+}
+
+.dispatch-status {
+  font-size: 0.68rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  background: var(--lab-cyan-dim);
+  border: 1px solid var(--lab-cyan-glow);
+  color: var(--lab-cyan);
+}
+
+.dispatch-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--lab-text);
+  line-height: 1.4;
+  margin: 0;
+}
+
+.dispatch-summary {
+  font-size: 0.88rem;
+  color: var(--lab-text-secondary);
+  line-height: 1.65;
+  flex-grow: 1;
+  margin: 0;
+}
+
+.dispatch-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1rem;
+  border-top: 1px solid var(--lab-border-dim);
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.dispatches-notify-bar {
+  margin-top: 2rem;
+  padding: 1.5rem 2rem;
+  background: var(--lab-panel);
+  border: 1px solid var(--lab-border-strong);
+  border-radius: var(--lab-radius);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  backdrop-filter: blur(12px);
+}
+
+.notify-info {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.notify-icon-box {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--lab-cyan-dim);
+  border: 1px solid var(--lab-cyan);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--lab-cyan);
+  flex-shrink: 0;
+}
+
+/* ===================================================================
+   RESPONSIVE OVERRIDES — Journey, Toolkit & Dispatches
+   =================================================================== */
+@media (max-width: 1024px) {
+  .journey-timeline {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .toolkit-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .dispatches-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .journey-timeline {
+    grid-template-columns: 1fr;
+  }
+  .toolkit-grid {
+    grid-template-columns: 1fr;
+  }
+  .dispatches-notify-bar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .dispatches-notify-bar .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* ===================================================================
+   LIGHT THEME OVERRIDES — Journey, Toolkit & Dispatches
+   =================================================================== */
+.lab-day .journey-step,
+.lab-day .toolkit-card,
+.lab-day .dispatch-card,
+.lab-day .dispatches-notify-bar {
+  background: rgba(255, 255, 255, 0.65);
+  border-color: rgba(0, 120, 200, 0.18);
+}
+
+.lab-day .journey-step:hover,
+.lab-day .toolkit-card:hover,
+.lab-day .dispatch-card:hover {
+  border-color: var(--lab-cyan-muted);
+}
+
+.lab-day .journey-step.active-stage {
+  background: linear-gradient(160deg, rgba(0, 180, 240, 0.1), rgba(255, 255, 255, 0.8));
+  border-color: var(--lab-cyan-muted);
+}
+
+.lab-day .tag-sm,
+.lab-day .tool-status {
+  background: rgba(240, 246, 255, 0.8);
+  border-color: rgba(0, 120, 200, 0.15);
 }

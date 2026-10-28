@@ -311,6 +311,42 @@ const DETAILED_PROJECTS = {
     results: 'Repository initialized for community data curation and predictive modeling benchmarks.',
     github: 'https://github.com/sahilkavishka',
     live: null
+  },
+  'smartbuild-agentic': {
+    title: 'Field Note: What "Agentic" Actually Means in a Construction Estimator',
+    category: 'RESEARCH DISPATCH // ARCHITECTURE',
+    status: 'TECHNICAL FIELD NOTE 01',
+    problem: 'When building an automated construction cost & loan advisory engine, naive LLM implementations attempt to compute complex financial schedules and material costs inside an open-ended conversational prompt, causing catastrophic hallucination in critical budget figures.',
+    approach: 'Decoupled into strict deterministic microservices: financial underwriting runs on a 45% Debt-Service Ratio matrix and S-curve cash flows; material forecasting runs on an XGBoost regressor; and the Gemini AI agent acts exclusively as a bilingual civil engineering explanation layer referencing verified structured outputs.',
+    stack: 'FastAPI, Gemini API, Python, XGBoost, Docker, REST Protocol',
+    contribution: 'Architectural separation of concerns, prompt grounding protocols, and fail-safe deterministic fallbacks.',
+    results: 'Eliminated calculation variance; guaranteed 100% compliance with banking Debt-Service guidelines while retaining natural conversational explanation.',
+    github: 'https://github.com/sahilkavishka/smartbuild_ai',
+    live: null
+  },
+  'sentiment-benchmarks': {
+    title: 'Field Note: Classic ML vs. Fine-Tuned BERT on 10,000+ Reviews',
+    category: 'RESEARCH DISPATCH // NLP BENCHMARKS',
+    status: 'TECHNICAL FIELD NOTE 02',
+    problem: 'Transformer architectures like BERT offer state-of-the-art semantic comprehension but incur substantial GPU memory footprints and 150ms+ inference latency, making direct deployment on edge devices or lightweight browser extensions prohibitively expensive.',
+    approach: 'Evaluated TF-IDF + Logistic Regression, Random Forest, and fine-tuned BERT across scraped GSMArena device reviews. Benchmarked inference latency, F1-macro scores on colloquial expressions, and memory footprints to define when transformer overhead is mathematically justified.',
+    stack: 'PyTorch, Hugging Face Transformers, Scikit-learn, FastAPI, Chrome Extension',
+    contribution: 'Scraping pipeline, data cleaning, transformer fine-tuning, latency benchmarking, and Chrome extension delivery.',
+    results: 'Demonstrated that classic ensembles achieve within 3.2% of transformer accuracy on unambiguous reviews at 1/14th the latency, whereas BERT proved necessary for negation-dense sentences.',
+    github: 'https://github.com/sahilkavishka/mini-NLP-project',
+    live: null
+  },
+  'medicine-starschema': {
+    title: 'Field Note: Designing a Star Schema to Survive Hospital Emergency Queries',
+    category: 'RESEARCH DISPATCH // DATA WAREHOUSING',
+    status: 'TECHNICAL FIELD NOTE 03',
+    problem: 'During macroeconomic disruptions and currency volatility in Sri Lanka, pharmaceutical supply chains faced multi-district stockouts. Disjointed Excel records and disparate import databases prevented healthcare planners from spotting shortages before clinics ran empty.',
+    approach: 'Constructed an automated dimensional Star Schema with fact tables capturing import volumes, foreign exchange fluctuations (USD/LKR), and hospital demand velocity across all administrative provinces.',
+    stack: 'Power BI, Python, Star Schema Modeling, SQL, ETL Pipelines',
+    contribution: 'Data modeling, schema design, currency volatility normalization, and executive dashboard development.',
+    results: 'Reduced critical reporting queries from hours across multiple spreadsheets to interactive sub-second slice-and-dice visualizations in Power BI.',
+    github: 'https://github.com/sahilkavishka/SL_Medicine_Supply_Chain',
+    live: null
   }
 };
 
@@ -395,10 +431,10 @@ const DETAILED_PROJECTS = {
     document.body.style.overflow = '';
   }
 
-  document.querySelectorAll('[data-inspect-id]').forEach(trigger => {
+  document.querySelectorAll('[data-inspect-id], [data-dispatch-id]').forEach(trigger => {
     trigger.addEventListener('click', (e) => {
       e.preventDefault();
-      const id = trigger.getAttribute('data-inspect-id');
+      const id = trigger.getAttribute('data-inspect-id') || trigger.getAttribute('data-dispatch-id');
       openInspectionModal(id);
     });
   });
@@ -679,6 +715,9 @@ const DETAILED_PROJECTS = {
     { title: 'Inside the Model (ML Lifecycle)', sub: 'Explore stages from problem formulation to serving', tag: 'LIFECYCLE', action: () => document.getElementById('lifecycle').scrollIntoView({ behavior: 'smooth' }) },
     { title: 'Exploration Log & Robotics Roadmap', sub: 'Current experiments and physical computing goals', tag: 'NAV', action: () => document.getElementById('log').scrollIntoView({ behavior: 'smooth' }) },
     { title: 'About Sahil & Capabilities', sub: 'Data science undergraduate background and tools', tag: 'NAV', action: () => document.getElementById('about').scrollIntoView({ behavior: 'smooth' }) },
+    { title: 'Engineering Journey Timeline', sub: 'Full-stack web to predictive data science & AI platforms', tag: 'NAV', action: () => document.querySelector('.journey-timeline')?.scrollIntoView({ behavior: 'smooth' }) },
+    { title: 'Workstation Toolkit', sub: 'Daily operational software, IDEs, and tools', tag: 'NAV', action: () => document.querySelector('.toolkit-grid')?.scrollIntoView({ behavior: 'smooth' }) },
+    { title: 'Research Dispatches & Notes', sub: 'Technical field notes on architecture and benchmarks', tag: 'NAV', action: () => document.getElementById('dispatches')?.scrollIntoView({ behavior: 'smooth' }) },
     { title: 'Toggle Dark / Day Theme', sub: 'Switch visual appearance', tag: 'THEME', action: toggleTheme },
     { title: 'Switch Language (English / සිංහල)', sub: 'Toggle bilingual hero text', tag: 'LANG', action: () => langToggle && langToggle.click() },
     { title: 'Export Contact Card (vCard)', sub: 'Download sahil-kavishka.vcf', tag: 'EXPORT', action: () => saveContactBtn && saveContactBtn.click() },
