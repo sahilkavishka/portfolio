@@ -83,8 +83,10 @@
         <a class="nav-link" href="#laboratory"><span class="mono mono-num">03 //</span> Mini Lab</a>
         <a class="nav-link" href="#lifecycle"><span class="mono mono-num">04 //</span> Lifecycle</a>
         <a class="nav-link" href="#log"><span class="mono mono-num">05 //</span> Log</a>
-        <a class="nav-link" href="#about"><span class="mono mono-num">06 //</span> About</a>
-        <a class="nav-link" href="#dispatches"><span class="mono mono-num">07 //</span> Dispatches</a>
+        <a class="nav-link" href="#expeditions"><span class="mono mono-num">06 //</span> Field Ops</a>
+        <a class="nav-link" href="#about"><span class="mono mono-num">07 //</span> About</a>
+        <a class="nav-link" href="#credentials"><span class="mono mono-num">08 //</span> Honors</a>
+        <a class="nav-link" href="#dispatches"><span class="mono mono-num">09 //</span> Dispatches</a>
       </nav>
 
       <div class="nav-tools">
@@ -336,12 +338,13 @@
         <!-- Filter Controls -->
         <div class="explorer-controls reveal-up">
           <div class="filter-pills" role="toolbar" aria-label="Filter projects by domain">
-            <button class="filter-btn" data-filter="all" type="button" aria-pressed="true">All Systems <span class="filter-count">10</span></button>
-            <button class="filter-btn" data-filter="ai" type="button" aria-pressed="false">AI &amp; ML <span class="filter-count">4</span></button>
-            <button class="filter-btn" data-filter="nlp" type="button" aria-pressed="false">NLP &amp; Deep Learning <span class="filter-count">2</span></button>
-            <button class="filter-btn" data-filter="data" type="button" aria-pressed="false">Data &amp; BI <span class="filter-count">5</span></button>
+            <button class="filter-btn" data-filter="all" type="button" aria-pressed="true">All Systems <span class="filter-count">16</span></button>
+            <button class="filter-btn" data-filter="ai" type="button" aria-pressed="false">AI &amp; ML <span class="filter-count">7</span></button>
+            <button class="filter-btn" data-filter="nlp" type="button" aria-pressed="false">NLP &amp; Deep Learning <span class="filter-count">3</span></button>
+            <button class="filter-btn" data-filter="cv" type="button" aria-pressed="false">3D &amp; Computer Vision <span class="filter-count">2</span></button>
+            <button class="filter-btn" data-filter="data" type="button" aria-pressed="false">Data &amp; BI <span class="filter-count">6</span></button>
             <button class="filter-btn" data-filter="web" type="button" aria-pressed="false">Web Applications <span class="filter-count">4</span></button>
-            <button class="filter-btn" data-filter="collab" type="button" aria-pressed="false">Collaborative <span class="filter-count">2</span></button>
+            <button class="filter-btn" data-filter="collab" type="button" aria-pressed="false">Collaborative <span class="filter-count">4</span></button>
           </div>
 
           <div class="search-input-wrap">
@@ -352,18 +355,129 @@
 
         <!-- Projects Grid -->
         <div class="projects-grid" id="projects-grid">
-          <!-- Project 1: codeXsabra - ResoveAI -->
-          <article class="project-card reveal-up" data-category="ai nlp collab" id="proj-resove-ai">
+          <!-- Project 1: CropSafe AI (Capstone) -->
+          <article class="project-card reveal-up" data-category="ai data" id="proj-cropsafe-ai">
+            <div class="card-visual-header">
+              <div class="card-visual-scan" aria-hidden="true"></div>
+              <div class="card-visual-info">
+                <span class="mono card-id-tag">CAPSTONE // DS3206·DS4105</span>
+                <span class="card-visual-metric mono">94.6% TEST ACC</span>
+              </div>
+            </div>
             <div class="card-top-row">
-              <span class="card-cat-badge">NLP · HACKATHON</span>
-              <span class="card-status-badge collab">COLLABORATIVE</span>
+              <span class="card-cat-badge">AI · AGRI-TECH CAPSTONE</span>
+              <span class="card-status-badge complete">ACADEMIC RESEARCH</span>
             </div>
             <div>
-              <h3 class="project-title">codeXsabra — ResoveAI</h3>
-              <p class="project-desc">AI-powered telecom customer query triage and resolution platform engineered during the Hutch AI hackathon with NLP categorization and automated routing.</p>
+              <h3 class="project-title">CropSafe AI — Fertilizer Quality &amp; Economic Loss Forecasting</h3>
+              <p class="project-desc">National fertilizer authenticity intelligence platform ground-truthed on 2,002 lab certificates across all 9 Sri Lankan provinces. LightGBM fraud classifier (94.6% accuracy, &lt;2ms latency) paired with yield deficit regressors (R²&gt;0.96) and black-market anomaly detection.</p>
             </div>
             <div class="project-stack-tags">
-              <span class="stack-tag">NLP</span><span class="stack-tag">FastAPI</span><span class="stack-tag">PyTorch</span><span class="stack-tag">Scikit-Learn</span><span class="stack-tag">Hutch AI</span>
+              <span class="stack-tag">LightGBM</span><span class="stack-tag">Python</span><span class="stack-tag">Scikit-Learn</span><span class="stack-tag">Streamlit</span><span class="stack-tag">Plotly</span><span class="stack-tag">Isolation Forest</span>
+            </div>
+            <div class="project-card-footer">
+              <a class="card-link-btn" href="https://github.com/sahilkavishka" target="_blank" rel="noreferrer noopener">Source Repo ↗</a>
+              <button class="inspect-btn" data-inspect-id="cropsafe-ai" type="button">Inspect</button>
+            </div>
+          </article>
+
+          <!-- Project 2: Sinharaja — The Lost Expedition -->
+          <article class="project-card reveal-up" data-category="web cv" id="proj-sinharaja">
+            <div class="card-visual-header">
+              <div class="card-visual-scan" aria-hidden="true"></div>
+              <div class="card-visual-info">
+                <span class="mono card-id-tag">3D WEBGL ENGINE</span>
+                <span class="card-visual-metric mono">60 FPS CLIENT-SIDE</span>
+              </div>
+            </div>
+            <div class="card-top-row">
+              <span class="card-cat-badge">3D GRAPHICS · TACTICAL SURVIVAL</span>
+              <span class="card-status-badge active">ACTIVE RELEASE</span>
+            </div>
+            <div>
+              <h3 class="project-title">Sinharaja — The Lost Expedition (3D Browser Game)</h3>
+              <p class="project-desc">First-person 3D tactical survival &amp; forensic mystery game set in Sri Lanka's Sinharaja rainforest. Built from scratch with React &amp; Three.js (WebGL) running at 60 FPS — featuring raycasting physics, leech blood loss mechanics, hypothermia, UV beams, and procedural Web Audio API synthesis.</p>
+            </div>
+            <div class="project-stack-tags">
+              <span class="stack-tag">Three.js</span><span class="stack-tag">React.js</span><span class="stack-tag">WebGL</span><span class="stack-tag">Web Audio</span><span class="stack-tag">JavaScript</span>
+            </div>
+            <div class="project-card-footer">
+              <a class="card-link-btn" href="https://github.com/sahilkavishka/sinharaja" target="_blank" rel="noreferrer noopener">Source Repo ↗</a>
+              <button class="inspect-btn" data-inspect-id="sinharaja-expedition" type="button">Inspect</button>
+            </div>
+          </article>
+
+          <!-- Project 3: ML & AI Nexus 2026 Hackathon (Rank #3 Global) -->
+          <article class="project-card reveal-up" data-category="ai data collab" id="proj-nexus-readmission">
+            <div class="card-visual-header">
+              <div class="card-visual-scan" aria-hidden="true"></div>
+              <div class="card-visual-info">
+                <span class="mono card-id-tag">KAGGLE RANK #3 GLOBAL</span>
+                <span class="card-visual-metric mono">BRIER SCORE 0.1021</span>
+              </div>
+            </div>
+            <div class="card-top-row">
+              <span class="card-cat-badge">CLINICAL AI · HACKATHON 🥉</span>
+              <span class="card-status-badge collab">TEAM CODE WAVE</span>
+            </div>
+            <div>
+              <h3 class="project-title">Trustworthy AI: 30-Day Clinical Readmission Predictor</h3>
+              <p class="project-desc">Secured 3rd Place globally in the ML &amp; AI Nexus 2026 Hackathon. Tri-model stacking ensemble (CatBoost, LightGBM, Lasso Logistic Regression) predicting unplanned hospital readmissions with Platt Sigmoid calibration slope ~0.99, demographic fairness auditing, and Shannon Entropy uncertainty quantification.</p>
+            </div>
+            <div class="project-stack-tags">
+              <span class="stack-tag">CatBoost</span><span class="stack-tag">LightGBM</span><span class="stack-tag">Platt Scaling</span><span class="stack-tag">Kaggle</span><span class="stack-tag">Biostatistics</span>
+            </div>
+            <div class="project-card-footer">
+              <a class="card-link-btn" href="https://github.com/sahilkavishka" target="_blank" rel="noreferrer noopener">Source Repo ↗</a>
+              <button class="inspect-btn" data-inspect-id="nexus-hospital-readmission" type="button">Inspect</button>
+            </div>
+          </article>
+
+          <!-- Project 4: Mora SP Cup 2026 Low-Light Denoising -->
+          <article class="project-card reveal-up" data-category="ai cv collab" id="proj-mora-sp-cup">
+            <div class="card-visual-header">
+              <div class="card-visual-scan" aria-hidden="true"></div>
+              <div class="card-visual-info">
+                <span class="mono card-id-tag">MORA SP CUP 2026</span>
+                <span class="card-visual-metric mono">32.42 dB PSNR</span>
+              </div>
+            </div>
+            <div class="card-top-row">
+              <span class="card-cat-badge">COMPUTER VISION · SIGNAL PROCESSING</span>
+              <span class="card-status-badge collab">TEAM ZENTRIX</span>
+            </div>
+            <div>
+              <h3 class="project-title">Hybrid Dual-Engine Low-Light Image Denoising</h3>
+              <p class="project-desc">IEEE SPS University of Moratuwa challenge solution combining a 7-stage classical DSP pipeline (Dual-Basis DWT BayesShrink, NLM, Guided Filter, Anisotropic Diffusion) with an 86.49M-parameter Deep Residual NAFNet-APEX v10 backbone — achieving 32.42 dB PSNR (+160.6% relative gain over baseline).</p>
+            </div>
+            <div class="project-stack-tags">
+              <span class="stack-tag">PyTorch</span><span class="stack-tag">NAFNet</span><span class="stack-tag">Classical DSP</span><span class="stack-tag">OpenCV</span><span class="stack-tag">CUDA</span>
+            </div>
+            <div class="project-card-footer">
+              <a class="card-link-btn" href="https://github.com/sahilkavishka" target="_blank" rel="noreferrer noopener">Source Repo ↗</a>
+              <button class="inspect-btn" data-inspect-id="mora-sp-cup-denoise" type="button">Inspect</button>
+            </div>
+          </article>
+
+          <!-- Project 5: codeXsabra - ResolvAI -->
+          <article class="project-card reveal-up" data-category="ai nlp collab" id="proj-resove-ai">
+            <div class="card-visual-header">
+              <div class="card-visual-scan" aria-hidden="true"></div>
+              <div class="card-visual-info">
+                <span class="mono card-id-tag">IGNITX · HUTCH AI</span>
+                <span class="card-visual-metric mono">BACKEND API &amp; UI</span>
+              </div>
+            </div>
+            <div class="card-top-row">
+              <span class="card-cat-badge">NLP &amp; TELECOM AI</span>
+              <span class="card-status-badge collab">HUTCH HACKATHON 2026</span>
+            </div>
+            <div>
+              <h3 class="project-title">ResolvAI — Multi-Source Resolution Copilot</h3>
+              <p class="project-desc">AI-powered telecom customer complaint resolution copilot engineered for IgnitX Hutch Hackathon 2026. Combines rule-based verification with AI-generated explainability to resolve billing discrepancies and triage inquiries. Built backend API microservices and frontend interface.</p>
+            </div>
+            <div class="project-stack-tags">
+              <span class="stack-tag">FastAPI</span><span class="stack-tag">Python</span><span class="stack-tag">NLP</span><span class="stack-tag">Scikit-Learn</span><span class="stack-tag">Hutch AI</span>
             </div>
             <div class="project-card-footer">
               <a class="card-link-btn" href="https://github.com/kavishanimsara/codeXsabra-ResoveAI" target="_blank" rel="noreferrer noopener">Source Repo ↗</a>
@@ -371,8 +485,249 @@
             </div>
           </article>
 
-          <!-- Project 2: AWS Customer Churn Predictor -->
+          <!-- Project 6: Smartphone Review Sentiment & Daraz Extension -->
+          <article class="project-card reveal-up" data-category="ai nlp" id="proj-sentiment-nlp">
+            <div class="card-visual-header">
+              <div class="card-visual-scan" aria-hidden="true"></div>
+              <div class="card-visual-info">
+                <span class="mono card-id-tag">CHROME EXTENSION V3</span>
+                <span class="card-visual-metric mono">BERT WEIGHTED</span>
+              </div>
+            </div>
+            <div class="card-top-row">
+              <span class="card-cat-badge">NLP · TRANSFORMERS</span>
+              <span class="card-status-badge complete">SHIPPED EXTENSION</span>
+            </div>
+            <div>
+              <h3 class="project-title">AI Review Insight: Daraz Chrome Extension &amp; BERT</h3>
+              <p class="project-desc">End-to-end NLP product scraping thousands of GSMArena reviews, benchmarking classic ML against fine-tuned BERT (WeightedTrainer), and packaged into a production Chrome Extension V3 with lazy-load DOM parsing and automated aspect-based PROS and CONS extraction on Daraz.lk.</p>
+            </div>
+            <div class="project-stack-tags">
+              <span class="stack-tag">PyTorch</span><span class="stack-tag">BERT</span><span class="stack-tag">FastAPI</span><span class="stack-tag">Chrome Extension</span><span class="stack-tag">NLTK</span>
+            </div>
+            <div class="project-card-footer">
+              <a class="card-link-btn" href="https://github.com/sahilkavishka/mini-NLP-project" target="_blank" rel="noreferrer noopener">GitHub Repo ↗</a>
+              <button class="inspect-btn" data-inspect-id="sentiment-nlp" type="button">Inspect</button>
+            </div>
+          </article>
+
+          <!-- Project 7: Salonora AI Platform -->
+          <article class="project-card reveal-up" data-category="web ai" id="proj-salonora">
+            <div class="card-visual-header">
+              <div class="card-visual-scan" aria-hidden="true"></div>
+              <div class="card-visual-info">
+                <span class="mono card-id-tag">AI STYLE STUDIO</span>
+                <span class="card-visual-metric mono">GEMINI AI + QR PASS</span>
+              </div>
+            </div>
+            <div class="card-top-row">
+              <span class="card-cat-badge">FULL-STACK · AI CONSULTANT</span>
+              <span class="card-status-badge complete">COMPLETE</span>
+            </div>
+            <div>
+              <h3 class="project-title">Salonora — AI Salon Discovery &amp; Booking Platform</h3>
+              <p class="project-desc">Smart salon platform integrating Google Gemini AI for personalized hair styling and skincare recommendations with voice narration, real-time appointment scheduling, contactless digital QR Check-In Pass, distance GPS sorting, and role-based owner/client portals.</p>
+            </div>
+            <div class="project-stack-tags">
+              <span class="stack-tag">PHP (MVC)</span><span class="stack-tag">MySQL</span><span class="stack-tag">Gemini API</span><span class="stack-tag">JavaScript</span><span class="stack-tag">QR Engine</span>
+            </div>
+            <div class="project-card-footer">
+              <a class="card-link-btn" href="https://github.com/sahilkavishka/salon" target="_blank" rel="noreferrer noopener">GitHub Repo ↗</a>
+              <button class="inspect-btn" data-inspect-id="salonora" type="button">Inspect</button>
+            </div>
+          </article>
+
+          <!-- Project 8: Ceylon Forecast Engine -->
+          <article class="project-card reveal-up" data-category="ai data" id="proj-ceylon-forecast">
+            <div class="card-visual-header">
+              <div class="card-visual-scan" aria-hidden="true"></div>
+              <div class="card-visual-info">
+                <span class="mono card-id-tag">TOURISM MACRO MODEL</span>
+                <span class="card-visual-metric mono">RANDOM FOREST REG</span>
+              </div>
+            </div>
+            <div class="card-top-row">
+              <span class="card-cat-badge">PREDICTIVE ML · DATA SCIENCE</span>
+              <span class="card-status-badge complete">STREAMLIT DEPLOYED</span>
+            </div>
+            <div>
+              <h3 class="project-title">Ceylon Forecast Engine — Sri Lanka Tourism Predictor</h3>
+              <p class="project-desc">AI-driven monthly tourist arrival forecasting platform. Incorporates LKR/USD exchange rates, Consumer Price Index (CPI) inflation, and seasonal cyclicality. Deployed on Streamlit featuring interactive What-If scenario simulations and joint sensitivity heatmaps.</p>
+            </div>
+            <div class="project-stack-tags">
+              <span class="stack-tag">Python</span><span class="stack-tag">Pandas</span><span class="stack-tag">Scikit-Learn</span><span class="stack-tag">Streamlit</span><span class="stack-tag">Plotly</span>
+            </div>
+            <div class="project-card-footer">
+              <a class="card-link-btn" href="https://github.com/sahilkavishka" target="_blank" rel="noreferrer noopener">Source Repo ↗</a>
+              <button class="inspect-btn" data-inspect-id="ceylon-forecast" type="button">Inspect</button>
+            </div>
+          </article>
+
+          <!-- Project 9: Sri Lanka Medicine Supply Chain BI -->
+          <article class="project-card reveal-up" data-category="data" id="proj-medicine-supply">
+            <div class="card-visual-header">
+              <div class="card-visual-scan" aria-hidden="true"></div>
+              <div class="card-visual-info">
+                <span class="mono card-id-tag">LKR 57.72B IMPORTS</span>
+                <span class="card-visual-metric mono">STAR SCHEMA BI</span>
+              </div>
+            </div>
+            <div class="card-top-row">
+              <span class="card-cat-badge">DATA WAREHOUSING · BI</span>
+              <span class="card-status-badge complete">COMPLETE</span>
+            </div>
+            <div>
+              <h3 class="project-title">Medicine Supply Chain C-Level Analytics &amp; Simulation</h3>
+              <p class="project-desc">Enterprise Power BI platform modeling LKR 57.72B pharmaceutical imports, USD/LKR exchange shocks, and hospital stockouts from 2020–2026. Features automated Star Schema, DAX What-If +35% crisis surge simulations, and ArcGIS global supplier tracking.</p>
+            </div>
+            <div class="project-stack-tags">
+              <span class="stack-tag">Power BI</span><span class="stack-tag">Advanced DAX</span><span class="stack-tag">Star Schema</span><span class="stack-tag">ArcGIS</span><span class="stack-tag">Python</span>
+            </div>
+            <div class="project-card-footer">
+              <a class="card-link-btn" href="https://github.com/sahilkavishka/SL_Medicine_Supply_Chain" target="_blank" rel="noreferrer noopener">GitHub Repo ↗</a>
+              <button class="inspect-btn" data-inspect-id="medicine-supply" type="button">Inspect</button>
+            </div>
+          </article>
+
+          <!-- Project 10: Sri Lanka Salary Predictor 2025 -->
+          <article class="project-card reveal-up" data-category="ai data" id="proj-salary-predictor">
+            <div class="card-visual-header">
+              <div class="card-visual-scan" aria-hidden="true"></div>
+              <div class="card-visual-info">
+                <span class="mono card-id-tag">TECH JOB MARKET</span>
+                <span class="card-visual-metric mono">RANDOM FOREST</span>
+              </div>
+            </div>
+            <div class="card-top-row">
+              <span class="card-cat-badge">MACHINE LEARNING · WEB APP</span>
+              <span class="card-status-badge complete">COMPLETE</span>
+            </div>
+            <div>
+              <h3 class="project-title">Sri Lanka Salary Predictor 2025</h3>
+              <p class="project-desc">Machine Learning web application trained on latest Sri Lankan tech and engineering market compensation data. Estimates earnings by role, experience, industry, and city (Colombo, Kandy, Galle) with instant downloadable PDF/text reports.</p>
+            </div>
+            <div class="project-stack-tags">
+              <span class="stack-tag">Python</span><span class="stack-tag">Scikit-Learn</span><span class="stack-tag">Streamlit</span><span class="stack-tag">Plotly</span><span class="stack-tag">Pandas</span>
+            </div>
+            <div class="project-card-footer">
+              <a class="card-link-btn" href="https://github.com/sahilkavishka" target="_blank" rel="noreferrer noopener">Source Repo ↗</a>
+              <button class="inspect-btn" data-inspect-id="salary-predictor-2025" type="button">Inspect</button>
+            </div>
+          </article>
+
+          <!-- Project 11: Microsoft Stock Analysis Probability Theory -->
+          <article class="project-card reveal-up" data-category="data" id="proj-msft-probability">
+            <div class="card-visual-header">
+              <div class="card-visual-scan" aria-hidden="true"></div>
+              <div class="card-visual-info">
+                <span class="mono card-id-tag">40-YEAR MARKET STUDY</span>
+                <span class="card-visual-metric mono">MONTE CARLO &amp; MARKOV</span>
+              </div>
+            </div>
+            <div class="card-top-row">
+              <span class="card-cat-badge">FINANCE ANALYTICS · PROBABILITY</span>
+              <span class="card-status-badge complete">COMPLETE</span>
+            </div>
+            <div>
+              <h3 class="project-title">Microsoft Stock Analysis Using Probability Theory (1986–2025)</h3>
+              <p class="project-desc">Deep-dive mathematical exploration across nearly 40 years of daily MSFT data. Implements theoretical distribution fitting (Normal, Student's t), Markov regime transitions, Bayesian volatility reasoning, VaR/CVaR risk metrics, and Monte Carlo trajectory forecasting.</p>
+            </div>
+            <div class="project-stack-tags">
+              <span class="stack-tag">Python</span><span class="stack-tag">NumPy</span><span class="stack-tag">Pandas</span><span class="stack-tag">Matplotlib</span><span class="stack-tag">Stochastic Calculus</span>
+            </div>
+            <div class="project-card-footer">
+              <a class="card-link-btn" href="https://github.com/sahilkavishka" target="_blank" rel="noreferrer noopener">Source Repo ↗</a>
+              <button class="inspect-btn" data-inspect-id="msft-probability" type="button">Inspect</button>
+            </div>
+          </article>
+
+          <!-- Project 12: ICC Champions Trophy Dashboard -->
+          <article class="project-card reveal-up" data-category="data" id="proj-icc-champions">
+            <div class="card-visual-header">
+              <div class="card-visual-scan" aria-hidden="true"></div>
+              <div class="card-visual-info">
+                <span class="mono card-id-tag">1998 – 2025 INSIGHTS</span>
+                <span class="card-visual-metric mono">ADVANCED DAX</span>
+              </div>
+            </div>
+            <div class="card-top-row">
+              <span class="card-cat-badge">SPORTS ANALYTICS · POWER BI</span>
+              <span class="card-status-badge complete">COMPLETE</span>
+            </div>
+            <div>
+              <h3 class="project-title">ICC Champions Trophy Historical Analytics Dashboard</h3>
+              <p class="project-desc">Interactive executive-level Power BI platform analyzing international match datasets from 1998 to 2025. Features Overall Dominance Tracker, automated DAX Head-to-Head Dominator KPI card, multi-decade batting strength trends, and global venue popularity treemaps.</p>
+            </div>
+            <div class="project-stack-tags">
+              <span class="stack-tag">Power BI</span><span class="stack-tag">DAX</span><span class="stack-tag">Data Modeling</span><span class="stack-tag">Sports Analytics</span>
+            </div>
+            <div class="project-card-footer">
+              <a class="card-link-btn" href="https://github.com/sahilkavishka" target="_blank" rel="noreferrer noopener">Source Repo ↗</a>
+              <button class="inspect-btn" data-inspect-id="icc-champions-trophy" type="button">Inspect</button>
+            </div>
+          </article>
+
+          <!-- Project 13: Sports Tournaments System -->
+          <article class="project-card reveal-up" data-category="ai web" id="proj-sports-tournaments">
+            <div class="card-visual-header">
+              <div class="card-visual-scan" aria-hidden="true"></div>
+              <div class="card-visual-info">
+                <span class="mono card-id-tag">FULL-STACK DJANGO</span>
+                <span class="card-visual-metric mono">OTP AUTH &amp; RBAC</span>
+              </div>
+            </div>
+            <div class="card-top-row">
+              <span class="card-cat-badge">FULL-STACK · PREDICTIVE ML</span>
+              <span class="card-status-badge active">ACTIVE</span>
+            </div>
+            <div>
+              <h3 class="project-title">Sports Tournaments Management System</h3>
+              <p class="project-desc">Centralized platform for organizers, players, and spectators with role-based access, OTP security, tournament search/filtering, and relational MySQL schemas, paired with match-outcome predictive models over REST APIs.</p>
+            </div>
+            <div class="project-stack-tags">
+              <span class="stack-tag">Django</span><span class="stack-tag">MySQL</span><span class="stack-tag">Scikit-learn</span><span class="stack-tag">Bootstrap</span><span class="stack-tag">Python</span>
+            </div>
+            <div class="project-card-footer">
+              <a class="card-link-btn" href="https://github.com/sahilkavishka" target="_blank" rel="noreferrer noopener">GitHub Repo ↗</a>
+              <button class="inspect-btn" data-inspect-id="sports-tournaments" type="button">Inspect</button>
+            </div>
+          </article>
+
+          <!-- Project 14: EdTech Market Intelligence Pipeline -->
+          <article class="project-card reveal-up" data-category="data" id="proj-edtech-pipeline">
+            <div class="card-visual-header">
+              <div class="card-visual-scan" aria-hidden="true"></div>
+              <div class="card-visual-info">
+                <span class="mono card-id-tag">894+ MASTER RECORDS</span>
+                <span class="card-visual-metric mono">YOUTUBE API V3</span>
+              </div>
+            </div>
+            <div class="card-top-row">
+              <span class="card-cat-badge">ETL PIPELINE · ANALYTICS</span>
+              <span class="card-status-badge complete">COMPLETE</span>
+            </div>
+            <div>
+              <h3 class="project-title">EdTech Market Intelligence Pipeline</h3>
+              <p class="project-desc">Automated data pipeline over YouTube Data API v3 analyzing Sri Lanka's EdTech ecosystem — engineering view velocity, viral multipliers, NLP medium detection, and engagement tiers published to an open Kaggle dataset.</p>
+            </div>
+            <div class="project-stack-tags">
+              <span class="stack-tag">Python</span><span class="stack-tag">YouTube API</span><span class="stack-tag">Pandas</span><span class="stack-tag">Power BI</span>
+            </div>
+            <div class="project-card-footer">
+              <a class="card-link-btn" href="https://github.com/sahilkavishka/-EdTech-Analytics" target="_blank" rel="noreferrer noopener">GitHub Repo ↗</a>
+              <button class="inspect-btn" data-inspect-id="edtech-pipeline" type="button">Inspect</button>
+            </div>
+          </article>
+
+          <!-- Project 15: AWS Customer Churn Predictor -->
           <article class="project-card reveal-up" data-category="ai data collab" id="proj-aws-churn">
+            <div class="card-visual-header">
+              <div class="card-visual-scan" aria-hidden="true"></div>
+              <div class="card-visual-info">
+                <span class="mono card-id-tag">CLOUD ML PIPELINE</span>
+                <span class="card-visual-metric mono">XGBOOST + FLASK</span>
+              </div>
+            </div>
             <div class="card-top-row">
               <span class="card-cat-badge">CLOUD ML · DATA SCIENCE</span>
               <span class="card-status-badge collab">COLLABORATIVE</span>
@@ -390,84 +745,15 @@
             </div>
           </article>
 
-          <!-- Project 3: Sports Tournaments System -->
-          <article class="project-card reveal-up" data-category="ai web" id="proj-sports-tournaments">
-            <div class="card-top-row">
-              <span class="card-cat-badge">FULL-STACK · PREDICTIVE ML</span>
-              <span class="card-status-badge active">ACTIVE</span>
-            </div>
-            <div>
-              <h3 class="project-title">Sports Tournaments Management</h3>
-              <p class="project-desc">Role-based web platform for organizers, players, and spectators — fixtures, live scores, leaderboards, and an ML match-outcome prediction model over REST.</p>
-            </div>
-            <div class="project-stack-tags">
-              <span class="stack-tag">Django</span><span class="stack-tag">MySQL</span><span class="stack-tag">Scikit-learn</span><span class="stack-tag">AJAX</span><span class="stack-tag">Python</span>
-            </div>
-            <div class="project-card-footer">
-              <a class="card-link-btn" href="https://github.com/sahilkavishka?tab=repositories&q=tournament" target="_blank" rel="noreferrer noopener">GitHub Repo ↗</a>
-              <button class="inspect-btn" data-inspect-id="sports-tournaments" type="button">Inspect</button>
-            </div>
-          </article>
-
-          <!-- Project 4: Smartphone Review Sentiment -->
-          <article class="project-card reveal-up" data-category="ai nlp" id="proj-sentiment-nlp">
-            <div class="card-top-row">
-              <span class="card-cat-badge">NLP · TRANSFORMERS</span>
-              <span class="card-status-badge complete">COMPLETE</span>
-            </div>
-            <div>
-              <h3 class="project-title">Review Sentiment: ML vs. BERT</h3>
-              <p class="project-desc">End-to-end NLP comparing classic ML against fine-tuned BERT on scraped GSMArena reviews — paired with a Chrome extension analyzing Daraz.lk reviews.</p>
-            </div>
-            <div class="project-stack-tags">
-              <span class="stack-tag">PyTorch</span><span class="stack-tag">BERT</span><span class="stack-tag">Scikit-learn</span><span class="stack-tag">FastAPI</span><span class="stack-tag">Chrome Ext.</span>
-            </div>
-            <div class="project-card-footer">
-              <a class="card-link-btn" href="https://github.com/sahilkavishka/mini-NLP-project" target="_blank" rel="noreferrer noopener">GitHub Repo ↗</a>
-              <button class="inspect-btn" data-inspect-id="sentiment-nlp" type="button">Inspect</button>
-            </div>
-          </article>
-
-          <!-- Project 5: Sri Lanka Medicine Supply Chain BI -->
-          <article class="project-card reveal-up" data-category="data" id="proj-medicine-supply">
-            <div class="card-top-row">
-              <span class="card-cat-badge">DATA WAREHOUSING · BI</span>
-              <span class="card-status-badge complete">COMPLETE</span>
-            </div>
-            <div>
-              <h3 class="project-title">Medicine Supply Chain BI</h3>
-              <p class="project-desc">Star-schema dimensional data warehouse and Power BI dashboard tracking pharmaceutical imports, USD/LKR volatility, and hospital stockouts from 2020–2026.</p>
-            </div>
-            <div class="project-stack-tags">
-              <span class="stack-tag">Power BI</span><span class="stack-tag">Python</span><span class="stack-tag">Star Schema</span><span class="stack-tag">SQL</span>
-            </div>
-            <div class="project-card-footer">
-              <a class="card-link-btn" href="https://github.com/sahilkavishka/SL_Medicine_Supply_Chain" target="_blank" rel="noreferrer noopener">GitHub Repo ↗</a>
-              <button class="inspect-btn" data-inspect-id="medicine-supply" type="button">Inspect</button>
-            </div>
-          </article>
-
-          <!-- Project 6: EdTech Market Intelligence Pipeline -->
-          <article class="project-card reveal-up" data-category="data" id="proj-edtech-pipeline">
-            <div class="card-top-row">
-              <span class="card-cat-badge">ETL PIPELINE · ANALYTICS</span>
-              <span class="card-status-badge complete">COMPLETE</span>
-            </div>
-            <div>
-              <h3 class="project-title">EdTech Market Intelligence Pipeline</h3>
-              <p class="project-desc">Automated data pipeline over the YouTube Data API v3 analyzing Sri Lanka's EdTech market — view velocity, channel authority, and engagement metrics feeding Power BI.</p>
-            </div>
-            <div class="project-stack-tags">
-              <span class="stack-tag">Python</span><span class="stack-tag">YouTube API</span><span class="stack-tag">Pandas</span><span class="stack-tag">Power BI</span>
-            </div>
-            <div class="project-card-footer">
-              <a class="card-link-btn" href="https://github.com/sahilkavishka/-EdTech-Analytics" target="_blank" rel="noreferrer noopener">GitHub Repo ↗</a>
-              <button class="inspect-btn" data-inspect-id="edtech-pipeline" type="button">Inspect</button>
-            </div>
-          </article>
-
-          <!-- Project 7: Math Quiz Analytics Dashboard -->
+          <!-- Project 16: Math Quiz Analytics Dashboard -->
           <article class="project-card reveal-up" data-category="data web" id="proj-quiz-analytics">
+            <div class="card-visual-header">
+              <div class="card-visual-scan" aria-hidden="true"></div>
+              <div class="card-visual-info">
+                <span class="mono card-id-tag">EDTECH ANALYTICS</span>
+                <span class="card-visual-metric mono">PLOTLY.JS SUITE</span>
+              </div>
+            </div>
             <div class="card-top-row">
               <span class="card-cat-badge">ANALYTICS · VISUALIZATION</span>
               <span class="card-status-badge complete">COMPLETE</span>
@@ -480,46 +766,8 @@
               <span class="stack-tag">HTML5/JS</span><span class="stack-tag">Plotly.js</span><span class="stack-tag">SQL</span><span class="stack-tag">Python</span>
             </div>
             <div class="project-card-footer">
-              <a class="card-link-btn" href="https://github.com/sahilkavishka?tab=repositories&q=quiz" target="_blank" rel="noreferrer noopener">GitHub Repo ↗</a>
+              <a class="card-link-btn" href="https://github.com/sahilkavishka" target="_blank" rel="noreferrer noopener">GitHub Repo ↗</a>
               <button class="inspect-btn" data-inspect-id="quiz-analytics" type="button">Inspect</button>
-            </div>
-          </article>
-
-          <!-- Project 8: Salon Booking & Management System -->
-          <article class="project-card reveal-up" data-category="web" id="proj-salon-system">
-            <div class="card-top-row">
-              <span class="card-cat-badge">FULL-STACK WEB</span>
-              <span class="card-status-badge complete">COMPLETE</span>
-            </div>
-            <div>
-              <h3 class="project-title">Salon Booking &amp; Management</h3>
-              <p class="project-desc">Full-stack appointment booking and management platform with administrative scheduling dashboards and client reservation workflows.</p>
-            </div>
-            <div class="project-stack-tags">
-              <span class="stack-tag">PHP</span><span class="stack-tag">MySQL</span><span class="stack-tag">JavaScript</span>
-            </div>
-            <div class="project-card-footer">
-              <a class="card-link-btn" href="https://github.com/sahilkavishka/salon" target="_blank" rel="noreferrer noopener">GitHub Repo ↗</a>
-              <button class="inspect-btn" data-inspect-id="salon-system" type="button">Inspect</button>
-            </div>
-          </article>
-
-          <!-- Project 9: SL Sports Analytics -->
-          <article class="project-card reveal-up" data-category="data" id="proj-sl-sports-analytics">
-            <div class="card-top-row">
-              <span class="card-cat-badge">OPEN DATA · SPORTS ANALYTICS</span>
-              <span class="card-status-badge planning">PLANNING</span>
-            </div>
-            <div>
-              <h3 class="project-title">SL Sports Analytics Platform</h3>
-              <p class="project-desc">An open-source Sri Lankan sports dataset initiative with statistical exploration notebooks and predictive models to unlock local sports analytics.</p>
-            </div>
-            <div class="project-stack-tags">
-              <span class="stack-tag">Python</span><span class="stack-tag">Pandas</span><span class="stack-tag">Plotly</span><span class="stack-tag">Open Data</span>
-            </div>
-            <div class="project-card-footer">
-              <a class="card-link-btn" href="https://github.com/sahilkavishka" target="_blank" rel="noreferrer noopener">Follow Repo ↗</a>
-              <button class="inspect-btn" data-inspect-id="sl-sports-analytics" type="button">Inspect</button>
             </div>
           </article>
         </div>
@@ -828,14 +1076,95 @@ def custom_construction_loss(y_true, y_pred):
       </div>
     </section>
 
+    <!-- STEP 4F: Field Operations & Community Expeditions Gallery -->
+    <section class="lab-section" id="expeditions">
+      <div class="container">
+        <div class="section-hud-header reveal-up">
+          <div class="section-title-wrap">
+            <span class="section-code">06 // FIELD EXPEDITIONS</span>
+            <h2 class="section-heading">Field Operations &amp; Community Expeditions</h2>
+            <p class="section-desc">Hands-on STEM outreach, physical computing workshops with BBC Micro:bit microcontrollers, and youth coding mentorship across regional schools and libraries in Sri Lanka. Click any field record to inspect full telemetry.</p>
+          </div>
+          <span class="section-badge mono">5 VERIFIED EXPEDITION RECORDS</span>
+        </div>
+
+        <div class="expeditions-gallery-grid reveal-up">
+          <!-- Photo 1: HOPE 2.0 Microbit Session -->
+          <div class="expedition-card" data-gallery-src="./images/community/hope2-microbit-session.jpg" data-gallery-title="Inspiring the Next Generation with Micro:bit (HOPE 2.0)" data-gallery-loc="Karagasthalawa School · IEEE WIE SUSL" data-gallery-desc="As part of our outreach initiative with IEEE WIE, we visited Karagasthalawa School to introduce rural students to the world of technology and programming. Through hands-on sessions using BBC Micro:bit boards, we taught them the fundamentals of code, hardware interaction, and problem-solving in a fun, tactile way.">
+            <div class="expedition-img-wrap">
+              <img src="./images/community/hope2-microbit-session.jpg" alt="Sahil Kavishka conducting hands-on Micro:bit coding at Karagasthalawa School" loading="lazy" />
+              <div class="expedition-overlay-tag mono">EXPEDITION 01 // HOPE 2.0</div>
+            </div>
+            <div class="expedition-info">
+              <span class="expedition-loc mono">Karagasthalawa School · IEEE WIE</span>
+              <h4 class="expedition-title">Inspiring with BBC Micro:bit</h4>
+              <p class="expedition-snippet">Hands-on hardware interaction introducing algorithmic thinking to young minds.</p>
+            </div>
+          </div>
+
+          <!-- Photo 2: Micro:bit Hardware Interaction -->
+          <div class="expedition-card" data-gallery-src="./images/community/microbit-hardware-interaction.jpg" data-gallery-title="Hardware Telemetry &amp; Sensor Logic" data-gallery-loc="Physical Computing Lab · HOPE 2.0" data-gallery-desc="Hands-on demonstration of Micro:bit 5x5 LED matrix and tactile buttons connected via USB to laptop development environments, introducing school children to input/output telemetry and real-time physical computing loops.">
+            <div class="expedition-img-wrap">
+              <img src="./images/community/microbit-hardware-interaction.jpg" alt="BBC Micro:bit microcontroller connected to laptop with LED matrix glowing" loading="lazy" />
+              <div class="expedition-overlay-tag mono">EXPEDITION 02 // HARDWARE</div>
+            </div>
+            <div class="expedition-info">
+              <span class="expedition-loc mono">Physical Computing · HOPE 2.0</span>
+              <h4 class="expedition-title">Hardware Telemetry &amp; Micro:bit</h4>
+              <p class="expedition-snippet">Controlling physical devices with code — tactile sensor inputs and LED outputs.</p>
+            </div>
+          </div>
+
+          <!-- Photo 3: HOPE 2.0 Active Classroom Training -->
+          <div class="expedition-card" data-gallery-src="./images/community/hope2-stem-training.jpg" data-gallery-title="STEM &amp; Algorithmic Thinking Trainer" data-gallery-loc="Karagasthalawa School · STEM Outreach" data-gallery-desc="Guiding classroom students through debugging their first code loops, tactile button interactions, and physical computing experiments during live practical sessions.">
+            <div class="expedition-img-wrap">
+              <img src="./images/community/hope2-stem-training.jpg" alt="Sahil Kavishka actively guiding students during practical programming session" loading="lazy" />
+              <div class="expedition-overlay-tag mono">EXPEDITION 03 // MENTORSHIP</div>
+            </div>
+            <div class="expedition-info">
+              <span class="expedition-loc mono">Karagasthalawa School · STEM</span>
+              <h4 class="expedition-title">Classroom Mentorship &amp; Debugging</h4>
+              <p class="expedition-snippet">Guiding students through logic debugging, loop structures, and creative problem-solving.</p>
+            </div>
+          </div>
+
+          <!-- Photo 4: Code Club Sri Lanka Ratnapura -->
+          <div class="expedition-card" data-gallery-src="./images/community/codeclub-mentoring-ratnapura.jpg" data-gallery-title="Volunteer Coding Instructor — Code Club Sri Lanka" data-gallery-loc="National Library Services Board · Ratnapura Public Library" data-gallery-desc="Supporting young learners at the National Library Services Board (Ratnapura Library) in foundational programming, visual block coding, and digital literacy to empower regional youth through accessible tech education.">
+            <div class="expedition-img-wrap">
+              <img src="./images/community/codeclub-mentoring-ratnapura.jpg" alt="Sahil Kavishka mentoring young students at Code Club Sri Lanka Ratnapura Library" loading="lazy" />
+              <div class="expedition-overlay-tag mono">EXPEDITION 04 // CODE CLUB</div>
+            </div>
+            <div class="expedition-info">
+              <span class="expedition-loc mono">Ratnapura Library · Code Club</span>
+              <h4 class="expedition-title">Volunteer Coding Instructor</h4>
+              <p class="expedition-snippet">Mentoring regional school children in visual coding and digital literacy at the National Library.</p>
+            </div>
+          </div>
+
+          <!-- Photo 5: Interactive Scratch Development -->
+          <div class="expedition-card" data-gallery-src="./images/community/codeclub-interactive-scratch.jpg" data-gallery-title="Interactive Logic &amp; Game Engineering" data-gallery-loc="Ratnapura Library · Hands-on Scratch Lab" data-gallery-desc="Guiding students to build interactive maze games and visual arithmetic logic in Scratch, connecting creative storytelling with mathematical computational thinking.">
+            <div class="expedition-img-wrap">
+              <img src="./images/community/codeclub-interactive-scratch.jpg" alt="Scratch visual programming environment displaying interactive maze on laptop" loading="lazy" />
+              <div class="expedition-overlay-tag mono">EXPEDITION 05 // LOGIC</div>
+            </div>
+            <div class="expedition-info">
+              <span class="expedition-loc mono">Scratch Lab · Youth Literacy</span>
+              <h4 class="expedition-title">Interactive Game Engineering</h4>
+              <p class="expedition-snippet">Empowering students to build visual maze engines and interactive computational logic.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- STEP 5: Personal Branding & About -->
     <section class="lab-section" id="about">
       <div class="container">
         <div class="section-hud-header reveal-up">
           <div class="section-title-wrap">
-            <span class="section-code">06 // IDENTITY</span>
+            <span class="section-code">07 // IDENTITY</span>
             <h2 class="section-heading">About Sahil Kavishka</h2>
-            <p class="section-desc">Data science undergraduate at Sabaragamuwa University of Sri Lanka, curious explorer, and practical problem solver.</p>
+            <p class="section-desc">Data science undergraduate at Sabaragamuwa University of Sri Lanka, Secretary of the Society of Computer Sciences, curious explorer, and practical problem solver.</p>
           </div>
           <span class="section-badge mono">RESEARCHER PROFILE</span>
         </div>
@@ -1221,12 +1550,171 @@ def custom_construction_loss(y_true, y_pred):
       </div>
     </section>
 
+    <!-- STEP 6C: Verified Accreditations & Competitive Credentials -->
+    <section class="lab-section" id="credentials">
+      <div class="container">
+        <div class="section-hud-header reveal-up">
+          <div class="section-title-wrap">
+            <span class="section-code">08 // ACCREDITATIONS</span>
+            <h2 class="section-heading">Verified Accreditations &amp; Competitive Honors</h2>
+            <p class="section-desc">External industry, university, and competitive certifications validating technical mastery, algorithmic rigor, and soft-skills excellence.</p>
+          </div>
+          <span class="section-badge mono">13 VERIFIED CREDENTIALS</span>
+        </div>
+
+        <div class="credentials-grid reveal-up">
+          <!-- 1: SQL Basic -->
+          <div class="credential-card">
+            <div class="cred-top-row">
+              <span class="cred-issuer mono">HACKERRANK</span>
+              <span class="cred-badge verified">VERIFIED CERT</span>
+            </div>
+            <h4 class="cred-title">SQL (Basic) Certificate</h4>
+            <p class="cred-desc">Demonstrated relational querying mastery: aggregate functions, subqueries, relational schema filtering, and grouping logic.</p>
+            <div class="cred-footer mono">ISSUER: HACKERRANK · DATABASES</div>
+          </div>
+
+          <!-- 2: TestGorilla Communication 1st Percentile -->
+          <div class="credential-card">
+            <div class="cred-top-row">
+              <span class="cred-issuer mono">TESTGORILLA</span>
+              <span class="cred-badge top-tier">1ST PERCENTILE 🏆</span>
+            </div>
+            <h4 class="cred-title">Professional Communication — 1st Percentile</h4>
+            <p class="cred-desc">Ranked in the top 1% globally in standardized professional communication, stakeholder alignment, and technical clarity evaluation.</p>
+            <div class="cred-footer mono">OCT 2026 · STANDARDIZED ASSESSMENT</div>
+          </div>
+
+          <!-- 3: Google Intro to AI -->
+          <div class="credential-card">
+            <div class="cred-top-row">
+              <span class="cred-issuer mono">GOOGLE // COURSERA</span>
+              <span class="cred-badge verified">COURSE CERT</span>
+            </div>
+            <h4 class="cred-title">Introduction to Artificial Intelligence</h4>
+            <p class="cred-desc">Foundational knowledge in core AI concepts, neural systems, machine learning fundamentals, and real-world ethical deployment.</p>
+            <div class="cred-footer mono">GOOGLE AUTHORIZED · COURSERA</div>
+          </div>
+
+          <!-- 4: Google Data-Driven Decisions -->
+          <div class="credential-card">
+            <div class="cred-top-row">
+              <span class="cred-issuer mono">GOOGLE // COURSERA</span>
+              <span class="cred-badge verified">COURSE CERT</span>
+            </div>
+            <h4 class="cred-title">Ask Questions to Make Data-Driven Decisions</h4>
+            <p class="cred-desc">Framing empirical research questions, stakeholder metrics, data structuring, and translating analysis into actionable business strategy.</p>
+            <div class="cred-footer mono">GOOGLE AUTHORIZED · COURSERA</div>
+          </div>
+
+          <!-- 5: Google Data, Data, Everywhere -->
+          <div class="credential-card">
+            <div class="cred-top-row">
+              <span class="cred-issuer mono">GOOGLE // COURSERA</span>
+              <span class="cred-badge verified">COURSE CERT</span>
+            </div>
+            <h4 class="cred-title">Foundations: Data, Data, Everywhere</h4>
+            <p class="cred-desc">Core data analytics practices, full data life cycle governance, spreadsheet manipulation, and fundamental analyst ecosystems.</p>
+            <div class="cred-footer mono">GOOGLE AUTHORIZED · COURSERA</div>
+          </div>
+
+          <!-- 6: UoM Python for Beginners -->
+          <div class="credential-card">
+            <div class="cred-top-row">
+              <span class="cred-issuer mono">UNIV. OF MORATUWA</span>
+              <span class="cred-badge verified">DEPT OF CSE</span>
+            </div>
+            <h4 class="cred-title">Python for Beginners</h4>
+            <p class="cred-desc">Department of Computer Science &amp; Engineering, Faculty of Engineering. Foundational programming syntax, algorithmic control, and data structures.</p>
+            <div class="cred-footer mono">FACULTY OF ENGINEERING · UOM</div>
+          </div>
+
+          <!-- 7: UoM Web Design for Beginners -->
+          <div class="credential-card">
+            <div class="cred-top-row">
+              <span class="cred-issuer mono">UNIV. OF MORATUWA</span>
+              <span class="cred-badge verified">DEPT OF IT</span>
+            </div>
+            <h4 class="cred-title">Web Design for Beginners</h4>
+            <p class="cred-desc">Department of Information Technology, Faculty of Information Technology. Structured, responsive, visually appealing, and user-friendly web interfaces.</p>
+            <div class="cred-footer mono">FACULTY OF IT · UOM</div>
+          </div>
+
+          <!-- 8: AWS Student Builder Group Outstanding Achievement -->
+          <div class="credential-card">
+            <div class="cred-top-row">
+              <span class="cred-issuer mono">AWS SUSL</span>
+              <span class="cred-badge honor">OUTSTANDING ACHIEVEMENT</span>
+            </div>
+            <h4 class="cred-title">Certificate of Outstanding Achievement</h4>
+            <p class="cred-desc">Awarded by AWS Student Builder Group at SUSL for active community leadership, peer mentoring, and promoting cloud computing innovation.</p>
+            <div class="cred-footer mono">AWS STUDENT BUILDERS · SUSL</div>
+          </div>
+
+          <!-- 9: CodeRally 7.0 2nd Place -->
+          <div class="credential-card">
+            <div class="cred-top-row">
+              <span class="cred-issuer mono">IEEE CS IIT</span>
+              <span class="cred-badge podium">2ND PLACE 🥈</span>
+            </div>
+            <h4 class="cred-title">CodeRally 7.0 — 2nd Place (Beginner Tier)</h4>
+            <p class="cred-desc">Secured 2nd Place with Team Code Wave after an intense 24-Hour Grand Finale coding competition organized by IEEE Computer Society IIT.</p>
+            <div class="cred-footer mono">24-HOUR FINALE · TEAM CODE WAVE</div>
+          </div>
+
+          <!-- 10: ML & AI Nexus 2026 3rd Place Global -->
+          <div class="credential-card">
+            <div class="cred-top-row">
+              <span class="cred-issuer mono">KAGGLE // GLOBAL</span>
+              <span class="cred-badge podium">GLOBAL RANK #3 🥉</span>
+            </div>
+            <h4 class="cred-title">ML &amp; AI Nexus 2026 — 3rd Place Global</h4>
+            <p class="cred-desc">Achieved Rank #3 globally on Kaggle for trustworthy clinical 30-day hospital readmission prediction with calibrated stacking ensembles.</p>
+            <div class="cred-footer mono">KAGGLE LEADERBOARD: 0.33400</div>
+          </div>
+
+          <!-- 11: J'Pura Xtreme 3.0 Finalist & Excellence -->
+          <div class="credential-card">
+            <div class="cred-top-row">
+              <span class="cred-issuer mono">IEEE USJ &amp; BUILDR LABS</span>
+              <span class="cred-badge honor">FINALIST &amp; EXCELLENCE</span>
+            </div>
+            <h4 class="cred-title">J'Pura Xtreme 3.0 — University Category Finalist</h4>
+            <p class="cred-desc">Certificate of Excellence in a competitive 24-hour programming hackathon representing Sabaragamuwa University with Team Code Wave.</p>
+            <div class="cred-footer mono">24-HOUR HACKATHON · BUILDR LABS</div>
+          </div>
+
+          <!-- 12: NEXORA 1.0 Appreciation -->
+          <div class="credential-card">
+            <div class="cred-top-row">
+              <span class="cred-issuer mono">IEEE SUSL</span>
+              <span class="cred-badge verified">ORGANIZING TEAM</span>
+            </div>
+            <h4 class="cred-title">NEXORA 1.0 — Certificate of Appreciation</h4>
+            <p class="cred-desc">Awarded for active program committee contribution, session coordination, and event planning for the flagship technology leadership conference.</p>
+            <div class="cred-footer mono">IEEE STUDENT BRANCH · SUSL</div>
+          </div>
+
+          <!-- 13: CYPHER 4.0 Pre-Task -->
+          <div class="credential-card">
+            <div class="cred-top-row">
+              <span class="cred-issuer mono">IEEE KDU &amp; GDG SL</span>
+              <span class="cred-badge verified">PRE-TASK FINISHER</span>
+            </div>
+            <h4 class="cred-title">CYPHER 4.0 — Certificate of Participation</h4>
+            <p class="cred-desc">Successfully participated in CYPHER 4.0 Pre-Task organized by IEEE KDU together with GDG Sri Lanka, GDG Cloud SL, and Women Techmakers.</p>
+            <div class="cred-footer mono">IEEE KDU · GDG SRI LANKA</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- STEP 6B: Research Dispatches & Engineering Writings -->
     <section class="lab-section" id="dispatches">
       <div class="container">
         <div class="section-hud-header reveal-up">
           <div class="section-title-wrap">
-            <span class="section-code">07 // FIELD NOTES</span>
+            <span class="section-code">09 // FIELD NOTES</span>
             <h2 class="section-heading">Research Dispatches &amp; Engineering Notes</h2>
             <p class="section-desc">Documenting decisions, architectural trade-offs, and empirical findings — focusing on why systems are built the way they are.</p>
           </div>
@@ -1306,7 +1794,7 @@ def custom_construction_loss(y_true, y_pred):
       <div class="container">
         <div class="section-hud-header reveal-up">
           <div class="section-title-wrap">
-            <span class="section-code">08 // TRANSMISSION</span>
+            <span class="section-code">10 // TRANSMISSION</span>
             <h2 class="section-heading">Initialize Connection</h2>
             <p class="section-desc">Open for research collaborations, Data Science &amp; Machine Learning internships, and technical engineering opportunities.</p>
           </div>
@@ -1318,14 +1806,26 @@ def custom_construction_loss(y_true, y_pred):
             <div>
               <h3 style="font-size:1.4rem;font-weight:800;color:var(--lab-text);margin-bottom:0.5rem">Direct Channels</h3>
               <p style="color:var(--lab-text-muted);font-size:0.92rem;line-height:1.6">
-                Email is the fastest medium to reach me. You can also connect via LinkedIn or inspect ongoing code updates on GitHub.
+                Direct channels for technical discussions, research inquiries, or project handoffs. All transmissions monitored daily.
               </p>
 
               <div class="contact-direct-links" style="margin-top:1.25rem">
                 <a class="direct-link-row" href="mailto:sahilkavishka428@gmail.com">
-                  <span>Direct Email</span>
+                  <span>Primary Email</span>
                   <span class="k mono">sahilkavishka428@gmail.com</span>
                 </a>
+                <a class="direct-link-row" href="mailto:22cds0428@ms.sab.ac.lk">
+                  <span>Academic Email</span>
+                  <span class="k mono">22cds0428@ms.sab.ac.lk</span>
+                </a>
+                <a class="direct-link-row" href="tel:+94705739193">
+                  <span>Mobile Line</span>
+                  <span class="k mono">+94 70 573 9193</span>
+                </a>
+                <div class="direct-link-row" style="cursor:default">
+                  <span>Base Location</span>
+                  <span class="k mono">Anuradhapura, Sri Lanka</span>
+                </div>
                 <a class="direct-link-row" href="https://github.com/sahilkavishka" target="_blank" rel="noreferrer noopener">
                   <span>GitHub Profile</span>
                   <span class="k mono">@sahilkavishka</span>
@@ -1335,7 +1835,7 @@ def custom_construction_loss(y_true, y_pred):
                   <span class="k mono">in/sahilkavishka</span>
                 </a>
                 <a class="direct-link-row" href="https://www.kaggle.com/sahilkavishkakumara" target="_blank" rel="noreferrer noopener">
-                  <span>Kaggle Notebooks</span>
+                  <span>Kaggle Profile</span>
                   <span class="k mono">@sahilkavishkakumara</span>
                 </a>
               </div>
@@ -1454,6 +1954,29 @@ def custom_construction_loss(y_true, y_pred):
           <span>View Source Repository</span>
           <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
         </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Field Operations Photo Lightbox Modal -->
+  <div class="modal-overlay" id="gallery-lightbox-overlay" role="dialog" aria-modal="true" aria-label="Field Expedition Photo Inspector">
+    <div class="lightbox-modal-box">
+      <div class="lightbox-header-bar">
+        <span class="mono" id="lightbox-loc" style="font-size:0.78rem;color:var(--lab-cyan)">Karagasthalawa School · IEEE WIE</span>
+        <button class="modal-close-btn" id="lightbox-close-btn" type="button" aria-label="Close Photo Lightbox">&times;</button>
+      </div>
+      <div class="lightbox-body">
+        <div class="lightbox-img-frame">
+          <img id="lightbox-img" src="" alt="Field Expedition Inspection" />
+        </div>
+        <div class="lightbox-caption-col">
+          <h3 id="lightbox-title" style="font-size:1.3rem;font-weight:800;color:var(--lab-text);margin-bottom:0.75rem"></h3>
+          <p id="lightbox-desc" style="color:var(--lab-text-secondary);font-size:0.92rem;line-height:1.7"></p>
+          <div class="lightbox-telemetry-stamp mono">
+            <span>OPERATIONAL STATUS: VERIFIED EXPEDITION</span>
+            <span>RESEARCHER: SAHIL KAVISHKA</span>
+          </div>
+        </div>
       </div>
     </div>
   </div>

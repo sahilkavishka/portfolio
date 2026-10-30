@@ -57,7 +57,15 @@ portfolio/
 ├── index.backup.html            # Pre-redesign archive
 ├── README.md                    # Technical documentation & project overview
 ├── images/
-│   └── sahil-kavishka.jpg       # Profile photo & research identity asset
+│   ├── sahil-kavishka.jpg       # Profile photo & research identity asset
+│   ├── community/               # Field operations & STEM workshop photographs
+│   │   ├── hope2-microbit-session.jpg
+│   │   ├── microbit-hardware-interaction.jpg
+│   │   ├── hope2-stem-training.jpg
+│   │   ├── codeclub-mentoring-ratnapura.jpg
+│   │   └── codeclub-interactive-scratch.jpg
+│   ├── projects/                # UI screenshots & architecture blueprints
+│   └── certificates/            # Verified credential badges
 ├── css/
 │   └── intelligence-lab.css     # Research laboratory design system & responsive styling
 └── js/

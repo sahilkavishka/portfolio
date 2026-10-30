@@ -192,6 +192,54 @@ async def predict_sentiment(payload: ReviewPayload):
 // STEP 4B: EXPERIMENTAL PROJECT EXPLORER & DEEP DIVE MODAL
 // ===================================================================
 const DETAILED_PROJECTS = {
+  'cropsafe-ai': {
+    title: 'CropSafe AI — National Fertilizer Quality Intelligence & Loss Forecasting Platform',
+    category: 'CAPSTONE PROJECT · AI & AGRI-TECH',
+    status: 'COMPLETED · FINAL YEAR CAPSTONE II (DS3206 / DS4105)',
+    problem: 'Counterfeit and adulterated agricultural fertilizer inputs threaten food security in Sri Lanka. Substandard blends containing heavy inert fillers or excessive moisture cause smallholder farmers to suffer harvest deficits exceeding 20% and severe financial losses.',
+    approach: 'Ground-truthed on 2,002 empirical laboratory test certificates across all 9 provinces of Sri Lanka. Built: 1) Champion Adulterant Classifier (LightGBM) achieving 94.6% Test Accuracy with sub-2ms inference, 2) Dual Harvest & Economic Loss Regressors (Gradient Boosting, R² > 0.96) computing farm-level yield deficits (%) and monetary damage (LKR/ha), 3) Chemical & Price Anomaly Detection (Isolation Forest & LOF) flagging uncatalogued chemical compositions and black-market price arbitrage (>15% markup), and 4) Regional Demand Forecaster predicting seasonal fertilizer requisition (in Metric Tons).',
+    stack: 'Python, LightGBM, Scikit-Learn, Streamlit, Plotly, Pandas, NumPy, Isolation Forest',
+    contribution: 'End-to-end research, dataset curation of 2,002 certificates across 9 provinces, multi-model evaluation, feature engineering, and provincial GIS decision engine.',
+    results: '94.6% Test Accuracy on fertilizer authenticity classification; R² > 0.96 on crop yield loss estimation; deployed interactive Streamlit decision dashboard.',
+    github: 'https://github.com/sahilkavishka',
+    live: null
+  },
+  'sinharaja-expedition': {
+    title: 'Sinharaja — The Lost Expedition: 3D Tactical Survival Game',
+    category: '3D COMPUTER GRAPHICS & WEBGL',
+    status: 'ACTIVE RELEASE · 60 FPS BROWSER ENGINE',
+    problem: 'Traditional educational and cultural simulation games rely on heavy desktop executables and bulky game engines (Unity/Unreal), preventing instant zero-install browser accessibility for regional environmental education.',
+    approach: 'Built a browser-based, First-Person 3D Tactical Survival & Forensic Mystery Game entirely from scratch using React and Three.js (WebGL) running smoothly at 60 FPS without external game engines. Features custom procedural textures, dynamic lighting (Flashlight & UV beam), AABB/Raycasting collision physics, real-time leech blood loss & salt remediation, hypothermia management, toxic sulfur gas vents with gas mask mechanics, endemic wildlife photography with forensic field journal, procedural Web Audio API synthesis, and real-time English/Sinhala localization.',
+    stack: 'React.js, Three.js, WebGL, Web Audio API, JavaScript (ES6+), HTML5, CSS3',
+    contribution: 'Engineered custom procedural 3D terrain, collision physics, survival mechanics, Web Audio sound synthesis, forensic journal, and bilingual localization.',
+    results: 'Smooth 60 FPS performance entirely client-side in standard web browsers; open source repository on GitHub.',
+    github: 'https://github.com/sahilkavishka/sinharaja',
+    live: null
+  },
+  'nexus-hospital-readmission': {
+    title: 'Trustworthy AI: Clinical 30-Day Hospital Readmission Predictor',
+    category: 'HEALTHCARE AI & BIOSTATISTICS',
+    status: 'GLOBAL RANK #3 🥉 · ML & AI NEXUS 2026 HACKATHON',
+    problem: 'Black-box clinical machine learning models frequently exhibit catastrophic probability miscalibration, algorithmic bias across demographic strata, and tail log-loss penalties when predicting 30-day unplanned hospital readmissions.',
+    approach: 'Engineered a statistically calibrated, trustworthy AI pipeline for Team CodeWave (Aradhya Jayawardane, Sarasi Rajarathna, Pooja Anbalagan, Sahil Kavishka): 1) Evidence-based clinical feature engineering (AKI, severe anemia, cardiorenal syndrome, polypharmacy), 2) Tri-model stacking ensemble blending CatBoost (depth=5), LightGBM (leaf-wise max_depth=4), and Lasso Logistic Regression via SLSQP constrained optimization, 3) Platt Sigmoid calibration (slope ~0.99) bounding probabilities [0.0248, 0.7280], 4) Subgroup fairness audit across sex (ΔAUC = 0.0024) and hospital tiers, and 5) Selective classification using Shannon Entropy to defer ambiguous cases (top 10%) for clinical review.',
+    stack: 'Python, CatBoost, LightGBM, Scikit-learn, Pandas, Kaggle, Biostatistics, Platt Scaling',
+    contribution: 'Feature engineering on physiological risk markers, ensemble blending optimization, probability calibration, fairness auditing, and 2-page Model Trust Card authoring.',
+    results: 'Secured 3rd Place globally on Kaggle Leaderboard (0.33400); 5-fold CV log loss: 0.3490 ± 0.0055, Brier Score: 0.1021, ROC-AUC: 0.6932.',
+    github: 'https://github.com/sahilkavishka',
+    live: null
+  },
+  'mora-sp-cup-denoise': {
+    title: 'Hybrid Dual-Engine Low-Light Image Denoising (Mora SP Cup 2026)',
+    category: 'COMPUTER VISION & SIGNAL PROCESSING',
+    status: 'COMPETITION SUBMISSION · TEAM ZENTRIX',
+    problem: 'Low-light smartphone sensors suffer from extreme analog/digital gain, introducing heavy Poisson photon-shot noise, Gaussian read noise, CFA chromatic blotching, and dark-current hot pixels.',
+    approach: 'Formulated a novel Hybrid Dual-Engine Restoration Framework for Team Zentrix (Savindi Hewage, Kavisha Nimsara, Sahil Kavishka): Engine A (7-Stage Classical DSP Pipeline for CPU execution: Adaptive Rank-Order Defect Pixel Suppression, Anisotropic Diffusion, Dual-Basis DWT BayesShrink, NLM Patch-based filtering, CIE-LAB & YCrCb decoupled smoothing, Guided Filtering, Multi-scale Laplacian detail fusion) achieving +71.2% over baseline in 3.4s; Engine B (Deep Residual Backbone NAFNet-APEX v10 with 86.49M parameters, SimpleGate + SCA, compound Charbonnier + D-SSIM loss, EMA β=0.9995, and 8-fold test-time augmentation).',
+    stack: 'PyTorch, Python, NAFNet, OpenCV, Scikit-Image, Classical DSP, CUDA',
+    contribution: 'Architected classical DSP smoothing filters, assisted in NAFNet loss formulation, evaluated PSNR/SSIM metrics, and verified offline CPU fallback.',
+    results: 'Achieved 32.42 dB PSNR and 0.9205 SSIM; Composite Score: 0.6863 (+160.6% relative gain over competition baseline).',
+    github: 'https://github.com/sahilkavishka',
+    live: null
+  },
   'smartbuild-ai': {
     title: 'SmartBuild AI — Construction Intelligence Platform',
     category: 'AI & MACHINE LEARNING · FLAGSHIP',
@@ -205,111 +253,147 @@ const DETAILED_PROJECTS = {
     live: null
   },
   'resove-ai': {
-    title: 'codeXsabra — ResoveAI',
-    category: 'NLP & TEAM COLLABORATION · HACKATHON',
-    status: 'COMPLETED · HUTCH AI FINALIST',
-    problem: 'Telecom customer support desks face immense ticket triage bottlenecks when routing multilingual, non-standard customer inquiries across billing, network outages, and technical complaints.',
-    approach: 'Constructed an automated NLP triage microservice with text preprocessing, TF-IDF / PyTorch token categorization, priority urgency scoring, and automated routing exposed via FastAPI endpoints.',
-    stack: 'NLP, FastAPI, PyTorch, Scikit-Learn, Hutch AI, Python',
-    contribution: 'Led the NLP text categorization engine, feature pipeline, and FastAPI inference microservice integration within the hackathon team.',
-    results: 'Delivered rapid categorization of simulated telecom inquiry datasets with real-time routing recommendations.',
+    title: 'ResolvAI — Multi-Source Resolution Copilot (IgnitX Hutch Hackathon 2026)',
+    category: 'NLP & TELECOM AI · HACKATHON',
+    status: 'COMPLETED · CODE X SABRA',
+    problem: 'Telecom customer support desks face immense ticket triage bottlenecks when resolving complex billing discrepancies and customer complaints across multiple divergent channels.',
+    approach: 'Developed as a team for IgnitX – Hutch Hackathon 2026 (organized by Hutch Sri Lanka). ResolvAI combines rule-based validation with AI-generated insights to make telecom complaint handling transparent, explainable, and automated.',
+    stack: 'Python, FastAPI, Scikit-learn, NLP, Rule Engine, REST APIs',
+    contribution: 'Responsible for Backend API Integration and Frontend UI, connecting core system components to support seamless communication between the rule engine, AI engine, and user interface.',
+    results: 'Structured data flow enabling real-time resolution recommendation and explainable billing discrepancy verification.',
     github: 'https://github.com/kavishanimsara/codeXsabra-ResoveAI',
     live: null
   },
-  'aws-churn': {
-    title: 'AWS Customer Churn Predictor',
-    category: 'DATA SCIENCE & CLOUD ML · COLLABORATIVE',
-    status: 'COMPLETED · CLOUD READY',
-    problem: 'Telecom and SaaS providers lose significant annual recurring revenue when at-risk accounts are identified too late to intervene effectively.',
-    approach: 'Engineered an end-to-end cloud-native predictive pipeline utilizing data cleansing, feature transformation (usage velocity), tree-based ensemble models (XGBoost, Random Forest), and AWS-compatible Flask serving.',
-    stack: 'AWS, Python, XGBoost, Flask, Scikit-Learn, Random Forest',
-    contribution: 'Feature engineering, model hyperparameter tuning, cross-validation benchmarking between Random Forest and XGBoost, and cloud deployment pipelines.',
-    results: 'Demonstrated substantial accuracy improvement over baseline models via rolling consumption velocity features.',
-    github: 'https://github.com/Dilharajay/churn_predictor',
+  'salonora': {
+    title: 'Salonora — AI-Powered Salon Discovery & Appointment Management Platform',
+    category: 'FULL-STACK WEB & AI AGENT',
+    status: 'COMPLETED · OPEN SOURCE',
+    problem: 'Finding the right personal aesthetic and coordinating salon appointments is often tedious for clients, while salon owners struggle with fragmented booking books, no-shows, and manual reception desks.',
+    approach: 'Engineered a modern, AI-enhanced salon platform featuring: 1) AI Style & Beauty Studio integrated with Google Gemini AI for personalized hair styling, skincare recommendations, and real-time voice narration, 2) Real-time booking & scheduling matching clients with specialized stylists, 3) Digital QR Check-In Pass for frictionless contact-free salon reception check-in, 4) Role-Based Access Control (RBAC) with dedicated portals for salon owners and customers, 5) GPS distance sorting for nearby salons, and 6) Glassmorphism UI with light/dark theme switching.',
+    stack: 'PHP (MVC Architecture), MySQL, Google Gemini API, JavaScript, HTML5, CSS3, PDO',
+    contribution: 'Full-stack architecture, Gemini AI integration, QR pass generation, database schema design with parameterized PDO queries, and CSRF protection.',
+    results: 'Deployed full-stack application supporting automated booking workflows, style consultations, and secure multi-role administrative portals.',
+    github: 'https://github.com/sahilkavishka/salon',
     live: null
   },
-  'sports-tournaments': {
-    title: 'Sports Tournaments Management & Prediction System',
-    category: 'FULL-STACK WEB & ML',
-    status: 'ACTIVE · WEBSOCKET UPGRADE',
-    problem: 'Sports leagues struggle with fragmented tournament coordination — managing fixtures, multi-role participant permissions, live scores, and spectator engagement on one platform.',
-    approach: 'Developed a comprehensive role-based web platform (organizers, players, spectators) with Django and MySQL, integrating an ML match-outcome prediction model exposed over a REST API.',
-    stack: 'Django, MySQL, Scikit-learn, JavaScript (ES6+), AJAX, Python',
-    contribution: 'Solo full-stack engineering: schema design, multi-role permission enforcement at the API layer, prediction model training, and ongoing migration from AJAX polling to WebSockets.',
-    results: 'Successfully handled tournament fixtures and match prediction data with verified permission separation.',
-    github: 'https://github.com/sahilkavishka?tab=repositories&q=tournament',
+  'ceylon-forecast': {
+    title: 'Ceylon Forecast Engine — Sri Lanka Tourism Trend Predictor',
+    category: 'PREDICTIVE ML & DATA SCIENCE',
+    status: 'COMPLETED · KAGGLE & STREAMLIT',
+    problem: 'Tourism is a cornerstone of Sri Lanka\'s economy, but stakeholder decision-making has historically remained reactive rather than proactive during macroeconomic disruptions and seasonal volatility.',
+    approach: 'Evaluated multiple regression algorithms to forecast monthly tourist arrivals. Random Forest Regression delivered highest accuracy in capturing non-linear arrival patterns. Integrated macroeconomic indicators (LKR/USD exchange rates, Consumer Price Index inflation) to analyze traveler elasticity, discovering origin country and seasonal cyclicality as primary drivers. Deployed on Streamlit with interactive "What-If" scenario simulations and sensitivity heatmaps.',
+    stack: 'Python, Pandas, Scikit-Learn, Plotly, Streamlit, Random Forest Regressor',
+    contribution: 'Data collection, feature engineering of macroeconomic indicators, model benchmarking, and interactive Streamlit simulation dashboard.',
+    results: 'Published open-source predictive tool with live what-if macro sensitivity sliders and seasonal heatmaps.',
+    github: 'https://github.com/sahilkavishka',
+    live: null
+  },
+  'salary-predictor-2025': {
+    title: 'Sri Lanka Salary Predictor 2025',
+    category: 'MACHINE LEARNING & WEB APP',
+    status: 'COMPLETED · OPEN SOURCE',
+    problem: 'Sri Lankan IT, engineering, and data science professionals often lack transparent, ground-truthed data on market-rate compensation across varying cities and experience levels.',
+    approach: 'Trained a Random Forest model on modern Sri Lankan job market salary records. Developed an interactive Streamlit & Plotly web app allowing users to estimate monthly/annual earnings based on role, experience, industry sector, and geographical location (Colombo, Kandy, Galle, etc.) with instant downloadable report summaries.',
+    stack: 'Python, Scikit-Learn, Streamlit, Plotly, Pandas',
+    contribution: 'End-to-end dataset cleaning, model training, cross-validation, and Streamlit user interface.',
+    results: 'Interactive estimator enabling transparent compensation benchmarks across Sri Lankan tech roles.',
+    github: 'https://github.com/sahilkavishka',
     live: null
   },
   'sentiment-nlp': {
-    title: 'Smartphone Review Sentiment: Classic ML vs. BERT',
+    title: 'AI Review Insight: Daraz Chrome Extension & BERT vs. Classic ML',
     category: 'NLP & DEEP LEARNING',
     status: 'COMPLETED · SHIPPED EXTENSION',
-    problem: 'Understanding whether complex deep learning architectures (BERT) justify their inference latency over traditional ML models when scoring e-commerce customer product reviews.',
-    approach: 'Scraped GSMArena reviews, trained and benchmarked Naive Bayes, SVM, and Random Forest against fine-tuned BERT (PyTorch / Hugging Face). Packaged the model into a live Chrome extension that evaluates Daraz.lk reviews in the user’s browser.',
-    stack: 'PyTorch, Hugging Face, Scikit-learn, NLTK, FastAPI, Chrome Extension API',
-    contribution: 'End-to-end architecture: dataset harvesting, model training and benchmarking, FastAPI inference backend, and Chrome Manifest V3 extension development.',
-    results: 'Shipped a working Chrome extension; established that classic ML achieves sub-10ms latency for real-time browser triage while BERT delivers superior accuracy on ambiguous syntax.',
+    problem: 'E-commerce buyers spend hours reading hundreds of contradictory product reviews. Standard sentiment tools fail to extract aspect-specific insights (battery, camera, build quality).',
+    approach: 'Scraped thousands of smartphone reviews from GSMArena, implemented VADER automated annotation, and benchmarked Naive Bayes, SVM, and Random Forest against fine-tuned BERT (bert-base-uncased) with a custom WeightedTrainer. Packaged the system into the AI Review Insight Chrome Extension V3 featuring deep DOM lazy-load scanning on Daraz.lk, aspect-based sentiment extraction into distinct PROS and CONS tags, and SVG progress charts.',
+    stack: 'PyTorch, Hugging Face Transformers, Scikit-learn, NLTK, FastAPI, Chrome Extension V3',
+    contribution: 'Scraping pipeline, BERT fine-tuning, FastAPI microservice, and native Daraz-themed Chrome Extension UI.',
+    results: 'Shipped working Chrome Extension extracting pros/cons in real-time from live Daraz e-commerce listings.',
     github: 'https://github.com/sahilkavishka/mini-NLP-project',
     live: null
   },
   'medicine-supply': {
-    title: 'Sri Lanka Medicine Supply Chain BI',
-    category: 'DATA SCIENCE & ANALYTICS',
-    status: 'COMPLETED · STAR SCHEMA',
-    problem: 'The 2022 Sri Lankan economic crisis severely strained pharmaceutical supply lines, creating acute hospital stockouts compounded by volatile USD/LKR currency exchange rates.',
-    approach: 'Engineered a dimensional data warehouse using a Star Schema, harmonizing three inconsistent governmental and public records onto a single date/district dimension, paired with an executive Power BI analytics dashboard.',
-    stack: 'Power BI, Python, Star Schema, SQL, Pandas',
-    contribution: 'Data hygiene pipelines in Python, dimensional star schema architecture, and interactive Power BI drill-down dashboards spanning 2020 through 2026.',
-    results: 'Unified divergent data sources to isolate critical correlation periods between currency devaluation and regional hospital stockout spikes.',
+    title: 'Sri Lanka Pharmaceutical Supply Chain C-Level Analytics & Simulation (2020–2026)',
+    category: 'DATA WAREHOUSING & POWER BI',
+    status: 'COMPLETED · ENTERPRISE BI',
+    problem: 'Severe currency devaluation and import restrictions during Sri Lanka\'s 2022 economic shock created acute hospital stockouts across essential drugs (e.g. Atorvastatin, Omeprazole).',
+    approach: 'Designed an enterprise-grade C-Level Power BI Analytics & Simulation Platform. Modeled LKR 57.72B in total import costs and 55.40M quantities across 2020–2026. Architected an automated Star Schema (Fact_Imports, Dim_Drugs, Dim_Suppliers, Dim_Time), built advanced DAX simulation measures for a dynamic +35% crisis cost surge, integrated ArcGIS live mapping for global supplier tracking, and evaluated local manufacturing resilience.',
+    stack: 'Power BI Desktop, Advanced DAX, Star Schema Modeling, Python, SQL, ArcGIS Maps',
+    contribution: 'Dimensional data modeling, star schema architecture, advanced DAX simulation formulas, and 3-page executive dashboard suite.',
+    results: 'Published Kaggle dataset and open-source project visualizing correlation between currency rates and hospital medicine availability.',
     github: 'https://github.com/sahilkavishka/SL_Medicine_Supply_Chain',
     live: null
   },
   'edtech-pipeline': {
-    title: 'EdTech Market Intelligence Pipeline',
-    category: 'DATA ENGINEERING & ANALYTICS',
-    status: 'COMPLETED · AUTOMATED',
-    problem: 'Educational content providers lack structured visibility into market engagement velocity, channel authority, and audience retention patterns in regional digital education.',
-    approach: 'Constructed an automated data pipeline querying the YouTube Data API v3 to harvest metrics on view velocity, channel authority, and topic traction, persisting structured outputs into Power BI dashboards.',
-    stack: 'Python, YouTube API v3, Pandas, Power BI',
-    contribution: 'Automated data engineering pipeline, scheduled refresh jobs, engagement velocity calculations, and Power BI report design.',
-    results: 'Replaced manual metric tracking with an automated pipeline highlighting high-velocity regional educational topics.',
+    title: 'Sri Lankan EdTech Market Intelligence Engine',
+    category: 'DATA ENGINEERING & PIPELINES',
+    status: 'COMPLETED · OPEN DATASET',
+    problem: 'Educators and creators lack structured visibility into what drives viewer virality and educational content engagement across Sri Lanka.',
+    approach: 'Constructed an end-to-end data pipeline harvesting ~894+ unique video and channel records via YouTube Data API v3. Engineered features: Content Velocity (Views/Day), Viral Multiplier, Engagement Rate %, NLP-based Medium Detection (Sinhala/English), and behavioral performance tiers. Visualized via custom dark-themed statistical suites.',
+    stack: 'Python, YouTube Data API v3, Pandas, Seaborn, Matplotlib, Power BI',
+    contribution: 'Data extraction pipeline, regex NLP categorization (A/L, O/L, Revision), and published open Kaggle dataset.',
+    results: 'Published master dataset and analytics suite tracking regional educational content virality.',
     github: 'https://github.com/sahilkavishka/-EdTech-Analytics',
+    live: null
+  },
+  'msft-probability': {
+    title: 'Microsoft Stock Analysis Using Probability Theory (1986–2025)',
+    category: 'STOCHASTIC MODELING & STATISTICS',
+    status: 'COMPLETED · 40-YEAR STUDY',
+    problem: 'Financial markets exhibit non-normal fat-tailed return behavior and volatility clustering that simple linear models fail to capture.',
+    approach: 'Deep-dive analytical study analyzing nearly 40 years of daily Microsoft stock data. Fitted theoretical distributions (Normal, Log-Normal, Student\'s t), calculated empirical probabilities, modeled Markov state transitions between bull/bear regimes, applied Bayesian reasoning for volatility inference, and executed Monte Carlo simulations alongside VaR and CVaR risk metrics.',
+    stack: 'Python, NumPy, Pandas, Matplotlib, Seaborn, SciPy, Stochastic Calculus',
+    contribution: 'Statistical distribution fitting, Markov transition matrix formulation, Bayesian volatility estimation, and Monte Carlo trajectory simulation.',
+    results: 'Identified regime-switching momentum patterns and quantified extreme downside risk metrics across four decades of market history.',
+    github: 'https://github.com/sahilkavishka',
+    live: null
+  },
+  'icc-champions-trophy': {
+    title: 'ICC Champions Trophy Historical Insights Dashboard (1998–2025)',
+    category: 'SPORTS ANALYTICS & POWER BI',
+    status: 'COMPLETED · INTERACTIVE BI',
+    problem: 'Sports enthusiasts and broadcasters struggle to evaluate historical tournament dominance, head-to-head dynamics, and venue performance over multi-decade spans.',
+    approach: 'Constructed an end-to-end Power BI dashboard analyzing historical match records from 1998 to 2025. Built dynamic DAX measures for an Overall Dominance Tracker, an automated Head-to-Head Dominator KPI card, a multi-decade Team Batting Strength trend line, a Player of the Match leaderboard, and an interactive Venue Popularity treemap.',
+    stack: 'Power BI Desktop, DAX Logic, Data Modeling, Sports Analytics',
+    contribution: 'Data hygiene, DAX metric engineering, hierarchical data modeling, and user-centric dashboard UI.',
+    results: 'Interactive dashboard delivering sub-second slice-and-dice insights across 27 years of international tournament cricket.',
+    github: 'https://github.com/sahilkavishka',
+    live: null
+  },
+  'sports-tournaments': {
+    title: 'Sports Manager — Full-Stack Sports Platform',
+    category: 'FULL-STACK WEB & ML',
+    status: 'ACTIVE · PRODUCTION',
+    problem: 'Sports tournament organizers, teams, and fans lack a unified platform for fixture scheduling, team registrations, score reporting, and interactive match predictions.',
+    approach: 'Engineered a full-stack platform using Django and MySQL with role-based access control, OTP-based secure authentication, dynamic tournament search/filtering, and interactive engagement features (likes and comments) for teams and spectators.',
+    stack: 'Python, Django, JavaScript, HTML5, CSS3, Bootstrap, MySQL, SQLite',
+    contribution: 'Full-stack engineering: schema design, OTP verification system, RBAC authorization, and match prediction integration.',
+    results: 'Operational multi-role tournament management suite with secure role segmentation.',
+    github: 'https://github.com/sahilkavishka',
     live: null
   },
   'quiz-analytics': {
     title: 'Math Quiz Analytics Dashboard',
     category: 'DATA ANALYTICS & WEB',
-    status: 'COMPLETED',
-    problem: 'Raw exam percentages obscure specific learning deficiencies, preventing educators from identifying precise skill gaps across student cohorts.',
-    approach: 'Created an educator analytics platform for timed quizzes featuring cohort distribution analysis, skill-gap detection by mathematical topic, and real-time student leaderboards.',
-    stack: 'HTML5/CSS3, JavaScript, Plotly.js, SQL, Python',
-    contribution: 'Built topic breakdown algorithms, cohort visualization metrics using Plotly, and educator reporting views.',
-    results: 'Enabled educators to diagnose whether poor quiz scores stemmed from algebra vs. geometry deficits rather than simple aggregate percentages.',
-    github: 'https://github.com/sahilkavishka?tab=repositories&q=quiz',
-    live: null
-  },
-  'salon-system': {
-    title: 'Salon Booking & Management System',
-    category: 'FULL-STACK WEB',
-    status: 'COMPLETED · PRODUCTION',
-    problem: 'Small salon businesses frequently struggle with appointment double-booking, manual client records, and lack of administrative overview.',
-    approach: 'Built a full-stack appointment scheduling and client management system with role separation for administrators and customers, backed by relational MySQL schemas.',
-    stack: 'PHP, MySQL, JavaScript, HTML5/CSS3',
-    contribution: 'Solo full-stack development: database normalization, session authentication, calendar booking logic, and administration dashboard.',
-    results: 'Successfully deployed and utilized for managing real small-business appointment workflows.',
-    github: 'https://github.com/sahilkavishka/salon',
-    live: null
-  },
-  'sl-sports-analytics': {
-    title: 'SL Sports Analytics Platform',
-    category: 'DATA SCIENCE & OPEN DATA',
-    status: 'PLANNING · OPEN SOURCE',
-    problem: 'Sri Lankan athletic and sports statistics largely remain trapped inside broadcast graphics rather than being organized into accessible open-source datasets for researchers.',
-    approach: 'Designing an open Sri Lankan sports repository with standardized schemas, statistical exploration notebooks, and baseline prediction models.',
-    stack: 'Python, Pandas, Plotly, Open Data Standards',
-    contribution: 'Project conceptualization, schema definition, and data scraping roadmap.',
-    results: 'Repository initialized for community data curation and predictive modeling benchmarks.',
+    status: 'COMPLETED · EDUCATIONAL SUITE',
+    problem: 'Standard timed quiz systems display raw percentage scores, hiding granular topic-level deficits and preventing educators from delivering targeted remediation.',
+    approach: 'Constructed an educator dashboard analyzing timed quiz submissions. Built cohort score distributions, automated skill-gap detection by topic (algebra vs geometry), and student leaderboard rankings using Plotly.js.',
+    stack: 'HTML5/JS, Plotly.js, SQL, Python',
+    contribution: 'Topic breakdown algorithms, cohort visualization metrics, and educator summary views.',
+    results: 'Enabled educators to diagnose exact conceptual deficiencies rather than relying on aggregate marks.',
     github: 'https://github.com/sahilkavishka',
+    live: null
+  },
+  'aws-churn': {
+    title: 'AWS Customer Churn Predictor',
+    category: 'DATA SCIENCE & CLOUD ML',
+    status: 'COMPLETED · CLOUD READY',
+    problem: 'Telecom and enterprise service providers incur severe revenue losses when customer churn is discovered reactively rather than proactively.',
+    approach: 'Developed a cloud-integrated predictive pipeline utilizing usage velocity features, ensemble tree algorithms (XGBoost, Random Forest), and containerized Flask microservice deployment.',
+    stack: 'AWS, Python, XGBoost, Flask, Scikit-Learn, Random Forest',
+    contribution: 'Feature engineering on rolling consumption metrics, model benchmarking, and Flask deployment scripts.',
+    results: 'Substantial accuracy gains over linear baselines through velocity feature extraction.',
+    github: 'https://github.com/Dilharajay/churn_predictor',
     live: null
   },
   'smartbuild-agentic': {
@@ -451,6 +535,52 @@ const DETAILED_PROJECTS = {
       closeInspectionModal();
     }
   });
+
+  // Field Operations Photo Lightbox Modal
+  const galleryOverlay = document.getElementById('gallery-lightbox-overlay');
+  const galleryImg = document.getElementById('lightbox-img');
+  const galleryTitle = document.getElementById('lightbox-title');
+  const galleryLoc = document.getElementById('lightbox-loc');
+  const galleryDesc = document.getElementById('lightbox-desc');
+  const galleryClose = document.getElementById('lightbox-close-btn');
+
+  function openLightbox(src, title, loc, desc) {
+    if (!galleryOverlay) return;
+    if (galleryImg) galleryImg.src = src;
+    if (galleryTitle) galleryTitle.textContent = title;
+    if (galleryLoc) galleryLoc.textContent = loc;
+    if (galleryDesc) galleryDesc.textContent = desc;
+    galleryOverlay.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeLightbox() {
+    if (!galleryOverlay) return;
+    galleryOverlay.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  document.querySelectorAll('[data-gallery-src]').forEach(card => {
+    card.addEventListener('click', () => {
+      const src = card.getAttribute('data-gallery-src');
+      const title = card.getAttribute('data-gallery-title') || '';
+      const loc = card.getAttribute('data-gallery-loc') || '';
+      const desc = card.getAttribute('data-gallery-desc') || '';
+      openLightbox(src, title, loc, desc);
+    });
+  });
+
+  if (galleryClose) galleryClose.addEventListener('click', closeLightbox);
+  if (galleryOverlay) {
+    galleryOverlay.addEventListener('click', (e) => {
+      if (e.target === galleryOverlay) closeLightbox();
+    });
+  }
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && galleryOverlay && galleryOverlay.classList.contains('open')) {
+      closeLightbox();
+    }
+  });
 })();
 
 
@@ -565,14 +695,18 @@ const DETAILED_PROJECTS = {
         'VERSION:3.0',
         'N:Kavishka;Sahil;;;',
         'FN:Sahil Kavishka',
-        'TITLE:BSc (Hons) Data Science Undergraduate',
-        'ORG:Sabaragamuwa University of Sri Lanka',
-        'EMAIL;TYPE=INTERNET:sahilkavishka428@gmail.com',
+        'TITLE:BSc (Hons) Data Science Undergraduate & AI Developer',
+        'ORG:Department of Data Science, Faculty of Computing, Sabaragamuwa University of Sri Lanka',
+        'TEL;TYPE=CELL,VOICE:+94705739193',
+        'EMAIL;TYPE=PREF,INTERNET:sahilkavishka428@gmail.com',
+        'EMAIL;TYPE=ACADEMIC,INTERNET:22cds0428@ms.sab.ac.lk',
         'URL:https://sahilkavishka.github.io/portfolio/',
         'URL;TYPE=GitHub:https://github.com/sahilkavishka',
         'URL;TYPE=LinkedIn:https://www.linkedin.com/in/sahilkavishka',
-        'ADR;TYPE=WORK:;;Anuradhapura;;;;Sri Lanka',
-        'NOTE:Exploring AI, machine learning, language, and intelligent systems.',
+        'URL;TYPE=Kaggle:https://www.kaggle.com/sahilkavishkakumara',
+        'ADR;TYPE=HOME:;;Pahamunegama, Galadivulwewa, Nochchiyagama;Anuradhapura;;50200;Sri Lanka',
+        'NOTE:BSc (Hons) Data Science at SUSL. Secretary of Society of Computer Sciences. Exploring AI, Machine Learning, Computer Vision, and Intelligent Systems.',
+        'BDAY:--1203',
         'END:VCARD'
       ].join('\n');
 
