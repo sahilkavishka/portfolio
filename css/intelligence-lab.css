@@ -609,6 +609,20 @@ img, svg {
   transform: translateY(-2px);
 }
 
+.btn-outline {
+  background: transparent;
+  color: var(--lab-text);
+  border: 1px solid var(--lab-border-strong);
+  box-shadow: none;
+}
+
+.btn-outline:hover {
+  background: var(--lab-panel-hover);
+  border-color: var(--lab-violet);
+  color: var(--lab-violet);
+  transform: translateY(-2px);
+}
+
 .hero-social-links {
   display: flex;
   align-items: center;
@@ -660,6 +674,72 @@ img, svg {
   right: 0;
   height: 2px;
   background: linear-gradient(90deg, var(--lab-cyan), var(--lab-violet), transparent);
+}
+
+.hud-profile-card {
+  display: flex;
+  align-items: center;
+  gap: 1.15rem;
+  padding: 1.25rem 1.35rem;
+  background: linear-gradient(135deg, rgba(0, 240, 255, 0.08), rgba(139, 92, 246, 0.05));
+  border-bottom: 1px solid var(--lab-border);
+}
+
+.hud-photo-wrap {
+  position: relative;
+  width: 84px;
+  height: 84px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  box-shadow: 0 0 20px rgba(0, 240, 255, 0.25);
+}
+
+.hud-profile-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--lab-cyan);
+  display: block;
+}
+
+.hud-photo-ring {
+  position: absolute;
+  inset: -5px;
+  border-radius: 50%;
+  border: 1px dashed rgba(0, 240, 255, 0.45);
+  animation: rotate-ring 18s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes rotate-ring {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.hud-profile-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.hud-profile-meta .hud-name {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--lab-text);
+  letter-spacing: -0.01em;
+}
+
+.hud-profile-meta .hud-sub {
+  font-size: 0.74rem;
+  color: var(--lab-cyan);
+  letter-spacing: 0.06em;
+  font-weight: 700;
+}
+
+.hud-profile-meta .hud-sub-loc {
+  font-size: 0.74rem;
+  color: var(--lab-text-muted);
 }
 
 .hud-header {
@@ -1077,7 +1157,14 @@ img, svg {
   color: var(--lab-text-muted);
 }
 
-/* Flagship Project Card */
+/* Flagship Project Card & Featured Case Studies */
+.featured-case-studies-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 2.25rem;
+  margin-bottom: 3.5rem;
+}
+
 .flagship-card {
   background: linear-gradient(145deg, var(--lab-surface-alt), var(--lab-panel-solid));
   border: 1px solid var(--lab-border-strong);
@@ -2387,6 +2474,7 @@ img, svg {
   align-items: center;
   justify-content: center;
   padding: 1.5rem;
+  overscroll-behavior: contain;
 }
 
 .modal-overlay.open {
@@ -2445,6 +2533,7 @@ img, svg {
 .modal-scroll-body {
   padding: 1.75rem;
   overflow-y: auto;
+  overscroll-behavior: contain;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
@@ -2502,6 +2591,7 @@ img, svg {
   align-items: flex-start;
   justify-content: center;
   padding: 12vh 1.25rem 1.25rem;
+  overscroll-behavior: contain;
 }
 
 #palette-overlay.open {

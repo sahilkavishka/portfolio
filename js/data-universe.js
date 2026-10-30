@@ -1,6 +1,6 @@
 /**
- * SAHIL — THE INTELLIGENCE LAB
- * Interactive Data Universe (Step 4A)
+ * SAHIL KAVISHKA — THE INTELLIGENCE LAB 2.0
+ * Interactive Technology Universe (10 Connected Domains)
  * Connected SVG knowledge graph linking Sahil's technical domains and verified projects.
  */
 
@@ -10,107 +10,160 @@
       id: 'ai',
       title: 'Artificial Intelligence',
       tag: 'COGNITIVE ARCHITECTURES',
-      desc: 'Developing agentic systems, generative intelligence, and automated decision engines that bridge mathematical models with real-world client workflows.',
-      stack: ['Gemini API', 'PyTorch', 'FastAPI', 'Agentic Workflows', 'Computer Vision'],
+      desc: 'Developing agentic workflows, multimodal generative systems, and automated decision engines that bridge mathematical algorithms with real-world client workflows.',
+      stack: ['Gemini API', 'PyTorch', 'FastAPI', 'Agentic Systems', 'Deterministic Fail-safes'],
       projects: [
-        { name: 'SmartBuild AI (Flagship)', status: 'In Progress · 25 Districts', filter: 'ai' },
-        { name: 'codeXsabra — ResoveAI', status: 'Hutch AI Hackathon · FastAPI', filter: 'collab' }
+        { name: 'SmartBuild AI (Flagship)', status: 'Active Lab Build · 25 Districts', filter: 'ai' },
+        { name: 'ResolvAI Copilot', status: 'Hutch AI Hackathon · FastAPI', filter: 'collab' },
+        { name: 'Salonora AI Platform', status: 'Gemini AI Voice & Vision', filter: 'web' }
       ]
     },
     ml: {
       id: 'ml',
       title: 'Machine Learning',
       tag: 'PREDICTIVE MODELING',
-      desc: 'Designing robust supervised and ensemble algorithms — from gradient boosting (XGBoost) for regional cost estimation to tree-based customer churn classifiers.',
-      stack: ['Scikit-learn', 'XGBoost', 'Random Forest', 'Cross-Validation', 'Hyperparameter Tuning'],
+      desc: 'Designing supervised, ensemble, and gradient-boosted algorithms (XGBoost, LightGBM, CatBoost) with strict cross-validation, threshold calibration, and fairness audits.',
+      stack: ['Scikit-learn', 'XGBoost', 'LightGBM', 'CatBoost', 'Stratified K-Fold', 'Threshold Calibration'],
       projects: [
-        { name: 'SmartBuild AI', status: 'CIDA Price Forecasting', filter: 'ai' },
-        { name: 'AWS Customer Churn Predictor', status: 'Ensemble Modeling', filter: 'collab' },
-        { name: 'Sports Tournaments System', status: 'Match Outcome Model', filter: 'ai' }
+        { name: 'CropSafe AI (Capstone)', status: 'LightGBM 94.6% Accuracy', filter: 'ai' },
+        { name: 'Clinical Readmission Predictor', status: 'Global Rank #3 🥉 Stacking', filter: 'ai' },
+        { name: 'Ceylon Tourism Forecast', status: 'Random Forest Macro Regressor', filter: 'data' }
       ]
     },
-    ds: {
-      id: 'ds',
-      title: 'Data Science',
-      tag: 'STATISTICAL EXPLORATION',
-      desc: 'Investigating complex distributions, feature correlation matrices, and exploratory pipelines to extract actionable ground truths from noisy multi-source datasets.',
-      stack: ['Python', 'Pandas', 'NumPy', 'Jupyter', 'Scipy', 'Seaborn'],
+    dl: {
+      id: 'dl',
+      title: 'Deep Learning',
+      tag: 'NEURAL REPRESENTATIONS',
+      desc: 'Architecting deep residual backbones, transformer fine-tuning, and compound loss functions (Charbonnier + D-SSIM) for high-fidelity restoration and nuanced classification.',
+      stack: ['PyTorch', 'NAFNet-APEX', 'Hugging Face', 'BERT', 'CUDA', 'Backbone Fine-Tuning'],
       projects: [
-        { name: 'Sri Lanka Medicine Supply Chain', status: 'Crisis Timeline Modeling', filter: 'data' },
-        { name: 'SL Sports Analytics', status: 'Open Data Platform', filter: 'data' }
+        { name: 'Hybrid Image Denoising', status: 'IEEE Mora SP Cup 2026', filter: 'cv' },
+        { name: 'Clinical Readmission Predictor', status: 'Multi-Model Ensembles', filter: 'ai' },
+        { name: 'AI Review Insight', status: 'Fine-Tuned BERT vs ML', filter: 'nlp' }
       ]
     },
     nlp: {
       id: 'nlp',
       title: 'Natural Language Processing',
       tag: 'LANGUAGE & SEMANTICS',
-      desc: 'Architecting end-to-end NLP pipelines: tokenization, TF-IDF lexical scoring, BERT transformer fine-tuning, and live e-commerce review sentiment parsing.',
-      stack: ['Hugging Face', 'BERT', 'PyTorch', 'NLTK', 'FastAPI', 'Chrome Extension API'],
+      desc: 'Building end-to-end NLP pipelines: lexical tokenization, TF-IDF scoring, VADER sentiment annotation, transformer fine-tuning, and real-time browser extension triage.',
+      stack: ['Transformers', 'BERT', 'PyTorch', 'NLTK', 'FastAPI', 'Chrome Extension V3'],
       projects: [
-        { name: 'Smartphone Review Sentiment', status: 'ML vs. BERT + Extension', filter: 'nlp' },
-        { name: 'codeXsabra — ResoveAI', status: 'Automated Query Triage', filter: 'collab' }
+        { name: 'AI Review Insight', status: 'Daraz Chrome Extension V3', filter: 'nlp' },
+        { name: 'ResolvAI Telecom Triage', status: 'Multi-Source Resolution', filter: 'collab' }
       ]
     },
-    bi: {
-      id: 'bi',
-      title: 'Data Analytics & BI',
-      tag: 'DECISION INTELLIGENCE',
-      desc: 'Structuring dimensional data warehouses (Star Schema) and interactive executive dashboards to track supply chain bottlenecks, currency shocks, and educational metrics.',
-      stack: ['Power BI', 'Star Schema', 'SQL', 'PostgreSQL', 'YouTube API v3', 'DAX'],
+    cv: {
+      id: 'cv',
+      title: 'Computer Vision',
+      tag: 'VISUAL INTELLIGENCE',
+      desc: 'Investigating low-light sensor restoration, defect pixel suppression, spatial raycasting, and architectural floor-plan parsing across digital sensors and 3D web environments.',
+      stack: ['OpenCV', 'Scikit-Image', 'NAFNet', 'Three.js / WebGL', 'Spatial Raycasting', 'Classical DSP'],
       projects: [
-        { name: 'Medicine Supply Chain BI', status: 'Star Schema · 2020-2026', filter: 'data' },
-        { name: 'EdTech Market Pipeline', status: 'YouTube API Automation', filter: 'data' },
-        { name: 'Math Quiz Analytics', status: 'Cohort Learning Dashboard', filter: 'data' }
+        { name: 'Hybrid Low-Light Denoising', status: 'NAFNet + Classical DSP (SP Cup)', filter: 'cv' },
+        { name: 'CropSafe AI Vision', status: 'Agricultural Anomaly Detection', filter: 'ai' },
+        { name: 'Sinharaja 3D Survival', status: 'Raycasting & Procedural Visuals', filter: 'cv' }
+      ]
+    },
+    robotics: {
+      id: 'robotics',
+      title: 'Robotics',
+      tag: 'AUTONOMOUS SYSTEMS',
+      desc: 'Advancing from physical computing microcontrollers to autonomous sensor loops, edge AI inference, and future Robot Operating System (ROS) node communication.',
+      stack: ['BBC Micro:bit', 'Sensors & Actuators', 'Embedded Python', 'ROS (Roadmap)', 'Edge Inference'],
+      projects: [
+        { name: 'HOPE 2.0 Micro:bit Sessions', status: 'IEEE WIE STEM Outreach', filter: 'all' },
+        { name: 'Robotics & Edge Sensor Roadmap', status: 'Active Research Horizon', filter: 'all' }
+      ]
+    },
+    iot: {
+      id: 'iot',
+      title: 'Internet of Things (IoT)',
+      tag: 'CONNECTED SENSORS',
+      desc: 'Deploying microcontroller telemetry, tactile sensor interaction, real-time input/output loops, and environmental monitoring grids.',
+      stack: ['BBC Micro:bit', 'MicroPython', 'GPIO Telemetry', 'Sensor Matrices', 'MQTT / WebSockets'],
+      projects: [
+        { name: 'Physical Computing Lab', status: 'Hardware Interaction Loops', filter: 'all' },
+        { name: 'Sensor Telemetry Horizon', status: 'Microcontroller Roadmap', filter: 'all' }
       ]
     },
     web: {
       id: 'web',
       title: 'Web Development',
-      tag: 'ENGINEERED PLATFORMS',
-      desc: 'Engineering scalable, accessible web architectures, REST APIs, and 3D architectural studios (Three.js) backed by robust Django and FastAPI microservices.',
-      stack: ['FastAPI', 'Django', 'Three.js', 'JavaScript (ES6+)', 'MySQL', 'Docker'],
+      tag: 'SYSTEMS ARCHITECTURE',
+      desc: 'Engineering responsive, high-performance web applications, 3D WebGL environments (60 FPS Three.js), and REST microservices backed by Django, FastAPI, and PHP/MySQL.',
+      stack: ['FastAPI', 'Django', 'Three.js / WebGL', 'React.js', 'JavaScript (ES6+)', 'Docker'],
       projects: [
-        { name: 'Sports Tournaments System', status: 'Role-Based Architecture', filter: 'web' },
-        { name: 'SmartBuild AI 3D Studio', status: 'Three.js CAD Generation', filter: 'ai' },
-        { name: 'Salon Booking Platform', status: 'Full-Stack PHP/MySQL', filter: 'web' }
+        { name: 'Sinharaja 3D WebGL', status: '60 FPS Browser Game Engine', filter: 'cv' },
+        { name: 'Sports Manager', status: 'Django/MySQL Role-Based Suite', filter: 'web' },
+        { name: 'Salonora AI Platform', status: 'Full-Stack PHP/MySQL + Gemini', filter: 'web' }
       ]
     },
-    iot: {
-      id: 'iot',
-      title: 'Robotics & IoT Exploration',
-      tag: 'PHYSICAL COMPUTING',
-      desc: 'Exploring sensor telemetry, edge inference, and microcontrollers — originating from hands-on BBC Micro:bit trainer sessions toward autonomous sensor networks.',
-      stack: ['BBC Micro:bit', 'Sensors & Actuators', 'Embedded Python', 'ROS (Roadmap)', 'Edge AI'],
+    da: {
+      id: 'da',
+      title: 'Data Analytics',
+      tag: 'DECISION INTELLIGENCE',
+      desc: 'Structuring enterprise Star Schema dimensional models, advanced DAX measures, and interactive C-Level dashboards to model crisis supply shocks and sports performance.',
+      stack: ['Power BI', 'Star Schema', 'Advanced DAX', 'SQL', 'ArcGIS Maps', 'Plotly.js'],
       projects: [
-        { name: 'HOPE 2.0 Physical Computing', status: 'IEEE Micro:bit STEM Outreach', filter: 'all' },
-        { name: 'Robotics & Edge Sensor Horizon', status: 'Active Research Roadmap', filter: 'all' }
+        { name: 'Medicine Supply Chain BI', status: 'Star Schema · 2020–2026', filter: 'data' },
+        { name: 'ICC Champions Historical BI', status: '27-Year Sports Analytics', filter: 'data' },
+        { name: 'EdTech Market Pipeline', status: 'YouTube API Automation', filter: 'data' }
+      ]
+    },
+    ds: {
+      id: 'ds',
+      title: 'Data Science',
+      tag: 'STATISTICAL EXPLORATION',
+      desc: 'Extracting empirical ground truths from noisy multi-source datasets: stochastic modeling, Markov regime switching, Monte Carlo simulations, and macro-financial analytics.',
+      stack: ['Python', 'Pandas', 'NumPy', 'SciPy', 'Monte Carlo', 'Biostatistics'],
+      projects: [
+        { name: 'CropSafe AI Dataset', status: '2,002 Empirical Lab Certificates', filter: 'ai' },
+        { name: 'Microsoft Stock Probability', status: '40-Year Stochastic Study', filter: 'data' },
+        { name: 'Ceylon Tourism Predictor', status: 'Macroeconomic Sensitivity', filter: 'data' }
       ]
     }
   };
 
-  // Node positions on 540x440 SVG coordinate canvas
+  // Node positions on 580x480 SVG coordinate canvas (Symmetrical 10-node orbital ring)
   const NODES = [
-    { id: 'ai',  x: 270, y: 75,  label: 'Artificial Intelligence', short: 'AI / Agents' },
-    { id: 'ml',  x: 430, y: 135, label: 'Machine Learning',        short: 'Machine Learning' },
-    { id: 'nlp', x: 450, y: 285, label: 'Natural Language Processing', short: 'NLP & LLMs' },
-    { id: 'iot', x: 340, y: 390, label: 'Robotics & IoT',          short: 'Robotics & IoT' },
-    { id: 'web', x: 190, y: 390, label: 'Web Development',         short: 'Web Platforms' },
-    { id: 'bi',  x: 90,  y: 285, label: 'Data Analytics & BI',     short: 'Data & BI' },
-    { id: 'ds',  x: 110, y: 135, label: 'Data Science',            short: 'Data Science' }
+    { id: 'ai',       x: 290, y: 65,  label: 'Artificial Intelligence',    short: 'AI / Agents' },
+    { id: 'ml',       x: 393, y: 98,  label: 'Machine Learning',           short: 'Machine Learning' },
+    { id: 'dl',       x: 456, y: 186, label: 'Deep Learning',              short: 'Deep Learning' },
+    { id: 'nlp',      x: 456, y: 294, label: 'Natural Language Processing', short: 'NLP & LLMs' },
+    { id: 'cv',       x: 393, y: 382, label: 'Computer Vision',            short: 'Computer Vision' },
+    { id: 'robotics', x: 290, y: 415, label: 'Robotics',                   short: 'Robotics' },
+    { id: 'iot',      x: 187, y: 382, label: 'Internet of Things',         short: 'IoT / Sensors' },
+    { id: 'web',      x: 124, y: 294, label: 'Web Development',            short: 'Web Platforms' },
+    { id: 'da',       x: 124, y: 186, label: 'Data Analytics',             short: 'Data Analytics' },
+    { id: 'ds',       x: 187, y: 98,  label: 'Data Science',               short: 'Data Science' }
   ];
 
-  // Interconnected network conduits (graph topology)
+  // Interconnected network conduits (Perimeter Ring + Synergistic Cross-Conduits)
   const EDGES = [
+    // Perimeter Ring
     ['ai', 'ml'],
-    ['ml', 'ds'],
-    ['ml', 'nlp'],
+    ['ml', 'dl'],
+    ['dl', 'nlp'],
+    ['nlp', 'cv'],
+    ['cv', 'robotics'],
+    ['robotics', 'iot'],
+    ['iot', 'web'],
+    ['web', 'da'],
+    ['da', 'ds'],
+    ['ds', 'ai'],
+    // Core Cross Conduits
+    ['ai', 'dl'],
     ['ai', 'nlp'],
-    ['ds', 'bi'],
-    ['bi', 'web'],
+    ['ai', 'cv'],
+    ['ml', 'ds'],
+    ['ml', 'da'],
+    ['dl', 'cv'],
+    ['cv', 'robotics'],
+    ['iot', 'robotics'],
     ['web', 'ai'],
-    ['web', 'iot'],
-    ['ds', 'iot'],
-    ['ml', 'bi']
+    ['ds', 'da'],
+    ['web', 'cv']
   ];
 
   const svg = document.getElementById('universe-svg');
@@ -127,21 +180,21 @@
 
   function renderGraph() {
     svg.innerHTML = '';
-    const center = { x: 270, y: 235 };
+    const center = { x: 290, y: 240 };
 
     // SVG Defs: Gradients and glow filters
     const defs = document.createElementNS('http://www.w3.org/2000/svg', 'defs');
     defs.innerHTML = `
       <radialGradient id="centerGlow" cx="50%" cy="50%" r="50%">
-        <stop offset="0%" stop-color="#00f0ff" stop-opacity="0.35"/>
+        <stop offset="0%" stop-color="#00f0ff" stop-opacity="0.32"/>
         <stop offset="100%" stop-color="#00f0ff" stop-opacity="0"/>
       </radialGradient>
       <radialGradient id="nodeActiveGlow" cx="50%" cy="50%" r="50%">
-        <stop offset="0%" stop-color="#00f0ff" stop-opacity="0.8"/>
+        <stop offset="0%" stop-color="#00f0ff" stop-opacity="0.85"/>
         <stop offset="100%" stop-color="#38bdf8" stop-opacity="0.2"/>
       </radialGradient>
       <filter id="glowFilter" x="-30%" y="-30%" width="160%" height="160%">
-        <feGaussianBlur stdDeviation="3.5" result="blur" />
+        <feGaussianBlur stdDeviation="3" result="blur" />
         <feMerge>
           <feMergeNode in="blur"/>
           <feMergeNode in="SourceGraphic"/>
@@ -161,7 +214,7 @@
     orbit.setAttribute('stroke-dasharray', '3 6');
     svg.appendChild(orbit);
 
-    // Central Core Glow & Hub
+    // Central Core Hub
     const hubGlow = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
     hubGlow.setAttribute('cx', center.x);
     hubGlow.setAttribute('cy', center.y);
@@ -190,7 +243,7 @@
     hubLabel.textContent = 'CORE';
     svg.appendChild(hubLabel);
 
-    // Edges
+    // Edges Group
     const edgesGroup = document.createElementNS('http://www.w3.org/2000/svg', 'g');
     edgesGroup.setAttribute('id', 'universe-edges-group');
 
@@ -225,7 +278,7 @@
       const ring = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
       ring.setAttribute('cx', n.x);
       ring.setAttribute('cy', n.y);
-      ring.setAttribute('r', '22');
+      ring.setAttribute('r', '20');
       ring.setAttribute('fill', '#070d1d');
       ring.setAttribute('stroke', 'rgba(56, 189, 248, 0.35)');
       ring.setAttribute('stroke-width', '1.5');
@@ -236,7 +289,7 @@
       const dot = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
       dot.setAttribute('cx', n.x);
       dot.setAttribute('cy', n.y);
-      dot.setAttribute('r', '7');
+      dot.setAttribute('r', '6');
       dot.setAttribute('fill', '#00f0ff');
       dot.setAttribute('class', 'node-dot');
       g.appendChild(dot);
@@ -244,7 +297,7 @@
       // Text label
       const text = document.createElementNS('http://www.w3.org/2000/svg', 'text');
       text.setAttribute('x', n.x);
-      text.setAttribute('y', n.y + 36);
+      text.setAttribute('y', n.y + 32);
       text.textContent = n.short;
       g.appendChild(text);
 
@@ -280,12 +333,12 @@
         ring.setAttribute('stroke', '#00f0ff');
         ring.setAttribute('stroke-width', '2.5');
         ring.setAttribute('filter', 'url(#glowFilter)');
-        dot.setAttribute('r', '9');
+        dot.setAttribute('r', '8');
       } else {
         ring.setAttribute('stroke', 'rgba(56, 189, 248, 0.35)');
         ring.setAttribute('stroke-width', '1.5');
         ring.removeAttribute('filter');
-        dot.setAttribute('r', '7');
+        dot.setAttribute('r', '6');
       }
     });
 
@@ -332,7 +385,13 @@
 
     if (filterBtn) {
       filterBtn.onclick = () => {
-        jumpToExplorer(id === 'iot' ? 'all' : (id === 'ds' || id === 'bi' ? 'data' : id));
+        let filterKey = 'all';
+        if (id === 'ai' || id === 'ml' || id === 'dl') filterKey = 'ai';
+        else if (id === 'nlp') filterKey = 'nlp';
+        else if (id === 'cv') filterKey = 'cv';
+        else if (id === 'web') filterKey = 'web';
+        else if (id === 'da' || id === 'ds') filterKey = 'data';
+        jumpToExplorer(filterKey);
       };
     }
   }

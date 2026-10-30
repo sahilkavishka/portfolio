@@ -678,11 +678,19 @@ const DETAILED_PROJECTS = {
   if (copyUrlBtn) {
     copyUrlBtn.addEventListener('click', async () => {
       try {
-        await navigator.clipboard.writeText('https://sahilkavishka.github.io/portfolio/');
-        showToast('Portfolio URL copied to clipboard');
+        await navigator.clipboard.writeText('https://sahilkavishka.me/');
+        showToast('Portfolio URL copied to clipboard (sahilkavishka.me)');
       } catch (err) {
-        showToast('URL: sahilkavishka.github.io/portfolio/');
+        showToast('URL: sahilkavishka.me');
       }
+    });
+  }
+
+  // Hero Download CV Button
+  const heroCvBtn = document.getElementById('hero-cv-btn');
+  if (heroCvBtn) {
+    heroCvBtn.addEventListener('click', () => {
+      showToast('Transmission terminal opened: Download vCard or dispatch message for formal CV.');
     });
   }
 
@@ -700,7 +708,7 @@ const DETAILED_PROJECTS = {
         'TEL;TYPE=CELL,VOICE:+94705739193',
         'EMAIL;TYPE=PREF,INTERNET:sahilkavishka428@gmail.com',
         'EMAIL;TYPE=ACADEMIC,INTERNET:22cds0428@ms.sab.ac.lk',
-        'URL:https://sahilkavishka.github.io/portfolio/',
+        'URL:https://sahilkavishka.me/',
         'URL;TYPE=GitHub:https://github.com/sahilkavishka',
         'URL;TYPE=LinkedIn:https://www.linkedin.com/in/sahilkavishka',
         'URL;TYPE=Kaggle:https://www.kaggle.com/sahilkavishkakumara',
