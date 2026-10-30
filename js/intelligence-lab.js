@@ -581,6 +581,36 @@ const DETAILED_PROJECTS = {
       closeLightbox();
     }
   });
+
+  // Expedition Category Filtering
+  const expFilterBtns = document.querySelectorAll('[data-exp-filter]');
+  const expCards = document.querySelectorAll('.expeditions-gallery-grid .expedition-card');
+
+  if (expFilterBtns.length > 0) {
+    expFilterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        expFilterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const filter = btn.getAttribute('data-exp-filter');
+
+        expCards.forEach(card => {
+          const category = card.getAttribute('data-exp-category') || '';
+          if (filter === 'all' || category === filter) {
+            card.style.display = '';
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(12px)';
+            requestAnimationFrame(() => {
+              card.style.transition = 'opacity 0.35s ease, transform 0.35s ease';
+              card.style.opacity = '1';
+              card.style.transform = 'translateY(0)';
+            });
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+  }
 })();
 
 

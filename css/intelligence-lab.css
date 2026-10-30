@@ -3778,6 +3778,210 @@ img, svg {
 }
 
 /* ===================================================================
+   ENHANCED VISUAL HEADERS & CERTIFICATE THUMBNAILS (PORTFOLIO 2.0)
+   =================================================================== */
+.card-visual-header.with-image {
+  height: 148px;
+  padding: 0;
+  display: block;
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--lab-radius-sm);
+  background: var(--lab-surface-elevated);
+  cursor: pointer;
+  border: 1px solid rgba(56, 189, 248, 0.2);
+  margin-bottom: 0.9rem;
+}
+
+.card-visual-header.with-image .card-bg-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1), filter 0.3s ease;
+  filter: brightness(0.85) contrast(1.05);
+  display: block;
+}
+
+.project-card:hover .card-visual-header.with-image .card-bg-img {
+  transform: scale(1.05);
+  filter: brightness(1) contrast(1.05);
+}
+
+.card-visual-header.with-image .card-visual-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(11, 15, 23, 0.1) 0%, rgba(11, 15, 23, 0.4) 50%, rgba(11, 15, 23, 0.92) 100%);
+  pointer-events: none;
+}
+
+.card-visual-header.with-image .card-visual-info {
+  position: absolute;
+  bottom: 0.6rem;
+  left: 0.75rem;
+  right: 0.75rem;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-zoom-pill {
+  position: absolute;
+  top: 0.6rem;
+  right: 0.6rem;
+  z-index: 3;
+  padding: 0.2rem 0.55rem;
+  font-size: 0.68rem;
+  font-family: var(--lab-font-mono);
+  background: rgba(11, 15, 23, 0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: var(--lab-cyan);
+  border: 1px solid rgba(56, 189, 248, 0.35);
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  opacity: 0;
+  transform: translateY(-4px);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  pointer-events: none;
+}
+
+.card-visual-header.with-image:hover .card-zoom-pill {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Certificate Preview Thumbnails */
+.cred-thumb-wrap {
+  position: relative;
+  width: 100%;
+  height: 110px;
+  border-radius: var(--lab-radius-sm);
+  overflow: hidden;
+  margin: 0.65rem 0 0.85rem;
+  border: 1px solid rgba(56, 189, 248, 0.15);
+  background: rgba(15, 23, 42, 0.6);
+  cursor: pointer;
+}
+
+.cred-thumb-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), filter 0.3s ease;
+  filter: brightness(0.88);
+  display: block;
+}
+
+.credential-card:hover .cred-thumb-wrap img {
+  transform: scale(1.05);
+  filter: brightness(1);
+}
+
+.cred-thumb-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 40%, rgba(11, 15, 23, 0.88) 100%);
+  display: flex;
+  align-items: flex-end;
+  padding: 0.45rem 0.65rem;
+  transition: background 0.3s ease;
+}
+
+.cred-thumb-overlay span {
+  font-size: 0.68rem;
+  color: var(--lab-cyan);
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-weight: 600;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.8);
+}
+
+/* Expedition Filter Navigation */
+.expedition-filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.8rem;
+}
+
+.expedition-filter-btn {
+  padding: 0.45rem 1rem;
+  border-radius: 9999px;
+  background: rgba(15, 23, 42, 0.5);
+  border: 1px solid var(--lab-border-dim);
+  color: var(--lab-text-muted);
+  font-family: var(--lab-font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.expedition-filter-btn:hover {
+  background: rgba(56, 189, 248, 0.08);
+  color: var(--lab-cyan);
+  border-color: rgba(56, 189, 248, 0.3);
+}
+
+.expedition-filter-btn.active {
+  background: rgba(56, 189, 248, 0.15);
+  color: var(--lab-cyan);
+  border-color: var(--lab-cyan);
+  box-shadow: 0 0 14px rgba(56, 189, 248, 0.2);
+}
+
+/* Video Demo Action Button */
+.card-video-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.38rem 0.75rem;
+  font-size: 0.76rem;
+  font-family: var(--lab-font-mono);
+  font-weight: 600;
+  border-radius: var(--lab-radius-sm);
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  color: #f87171;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.card-video-btn:hover {
+  background: rgba(239, 68, 68, 0.2);
+  border-color: #f87171;
+  color: #ffffff;
+  box-shadow: 0 0 12px rgba(239, 68, 68, 0.25);
+}
+
+/* Light Theme Adjustments */
+.lab-day .card-visual-header.with-image {
+  border-color: rgba(0, 120, 200, 0.2);
+}
+
+.lab-day .cred-thumb-wrap {
+  border-color: rgba(0, 120, 200, 0.2);
+}
+
+.lab-day .expedition-filter-btn {
+  background: rgba(240, 246, 255, 0.8);
+  border-color: rgba(0, 120, 200, 0.2);
+  color: #475569;
+}
+
+.lab-day .expedition-filter-btn.active {
+  background: rgba(0, 120, 200, 0.15);
+  border-color: var(--lab-cyan-muted);
+  color: var(--lab-cyan-muted);
+}
+
+/* ===================================================================
    LIGHT THEME OVERRIDES FOR GALLERY & CREDENTIALS
    =================================================================== */
 .lab-day .expedition-card,
