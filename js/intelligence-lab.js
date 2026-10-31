@@ -626,9 +626,6 @@ const DETAILED_PROJECTS = {
   if (savedTheme === 'day') {
     root.setAttribute('data-theme', 'day');
     if (themeToggle) themeToggle.textContent = '◑';
-  } else if (!savedTheme && window.matchMedia('(prefers-color-scheme: light)').matches) {
-    root.setAttribute('data-theme', 'day');
-    if (themeToggle) themeToggle.textContent = '◑';
   }
 
   function toggleTheme() {
@@ -825,21 +822,98 @@ const DETAILED_PROJECTS = {
     });
   }
 
-  // Scroll-Spy for Navigation Links
-  const navLinks = document.querySelectorAll('.lab-nav .nav-link[href^="#"]');
-  const sections = Array.from(navLinks).map(link => document.querySelector(link.getAttribute('href'))).filter(Boolean);
+  // Mobile Navigation Drawer Toggle & Accessibility
+  const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+  const primaryNav = document.getElementById('primary-nav');
+  if (mobileMenuBtn && primaryNav) {
+    const toggleMobileMenu = (force) => {
+      const isOpen = typeof force === 'boolean' ? force : !mobileMenuBtn.classList.contains('menu-open');
+      mobileMenuBtn.classList.toggle('menu-open', isOpen);
+      primaryNav.classList.toggle('menu-open', isOpen);
+      mobileMenuBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    };
+
+    mobileMenuBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      toggleMobileMenu();
+    });
+
+    // Close when clicking nav links or dropdown links
+    primaryNav.querySelectorAll('a[href^="#"]').forEach(link => {
+      link.addEventListener('click', () => toggleMobileMenu(false));
+    });
+
+    // Close when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!primaryNav.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
+        toggleMobileMenu(false);
+      }
+    });
+
+    // Close on Escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && primaryNav.classList.contains('menu-open')) {
+        toggleMobileMenu(false);
+        mobileMenuBtn.focus();
+      }
+    });
+  }
+
+  // Navigation Dropdown Interaction (Touch / Mobile Friendly)
+  const dropdownItem = document.querySelector('.nav-dropdown-item');
+  const dropdownTrigger = document.querySelector('.nav-dropdown-trigger');
+  if (dropdownItem && dropdownTrigger) {
+    dropdownTrigger.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      const isOpen = dropdownItem.classList.toggle('dropdown-open');
+      dropdownTrigger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!dropdownItem.contains(e.target)) {
+        dropdownItem.classList.remove('dropdown-open');
+        dropdownTrigger.setAttribute('aria-expanded', 'false');
+      }
+    });
+  }
+
+  // State-Aware Sticky Header Fallback (Modern Web Guidance polyfill pattern)
+  const siteHeader = document.getElementById('site-header');
+  if (siteHeader) {
+    const updateStuckState = () => {
+      siteHeader.classList.toggle('is-stuck', window.scrollY > 10);
+    };
+    window.addEventListener('scroll', updateStuckState, { passive: true });
+    updateStuckState();
+  }
+
+  // Scroll-Spy for Navigation Links (Supports Core Links & Dropdown Items)
+  const navLinks = document.querySelectorAll('.lab-nav .nav-link[href^="#"], .nav-dropdown-menu .dropdown-link[href^="#"]');
+  const sections = Array.from(navLinks).map(link => {
+    const targetId = link.getAttribute('href');
+    return targetId && targetId !== '#top' ? document.querySelector(targetId) : null;
+  }).filter(Boolean);
 
   if ('IntersectionObserver' in window && sections.length) {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           const id = entry.target.id;
+          let activeInsideDropdown = false;
           navLinks.forEach(link => {
-            link.classList.toggle('active-link', link.getAttribute('href') === `#${id}`);
+            const isMatch = link.getAttribute('href') === `#${id}`;
+            link.classList.toggle('active-link', isMatch);
+            if (isMatch && link.classList.contains('dropdown-link')) {
+              activeInsideDropdown = true;
+            }
           });
+          if (dropdownTrigger) {
+            dropdownTrigger.classList.toggle('active-link', activeInsideDropdown);
+          }
         }
       });
-    }, { rootMargin: '-40% 0px -50% 0px', threshold: 0 });
+    }, { rootMargin: '-30% 0px -50% 0px', threshold: 0 });
 
     sections.forEach(sec => observer.observe(sec));
   }

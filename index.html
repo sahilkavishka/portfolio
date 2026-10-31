@@ -57,45 +57,95 @@
   <a class="skip-link" href="#main">Skip to main research content</a>
   <div id="lab-progress" aria-hidden="true"></div>
 
-  <!-- Header & Navigation HUD -->
-  <header class="lab-header">
-    <div class="container lab-nav-wrap">
-      <a class="lab-brand" href="#top" aria-label="Sahil Kavishka — Intelligence Lab Home">
-        <div class="brand-telemetry-badge" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/>
-          </svg>
+  <!-- Floating Intelligence Dock Header -->
+  <header class="lab-header-container sticky-container" id="site-header">
+    <div class="lab-nav-dock">
+      <div class="container lab-nav-wrap">
+        <!-- Brand Identity with SK Monogram Shield -->
+        <a class="lab-brand" href="#top" aria-label="Sahil Kavishka — The Intelligence Lab Home">
+          <div class="brand-monogram-shield" aria-hidden="true">
+            <span class="monogram-text">SK</span>
+            <div class="brand-radar-ping"></div>
+          </div>
+          <div class="brand-info">
+            <span class="brand-title">SAHIL KAVISHKA</span>
+            <span class="brand-sub"><span class="brand-live-dot" aria-hidden="true"></span><span data-en="THE INTELLIGENCE LAB" data-si="දත්ත හා බුද්ධි විද්‍යාගාරය">THE INTELLIGENCE LAB</span></span>
+          </div>
+        </a>
+
+        <!-- Primary Navigation Links -->
+        <nav class="lab-nav" id="primary-nav" aria-label="Primary Navigation">
+          <a class="nav-link" href="#about" data-en="About" data-si="පිළිබඳව">About</a>
+          <a class="nav-link" href="#projects" data-en="Projects" data-si="ව්‍යාපෘති">Projects</a>
+          <a class="nav-link" href="#universe" data-en="Tech Universe" data-si="තාක්ෂණ විශ්වය">Tech Universe</a>
+          <a class="nav-link" href="#laboratory" data-en="AI Lab" data-si="AI විද්‍යාගාරය">AI Lab</a>
+          <a class="nav-link" href="#expeditions" data-en="Field Ops" data-si="ක්ෂේත්‍ර අත්දැකීම්">Field Ops</a>
+          <a class="nav-link" href="#credentials" data-en="Honors" data-si="ඇගයීම්">Honors</a>
+
+          <!-- Dropdown Menu for Extended Systems -->
+          <div class="nav-dropdown-item">
+            <button class="nav-link nav-dropdown-trigger" type="button" aria-expanded="false" aria-haspopup="true">
+              <span data-en="More" data-si="තවත්">More</span>
+              <svg class="dropdown-chevron" viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="nav-dropdown-menu" role="menu">
+              <a class="dropdown-link" href="#lifecycle" role="menuitem">
+                <span class="mono drop-code">04 //</span>
+                <div class="drop-text-group">
+                  <strong data-en="Lifecycle" data-si="ජීවන චක්‍රය">Lifecycle</strong>
+                  <small data-en="ML Framework" data-si="ML ක්‍රමවේදය">ML Framework</small>
+                </div>
+              </a>
+              <a class="dropdown-link" href="#log" role="menuitem">
+                <span class="mono drop-code">05 //</span>
+                <div class="drop-text-group">
+                  <strong data-en="Telemetry Log" data-si="ක්‍රියාකාරී සටහන්">Telemetry Log</strong>
+                  <small data-en="Research &amp; Roadmap" data-si="පර්යේෂණ මාර්ගය">Research &amp; Roadmap</small>
+                </div>
+              </a>
+              <a class="dropdown-link" href="#dispatches" role="menuitem">
+                <span class="mono drop-code">09 //</span>
+                <div class="drop-text-group">
+                  <strong data-en="Dispatches" data-si="ලේඛන &amp; සටහන්">Dispatches</strong>
+                  <small data-en="Technical Field Notes" data-si="තාක්ෂණික සටහන්">Technical Field Notes</small>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <!-- Mobile Drawer Footer Actions -->
+          <div class="mobile-drawer-footer">
+            <a class="hud-btn hud-cta mobile-cta-btn" href="#contact">
+              <span data-en="Connect / Get In Touch" data-si="සම්බන්ධ වන්න">Connect / Get In Touch</span>
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+          </div>
+        </nav>
+
+        <!-- Nav Tools & Quick Actions -->
+        <div class="nav-tools">
+          <button class="hud-btn palette-trigger kbd-cmd" type="button" aria-label="Open Command Console (Ctrl+K)" title="Search Commands (Ctrl+K)">
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            <span class="nav-kbd-label">Console</span>
+            <kbd>Ctrl+K</kbd>
+          </button>
+
+          <button class="hud-btn icon-only lang-pill" id="lang-toggle" type="button" aria-label="Switch Language (English / Sinhala)" title="Toggle English / Sinhala">EN</button>
+
+          <button class="hud-btn icon-only theme-pill" id="theme-toggle" type="button" aria-label="Toggle Daylight / Dark Theme" title="Toggle Theme">◐</button>
+
+          <a class="hud-btn hud-cta nav-cta-pill" href="#contact">
+            <span data-en="Connect" data-si="සම්බන්ධ වන්න">Connect</span>
+            <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </a>
+
+          <!-- Mobile Menu Toggle Button (Accessible & Animated) -->
+          <button class="menu-toggle-btn" id="mobile-menu-btn" type="button" aria-label="Toggle Navigation Menu" aria-expanded="false" aria-controls="primary-nav">
+            <span class="toggle-bar"></span>
+            <span class="toggle-bar"></span>
+            <span class="toggle-bar"></span>
+          </button>
         </div>
-        <div class="brand-info">
-          <span class="brand-title">SAHIL <span class="lab-tag">LAB</span></span>
-          <span class="brand-sub">THE INTELLIGENCE LAB</span>
-        </div>
-      </a>
-
-      <label class="menu-toggle" for="nav-check" aria-label="Toggle Navigation Menu">
-        <span></span><span></span><span></span>
-      </label>
-      <input type="checkbox" id="nav-check" aria-hidden="true" />
-
-      <nav class="lab-nav" aria-label="Lab Navigation">
-        <a class="nav-link" href="#universe"><span class="mono mono-num">01 //</span> Universe</a>
-        <a class="nav-link" href="#projects"><span class="mono mono-num">02 //</span> Systems</a>
-        <a class="nav-link" href="#laboratory"><span class="mono mono-num">03 //</span> Mini Lab</a>
-        <a class="nav-link" href="#lifecycle"><span class="mono mono-num">04 //</span> Lifecycle</a>
-        <a class="nav-link" href="#log"><span class="mono mono-num">05 //</span> Log</a>
-        <a class="nav-link" href="#expeditions"><span class="mono mono-num">06 //</span> Field Ops</a>
-        <a class="nav-link" href="#about"><span class="mono mono-num">07 //</span> About</a>
-        <a class="nav-link" href="#credentials"><span class="mono mono-num">08 //</span> Honors</a>
-        <a class="nav-link" href="#dispatches"><span class="mono mono-num">09 //</span> Dispatches</a>
-      </nav>
-
-      <div class="nav-tools">
-        <button class="hud-btn palette-trigger kbd-cmd" type="button" aria-label="Open Command Console (Ctrl+K)">
-          <span>Console</span> <kbd>Ctrl+K</kbd>
-        </button>
-        <button class="hud-btn icon-only" id="lang-toggle" type="button" aria-label="Switch Language (English / Sinhala)" title="Toggle English / Sinhala">EN</button>
-        <button class="hud-btn icon-only" id="theme-toggle" type="button" aria-label="Toggle Daylight / Dark Theme" title="Toggle Theme">◐</button>
-        <a class="hud-btn hud-cta" href="#contact">Connect</a>
       </div>
     </div>
   </header>
@@ -1450,9 +1500,9 @@ def custom_construction_loss(y_true, y_pred):
           </div>
 
           <!-- 4: Code Club Ratnapura Mentoring -->
-          <div class="expedition-card" data-exp-category="stem" data-gallery-src="./images/community/codeclub-session-1.jpg" data-gallery-title="Volunteer Coding Instructor — Code Club Sri Lanka" data-gallery-loc="National Library Services Board · Ratnapura Public Library" data-gallery-desc="Mentored young learners at the National Library Services Board (Ratnapura Library) in foundational programming and digital literacy. Guided students through creative coding challenges and algorithmic logic.">
+          <div class="expedition-card" data-exp-category="stem" data-gallery-src="./images/community/codeclub-lab-mentoring.jpg" data-gallery-title="Volunteer Coding Instructor — Code Club Sri Lanka" data-gallery-loc="National Library Services Board · Ratnapura Public Library" data-gallery-desc="Mentored young learners at the National Library Services Board (Ratnapura Library) in foundational programming and digital literacy. Guided students through creative coding challenges and algorithmic logic.">
             <div class="expedition-img-wrap">
-              <img src="./images/community/codeclub-session-1.jpg" alt="Sahil Kavishka mentoring young students at Code Club Ratnapura Library" loading="lazy" />
+              <img src="./images/community/codeclub-lab-mentoring.jpg" alt="Sahil Kavishka mentoring young students at Code Club Ratnapura Library" loading="lazy" />
               <div class="expedition-overlay-tag mono">EXPEDITION 04 // CODE CLUB</div>
             </div>
             <div class="expedition-info">
@@ -1528,9 +1578,9 @@ def custom_construction_loss(y_true, y_pred):
           </div>
 
           <!-- 10: CV Boost 2026 Zone24x7 Industry Connect -->
-          <div class="expedition-card" data-exp-category="industry" data-gallery-src="./images/community/cvboost-plaque-zone24x7.jpg" data-gallery-title="CV Boost 2026 &amp; Zone24x7 Industry Connect" data-gallery-loc="IEEE Student Branch of Curtin University Colombo · Zone24x7" data-gallery-desc="Appreciation token and industry partnership connecting students directly with senior tech leaders from Zone24x7, gaining deep insights into enterprise recruiting, ATS optimization, and portfolio benchmarks.">
+          <div class="expedition-card" data-exp-category="industry" data-gallery-src="./images/community/cv boost curtin university.jfif" data-gallery-title="CV Boost 2026 &amp; Zone24x7 Industry Connect" data-gallery-loc="IEEE Student Branch of Curtin University Colombo · Zone24x7" data-gallery-desc="Appreciation token and industry partnership connecting students directly with senior tech leaders from Zone24x7, gaining deep insights into enterprise recruiting, ATS optimization, and portfolio benchmarks.">
             <div class="expedition-img-wrap">
-              <img src="./images/community/cvboost-plaque-zone24x7.jpg" alt="CV Boost 2026 Appreciation Token with Zone24x7 leaders" loading="lazy" />
+              <img src="./images/community/cv boost curtin university.jfif" alt="CV Boost 2026 Industry Connect at Curtin University Colombo" loading="lazy" />
               <div class="expedition-overlay-tag mono">EXPEDITION 10 // INDUSTRY CONNECT</div>
             </div>
             <div class="expedition-info">
@@ -1540,16 +1590,16 @@ def custom_construction_loss(y_true, y_pred):
             </div>
           </div>
 
-          <!-- 11: IgnitX Hutch Hackathon 2026 Team -->
-          <div class="expedition-card" data-exp-category="industry" data-gallery-src="./images/community/hutch-hackathon-team.jpg" data-gallery-title="IgnitX Hutch Hackathon 2026 — Team ResolvAI" data-gallery-loc="Hutchison Telecommunications · IgnitX Hackathon" data-gallery-desc="Collaborative hackathon engineering sprint developing ResolvAI — Multi-Source Resolution Copilot with team members Savindi Hewage and Kavisha Nimsara, integrating FastAPI backend microservices with rule verification and AI reasoning.">
+          <!-- 11: CodeRally 7.0 Hackathon Sprint -->
+          <div class="expedition-card" data-exp-category="industry" data-gallery-src="./images/community/coderally 7.0.jpg" data-gallery-title="CodeRally 7.0 Hackathon Sprint &amp; Algorithmic Competition" data-gallery-loc="IEEE Student Branch · CodeRally 7.0" data-gallery-desc="Collaborative algorithmic engineering sprint and competitive programming challenge during CodeRally 7.0, designing rapid algorithmic solutions and full-stack software prototypes.">
             <div class="expedition-img-wrap">
-              <img src="./images/community/hutch-hackathon-team.jpg" alt="Team ResolvAI collaborating during IgnitX Hutch Hackathon 2026" loading="lazy" />
-              <div class="expedition-overlay-tag mono">EXPEDITION 11 // HACKATHON SPRINT</div>
+              <img src="./images/community/coderally 7.0.jpg" alt="CodeRally 7.0 Hackathon team sprint" loading="lazy" />
+              <div class="expedition-overlay-tag mono">EXPEDITION 11 // CODERALLY 7.0</div>
             </div>
             <div class="expedition-info">
-              <span class="expedition-loc mono">Hutch Sri Lanka · IgnitX Hackathon</span>
-              <h4 class="expedition-title">ResolvAI Hackathon Sprint</h4>
-              <p class="expedition-snippet">Intense engineering sprint building AI-powered telecom resolution copilots under hackathon pressure.</p>
+              <span class="expedition-loc mono">IEEE Branch · CodeRally 7.0</span>
+              <h4 class="expedition-title">CodeRally 7.0 Hackathon Sprint</h4>
+              <p class="expedition-snippet">Intense algorithmic sprint building rapid software prototypes and competitive programming models.</p>
             </div>
           </div>
         </div>
