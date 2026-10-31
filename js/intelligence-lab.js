@@ -361,7 +361,7 @@ const DETAILED_PROJECTS = {
     live: null
   },
   'sports-tournaments': {
-    title: 'Sports Manager — Full-Stack Sports Platform',
+    title: 'MatchPoint — Full-Stack Sports Tournaments Platform',
     category: 'FULL-STACK WEB & ML',
     status: 'ACTIVE · PRODUCTION',
     problem: 'Sports tournament organizers, teams, and fans lack a unified platform for fixture scheduling, team registrations, score reporting, and interactive match predictions.',
@@ -381,6 +381,18 @@ const DETAILED_PROJECTS = {
     stack: 'HTML5/JS, Plotly.js, SQL, Python',
     contribution: 'Topic breakdown algorithms, cohort visualization metrics, and educator summary views.',
     results: 'Enabled educators to diagnose exact conceptual deficiencies rather than relying on aggregate marks.',
+    github: 'https://github.com/sahilkavishka',
+    live: null
+  },
+  'data-mining-rules': {
+    title: 'Market Basket & Association Rule Mining Pipeline',
+    category: 'DATA MINING & TRANSACTIONS',
+    status: 'RESEARCH & PRODUCTION PIPELINE',
+    problem: 'Retail transaction datasets contain thousands of item combinations, making it difficult to uncover consumer co-purchasing affinities and high-value bundle recommendations manually.',
+    approach: 'Implemented an algorithmic association rule mining pipeline in Python 3.13 using MLxtend. Extracted frequent itemsets via Apriori and computed high-lift association rules with confidence threshold >= 0.70 to discover strong antecedent-consequent purchasing signals.',
+    stack: 'Python 3.13, MLxtend, Apriori Algorithm, Pandas, NumPy, Jupyter Notebook',
+    contribution: 'Designed the end-to-end transaction ETL pipeline, metric threshold calibration (support, confidence, lift), and actionable association rule extraction.',
+    results: 'Extracted high-confidence rules (confidence > 0.70, lift up to 1.71) identifying strong complementary product demand for inventory and bundling optimization.',
     github: 'https://github.com/sahilkavishka',
     live: null
   },
@@ -579,6 +591,52 @@ const DETAILED_PROJECTS = {
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && galleryOverlay && galleryOverlay.classList.contains('open')) {
       closeLightbox();
+    }
+  });
+
+  // Project Video Demonstration Lightbox Modal
+  const videoOverlay = document.getElementById('video-modal-overlay');
+  const videoPlayer = document.getElementById('lab-video-player');
+  const videoSource = document.getElementById('lab-video-source');
+  const videoTitle = document.getElementById('video-modal-title');
+  const videoClose = document.getElementById('video-modal-close-btn');
+
+  function openVideoModal(src, title) {
+    if (!videoOverlay || !videoPlayer) return;
+    if (videoTitle) videoTitle.textContent = title || 'Project Demonstration Video';
+    if (videoSource) videoSource.src = src;
+    videoPlayer.load();
+    videoOverlay.classList.add('open');
+    document.body.style.overflow = 'hidden';
+    videoPlayer.play().catch(() => {});
+  }
+
+  function closeVideoModal() {
+    if (!videoOverlay || !videoPlayer) return;
+    videoPlayer.pause();
+    videoOverlay.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  document.querySelectorAll('[data-video-src]').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      const src = btn.getAttribute('data-video-src');
+      const title = btn.getAttribute('data-video-title');
+      openVideoModal(src, title);
+    });
+  });
+
+  if (videoClose) videoClose.addEventListener('click', closeVideoModal);
+  if (videoOverlay) {
+    videoOverlay.addEventListener('click', (e) => {
+      if (e.target === videoOverlay) closeVideoModal();
+    });
+  }
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && videoOverlay && videoOverlay.classList.contains('open')) {
+      closeVideoModal();
     }
   });
 

@@ -441,6 +441,10 @@
                   <span>View on GitHub</span>
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
                 </a>
+                <button class="btn btn-secondary btn-video-play" data-video-src="./videos/cropsafeAI.mp4" data-video-title="CropSafe AI — Interactive System Screencast &amp; Loss Forecasting Demo" type="button">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                  <span>Watch System Demo</span>
+                </button>
                 <button class="btn btn-secondary" data-inspect-id="cropsafe-ai" type="button">
                   <span>Inspect Architecture Deep Dive</span>
                 </button>
@@ -837,11 +841,13 @@
 
           <!-- Project 6: Smartphone Review Sentiment & Daraz Extension -->
           <article class="project-card reveal-up" data-category="ai nlp" id="proj-sentiment-nlp">
-            <div class="card-visual-header">
-              <div class="card-visual-scan" aria-hidden="true"></div>
+            <div class="card-visual-header with-image" data-gallery-src="./images/projects/daraz nlp extention.jfif" data-gallery-title="AI Review Insight: Daraz Chrome Extension &amp; BERT" data-gallery-loc="Chrome Web Extension V3 · PyTorch · Hugging Face BERT · FastAPI" data-gallery-desc="In-browser AI extension analyzing Daraz.lk reviews in real time, classifying sentiment, evaluating rating accuracy, and extracting aspect-based Pros and Cons directly inside the live shopping interface.">
+              <img src="./images/projects/daraz nlp extention.jfif" alt="AI Review Insight Daraz Chrome Extension in action" class="card-bg-img" loading="lazy" />
+              <div class="card-visual-overlay"></div>
+              <div class="card-zoom-pill"><span>ENLARGE</span> ↗</div>
               <div class="card-visual-info">
                 <span class="mono card-id-tag">CHROME EXTENSION V3</span>
-                <span class="card-visual-metric mono">BERT WEIGHTED</span>
+                <span class="card-visual-metric mono">BERT ASPECT EXTRACTION</span>
               </div>
             </div>
             <div class="card-top-row">
@@ -863,11 +869,13 @@
 
           <!-- Project 7: Salonora AI Platform -->
           <article class="project-card reveal-up" data-category="web ai" id="proj-salonora">
-            <div class="card-visual-header">
-              <div class="card-visual-scan" aria-hidden="true"></div>
+            <div class="card-visual-header with-image" data-gallery-src="./images/projects/salonora.jfif" data-gallery-title="Salonora — AI Salon Discovery &amp; Booking Platform" data-gallery-loc="Full-Stack Web · Google Gemini AI · Dynamic Booking · Encrypted QR Pass" data-gallery-desc="Full-stack beauty and salon discovery engine integrating Google Gemini AI style consultations, appointment scheduling, real-time vendor management, and QR-based client check-in validation.">
+              <img src="./images/projects/salonora.jfif" alt="Salonora AI Salon Discovery Platform interface" class="card-bg-img" loading="lazy" />
+              <div class="card-visual-overlay"></div>
+              <div class="card-zoom-pill"><span>ENLARGE</span> ↗</div>
               <div class="card-visual-info">
-                <span class="mono card-id-tag">AI STYLE STUDIO</span>
-                <span class="card-visual-metric mono">GEMINI AI + QR PASS</span>
+                <span class="mono card-id-tag">FULL-STACK WEB &amp; AI</span>
+                <span class="card-visual-metric mono">GEMINI AI &amp; QR PASS</span>
               </div>
             </div>
             <div class="card-top-row">
@@ -883,6 +891,7 @@
             </div>
             <div class="project-card-footer">
               <a class="card-link-btn" href="https://github.com/sahilkavishka/salon" target="_blank" rel="noreferrer noopener">GitHub Repo ↗</a>
+              <button class="card-link-btn btn-video-play" data-video-src="./videos/salonora.mp4" data-video-title="Salonora — Full-Stack AI Beauty &amp; Booking Walkthrough" type="button">Demo ▶</button>
               <button class="inspect-btn" data-inspect-id="salonora" type="button">Inspect</button>
             </div>
           </article>
@@ -1027,12 +1036,14 @@
             </div>
           </article>
 
-          <!-- Project 13: Sports Tournaments System -->
+          <!-- Project 13: MatchPoint - Sports Tournaments Management System -->
           <article class="project-card reveal-up" data-category="ai web" id="proj-sports-tournaments">
-            <div class="card-visual-header">
-              <div class="card-visual-scan" aria-hidden="true"></div>
+            <div class="card-visual-header with-image" data-gallery-src="./images/projects/matchpoint sport tournerment.jfif" data-gallery-title="MatchPoint — Sports Tournaments Management Platform" data-gallery-loc="Django · MySQL · Scikit-learn · OTP Security · REST APIs" data-gallery-desc="Centralized sports tournament management platform for organizers, players, and spectators featuring role-based access control (RBAC), OTP phone verification, tournament brackets, and predictive match outcome modeling.">
+              <img src="./images/projects/matchpoint sport tournerment.jfif" alt="MatchPoint Sports Tournaments Management Platform branding" class="card-bg-img" loading="lazy" />
+              <div class="card-visual-overlay"></div>
+              <div class="card-zoom-pill"><span>ENLARGE</span> ↗</div>
               <div class="card-visual-info">
-                <span class="mono card-id-tag">FULL-STACK DJANGO</span>
+                <span class="mono card-id-tag">MATCHPOINT · DJANGO</span>
                 <span class="card-visual-metric mono">OTP AUTH &amp; RBAC</span>
               </div>
             </div>
@@ -1041,7 +1052,7 @@
               <span class="card-status-badge active">ACTIVE</span>
             </div>
             <div>
-              <h3 class="project-title">Sports Tournaments Management System</h3>
+              <h3 class="project-title">MatchPoint — Sports Tournaments Management System</h3>
               <p class="project-desc">Centralized platform for organizers, players, and spectators with role-based access, OTP security, tournament search/filtering, and relational MySQL schemas, paired with match-outcome predictive models over REST APIs.</p>
             </div>
             <div class="project-stack-tags">
@@ -1130,6 +1141,34 @@
             <div class="project-card-footer">
               <a class="card-link-btn" href="https://github.com/sahilkavishka" target="_blank" rel="noreferrer noopener">GitHub Repo ↗</a>
               <button class="inspect-btn" data-inspect-id="quiz-analytics" type="button">Inspect</button>
+            </div>
+          </article>
+
+          <!-- Project 17: Market Basket & Association Rule Mining Pipeline -->
+          <article class="project-card reveal-up" data-category="data ai" id="proj-data-mining">
+            <div class="card-visual-header with-image" data-gallery-src="./images/community/data mining project.jpg" data-gallery-title="Market Basket &amp; Association Rule Mining Pipeline" data-gallery-loc="Python 3.13 · MLxtend · Apriori · Association Rules · Jupyter" data-gallery-desc="Empirical association rule mining and market basket analytics pipeline. Implemented support, confidence (&gt;0.70), and lift metrics on transactional retail data to identify multi-item buying affinities and co-occurrence patterns.">
+              <img src="./images/community/data mining project.jpg" alt="Association Rule Mining Python Notebook" class="card-bg-img" loading="lazy" />
+              <div class="card-visual-overlay"></div>
+              <div class="card-zoom-pill"><span>ENLARGE</span> ↗</div>
+              <div class="card-visual-info">
+                <span class="mono card-id-tag">DATA MINING · APRIORI</span>
+                <span class="card-visual-metric mono">CONFIDENCE &gt; 0.70</span>
+              </div>
+            </div>
+            <div class="card-top-row">
+              <span class="card-cat-badge">DATA MINING · ML RESEARCH</span>
+              <span class="card-status-badge complete">RESEARCH PIPELINE</span>
+            </div>
+            <div>
+              <h3 class="project-title">Market Basket Association Rule Mining Pipeline</h3>
+              <p class="project-desc">Algorithmic transaction analytics extracting frequent itemsets and high-lift association rules (confidence &gt; 0.70). Uncovers actionable cross-selling signals and multi-item consumer purchasing behaviors.</p>
+            </div>
+            <div class="project-stack-tags">
+              <span class="stack-tag">Python</span><span class="stack-tag">MLxtend</span><span class="stack-tag">Pandas</span><span class="stack-tag">Data Mining</span><span class="stack-tag">Jupyter</span>
+            </div>
+            <div class="project-card-footer">
+              <a class="card-link-btn" href="https://github.com/sahilkavishka" target="_blank" rel="noreferrer noopener">GitHub Repo ↗</a>
+              <button class="inspect-btn" data-inspect-id="data-mining-rules" type="button">Inspect</button>
             </div>
           </article>
         </div>
@@ -1526,15 +1565,15 @@ def custom_construction_loss(y_true, y_pred):
           </div>
 
           <!-- 6: SOCS ITEX 2.0 Innovation Booth -->
-          <div class="expedition-card" data-exp-category="socs" data-gallery-src="./images/community/socs-itex-1.jpg" data-gallery-title="ITEX 2.0 — IT Day &amp; Innovation Exhibition 2026" data-gallery-loc="Society of Computer Science (SOCS) · Sabaragamuwa University" data-gallery-desc="Showcasing cutting-edge student projects, interactive computing demos, and data science research to industry guests, faculty members, and visiting students at ITEX 2.0.">
+          <div class="expedition-card" data-exp-category="socs" data-gallery-src="./images/community/itex 2.0.jpeg" data-gallery-title="ITEX 2.0 — Computer Vision &amp; Neural Usability Demonstration" data-gallery-loc="Society of Computer Science (SOCS) · Sabaragamuwa University" data-gallery-desc="Demonstrating REALITY // SPEC — Next-Gen Computer Vision &amp; Neural Usability Suite to visiting school students and delegates at ITEX 2.0 (IT Day &amp; Innovation Exhibition), Sabaragamuwa University of Sri Lanka.">
             <div class="expedition-img-wrap">
-              <img src="./images/community/socs-itex-1.jpg" alt="ITEX 2.0 IT Day & Innovation Exhibition project showcase" loading="lazy" />
+              <img src="./images/community/itex 2.0.jpeg" alt="Sahil Kavishka demonstrating live computer vision AI suite to school students at ITEX 2.0" loading="lazy" />
               <div class="expedition-overlay-tag mono">EXPEDITION 06 // ITEX 2.0</div>
             </div>
             <div class="expedition-info">
               <span class="expedition-loc mono">SOCS · IT Day Exhibition</span>
-              <h4 class="expedition-title">ITEX 2.0 Project Exhibition</h4>
-              <p class="expedition-snippet">Demonstrating practical software systems and data-driven applications at the university innovation expo.</p>
+              <h4 class="expedition-title">Live AI &amp; Vision Demonstration</h4>
+              <p class="expedition-snippet">Guiding young students through real-time computer vision gesture diagnostics and neural interfaces.</p>
             </div>
           </div>
 
@@ -2131,6 +2170,12 @@ def custom_construction_loss(y_true, y_pred):
               <span class="cred-issuer mono">AWS SUSL</span>
               <span class="cred-badge honor">OUTSTANDING ACHIEVEMENT</span>
             </div>
+            <div class="cred-thumb-wrap" data-gallery-src="./images/certificates/aws.jfif" data-gallery-title="AWS Student Builder Group — Certificate of Outstanding Achievement" data-gallery-loc="AWS Student Builder Group · Sabaragamuwa University of Sri Lanka" data-gallery-desc="Awarded to Sahil Kavishka for outstanding achievement in the local AWS Student Builder Group at SUSL, verified and signed by AWS Community Program Management.">
+              <img src="./images/certificates/aws.jfif" alt="AWS Student Builder Group Outstanding Achievement Certificate" loading="lazy" />
+              <div class="cred-thumb-overlay">
+                <span class="mono"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 3 21 3 21 9"></polyline><polyline points="9 21 3 21 3 15"></polyline><line x1="21" y1="3" x2="14" y2="10"></line><line x1="3" y1="21" x2="10" y2="14"></line></svg> PREVIEW</span>
+              </div>
+            </div>
             <h4 class="cred-title">Certificate of Outstanding Achievement</h4>
             <p class="cred-desc">Awarded by AWS Student Builder Group at SUSL for active community leadership, peer mentoring, and promoting cloud computing innovation.</p>
             <div class="cred-footer mono">AWS STUDENT BUILDERS · SUSL</div>
@@ -2141,6 +2186,12 @@ def custom_construction_loss(y_true, y_pred):
             <div class="cred-top-row">
               <span class="cred-issuer mono">IEEE CS IIT</span>
               <span class="cred-badge podium">2ND PLACE 🥈</span>
+            </div>
+            <div class="cred-thumb-wrap" data-gallery-src="./images/certificates/coderally 7.0.jfif" data-gallery-title="CodeRally 7.0 — 2nd Place Stage Award Ceremony" data-gallery-loc="IEEE Computer Society · Code Wave Team · SUSL" data-gallery-desc="Award presentation ceremony honoring Sahil Kavishka and Team Code Wave for securing 2nd Place in the competitive 24-hour CodeRally 7.0 hackathon.">
+              <img src="./images/certificates/coderally 7.0.jfif" alt="CodeRally 7.0 2nd Place Stage Award Ceremony" loading="lazy" />
+              <div class="cred-thumb-overlay">
+                <span class="mono"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 3 21 3 21 9"></polyline><polyline points="9 21 3 21 3 15"></polyline><line x1="21" y1="3" x2="14" y2="10"></line><line x1="3" y1="21" x2="10" y2="14"></line></svg> PREVIEW</span>
+              </div>
             </div>
             <h4 class="cred-title">CodeRally 7.0 — 2nd Place (Beginner Tier)</h4>
             <p class="cred-desc">Secured 2nd Place with Team Code Wave after an intense 24-Hour Grand Finale coding competition organized by IEEE Computer Society IIT.</p>
@@ -2175,6 +2226,12 @@ def custom_construction_loss(y_true, y_pred):
               <span class="cred-issuer mono">IEEE SUSL</span>
               <span class="cred-badge verified">ORGANIZING TEAM</span>
             </div>
+            <div class="cred-thumb-wrap" data-gallery-src="./images/certificates/nexora 1.0.jfif" data-gallery-title="NEXORA 1.0 — Certificate of Appreciation" data-gallery-loc="IEEE Student Branch · Sabaragamuwa University of Sri Lanka" data-gallery-desc="Awarded to Sahil Kavishka in recognition of active contribution to NEXORA 1.0 as Program Team Member with unwavering dedication and exemplary teamwork.">
+              <img src="./images/certificates/nexora 1.0.jfif" alt="NEXORA 1.0 Certificate of Appreciation" loading="lazy" />
+              <div class="cred-thumb-overlay">
+                <span class="mono"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 3 21 3 21 9"></polyline><polyline points="9 21 3 21 3 15"></polyline><line x1="21" y1="3" x2="14" y2="10"></line><line x1="3" y1="21" x2="10" y2="14"></line></svg> PREVIEW</span>
+              </div>
+            </div>
             <h4 class="cred-title">NEXORA 1.0 — Certificate of Appreciation</h4>
             <p class="cred-desc">Awarded for active program committee contribution, session coordination, and event planning for the flagship technology leadership conference.</p>
             <div class="cred-footer mono">IEEE STUDENT BRANCH · SUSL</div>
@@ -2185,6 +2242,12 @@ def custom_construction_loss(y_true, y_pred):
             <div class="cred-top-row">
               <span class="cred-issuer mono">IEEE KDU &amp; GDG SL</span>
               <span class="cred-badge verified">PRE-TASK FINISHER</span>
+            </div>
+            <div class="cred-thumb-wrap" data-gallery-src="./images/certificates/cyper 4.0.jfif" data-gallery-title="CYPHER 4.0 — Certificate of Participation (The Pre Task)" data-gallery-loc="IEEE Student Branch of KDU · GDG Sri Lanka · GDG Cloud" data-gallery-desc="Awarded to M.K.S.K. Kumara (Sahil Kavishka) of Team Zentrix for successfully completing the CYPHER 4.0 Pre-Task, demonstrating technical skills and algorithmic innovation.">
+              <img src="./images/certificates/cyper 4.0.jfif" alt="CYPHER 4.0 Certificate of Participation" loading="lazy" />
+              <div class="cred-thumb-overlay">
+                <span class="mono"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 3 21 3 21 9"></polyline><polyline points="9 21 3 21 3 15"></polyline><line x1="21" y1="3" x2="14" y2="10"></line><line x1="3" y1="21" x2="10" y2="14"></line></svg> PREVIEW</span>
+              </div>
             </div>
             <h4 class="cred-title">CYPHER 4.0 — Certificate of Participation</h4>
             <p class="cred-desc">Successfully participated in CYPHER 4.0 Pre-Task organized by IEEE KDU together with GDG Sri Lanka, GDG Cloud SL, and Women Techmakers.</p>
@@ -2208,6 +2271,12 @@ def custom_construction_loss(y_true, y_pred):
               <span class="cred-issuer mono">STATISTICS SOCIETY</span>
               <span class="cred-badge verified">DASHBOARD WORKSHOP</span>
             </div>
+            <div class="cred-thumb-wrap" data-gallery-src="./images/certificates/data xplore 2.0.jfif" data-gallery-title="Data Xplore 2.0 — Certificate of Participation" data-gallery-loc="Statistics Society · University of Sri Jayewardenepura" data-gallery-desc="Awarded to M.K.S.K. Kumara for successfully participating in Data Analysis and Report Submission of DATA XPLORE 2.0 and the Online Dashboard Workshop.">
+              <img src="./images/certificates/data xplore 2.0.jfif" alt="Data Xplore 2.0 Certificate of Participation" loading="lazy" />
+              <div class="cred-thumb-overlay">
+                <span class="mono"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 3 21 3 21 9"></polyline><polyline points="9 21 3 21 3 15"></polyline><line x1="21" y1="3" x2="14" y2="10"></line><line x1="3" y1="21" x2="10" y2="14"></line></svg> PREVIEW</span>
+              </div>
+            </div>
             <h4 class="cred-title">Data Xplore 2.0 — Dashboard Workshop</h4>
             <p class="cred-desc">Mastered interactive BI dashboard principles, KPI architecture, dimensional data exploration, and executive visualization techniques.</p>
             <div class="cred-footer mono">STATISTICS SOCIETY · BI WORKSHOP</div>
@@ -2218,6 +2287,12 @@ def custom_construction_loss(y_true, y_pred):
             <div class="cred-top-row">
               <span class="cred-issuer mono">ICEH 2026 // IEEE</span>
               <span class="cred-badge verified">RESEARCH WEBINAR</span>
+            </div>
+            <div class="cred-thumb-wrap" data-gallery-src="./images/certificates/iceh 2026.jfif" data-gallery-title="ICEH 2026 — Certificate of Participation" data-gallery-loc="Engineers Without Borders Sri Lanka · gapHQ · University of Peradeniya" data-gallery-desc="Awarded to M.K.S.K. Kumara for participating in the pre-conference webinar of the International Conference on Engineering for Humanity on AI-enabled energy infrastructure.">
+              <img src="./images/certificates/iceh 2026.jfif" alt="ICEH 2026 Certificate of Participation" loading="lazy" />
+              <div class="cred-thumb-overlay">
+                <span class="mono"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 3 21 3 21 9"></polyline><polyline points="9 21 3 21 3 15"></polyline><line x1="21" y1="3" x2="14" y2="10"></line><line x1="3" y1="21" x2="10" y2="14"></line></svg> PREVIEW</span>
+              </div>
             </div>
             <h4 class="cred-title">ICEH 2026 — Engineering for Humanity</h4>
             <p class="cred-desc">Participated in global research discussions on technology for human development, AI ethics, sustainable computing, and assistive technologies.</p>
@@ -2495,6 +2570,22 @@ def custom_construction_loss(y_true, y_pred):
             <span>RESEARCHER: SAHIL KAVISHKA</span>
           </div>
         </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Video Demonstration Lightbox Modal -->
+  <div class="modal-overlay" id="video-modal-overlay" role="dialog" aria-modal="true" aria-label="System Video Walkthrough">
+    <div class="lightbox-modal-box video-modal-box">
+      <div class="lightbox-header-bar">
+        <span class="mono" id="video-modal-title" style="font-size:0.85rem;color:var(--lab-cyan);font-weight:700">Project Video Demonstration</span>
+        <button class="modal-close-btn" id="video-modal-close-btn" type="button" aria-label="Close Video">✕</button>
+      </div>
+      <div class="video-modal-body">
+        <video id="lab-video-player" controls preload="metadata" playsinline style="width:100%;max-height:72vh;border-radius:var(--lab-radius-sm);background:#000;display:block">
+          <source src="" type="video/mp4" id="lab-video-source">
+          Your browser does not support HTML5 video playback.
+        </video>
       </div>
     </div>
   </div>

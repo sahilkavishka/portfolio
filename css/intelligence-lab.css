@@ -4043,6 +4043,39 @@ img, svg {
   flex-direction: column;
 }
 
+/* Video Demonstration Lightbox Modal */
+.video-modal-box {
+  width: 92% !important;
+  max-width: 960px !important;
+}
+
+.video-modal-body {
+  padding: 1rem;
+  background: #02050e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-video-play {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  background: linear-gradient(135deg, rgba(56, 189, 248, 0.2), rgba(99, 102, 241, 0.14)) !important;
+  color: var(--lab-cyan) !important;
+  border: 1px solid var(--lab-cyan) !important;
+  box-shadow: 0 0 12px var(--lab-cyan-dim);
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.btn-video-play:hover {
+  background: linear-gradient(135deg, var(--lab-cyan), #0284c7) !important;
+  color: #040711 !important;
+  box-shadow: 0 0 20px var(--lab-cyan);
+  transform: translateY(-1px);
+}
+
 .lightbox-header-bar {
   display: flex;
   justify-content: space-between;
