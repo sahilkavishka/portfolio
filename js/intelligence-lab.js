@@ -775,7 +775,7 @@ const DETAILED_PROJECTS = {
   const heroCvBtn = document.getElementById('hero-cv-btn');
   if (heroCvBtn) {
     heroCvBtn.addEventListener('click', () => {
-      showToast('Transmission terminal opened: Download vCard or dispatch message for formal CV.');
+      showToast('Initiating download: Sahil_Kavishka_CV.pdf');
     });
   }
 
@@ -1011,6 +1011,7 @@ const DETAILED_PROJECTS = {
   const paletteOpenBtns = document.querySelectorAll('.palette-trigger');
 
   const PALETTE_ENTRIES = [
+    { title: 'Download Curriculum Vitae (CV / Resume)', sub: 'Official verified PDF document (Sahil_Kavishka_CV.pdf)', tag: 'PDF', action: () => { const a = document.createElement('a'); a.href = './Sahil_Kavishka_CV.pdf'; a.download = 'Sahil_Kavishka_CV.pdf'; a.target = '_blank'; a.rel = 'noopener noreferrer'; a.click(); showToast('Downloading Sahil Kavishka CV (PDF)...'); } },
     { title: 'Interactive Data Universe', sub: 'Explore connections between technical domains', tag: 'NAV', action: () => document.getElementById('universe').scrollIntoView({ behavior: 'smooth' }) },
     { title: 'Experimental Project Explorer', sub: 'Filter and inspect verified technical systems', tag: 'NAV', action: () => document.getElementById('projects').scrollIntoView({ behavior: 'smooth' }) },
     { title: 'SmartBuild AI (Flagship Project)', sub: 'Three.js 2D/3D CAD & XGBoost price forecasting', tag: 'INSPECT', action: () => window.open('https://github.com/sahilkavishka/smartbuild_ai', '_blank') },
