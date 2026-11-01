@@ -5086,3 +5086,259 @@ img, svg {
   color: var(--lab-text-muted);
   line-height: 1.5;
 }
+
+
+/* ===================================================================
+   DATA SCIENCE & AI STUDIO PROJECT CARDS (ENHANCED WIDESCREEN HUD)
+   =================================================================== */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+@media (max-width: 1024px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+}
+
+@media (max-width: 680px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+}
+
+.project-card {
+  background: linear-gradient(165deg, rgba(15, 23, 42, 0.75), rgba(8, 12, 22, 0.95));
+  border: 1px solid rgba(56, 189, 248, 0.18);
+  border-radius: var(--lab-radius);
+  padding: 1.15rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(0, 240, 255, 0.45);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.45), 0 0 24px rgba(0, 240, 255, 0.12);
+}
+
+.project-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--lab-cyan), transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.project-card:hover::before {
+  opacity: 1;
+}
+
+/* Widescreen Scientific Media Frame */
+.project-media-frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: var(--lab-radius-sm);
+  overflow: hidden;
+  background: radial-gradient(circle at 50% 50%, rgba(20, 30, 50, 0.9), rgba(5, 8, 16, 0.98));
+  border: 1px solid rgba(56, 189, 248, 0.22);
+  cursor: pointer;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+  margin-bottom: 0.9rem;
+}
+
+.project-media-frame .project-media-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  filter: brightness(0.92) contrast(1.04);
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1), filter 0.3s ease;
+}
+
+.project-card:hover .project-media-frame .project-media-img {
+  transform: scale(1.04);
+  filter: brightness(1) contrast(1.06);
+}
+
+.project-media-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(8, 12, 22, 0.05) 0%,
+    rgba(8, 12, 22, 0.2) 45%,
+    rgba(8, 12, 22, 0.88) 100%
+  );
+  pointer-events: none;
+}
+
+/* Subtle corner scan brackets on media frame */
+.project-media-frame::before {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  width: 10px;
+  height: 10px;
+  border-top: 1.5px solid rgba(0, 240, 255, 0.6);
+  border-left: 1.5px solid rgba(0, 240, 255, 0.6);
+  pointer-events: none;
+  z-index: 2;
+}
+
+.project-media-frame::after {
+  content: "";
+  position: absolute;
+  bottom: 6px;
+  right: 6px;
+  width: 10px;
+  height: 10px;
+  border-bottom: 1.5px solid rgba(0, 240, 255, 0.6);
+  border-right: 1.5px solid rgba(0, 240, 255, 0.6);
+  pointer-events: none;
+  z-index: 2;
+}
+
+.project-media-hud {
+  position: absolute;
+  bottom: 0.45rem;
+  left: 0.55rem;
+  right: 0.55rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.project-media-hud .hud-pill {
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: #fff;
+  background: rgba(10, 15, 26, 0.78);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  padding: 0.18rem 0.45rem;
+  border-radius: 4px;
+  border: 1px solid rgba(56, 189, 248, 0.35);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.project-media-hud .hud-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--lab-cyan);
+  box-shadow: 0 0 6px var(--lab-cyan);
+}
+
+.project-media-hud .hud-metric {
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  color: var(--lab-cyan);
+  background: rgba(10, 15, 26, 0.78);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  padding: 0.18rem 0.5rem;
+  border-radius: 4px;
+  border: 1px solid rgba(0, 240, 255, 0.35);
+  box-shadow: 0 0 8px rgba(0, 240, 255, 0.12);
+}
+
+.project-media-zoom-btn {
+  position: absolute;
+  top: 0.45rem;
+  right: 0.45rem;
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: #fff;
+  background: rgba(10, 15, 26, 0.82);
+  border: 1px solid rgba(0, 240, 255, 0.35);
+  padding: 0.18rem 0.45rem;
+  border-radius: 4px;
+  opacity: 0;
+  transform: translateY(-3px);
+  transition: opacity 0.25s ease, transform 0.25s ease, background 0.2s ease, border-color 0.2s ease;
+  backdrop-filter: blur(6px);
+  pointer-events: none;
+  z-index: 3;
+}
+
+.project-card:hover .project-media-zoom-btn {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Card Body Content Alignment */
+.card-top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.55rem;
+}
+
+.project-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1.35;
+  color: var(--lab-text);
+  margin-bottom: 0.45rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  min-height: 2.8rem;
+}
+
+.project-desc {
+  font-size: 0.84rem;
+  line-height: 1.5;
+  color: var(--lab-text-muted);
+  margin-bottom: 0.8rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  min-height: 3.8rem;
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin-bottom: 0.85rem;
+  min-height: 1.7rem;
+}
+
+.project-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding-top: 0.8rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  margin-top: auto;
+}

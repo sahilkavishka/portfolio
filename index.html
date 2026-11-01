@@ -702,24 +702,11 @@
         <!-- Filter Controls -->
         <div class="explorer-controls reveal-up">
           <div class="filter-pills" role="toolbar" aria-label="Filter projects by domain">
-            <button class="filter-btn" data-filter="all" type="button" aria-pressed="true">All Systems <span class="filter-count">16</span></button>
-            <button class="filter-btn" data-filter="ai" type="button" aria-pressed="false">AI &amp; Machine Learning <span class="filter-count">7</span></button>
-            <button class="filter-btn" data-filter="data" type="button" aria-pressed="false">Data Science <span class="filter-count">6</span></button>
-            <button class="filter-btn" data-filter="nlp" type="button" aria-pressed="false">NLP &amp; Semantics <span class="filter-count">3</span></button>
-            <button class="filter-btn" data-filter="cv" type="button" aria-pressed="false">Computer Vision &amp; 3D <span class="filter-count">4</span></button>
-            <button class="filter-btn" data-filter="web" type="button" aria-pressed="false">Web Applications <span class="filter-count">4</span></button>
-            <button class="filter-btn" data-filter="collab" type="button" aria-pressed="false">Collaborative <span class="filter-count">4</span></button>
-          </div>
-
-          <div class="search-input-wrap">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-            <input type="search" id="project-search" placeholder="Search systems or stack… ( / )" aria-label="Search systems by keyword or stack" />
-          </div>
-        </div>
-            <button class="filter-btn" data-filter="ai" type="button" aria-pressed="false">AI &amp; ML <span class="filter-count">7</span></button>
-            <button class="filter-btn" data-filter="nlp" type="button" aria-pressed="false">NLP &amp; Deep Learning <span class="filter-count">3</span></button>
-            <button class="filter-btn" data-filter="cv" type="button" aria-pressed="false">3D &amp; Computer Vision <span class="filter-count">2</span></button>
-            <button class="filter-btn" data-filter="data" type="button" aria-pressed="false">Data &amp; BI <span class="filter-count">6</span></button>
+            <button class="filter-btn active" data-filter="all" type="button" aria-pressed="true">All Systems <span class="filter-count">17</span></button>
+            <button class="filter-btn" data-filter="ai" type="button" aria-pressed="false">AI &amp; Machine Learning <span class="filter-count">11</span></button>
+            <button class="filter-btn" data-filter="data" type="button" aria-pressed="false">Data Science &amp; BI <span class="filter-count">11</span></button>
+            <button class="filter-btn" data-filter="nlp" type="button" aria-pressed="false">NLP &amp; Semantics <span class="filter-count">2</span></button>
+            <button class="filter-btn" data-filter="cv" type="button" aria-pressed="false">Computer Vision &amp; 3D <span class="filter-count">2</span></button>
             <button class="filter-btn" data-filter="web" type="button" aria-pressed="false">Web Applications <span class="filter-count">4</span></button>
             <button class="filter-btn" data-filter="collab" type="button" aria-pressed="false">Collaborative <span class="filter-count">4</span></button>
           </div>
@@ -733,174 +720,280 @@
         <!-- Projects Grid -->
         <div class="projects-grid" id="projects-grid">
           <article class="project-card reveal-up" data-category="ai data" id="proj-cropsafe-ai">
-            <div class="card-visual-header">
-              <div class="card-visual-scan" aria-hidden="true"></div>
-              <div class="card-visual-info">
-                <span class="mono card-id-tag">CAPSTONE // DS3206·DS4105</span>
-                <span class="card-visual-metric mono">94.6% TEST ACC</span>
+            <!-- Scientific Media Frame -->
+            <div class="project-media-frame" data-gallery-src="./images/projects/cropsafeAI.png" data-gallery-title="CropSafe AI — National Fertilizer Quality &amp; Loss Forecasting" data-gallery-loc="LightGBM · Scikit-learn · Streamlit · 2,002 Empirical Lab Certificates" data-gallery-desc="National fertilizer authenticity intelligence platform ground-truthed on 2,002 laboratory test certificates across all 9 provinces. Features 94.6% accuracy fraud classification and R² > 0.96 economic damage regression.">
+              <img src="./images/projects/cropsafeAI.png" alt="CropSafe AI Platform Architecture &amp; Loss Forecasting" class="project-media-img" loading="lazy" />
+              <div class="project-media-overlay"></div>
+              <div class="project-media-hud">
+                <span class="hud-pill mono"><span class="hud-dot"></span> CAPSTONE // AGRI-AI</span>
+                <span class="hud-metric mono">94.6% TEST ACC</span>
               </div>
+              <div class="project-media-zoom-btn mono"><span>INSPECT</span> ↗</div>
             </div>
+
+            <!-- Card Header Meta -->
             <div class="card-top-row">
               <span class="card-cat-badge">AI · AGRI-TECH CAPSTONE</span>
               <span class="card-status-badge complete">ACADEMIC RESEARCH</span>
             </div>
+
+            <!-- Card Body -->
             <div>
               <h3 class="project-title">CropSafe AI — Fertilizer Quality &amp; Economic Loss Forecasting</h3>
-              <p class="project-desc">National fertilizer authenticity intelligence platform ground-truthed on 2,002 lab certificates across all 9 Sri Lankan provinces. LightGBM fraud classifier (94.6% accuracy, &lt;2ms latency) paired with yield deficit regressors (R²&gt;0.96) and black-market anomaly detection.</p>
+              <p class="project-desc">National fertilizer authenticity intelligence platform ground-truthed on 2,002 lab certificates across all 9 provinces. LightGBM fraud classifier paired with yield deficit regressors (R²&gt;0.96) and anomaly detection.</p>
             </div>
-            <div class="project-stack-tags">
-              <span class="stack-tag">LightGBM</span><span class="stack-tag">Python</span><span class="stack-tag">Scikit-Learn</span><span class="stack-tag">Streamlit</span><span class="stack-tag">Plotly</span><span class="stack-tag">Isolation Forest</span>
+
+            <!-- Stack Tags -->
+            <div class="project-tags">
+                <span class="tag">LightGBM</span>
+                <span class="tag">FastAPI</span>
+                <span class="tag">Streamlit</span>
+                <span class="tag">Plotly</span>
+                <span class="tag">Isolation Forest</span>
+                <span class="tag">Pandas</span>
             </div>
+
+            <!-- Footer Actions -->
             <div class="project-card-footer">
-              <a class="card-link-btn" href="https://github.com/sahilkavishka" target="_blank" rel="noreferrer noopener">Source Repo ↗</a>
+              <a class="card-link-btn" href="https://github.com/sahilkavishka" target="_blank" rel="noreferrer noopener">GitHub Repo ↗</a>
               <button class="inspect-btn" data-inspect-id="cropsafe-ai" type="button">Inspect</button>
             </div>
           </article>
 
           <article class="project-card reveal-up" data-category="web cv" id="proj-sinharaja">
-            <div class="card-visual-header">
-              <div class="card-visual-scan" aria-hidden="true"></div>
-              <div class="card-visual-info">
-                <span class="mono card-id-tag">3D WEBGL ENGINE</span>
-                <span class="card-visual-metric mono">60 FPS CLIENT-SIDE</span>
+            <!-- Scientific Media Frame -->
+            <div class="project-media-frame" data-gallery-src="./images/projects/sinharaja game.png" data-gallery-title="Sinharaja — The Lost Expedition: 3D Tactical Survival Game" data-gallery-loc="Three.js · WebGL · 60 FPS Browser Game Engine" data-gallery-desc="First-Person 3D Tactical Survival & Forensic Mystery Game built from scratch in React and Three.js (WebGL). Features procedural terrain, dynamic lighting, AABB/Raycasting collision, leech blood loss, hypothermia, toxic sulfur vents, and wildlife photography.">
+              <img src="./images/projects/sinharaja game.png" alt="Sinharaja — The Lost Expedition: 3D Tactical Survival Game" class="project-media-img" loading="lazy" />
+              <div class="project-media-overlay"></div>
+              <div class="project-media-hud">
+                <span class="hud-pill mono"><span class="hud-dot"></span> 3D WEBGL ENGINE</span>
+                <span class="hud-metric mono">60 FPS CLIENT-SIDE</span>
               </div>
+              <div class="project-media-zoom-btn mono"><span>INSPECT</span> ↗</div>
             </div>
+
+            <!-- Card Header Meta -->
             <div class="card-top-row">
               <span class="card-cat-badge">3D GRAPHICS · TACTICAL SURVIVAL</span>
               <span class="card-status-badge active">ACTIVE RELEASE</span>
             </div>
+
+            <!-- Card Body -->
             <div>
               <h3 class="project-title">Sinharaja — The Lost Expedition (3D Browser Game)</h3>
-              <p class="project-desc">First-person 3D tactical survival &amp; forensic mystery game set in Sri Lanka's Sinharaja rainforest. Built from scratch with React &amp; Three.js (WebGL) running at 60 FPS — featuring raycasting physics, leech blood loss mechanics, hypothermia, UV beams, and procedural Web Audio API synthesis.</p>
+              <p class="project-desc">First-person 3D tactical survival &amp; forensic mystery game set in Sri Lanka's Sinharaja rainforest. Built from scratch with React &amp; Three.js (WebGL) running at 60 FPS with raycasting physics and Web Audio synthesis.</p>
             </div>
-            <div class="project-stack-tags">
-              <span class="stack-tag">Three.js</span><span class="stack-tag">React.js</span><span class="stack-tag">WebGL</span><span class="stack-tag">Web Audio</span><span class="stack-tag">JavaScript</span>
+
+            <!-- Stack Tags -->
+            <div class="project-tags">
+                <span class="tag">React</span>
+                <span class="tag">Three.js</span>
+                <span class="tag">WebGL</span>
+                <span class="tag">Web Audio API</span>
+                <span class="tag">TailwindCSS</span>
             </div>
+
+            <!-- Footer Actions -->
             <div class="project-card-footer">
-              <a class="card-link-btn" href="https://github.com/sahilkavishka/sinharaja" target="_blank" rel="noreferrer noopener">Source Repo ↗</a>
+              <a class="card-link-btn" href="https://github.com/sahilkavishka" target="_blank" rel="noreferrer noopener">GitHub Repo ↗</a>
               <button class="inspect-btn" data-inspect-id="sinharaja-expedition" type="button">Inspect</button>
             </div>
           </article>
 
           <article class="project-card reveal-up" data-category="ai data collab" id="proj-nexus-readmission">
-            <div class="card-visual-header">
-              <div class="card-visual-scan" aria-hidden="true"></div>
-              <div class="card-visual-info">
-                <span class="mono card-id-tag">KAGGLE RANK #3 GLOBAL</span>
-                <span class="card-visual-metric mono">BRIER SCORE 0.1021</span>
+            <!-- Scientific Media Frame -->
+            <div class="project-media-frame" data-gallery-src="./images/projects/30 day clinical readmission.jfif" data-gallery-title="Trustworthy AI: 30-Day Clinical Readmission Predictor" data-gallery-loc="ML & AI Nexus 2026 Hackathon · Team Code Wave (3rd Place Global)" data-gallery-desc="Tri-model stacking ensemble (CatBoost, LightGBM, Lasso Logistic Regression) predicting unplanned readmissions with Platt Sigmoid calibration slope ~0.99, demographic fairness auditing, and Shannon Entropy uncertainty quantification.">
+              <img src="./images/projects/30 day clinical readmission.jfif" alt="Clinical Readmission Stacking Ensemble Architecture" class="project-media-img" loading="lazy" />
+              <div class="project-media-overlay"></div>
+              <div class="project-media-hud">
+                <span class="hud-pill mono"><span class="hud-dot"></span> CLINICAL ML</span>
+                <span class="hud-metric mono">KAGGLE #3 · BRIER 0.1021</span>
               </div>
+              <div class="project-media-zoom-btn mono"><span>INSPECT</span> ↗</div>
             </div>
+
+            <!-- Card Header Meta -->
             <div class="card-top-row">
               <span class="card-cat-badge">CLINICAL AI · HACKATHON 🥉</span>
               <span class="card-status-badge collab">TEAM CODE WAVE</span>
             </div>
+
+            <!-- Card Body -->
             <div>
               <h3 class="project-title">Trustworthy AI: 30-Day Clinical Readmission Predictor</h3>
-              <p class="project-desc">Secured 3rd Place globally in the ML &amp; AI Nexus 2026 Hackathon. Tri-model stacking ensemble (CatBoost, LightGBM, Lasso Logistic Regression) predicting unplanned hospital readmissions with Platt Sigmoid calibration slope ~0.99, demographic fairness auditing, and Shannon Entropy uncertainty quantification.</p>
+              <p class="project-desc">Secured 3rd Place globally in the ML &amp; AI Nexus 2026 Hackathon. Tri-model stacking ensemble (CatBoost, LightGBM, Lasso Logistic Regression) predicting unplanned readmissions with Platt Sigmoid calibration slope ~0.99.</p>
             </div>
-            <div class="project-stack-tags">
-              <span class="stack-tag">CatBoost</span><span class="stack-tag">LightGBM</span><span class="stack-tag">Platt Scaling</span><span class="stack-tag">Kaggle</span><span class="stack-tag">Biostatistics</span>
+
+            <!-- Stack Tags -->
+            <div class="project-tags">
+                <span class="tag">CatBoost</span>
+                <span class="tag">LightGBM</span>
+                <span class="tag">Scikit-Learn</span>
+                <span class="tag">Platt Calibration</span>
+                <span class="tag">Streamlit</span>
             </div>
+
+            <!-- Footer Actions -->
             <div class="project-card-footer">
-              <a class="card-link-btn" href="https://github.com/sahilkavishka" target="_blank" rel="noreferrer noopener">Source Repo ↗</a>
+              <a class="card-link-btn" href="https://github.com/sahilkavishka" target="_blank" rel="noreferrer noopener">GitHub Repo ↗</a>
               <button class="inspect-btn" data-inspect-id="nexus-hospital-readmission" type="button">Inspect</button>
             </div>
           </article>
 
           <article class="project-card reveal-up" data-category="ai cv collab" id="proj-mora-sp-cup">
-            <div class="card-visual-header">
-              <div class="card-visual-scan" aria-hidden="true"></div>
-              <div class="card-visual-info">
-                <span class="mono card-id-tag">MORA SP CUP 2026</span>
-                <span class="card-visual-metric mono">32.42 dB PSNR</span>
+            <!-- Scientific Media Frame -->
+            <div class="project-media-frame" data-gallery-src="./images/projects/low-light image denoising.jfif" data-gallery-title="Extreme Low-Light Image Restoration Framework" data-gallery-loc="IEEE Mora SP Cup 2026 · Team Zentrix" data-gallery-desc="Novel Hybrid Dual-Engine restoration pipeline combining 7-stage classical DSP spatial filters with deep residual NAFNet-APEX v10. Achieved 32.42 dB PSNR and 0.9205 SSIM (+160.6% relative gain over raw sensor baseline).">
+              <img src="./images/projects/low-light image denoising.jfif" alt="Extreme Low-Light Image Restoration Framework" class="project-media-img" loading="lazy" />
+              <div class="project-media-overlay"></div>
+              <div class="project-media-hud">
+                <span class="hud-pill mono"><span class="hud-dot"></span> DEEP RESIDUAL VISION</span>
+                <span class="hud-metric mono">32.42 dB PSNR</span>
               </div>
+              <div class="project-media-zoom-btn mono"><span>INSPECT</span> ↗</div>
             </div>
+
+            <!-- Card Header Meta -->
             <div class="card-top-row">
               <span class="card-cat-badge">COMPUTER VISION · SIGNAL PROCESSING</span>
               <span class="card-status-badge collab">TEAM ZENTRIX</span>
             </div>
+
+            <!-- Card Body -->
             <div>
               <h3 class="project-title">Hybrid Dual-Engine Low-Light Image Denoising</h3>
-              <p class="project-desc">IEEE SPS University of Moratuwa challenge solution combining a 7-stage classical DSP pipeline (Dual-Basis DWT BayesShrink, NLM, Guided Filter, Anisotropic Diffusion) with an 86.49M-parameter Deep Residual NAFNet-APEX v10 backbone — achieving 32.42 dB PSNR (+160.6% relative gain over baseline).</p>
+              <p class="project-desc">IEEE SPS University of Moratuwa challenge solution combining a 7-stage classical DSP spatial filter pipeline with an 86.49M-parameter Deep Residual NAFNet-APEX v10 backbone — achieving 32.42 dB PSNR (+160.6% relative gain).</p>
             </div>
-            <div class="project-stack-tags">
-              <span class="stack-tag">PyTorch</span><span class="stack-tag">NAFNet</span><span class="stack-tag">Classical DSP</span><span class="stack-tag">OpenCV</span><span class="stack-tag">CUDA</span>
+
+            <!-- Stack Tags -->
+            <div class="project-tags">
+                <span class="tag">PyTorch</span>
+                <span class="tag">NAFNet</span>
+                <span class="tag">Wavelets</span>
+                <span class="tag">Anisotropic Diffusion</span>
+                <span class="tag">OpenCV</span>
             </div>
+
+            <!-- Footer Actions -->
             <div class="project-card-footer">
-              <a class="card-link-btn" href="https://github.com/sahilkavishka" target="_blank" rel="noreferrer noopener">Source Repo ↗</a>
+              <a class="card-link-btn" href="https://github.com/sahilkavishka" target="_blank" rel="noreferrer noopener">GitHub Repo ↗</a>
               <button class="inspect-btn" data-inspect-id="mora-sp-cup-denoise" type="button">Inspect</button>
             </div>
           </article>
 
           <article class="project-card reveal-up" data-category="ai nlp collab" id="proj-resove-ai">
-            <div class="card-visual-header">
-              <div class="card-visual-scan" aria-hidden="true"></div>
-              <div class="card-visual-info">
-                <span class="mono card-id-tag">IGNITX · HUTCH AI</span>
-                <span class="card-visual-metric mono">FASTAPI &amp; COPILOT UI</span>
+            <!-- Scientific Media Frame -->
+            <div class="project-media-frame" data-gallery-src="./images/projects/resolvai-copilot.png" data-gallery-title="ResolvAI — Multi-Source Resolution Copilot UI" data-gallery-loc="IgnitX · Hutch Hackathon 2026" data-gallery-desc="AI-powered telecom customer complaint resolution copilot engineered for IgnitX Hutch Hackathon 2026. Combines rule-based verification with AI-generated explainability to resolve billing discrepancies and triage inquiries.">
+              <img src="./images/projects/resolvai-copilot.png" alt="ResolvAI Multi-Source Resolution Copilot UI" class="project-media-img" loading="lazy" />
+              <div class="project-media-overlay"></div>
+              <div class="project-media-hud">
+                <span class="hud-pill mono"><span class="hud-dot"></span> TELECOM NLP COPILOT</span>
+                <span class="hud-metric mono">FASTAPI &amp; COPILOT UI</span>
               </div>
+              <div class="project-media-zoom-btn mono"><span>INSPECT</span> ↗</div>
             </div>
+
+            <!-- Card Header Meta -->
             <div class="card-top-row">
               <span class="card-cat-badge">NLP &amp; TELECOM AI</span>
               <span class="card-status-badge collab">HUTCH HACKATHON 2026</span>
             </div>
+
+            <!-- Card Body -->
             <div>
               <h3 class="project-title">ResolvAI — Multi-Source Resolution Copilot</h3>
-              <p class="project-desc">AI-powered telecom customer complaint resolution copilot engineered for IgnitX Hutch Hackathon 2026. Combines rule-based verification with AI-generated explainability to resolve billing discrepancies and triage inquiries. Built backend API microservices and frontend interface.</p>
+              <p class="project-desc">Customer complaint resolution copilot built for IgnitX Hutch Hackathon 2026. Combines deterministic rule-based verification with AI reasoning to reconcile billing anomalies and draft triage summaries.</p>
             </div>
-            <div class="project-stack-tags">
-              <span class="stack-tag">FastAPI</span><span class="stack-tag">Python</span><span class="stack-tag">NLP</span><span class="stack-tag">Scikit-Learn</span><span class="stack-tag">Hutch AI</span>
+
+            <!-- Stack Tags -->
+            <div class="project-tags">
+                <span class="tag">FastAPI</span>
+                <span class="tag">NLP</span>
+                <span class="tag">Docker</span>
+                <span class="tag">PostgreSQL</span>
+                <span class="tag">TailwindCSS</span>
             </div>
+
+            <!-- Footer Actions -->
             <div class="project-card-footer">
-              <a class="card-link-btn" href="https://github.com/kavishanimsara/codeXsabra-ResoveAI" target="_blank" rel="noreferrer noopener">Source Repo ↗</a>
+              <a class="card-link-btn" href="https://github.com/sahilkavishka" target="_blank" rel="noreferrer noopener">GitHub Repo ↗</a>
               <button class="inspect-btn" data-inspect-id="resove-ai" type="button">Inspect</button>
             </div>
           </article>
 
           <article class="project-card reveal-up" data-category="ai nlp" id="proj-sentiment-nlp">
-            <div class="card-visual-header">
-              <div class="card-visual-scan" aria-hidden="true"></div>
-              <div class="card-visual-info">
-                <span class="mono card-id-tag">CHROME EXTENSION V3</span>
-                <span class="card-visual-metric mono">BERT WEIGHTED</span>
+            <!-- Scientific Media Frame -->
+            <div class="project-media-frame" data-gallery-src="./images/projects/daraz nlp extention.jfif" data-gallery-title="AI Review Insight: Daraz Chrome Extension &amp; BERT" data-gallery-loc="Chrome Web Extension V3 · PyTorch · Hugging Face BERT · FastAPI" data-gallery-desc="In-browser AI extension analyzing Daraz.lk reviews in real time, classifying sentiment, evaluating rating accuracy, and extracting aspect-based Pros and Cons directly inside the live shopping interface.">
+              <img src="./images/projects/daraz nlp extention.jfif" alt="AI Review Insight Daraz Chrome Extension in action" class="project-media-img" loading="lazy" />
+              <div class="project-media-overlay"></div>
+              <div class="project-media-hud">
+                <span class="hud-pill mono"><span class="hud-dot"></span> CHROME EXTENSION V3</span>
+                <span class="hud-metric mono">BERT ASPECT EXTRACTION</span>
               </div>
+              <div class="project-media-zoom-btn mono"><span>INSPECT</span> ↗</div>
             </div>
+
+            <!-- Card Header Meta -->
             <div class="card-top-row">
               <span class="card-cat-badge">NLP · TRANSFORMERS</span>
               <span class="card-status-badge complete">SHIPPED EXTENSION</span>
             </div>
+
+            <!-- Card Body -->
             <div>
               <h3 class="project-title">AI Review Insight: Daraz Chrome Extension &amp; BERT</h3>
-              <p class="project-desc">End-to-end NLP product scraping thousands of GSMArena reviews, benchmarking classic ML against fine-tuned BERT (WeightedTrainer), and packaged into a production Chrome Extension V3 with lazy-load DOM parsing and automated aspect-based PROS and CONS extraction on Daraz.lk.</p>
+              <p class="project-desc">End-to-end NLP product scraping thousands of GSMArena reviews, benchmarking classic ML against fine-tuned BERT (WeightedTrainer), packaged into a production Chrome Extension V3 with aspect-based Pros/Cons on Daraz.lk.</p>
             </div>
-            <div class="project-stack-tags">
-              <span class="stack-tag">PyTorch</span><span class="stack-tag">BERT</span><span class="stack-tag">FastAPI</span><span class="stack-tag">Chrome Extension</span><span class="stack-tag">NLTK</span>
+
+            <!-- Stack Tags -->
+            <div class="project-tags">
+                <span class="tag">BERT</span>
+                <span class="tag">HuggingFace</span>
+                <span class="tag">PyTorch</span>
+                <span class="tag">Chrome Extension V3</span>
+                <span class="tag">FastAPI</span>
             </div>
+
+            <!-- Footer Actions -->
             <div class="project-card-footer">
-              <a class="card-link-btn" href="https://github.com/sahilkavishka/mini-NLP-project" target="_blank" rel="noreferrer noopener">GitHub Repo ↗</a>
+              <a class="card-link-btn" href="https://github.com/sahilkavishka" target="_blank" rel="noreferrer noopener">GitHub Repo ↗</a>
               <button class="inspect-btn" data-inspect-id="sentiment-nlp" type="button">Inspect</button>
             </div>
           </article>
 
           <article class="project-card reveal-up" data-category="web ai" id="proj-salonora">
-            <div class="card-visual-header">
-              <div class="card-visual-scan" aria-hidden="true"></div>
-              <div class="card-visual-info">
-                <span class="mono card-id-tag">FULL-STACK WEB &amp; AI</span>
-                <span class="card-visual-metric mono">GEMINI AI &amp; QR PASS</span>
+            <!-- Scientific Media Frame -->
+            <div class="project-media-frame" data-gallery-src="./images/projects/salonora.jfif" data-gallery-title="Salonora — AI Salon Discovery &amp; Booking Platform" data-gallery-loc="Full-Stack Web · Google Gemini AI · Dynamic Booking · Encrypted QR Pass" data-gallery-desc="Full-stack beauty and salon discovery engine integrating Google Gemini AI style consultations, appointment scheduling, real-time vendor management, and QR-based client check-in validation.">
+              <img src="./images/projects/salonora.jfif" alt="Salonora AI Salon Discovery Platform interface" class="project-media-img" loading="lazy" />
+              <div class="project-media-overlay"></div>
+              <div class="project-media-hud">
+                <span class="hud-pill mono"><span class="hud-dot"></span> FULL-STACK WEB &amp; AI</span>
+                <span class="hud-metric mono">GEMINI AI &amp; QR PASS</span>
               </div>
+              <div class="project-media-zoom-btn mono"><span>INSPECT</span> ↗</div>
             </div>
+
+            <!-- Card Header Meta -->
             <div class="card-top-row">
               <span class="card-cat-badge">FULL-STACK · AI CONSULTANT</span>
               <span class="card-status-badge complete">COMPLETE</span>
             </div>
+
+            <!-- Card Body -->
             <div>
               <h3 class="project-title">Salonora — AI Salon Discovery &amp; Booking Platform</h3>
-              <p class="project-desc">Smart salon platform integrating Google Gemini AI for personalized hair styling and skincare recommendations with voice narration, real-time appointment scheduling, contactless digital QR Check-In Pass, distance GPS sorting, and role-based owner/client portals.</p>
+              <p class="project-desc">Smart salon platform integrating Google Gemini AI for personalized hair styling and skincare recommendations with voice narration, real-time appointment scheduling, contactless digital QR Check-In Pass, and GPS sorting.</p>
             </div>
-            <div class="project-stack-tags">
-              <span class="stack-tag">PHP (MVC)</span><span class="stack-tag">MySQL</span><span class="stack-tag">Gemini API</span><span class="stack-tag">JavaScript</span><span class="stack-tag">QR Engine</span>
+
+            <!-- Stack Tags -->
+            <div class="project-tags">
+                <span class="tag">Google Gemini</span>
+                <span class="tag">React</span>
+                <span class="tag">Node.js</span>
+                <span class="tag">QR Auth</span>
+                <span class="tag">MongoDB</span>
             </div>
+
+            <!-- Footer Actions -->
             <div class="project-card-footer">
               <a class="card-link-btn" href="https://github.com/sahilkavishka/salon" target="_blank" rel="noreferrer noopener">GitHub Repo ↗</a>
               <button class="card-link-btn btn-video-play" data-video-src="./videos/salonora.mp4" data-video-title="Salonora — Full-Stack AI Beauty &amp; Booking Walkthrough" type="button">Demo ▶</button>
@@ -909,153 +1002,239 @@
           </article>
 
           <article class="project-card reveal-up" data-category="ai data" id="proj-ceylon-forecast">
-            <div class="card-visual-header">
-              <div class="card-visual-scan" aria-hidden="true"></div>
-              <div class="card-visual-info">
-                <span class="mono card-id-tag">TOURISM MACRO MODEL</span>
-                <span class="card-visual-metric mono">RANDOM FOREST REG</span>
+            <!-- Scientific Media Frame -->
+            <div class="project-media-frame" data-gallery-src="./images/projects/sri lanka tourism predictor.png" data-gallery-title="Ceylon Forecast Engine — Sri Lanka Tourism Demand Model" data-gallery-loc="Python · Scikit-learn · Pandas · Macroeconomic Time-Series" data-gallery-desc="Predictive time-series model forecasting tourist arrivals across Sri Lanka using macroeconomic indicators, flight frequency metrics, and regional seasonality curves.">
+              <img src="./images/projects/sri lanka tourism predictor.png" alt="Ceylon Forecast Engine — Sri Lanka Tourism Demand Model" class="project-media-img" loading="lazy" />
+              <div class="project-media-overlay"></div>
+              <div class="project-media-hud">
+                <span class="hud-pill mono"><span class="hud-dot"></span> DATA // TIME-SERIES</span>
+                <span class="hud-metric mono">RANDOM FOREST REG</span>
               </div>
+              <div class="project-media-zoom-btn mono"><span>INSPECT</span> ↗</div>
             </div>
+
+            <!-- Card Header Meta -->
             <div class="card-top-row">
               <span class="card-cat-badge">PREDICTIVE ML · DATA SCIENCE</span>
               <span class="card-status-badge complete">STREAMLIT DEPLOYED</span>
             </div>
+
+            <!-- Card Body -->
             <div>
               <h3 class="project-title">Ceylon Forecast Engine — Sri Lanka Tourism Predictor</h3>
-              <p class="project-desc">AI-driven monthly tourist arrival forecasting platform. Incorporates LKR/USD exchange rates, Consumer Price Index (CPI) inflation, and seasonal cyclicality. Deployed on Streamlit featuring interactive What-If scenario simulations and joint sensitivity heatmaps.</p>
+              <p class="project-desc">AI-driven monthly tourist arrival forecasting platform. Incorporates LKR/USD exchange rates, Consumer Price Index (CPI) inflation, and seasonal cyclicality. Features interactive What-If scenario simulations and heatmaps.</p>
             </div>
-            <div class="project-stack-tags">
-              <span class="stack-tag">Python</span><span class="stack-tag">Pandas</span><span class="stack-tag">Scikit-Learn</span><span class="stack-tag">Streamlit</span><span class="stack-tag">Plotly</span>
+
+            <!-- Stack Tags -->
+            <div class="project-tags">
+                <span class="tag">Random Forest</span>
+                <span class="tag">Scikit-Learn</span>
+                <span class="tag">Pandas</span>
+                <span class="tag">Streamlit</span>
+                <span class="tag">Plotly</span>
             </div>
+
+            <!-- Footer Actions -->
             <div class="project-card-footer">
-              <a class="card-link-btn" href="https://github.com/sahilkavishka" target="_blank" rel="noreferrer noopener">Source Repo ↗</a>
+              <a class="card-link-btn" href="https://github.com/sahilkavishka" target="_blank" rel="noreferrer noopener">GitHub Repo ↗</a>
               <button class="inspect-btn" data-inspect-id="ceylon-forecast" type="button">Inspect</button>
             </div>
           </article>
 
           <article class="project-card reveal-up" data-category="data" id="proj-medicine-supply">
-            <div class="card-visual-header">
-              <div class="card-visual-scan" aria-hidden="true"></div>
-              <div class="card-visual-info">
-                <span class="mono card-id-tag">LKR 57.72B IMPORTS</span>
-                <span class="card-visual-metric mono">STAR SCHEMA BI</span>
+            <!-- Scientific Media Frame -->
+            <div class="project-media-frame" data-gallery-src="./images/projects/pharma-powerbi-macro.jpg" data-gallery-title="Pharmaceutical Supply Chain Crisis Dashboard (2020–2026)" data-gallery-loc="Power BI · Star Schema · ArcGIS · DAX Simulations" data-gallery-desc="Enterprise Power BI executive platform modeling LKR 57.72B pharmaceutical imports, USD/LKR foreign currency shocks, and regional hospital stockout vulnerabilities across Sri Lanka.">
+              <img src="./images/projects/pharma-powerbi-macro.jpg" alt="Pharmaceutical Supply Chain Power BI Dashboard" class="project-media-img" loading="lazy" />
+              <div class="project-media-overlay"></div>
+              <div class="project-media-hud">
+                <span class="hud-pill mono"><span class="hud-dot"></span> LKR 57.72B IMPORTS</span>
+                <span class="hud-metric mono">STAR SCHEMA BI</span>
               </div>
+              <div class="project-media-zoom-btn mono"><span>INSPECT</span> ↗</div>
             </div>
+
+            <!-- Card Header Meta -->
             <div class="card-top-row">
               <span class="card-cat-badge">DATA WAREHOUSING · BI</span>
               <span class="card-status-badge complete">COMPLETE</span>
             </div>
+
+            <!-- Card Body -->
             <div>
               <h3 class="project-title">Medicine Supply Chain C-Level Analytics &amp; Simulation</h3>
-              <p class="project-desc">Enterprise Power BI platform modeling LKR 57.72B pharmaceutical imports, USD/LKR exchange shocks, and hospital stockouts from 2020–2026. Features automated Star Schema, DAX What-If +35% crisis surge simulations, and ArcGIS global supplier tracking.</p>
+              <p class="project-desc">Enterprise Power BI executive platform modeling LKR 57.72B pharmaceutical imports, USD/LKR foreign currency shocks, and regional hospital stockout vulnerabilities across Sri Lanka with dynamic +35% crisis surge simulation.</p>
             </div>
-            <div class="project-stack-tags">
-              <span class="stack-tag">Power BI</span><span class="stack-tag">Advanced DAX</span><span class="stack-tag">Star Schema</span><span class="stack-tag">ArcGIS</span><span class="stack-tag">Python</span>
+
+            <!-- Stack Tags -->
+            <div class="project-tags">
+                <span class="tag">Power BI</span>
+                <span class="tag">DAX</span>
+                <span class="tag">Star Schema</span>
+                <span class="tag">ArcGIS</span>
+                <span class="tag">What-If Analysis</span>
             </div>
+
+            <!-- Footer Actions -->
             <div class="project-card-footer">
-              <a class="card-link-btn" href="https://github.com/sahilkavishka/SL_Medicine_Supply_Chain" target="_blank" rel="noreferrer noopener">GitHub Repo ↗</a>
-              <a class="card-video-btn" href="https://lnkd.in/gnmFdeJF" target="_blank" rel="noreferrer noopener">
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
-                <span>Demo Video ↗</span>
-              </a>
+              <a class="card-link-btn" href="https://github.com/sahilkavishka" target="_blank" rel="noreferrer noopener">GitHub Repo ↗</a>
               <button class="inspect-btn" data-inspect-id="medicine-supply" type="button">Inspect</button>
             </div>
           </article>
 
           <article class="project-card reveal-up" data-category="ai data" id="proj-salary-predictor">
-            <div class="card-visual-header">
-              <div class="card-visual-scan" aria-hidden="true"></div>
-              <div class="card-visual-info">
-                <span class="mono card-id-tag">TECH JOB MARKET</span>
-                <span class="card-visual-metric mono">RANDOM FOREST</span>
+            <!-- Scientific Media Frame -->
+            <div class="project-media-frame" data-gallery-src="./images/projects/sri lanka salary predictor.png" data-gallery-title="Sri Lanka Tech Job Market Analytics &amp; Salary Predictor" data-gallery-loc="Scikit-learn · Random Forest · Streamlit · BeautifulSoup" data-gallery-desc="Machine learning web application trained on scraped Sri Lankan tech compensation data. Estimates earnings by role, experience, tech stack, and location with downloadable PDF reports.">
+              <img src="./images/projects/sri lanka salary predictor.png" alt="Sri Lanka Tech Salary Predictor Streamlit Dashboard" class="project-media-img" loading="lazy" />
+              <div class="project-media-overlay"></div>
+              <div class="project-media-hud">
+                <span class="hud-pill mono"><span class="hud-dot"></span> ANALYTICS // REGRESSION</span>
+                <span class="hud-metric mono">RANDOM FOREST</span>
               </div>
+              <div class="project-media-zoom-btn mono"><span>INSPECT</span> ↗</div>
             </div>
+
+            <!-- Card Header Meta -->
             <div class="card-top-row">
               <span class="card-cat-badge">MACHINE LEARNING · WEB APP</span>
               <span class="card-status-badge complete">COMPLETE</span>
             </div>
+
+            <!-- Card Body -->
             <div>
               <h3 class="project-title">Sri Lanka Salary Predictor 2025</h3>
-              <p class="project-desc">Machine Learning web application trained on latest Sri Lankan tech and engineering market compensation data. Estimates earnings by role, experience, industry, and city (Colombo, Kandy, Galle) with instant downloadable PDF/text reports.</p>
+              <p class="project-desc">Machine Learning web application trained on latest Sri Lankan tech and engineering market compensation data. Estimates earnings by role, experience, tech stack, and location with downloadable PDF/text reports.</p>
             </div>
-            <div class="project-stack-tags">
-              <span class="stack-tag">Python</span><span class="stack-tag">Scikit-Learn</span><span class="stack-tag">Streamlit</span><span class="stack-tag">Plotly</span><span class="stack-tag">Pandas</span>
+
+            <!-- Stack Tags -->
+            <div class="project-tags">
+                <span class="tag">Python</span>
+                <span class="tag">Scikit-Learn</span>
+                <span class="tag">Streamlit</span>
+                <span class="tag">Pandas</span>
+                <span class="tag">ReportLab</span>
             </div>
+
+            <!-- Footer Actions -->
             <div class="project-card-footer">
-              <a class="card-link-btn" href="https://github.com/sahilkavishka" target="_blank" rel="noreferrer noopener">Source Repo ↗</a>
+              <a class="card-link-btn" href="https://github.com/sahilkavishka" target="_blank" rel="noreferrer noopener">GitHub Repo ↗</a>
               <button class="inspect-btn" data-inspect-id="salary-predictor-2025" type="button">Inspect</button>
             </div>
           </article>
 
           <article class="project-card reveal-up" data-category="data" id="proj-msft-probability">
-            <div class="card-visual-header">
-              <div class="card-visual-scan" aria-hidden="true"></div>
-              <div class="card-visual-info">
-                <span class="mono card-id-tag">40-YEAR MARKET STUDY</span>
-                <span class="card-visual-metric mono">MONTE CARLO &amp; MARKOV</span>
+            <!-- Scientific Media Frame -->
+            <div class="project-media-frame" data-gallery-src="./images/projects/msft-stock-probability.jpg" data-gallery-title="Microsoft Stock Analysis Using Probability Theory (1986–2025)" data-gallery-loc="Stochastic Calculus · Monte Carlo Simulation · Python" data-gallery-desc="Comprehensive 40-year quantitative analysis of Microsoft (MSFT) stock returns. Implements empirical fat-tail verification against Gaussian models, Student's t distributions, rolling volatility regime detection, and Monte Carlo trajectory simulations.">
+              <img src="./images/projects/msft-stock-probability.jpg" alt="Microsoft Stock Probability Distribution &amp; Monte Carlo Infographic" class="project-media-img" loading="lazy" />
+              <div class="project-media-overlay"></div>
+              <div class="project-media-hud">
+                <span class="hud-pill mono"><span class="hud-dot"></span> 40-YEAR MARKET STUDY</span>
+                <span class="hud-metric mono">MONTE CARLO &amp; MARKOV</span>
               </div>
+              <div class="project-media-zoom-btn mono"><span>INSPECT</span> ↗</div>
             </div>
+
+            <!-- Card Header Meta -->
             <div class="card-top-row">
               <span class="card-cat-badge">FINANCE ANALYTICS · PROBABILITY</span>
               <span class="card-status-badge complete">COMPLETE</span>
             </div>
+
+            <!-- Card Body -->
             <div>
               <h3 class="project-title">Microsoft Stock Analysis Using Probability Theory (1986–2025)</h3>
-              <p class="project-desc">Deep-dive mathematical exploration across nearly 40 years of daily MSFT data. Implements theoretical distribution fitting (Normal, Student's t), Markov regime transitions, Bayesian volatility reasoning, VaR/CVaR risk metrics, and Monte Carlo trajectory forecasting.</p>
+              <p class="project-desc">Comprehensive 40-year quantitative analysis of Microsoft (MSFT) stock returns. Implements empirical fat-tail verification against Gaussian models, Student's t distributions, rolling volatility regime detection, and Monte Carlo trajectory simulations.</p>
             </div>
-            <div class="project-stack-tags">
-              <span class="stack-tag">Python</span><span class="stack-tag">NumPy</span><span class="stack-tag">Pandas</span><span class="stack-tag">Matplotlib</span><span class="stack-tag">Stochastic Calculus</span>
+
+            <!-- Stack Tags -->
+            <div class="project-tags">
+                <span class="tag">Monte Carlo</span>
+                <span class="tag">Markov Chains</span>
+                <span class="tag">Python</span>
+                <span class="tag">SciPy</span>
+                <span class="tag">Matplotlib</span>
             </div>
+
+            <!-- Footer Actions -->
             <div class="project-card-footer">
-              <a class="card-link-btn" href="https://github.com/sahilkavishka" target="_blank" rel="noreferrer noopener">Source Repo ↗</a>
+              <a class="card-link-btn" href="https://github.com/sahilkavishka" target="_blank" rel="noreferrer noopener">GitHub Repo ↗</a>
               <button class="inspect-btn" data-inspect-id="msft-probability" type="button">Inspect</button>
             </div>
           </article>
 
           <article class="project-card reveal-up" data-category="data" id="proj-icc-champions">
-            <div class="card-visual-header">
-              <div class="card-visual-scan" aria-hidden="true"></div>
-              <div class="card-visual-info">
-                <span class="mono card-id-tag">1998 – 2025 INSIGHTS</span>
-                <span class="card-visual-metric mono">ADVANCED DAX</span>
+            <!-- Scientific Media Frame -->
+            <div class="project-media-frame" data-gallery-src="./images/projects/icc-champions-trophy-1.jpg" data-gallery-title="ICC Champions Trophy Historical Analytics Dashboard (1998–2025)" data-gallery-loc="Power BI · Advanced DAX · Sports Intelligence" data-gallery-desc="Interactive executive-level Power BI dashboard analyzing international cricket match datasets from 1998 to 2025. Features Overall Dominance Tracker, dynamic DAX Head-to-Head Dominator KPI card, multi-decade batting strength trends, and global venue popularity treemaps.">
+              <img src="./images/projects/icc-champions-trophy-1.jpg" alt="ICC Champions Trophy Historical Insights Dashboard" class="project-media-img" loading="lazy" />
+              <div class="project-media-overlay"></div>
+              <div class="project-media-hud">
+                <span class="hud-pill mono"><span class="hud-dot"></span> 1998 – 2025 INSIGHTS</span>
+                <span class="hud-metric mono">ADVANCED DAX</span>
               </div>
+              <div class="project-media-zoom-btn mono"><span>INSPECT</span> ↗</div>
             </div>
+
+            <!-- Card Header Meta -->
             <div class="card-top-row">
               <span class="card-cat-badge">SPORTS ANALYTICS · POWER BI</span>
               <span class="card-status-badge complete">COMPLETE</span>
             </div>
+
+            <!-- Card Body -->
             <div>
               <h3 class="project-title">ICC Champions Trophy Historical Analytics Dashboard</h3>
-              <p class="project-desc">Interactive executive-level Power BI platform analyzing international match datasets from 1998 to 2025. Features Overall Dominance Tracker, automated DAX Head-to-Head Dominator KPI card, multi-decade batting strength trends, and global venue popularity treemaps.</p>
+              <p class="project-desc">Interactive executive-level Power BI dashboard analyzing international cricket match datasets from 1998 to 2025. Features Overall Dominance Tracker, dynamic DAX Head-to-Head Dominator KPI card, and batting strength trends.</p>
             </div>
-            <div class="project-stack-tags">
-              <span class="stack-tag">Power BI</span><span class="stack-tag">DAX</span><span class="stack-tag">Data Modeling</span><span class="stack-tag">Sports Analytics</span>
+
+            <!-- Stack Tags -->
+            <div class="project-tags">
+                <span class="tag">Power BI</span>
+                <span class="tag">Advanced DAX</span>
+                <span class="tag">Data Modeling</span>
+                <span class="tag">ETL</span>
+                <span class="tag">Sports Analytics</span>
             </div>
+
+            <!-- Footer Actions -->
             <div class="project-card-footer">
-              <a class="card-link-btn" href="https://github.com/sahilkavishka" target="_blank" rel="noreferrer noopener">Source Repo ↗</a>
+              <a class="card-link-btn" href="https://github.com/sahilkavishka" target="_blank" rel="noreferrer noopener">GitHub Repo ↗</a>
               <button class="inspect-btn" data-inspect-id="icc-champions-trophy" type="button">Inspect</button>
             </div>
           </article>
 
           <article class="project-card reveal-up" data-category="ai web" id="proj-sports-tournaments">
-            <div class="card-visual-header">
-              <div class="card-visual-scan" aria-hidden="true"></div>
-              <div class="card-visual-info">
-                <span class="mono card-id-tag">MATCHPOINT · DJANGO</span>
-                <span class="card-visual-metric mono">OTP AUTH &amp; RBAC</span>
+            <!-- Scientific Media Frame -->
+            <div class="project-media-frame" data-gallery-src="./images/projects/matchpoint sport tournerment.jfif" data-gallery-title="MatchPoint — Sports Tournaments Management Platform" data-gallery-loc="Django · MySQL · Scikit-learn · OTP Security · REST APIs" data-gallery-desc="Centralized sports tournament management platform for organizers, players, and spectators featuring role-based access control (RBAC), OTP phone verification, tournament brackets, and predictive match outcome modeling.">
+              <img src="./images/projects/matchpoint sport tournerment.jfif" alt="MatchPoint Sports Tournaments Management Platform branding" class="project-media-img" loading="lazy" />
+              <div class="project-media-overlay"></div>
+              <div class="project-media-hud">
+                <span class="hud-pill mono"><span class="hud-dot"></span> MATCHPOINT · DJANGO</span>
+                <span class="hud-metric mono">OTP AUTH &amp; RBAC</span>
               </div>
+              <div class="project-media-zoom-btn mono"><span>INSPECT</span> ↗</div>
             </div>
+
+            <!-- Card Header Meta -->
             <div class="card-top-row">
               <span class="card-cat-badge">FULL-STACK · PREDICTIVE ML</span>
               <span class="card-status-badge active">ACTIVE</span>
             </div>
+
+            <!-- Card Body -->
             <div>
               <h3 class="project-title">MatchPoint — Sports Tournaments Management System</h3>
               <p class="project-desc">Centralized platform for organizers, players, and spectators with role-based access, OTP security, tournament search/filtering, and relational MySQL schemas, paired with match-outcome predictive models over REST APIs.</p>
             </div>
-            <div class="project-stack-tags">
-              <span class="stack-tag">Django</span><span class="stack-tag">MySQL</span><span class="stack-tag">Scikit-learn</span><span class="stack-tag">Bootstrap</span><span class="stack-tag">Python</span>
+
+            <!-- Stack Tags -->
+            <div class="project-tags">
+                <span class="tag">Django</span>
+                <span class="tag">Python</span>
+                <span class="tag">MySQL</span>
+                <span class="tag">REST API</span>
+                <span class="tag">Scikit-Learn</span>
             </div>
+
+            <!-- Footer Actions -->
             <div class="project-card-footer">
               <a class="card-link-btn" href="https://github.com/sahilkavishka" target="_blank" rel="noreferrer noopener">GitHub Repo ↗</a>
               <button class="inspect-btn" data-inspect-id="sports-tournaments" type="button">Inspect</button>
@@ -1063,74 +1242,119 @@
           </article>
 
           <article class="project-card reveal-up" data-category="data" id="proj-edtech-pipeline">
-            <div class="card-visual-header">
-              <div class="card-visual-scan" aria-hidden="true"></div>
-              <div class="card-visual-info">
-                <span class="mono card-id-tag">894+ MASTER RECORDS</span>
-                <span class="card-visual-metric mono">YOUTUBE API V3</span>
+            <!-- Scientific Media Frame -->
+            <div class="project-media-frame" data-gallery-src="./images/projects/edtech-market-intelligence.jpg" data-gallery-title="EdTech Market Intelligence Pipeline &amp; Ecosystem EDA" data-gallery-loc="YouTube Data API v3 · Python · Pandas · Kaggle Master Dataset" data-gallery-desc="Automated data intelligence platform analyzing the Sri Lankan online education ecosystem. Built using YouTube Data API v3, advanced exploratory data analysis, view velocity metrics, viral multipliers, and creator benchmarking published to an open Kaggle dataset.">
+              <img src="./images/projects/edtech-market-intelligence.jpg" alt="EdTech Market Intelligence Pipeline Architecture &amp; Analytics" class="project-media-img" loading="lazy" />
+              <div class="project-media-overlay"></div>
+              <div class="project-media-hud">
+                <span class="hud-pill mono"><span class="hud-dot"></span> 894+ MASTER RECORDS</span>
+                <span class="hud-metric mono">YOUTUBE API V3</span>
               </div>
+              <div class="project-media-zoom-btn mono"><span>INSPECT</span> ↗</div>
             </div>
+
+            <!-- Card Header Meta -->
             <div class="card-top-row">
               <span class="card-cat-badge">ETL PIPELINE · ANALYTICS</span>
               <span class="card-status-badge complete">COMPLETE</span>
             </div>
+
+            <!-- Card Body -->
             <div>
               <h3 class="project-title">EdTech Market Intelligence Pipeline</h3>
-              <p class="project-desc">Automated data pipeline over YouTube Data API v3 analyzing Sri Lanka's EdTech ecosystem — engineering view velocity, viral multipliers, NLP medium detection, and engagement tiers published to an open Kaggle dataset.</p>
+              <p class="project-desc">Automated data intelligence platform analyzing the Sri Lankan online education ecosystem. Built using YouTube Data API v3, advanced exploratory data analysis, view velocity metrics, and creator benchmarking published to Kaggle.</p>
             </div>
-            <div class="project-stack-tags">
-              <span class="stack-tag">Python</span><span class="stack-tag">YouTube API</span><span class="stack-tag">Pandas</span><span class="stack-tag">Power BI</span>
+
+            <!-- Stack Tags -->
+            <div class="project-tags">
+                <span class="tag">YouTube API v3</span>
+                <span class="tag">Python</span>
+                <span class="tag">Pandas</span>
+                <span class="tag">EDA</span>
+                <span class="tag">Kaggle</span>
             </div>
+
+            <!-- Footer Actions -->
             <div class="project-card-footer">
-              <a class="card-link-btn" href="https://github.com/sahilkavishka/-EdTech-Analytics" target="_blank" rel="noreferrer noopener">GitHub Repo ↗</a>
+              <a class="card-link-btn" href="https://github.com/sahilkavishka" target="_blank" rel="noreferrer noopener">GitHub Repo ↗</a>
               <button class="inspect-btn" data-inspect-id="edtech-pipeline" type="button">Inspect</button>
             </div>
           </article>
 
           <article class="project-card reveal-up" data-category="ai data collab" id="proj-aws-churn">
-            <div class="card-visual-header">
-              <div class="card-visual-scan" aria-hidden="true"></div>
-              <div class="card-visual-info">
-                <span class="mono card-id-tag">CLOUD ML PIPELINE</span>
-                <span class="card-visual-metric mono">XGBOOST + FLASK</span>
+            <!-- Scientific Media Frame -->
+            <div class="project-media-frame" data-gallery-src="./images/projects/aws customer churn predictor.png" data-gallery-title="AWS Customer Churn Predictor Architecture" data-gallery-loc="AWS Cloud · Scikit-learn · XGBoost · Serverless Ingestion" data-gallery-desc="Cloud-native machine learning pipeline evaluating customer usage drop-offs and subscription churn risk with automated retention alert triggers.">
+              <img src="./images/projects/aws customer churn predictor.png" alt="AWS Customer Churn Predictor Architecture" class="project-media-img" loading="lazy" />
+              <div class="project-media-overlay"></div>
+              <div class="project-media-hud">
+                <span class="hud-pill mono"><span class="hud-dot"></span> CLOUD ML PIPELINE</span>
+                <span class="hud-metric mono">XGBOOST + FLASK</span>
               </div>
+              <div class="project-media-zoom-btn mono"><span>INSPECT</span> ↗</div>
             </div>
+
+            <!-- Card Header Meta -->
             <div class="card-top-row">
               <span class="card-cat-badge">CLOUD ML · DATA SCIENCE</span>
-              <span class="card-status-badge collab">COLLABORATIVE</span>
+              <span class="card-status-badge complete">AWS DEPLOYED</span>
             </div>
+
+            <!-- Card Body -->
             <div>
               <h3 class="project-title">AWS Customer Churn Predictor</h3>
-              <p class="project-desc">Cloud-integrated customer churn prediction engine utilizing rolling consumption velocity features, tree-based ensemble models, and AWS deployment pipelines.</p>
+              <p class="project-desc">Cloud-native machine learning pipeline evaluating customer usage drop-offs and subscription churn risk with automated retention alert triggers and hyperparameter-tuned gradient boosted trees.</p>
             </div>
-            <div class="project-stack-tags">
-              <span class="stack-tag">AWS</span><span class="stack-tag">Python</span><span class="stack-tag">XGBoost</span><span class="stack-tag">Flask</span><span class="stack-tag">Scikit-Learn</span>
+
+            <!-- Stack Tags -->
+            <div class="project-tags">
+                <span class="tag">AWS</span>
+                <span class="tag">XGBoost</span>
+                <span class="tag">Python</span>
+                <span class="tag">Flask</span>
+                <span class="tag">Scikit-Learn</span>
             </div>
+
+            <!-- Footer Actions -->
             <div class="project-card-footer">
-              <a class="card-link-btn" href="https://github.com/Dilharajay/churn_predictor" target="_blank" rel="noreferrer noopener">Source Repo ↗</a>
+              <a class="card-link-btn" href="https://github.com/sahilkavishka" target="_blank" rel="noreferrer noopener">GitHub Repo ↗</a>
               <button class="inspect-btn" data-inspect-id="aws-churn" type="button">Inspect</button>
             </div>
           </article>
 
           <article class="project-card reveal-up" data-category="data web" id="proj-quiz-analytics">
-            <div class="card-visual-header">
-              <div class="card-visual-scan" aria-hidden="true"></div>
-              <div class="card-visual-info">
-                <span class="mono card-id-tag">EDTECH ANALYTICS</span>
-                <span class="card-visual-metric mono">PLOTLY.JS SUITE</span>
+            <!-- Scientific Media Frame -->
+            <div class="project-media-frame" data-gallery-src="./images/projects/math quiz analytics.png" data-gallery-title="Mathematics Quiz Performance Analytics Platform" data-gallery-loc="Full-Stack Web · Exploratory Data Analysis · Item Response Theory" data-gallery-desc="Interactive assessment analytics platform evaluating student problem-solving patterns, question difficulty indices, and cohort mastery curves.">
+              <img src="./images/projects/math quiz analytics.png" alt="Mathematics Quiz Performance Analytics Platform" class="project-media-img" loading="lazy" />
+              <div class="project-media-overlay"></div>
+              <div class="project-media-hud">
+                <span class="hud-pill mono"><span class="hud-dot"></span> EDUCATION // COHORT EDA</span>
+                <span class="hud-metric mono">ITEM RESPONSE</span>
               </div>
+              <div class="project-media-zoom-btn mono"><span>INSPECT</span> ↗</div>
             </div>
+
+            <!-- Card Header Meta -->
             <div class="card-top-row">
-              <span class="card-cat-badge">ANALYTICS · VISUALIZATION</span>
+              <span class="card-cat-badge">EDTECH · DATA ANALYTICS</span>
               <span class="card-status-badge complete">COMPLETE</span>
             </div>
+
+            <!-- Card Body -->
             <div>
               <h3 class="project-title">Math Quiz Analytics Dashboard</h3>
-              <p class="project-desc">Educator analytics dashboard for timed quizzes with cohort performance distributions, skill-gap detection by topic, and student leaderboards.</p>
+              <p class="project-desc">Interactive assessment analytics platform evaluating student problem-solving patterns, question difficulty indices, and cohort mastery curves with dynamic Plotly visualizations.</p>
             </div>
-            <div class="project-stack-tags">
-              <span class="stack-tag">HTML5/JS</span><span class="stack-tag">Plotly.js</span><span class="stack-tag">SQL</span><span class="stack-tag">Python</span>
+
+            <!-- Stack Tags -->
+            <div class="project-tags">
+                <span class="tag">Plotly.js</span>
+                <span class="tag">Python</span>
+                <span class="tag">Pandas</span>
+                <span class="tag">EDA</span>
+                <span class="tag">Streamlit</span>
             </div>
+
+            <!-- Footer Actions -->
             <div class="project-card-footer">
               <a class="card-link-btn" href="https://github.com/sahilkavishka" target="_blank" rel="noreferrer noopener">GitHub Repo ↗</a>
               <button class="inspect-btn" data-inspect-id="quiz-analytics" type="button">Inspect</button>
@@ -1138,24 +1362,39 @@
           </article>
 
           <article class="project-card reveal-up" data-category="data ai" id="proj-data-mining">
-            <div class="card-visual-header">
-              <div class="card-visual-scan" aria-hidden="true"></div>
-              <div class="card-visual-info">
-                <span class="mono card-id-tag">DATA MINING · APRIORI</span>
-                <span class="card-visual-metric mono">CONFIDENCE &gt; 0.70</span>
+            <!-- Scientific Media Frame -->
+            <div class="project-media-frame" data-gallery-src="./images/community/data mining project.jpg" data-gallery-title="Market Basket &amp; Association Rule Mining Pipeline" data-gallery-loc="Python 3.13 · MLxtend · Apriori · Association Rules · Jupyter" data-gallery-desc="Empirical association rule mining and market basket analytics pipeline. Implemented support, confidence (>0.70), and lift metrics on transactional retail data to identify multi-item buying affinities and co-occurrence patterns.">
+              <img src="./images/community/data mining project.jpg" alt="Association Rule Mining Python Notebook" class="project-media-img" loading="lazy" />
+              <div class="project-media-overlay"></div>
+              <div class="project-media-hud">
+                <span class="hud-pill mono"><span class="hud-dot"></span> DATA MINING · APRIORI</span>
+                <span class="hud-metric mono">CONFIDENCE &gt; 0.70</span>
               </div>
+              <div class="project-media-zoom-btn mono"><span>INSPECT</span> ↗</div>
             </div>
+
+            <!-- Card Header Meta -->
             <div class="card-top-row">
-              <span class="card-cat-badge">DATA MINING · ML RESEARCH</span>
-              <span class="card-status-badge complete">RESEARCH PIPELINE</span>
+              <span class="card-cat-badge">DATA MINING · UNSUPERVISED</span>
+              <span class="card-status-badge complete">COMPLETE</span>
             </div>
+
+            <!-- Card Body -->
             <div>
               <h3 class="project-title">Market Basket Association Rule Mining Pipeline</h3>
-              <p class="project-desc">Algorithmic transaction analytics extracting frequent itemsets and high-lift association rules (confidence &gt; 0.70). Uncovers actionable cross-selling signals and multi-item consumer purchasing behaviors.</p>
+              <p class="project-desc">Empirical association rule mining and market basket analytics pipeline. Implemented support, confidence (&gt;0.70), and lift metrics on transactional retail data to identify multi-item buying affinities and co-occurrence patterns.</p>
             </div>
-            <div class="project-stack-tags">
-              <span class="stack-tag">Python</span><span class="stack-tag">MLxtend</span><span class="stack-tag">Pandas</span><span class="stack-tag">Data Mining</span><span class="stack-tag">Jupyter</span>
+
+            <!-- Stack Tags -->
+            <div class="project-tags">
+                <span class="tag">Python</span>
+                <span class="tag">MLxtend</span>
+                <span class="tag">Apriori</span>
+                <span class="tag">FP-Growth</span>
+                <span class="tag">Matplotlib</span>
             </div>
+
+            <!-- Footer Actions -->
             <div class="project-card-footer">
               <a class="card-link-btn" href="https://github.com/sahilkavishka" target="_blank" rel="noreferrer noopener">GitHub Repo ↗</a>
               <button class="inspect-btn" data-inspect-id="data-mining-rules" type="button">Inspect</button>
@@ -2171,9 +2410,9 @@ def custom_construction_loss(y_true, y_pred):
           </div>
 
           <!-- 7: SOCS Interactive Showcase -->
-          <div class="expedition-card" data-exp-category="socs" data-gallery-src="./images/community/socs-itex-2.jpg" data-gallery-title="Interactive Computing &amp; AI System Demonstrations" data-gallery-loc="Main Exhibition Hall · SOCS Innovation" data-gallery-desc="Presenting real-time machine learning and software demonstrations to tech enthusiasts, promoting collaborative knowledge sharing and hands-on computing.">
+          <div class="expedition-card" data-exp-category="socs" data-gallery-src="./images/community/interactive ai system demo.jpeg" data-gallery-title="Interactive Computing &amp; AI System Demonstrations" data-gallery-loc="Main Exhibition Hall · SOCS Innovation" data-gallery-desc="Presenting real-time machine learning and software demonstrations to tech enthusiasts, promoting collaborative knowledge sharing and hands-on computing.">
             <div class="expedition-img-wrap">
-              <img src="./images/community/socs-itex-2.jpg" alt="Interactive computing demonstrations at SOCS ITEX" loading="lazy" />
+              <img src="./images/community/interactive ai system demo.jpeg" alt="Interactive computing demonstrations at SOCS ITEX" loading="lazy" />
               <div class="expedition-overlay-tag mono">EXPEDITION 07 // DEMO BOOTH</div>
             </div>
             <div class="expedition-info">
