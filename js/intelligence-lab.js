@@ -201,6 +201,7 @@ const DETAILED_PROJECTS = {
     stack: 'Python, LightGBM, Scikit-Learn, Streamlit, Plotly, Pandas, NumPy, Isolation Forest',
     contribution: 'End-to-end research, dataset curation of 2,002 certificates across 9 provinces, multi-model evaluation, feature engineering, and provincial GIS decision engine.',
     results: '94.6% Test Accuracy on fertilizer authenticity classification; R² > 0.96 on crop yield loss estimation; deployed interactive Streamlit decision dashboard.',
+    image: './images/projects/cropsafeAI.png',
     github: 'https://github.com/sahilkavishka',
     live: null
   },
@@ -213,6 +214,7 @@ const DETAILED_PROJECTS = {
     stack: 'React.js, Three.js, WebGL, Web Audio API, JavaScript (ES6+), HTML5, CSS3',
     contribution: 'Engineered custom procedural 3D terrain, collision physics, survival mechanics, Web Audio sound synthesis, forensic journal, and bilingual localization.',
     results: 'Smooth 60 FPS performance entirely client-side in standard web browsers; open source repository on GitHub.',
+    image: './images/projects/sinharaja game.png',
     github: 'https://github.com/sahilkavishka/sinharaja',
     live: null
   },
@@ -225,6 +227,7 @@ const DETAILED_PROJECTS = {
     stack: 'Python, CatBoost, LightGBM, Scikit-learn, Pandas, Kaggle, Biostatistics, Platt Scaling',
     contribution: 'Feature engineering on physiological risk markers, ensemble blending optimization, probability calibration, fairness auditing, and 2-page Model Trust Card authoring.',
     results: 'Secured 3rd Place globally on Kaggle Leaderboard (0.33400); 5-fold CV log loss: 0.3490 ± 0.0055, Brier Score: 0.1021, ROC-AUC: 0.6932.',
+    image: './images/projects/30 day clinical readmission.jfif',
     github: 'https://github.com/sahilkavishka',
     live: null
   },
@@ -237,6 +240,7 @@ const DETAILED_PROJECTS = {
     stack: 'PyTorch, Python, NAFNet, OpenCV, Scikit-Image, Classical DSP, CUDA',
     contribution: 'Architected classical DSP smoothing filters, assisted in NAFNet loss formulation, evaluated PSNR/SSIM metrics, and verified offline CPU fallback.',
     results: 'Achieved 32.42 dB PSNR and 0.9205 SSIM; Composite Score: 0.6863 (+160.6% relative gain over competition baseline).',
+    image: './images/projects/low-light image denoising.jfif',
     github: 'https://github.com/sahilkavishka',
     live: null
   },
@@ -249,6 +253,7 @@ const DETAILED_PROJECTS = {
     stack: 'Python, FastAPI, XGBoost, Three.js, TailwindCSS, Gemini API, Docker',
     contribution: 'Architected the core system, built the XGBoost regional price forecasting model, and implemented the multi-bank 45% DSR loan eligibility matrix comparing BOC, Commercial Bank, HNB, Sampath, and NSB.',
     results: 'Model accounts for regional port distance non-linearities across all 25 administrative districts; currently testing CV floor-plan wall detection.',
+    image: './images/projects/smartbuildAI.jfif',
     github: 'https://github.com/sahilkavishka/smartbuild_ai',
     live: null
   },
@@ -261,6 +266,7 @@ const DETAILED_PROJECTS = {
     stack: 'Python, FastAPI, Scikit-learn, NLP, Rule Engine, REST APIs',
     contribution: 'Responsible for Backend API Integration and Frontend UI, connecting core system components to support seamless communication between the rule engine, AI engine, and user interface.',
     results: 'Structured data flow enabling real-time resolution recommendation and explainable billing discrepancy verification.',
+    image: './images/projects/resolvai-copilot.png',
     github: 'https://github.com/kavishanimsara/codeXsabra-ResoveAI',
     live: null
   },
@@ -273,6 +279,7 @@ const DETAILED_PROJECTS = {
     stack: 'PHP (MVC Architecture), MySQL, Google Gemini API, JavaScript, HTML5, CSS3, PDO',
     contribution: 'Full-stack architecture, Gemini AI integration, QR pass generation, database schema design with parameterized PDO queries, and CSRF protection.',
     results: 'Deployed full-stack application supporting automated booking workflows, style consultations, and secure multi-role administrative portals.',
+    image: './images/projects/salonora.jfif',
     github: 'https://github.com/sahilkavishka/salon',
     live: null
   },
@@ -285,6 +292,7 @@ const DETAILED_PROJECTS = {
     stack: 'Python, Pandas, Scikit-Learn, Plotly, Streamlit, Random Forest Regressor',
     contribution: 'Data collection, feature engineering of macroeconomic indicators, model benchmarking, and interactive Streamlit simulation dashboard.',
     results: 'Published open-source predictive tool with live what-if macro sensitivity sliders and seasonal heatmaps.',
+    image: './images/projects/sri lanka tourism predictor.png',
     github: 'https://github.com/sahilkavishka',
     live: null
   },
@@ -297,6 +305,7 @@ const DETAILED_PROJECTS = {
     stack: 'Python, Scikit-Learn, Streamlit, Plotly, Pandas',
     contribution: 'End-to-end dataset cleaning, model training, cross-validation, and Streamlit user interface.',
     results: 'Interactive estimator enabling transparent compensation benchmarks across Sri Lankan tech roles.',
+    image: './images/projects/sri lanka salary predictor.png',
     github: 'https://github.com/sahilkavishka',
     live: null
   },
@@ -309,6 +318,7 @@ const DETAILED_PROJECTS = {
     stack: 'PyTorch, Hugging Face Transformers, Scikit-learn, NLTK, FastAPI, Chrome Extension V3',
     contribution: 'Scraping pipeline, BERT fine-tuning, FastAPI microservice, and native Daraz-themed Chrome Extension UI.',
     results: 'Shipped working Chrome Extension extracting pros/cons in real-time from live Daraz e-commerce listings.',
+    image: './images/projects/daraz nlp extention.jfif',
     github: 'https://github.com/sahilkavishka/mini-NLP-project',
     live: null
   },
@@ -321,6 +331,7 @@ const DETAILED_PROJECTS = {
     stack: 'Power BI Desktop, Advanced DAX, Star Schema Modeling, Python, SQL, ArcGIS Maps',
     contribution: 'Dimensional data modeling, star schema architecture, advanced DAX simulation formulas, and 3-page executive dashboard suite.',
     results: 'Published Kaggle dataset and open-source project visualizing correlation between currency rates and hospital medicine availability.',
+    image: './images/projects/pharma-powerbi-macro.jpg',
     github: 'https://github.com/sahilkavishka/SL_Medicine_Supply_Chain',
     live: null
   },
@@ -333,6 +344,7 @@ const DETAILED_PROJECTS = {
     stack: 'Python, YouTube Data API v3, Pandas, Seaborn, Matplotlib, Power BI',
     contribution: 'Data extraction pipeline, regex NLP categorization (A/L, O/L, Revision), and published open Kaggle dataset.',
     results: 'Published master dataset and analytics suite tracking regional educational content virality.',
+    image: './images/projects/edtech-market-intelligence.jpg',
     github: 'https://github.com/sahilkavishka/-EdTech-Analytics',
     live: null
   },
@@ -345,6 +357,7 @@ const DETAILED_PROJECTS = {
     stack: 'Python, NumPy, Pandas, Matplotlib, Seaborn, SciPy, Stochastic Calculus',
     contribution: 'Statistical distribution fitting, Markov transition matrix formulation, Bayesian volatility estimation, and Monte Carlo trajectory simulation.',
     results: 'Identified regime-switching momentum patterns and quantified extreme downside risk metrics across four decades of market history.',
+    image: './images/projects/msft-stock-probability.jpg',
     github: 'https://github.com/sahilkavishka',
     live: null
   },
@@ -357,6 +370,7 @@ const DETAILED_PROJECTS = {
     stack: 'Power BI Desktop, DAX Logic, Data Modeling, Sports Analytics',
     contribution: 'Data hygiene, DAX metric engineering, hierarchical data modeling, and user-centric dashboard UI.',
     results: 'Interactive dashboard delivering sub-second slice-and-dice insights across 27 years of international tournament cricket.',
+    image: './images/projects/icc-champions-trophy-1.jpg',
     github: 'https://github.com/sahilkavishka',
     live: null
   },
@@ -369,6 +383,7 @@ const DETAILED_PROJECTS = {
     stack: 'Python, Django, JavaScript, HTML5, CSS3, Bootstrap, MySQL, SQLite',
     contribution: 'Full-stack engineering: schema design, OTP verification system, RBAC authorization, and match prediction integration.',
     results: 'Operational multi-role tournament management suite with secure role segmentation.',
+    image: './images/projects/matchpoint sport tournerment.jfif',
     github: 'https://github.com/sahilkavishka',
     live: null
   },
@@ -381,6 +396,7 @@ const DETAILED_PROJECTS = {
     stack: 'HTML5/JS, Plotly.js, SQL, Python',
     contribution: 'Topic breakdown algorithms, cohort visualization metrics, and educator summary views.',
     results: 'Enabled educators to diagnose exact conceptual deficiencies rather than relying on aggregate marks.',
+    image: './images/projects/math quiz analytics.png',
     github: 'https://github.com/sahilkavishka',
     live: null
   },
@@ -393,6 +409,7 @@ const DETAILED_PROJECTS = {
     stack: 'Python 3.13, MLxtend, Apriori Algorithm, Pandas, NumPy, Jupyter Notebook',
     contribution: 'Designed the end-to-end transaction ETL pipeline, metric threshold calibration (support, confidence, lift), and actionable association rule extraction.',
     results: 'Extracted high-confidence rules (confidence > 0.70, lift up to 1.71) identifying strong complementary product demand for inventory and bundling optimization.',
+    image: './images/community/data mining project.jpg',
     github: 'https://github.com/sahilkavishka',
     live: null
   },
@@ -405,6 +422,7 @@ const DETAILED_PROJECTS = {
     stack: 'AWS, Python, XGBoost, Flask, Scikit-Learn, Random Forest',
     contribution: 'Feature engineering on rolling consumption metrics, model benchmarking, and Flask deployment scripts.',
     results: 'Substantial accuracy gains over linear baselines through velocity feature extraction.',
+    image: './images/projects/aws customer churn predictor.png',
     github: 'https://github.com/Dilharajay/churn_predictor',
     live: null
   },
@@ -511,6 +529,18 @@ const DETAILED_PROJECTS = {
     if (modalStack) modalStack.textContent = data.stack;
     if (modalContribution) modalContribution.textContent = data.contribution;
     if (modalResults) modalResults.textContent = data.results;
+
+    const modalImageWrap = document.getElementById('modal-image-wrap');
+    const modalImage = document.getElementById('modal-image');
+    if (modalImageWrap && modalImage) {
+      if (data.image) {
+        modalImage.src = data.image;
+        modalImage.alt = `${data.title} Architecture & System Interface`;
+        modalImageWrap.style.display = 'block';
+      } else {
+        modalImageWrap.style.display = 'none';
+      }
+    }
 
     if (modalGithubLink) {
       modalGithubLink.href = data.github;
