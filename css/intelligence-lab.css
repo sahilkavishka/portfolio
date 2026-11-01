@@ -4385,3 +4385,704 @@ img, svg {
 .lab-day .lightbox-header-bar {
   background: rgba(240, 246, 255, 0.85);
 }
+
+/* ===================================================================
+   DATA INTELLIGENCE STUDIO 2.0 — ADVANCED SCIENTIFIC SUITE
+   =================================================================== */
+
+/* --- Feature 1: Data Visualization Studio --- */
+.viz-studio-container {
+  background: rgba(11, 18, 32, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(0, 229, 255, 0.2);
+  border-radius: 16px;
+  padding: 1.75rem;
+  margin-top: 1.5rem;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+.viz-controls-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+  padding-bottom: 1.25rem;
+  margin-bottom: 1.25rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.viz-control-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  min-width: 170px;
+  flex: 1;
+}
+
+.viz-control-label {
+  font-family: var(--font-mono, monospace);
+  font-size: 0.74rem;
+  color: var(--lab-cyan);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.viz-select {
+  background: rgba(5, 8, 17, 0.9);
+  color: var(--lab-text);
+  border: 1px solid rgba(0, 229, 255, 0.3);
+  border-radius: 8px;
+  padding: 0.55rem 0.85rem;
+  font-size: 0.88rem;
+  font-family: inherit;
+  outline: none;
+  cursor: pointer;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.viz-select:focus {
+  border-color: var(--lab-cyan);
+  box-shadow: 0 0 12px rgba(0, 229, 255, 0.25);
+}
+
+.viz-canvas-wrapper {
+  position: relative;
+  width: 100%;
+  height: 420px;
+  background: radial-gradient(circle at 50% 50%, rgba(11, 18, 32, 0.95), rgba(5, 8, 17, 0.98));
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.viz-canvas-wrapper canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.viz-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 0.85rem;
+  margin-top: 1.25rem;
+}
+
+.viz-stat-card {
+  background: rgba(5, 8, 17, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+}
+
+.viz-stat-card .label {
+  font-family: var(--font-mono, monospace);
+  font-size: 0.72rem;
+  color: var(--lab-text-muted);
+  text-transform: uppercase;
+  margin-bottom: 0.25rem;
+}
+
+.viz-stat-card .value {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--lab-text);
+}
+
+.viz-stat-card .value.stat-highlight {
+  color: var(--lab-cyan);
+}
+
+.viz-stat-card .value.stat-highlight.positive {
+  color: #10b981;
+}
+
+.viz-insight-box {
+  background: rgba(0, 229, 255, 0.05);
+  border-left: 3px solid var(--lab-cyan);
+  border-radius: 0 8px 8px 0;
+  padding: 0.85rem 1.25rem;
+  margin-top: 1rem;
+  font-size: 0.92rem;
+  color: var(--lab-text);
+  line-height: 1.5;
+}
+
+/* --- Feature 2: Machine Learning Playground --- */
+.ml-playground-container {
+  background: rgba(11, 18, 32, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(168, 85, 247, 0.25);
+  border-radius: 16px;
+  padding: 1.75rem;
+  margin-top: 1.5rem;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+}
+
+.ml-algo-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.ml-algo-tab-btn {
+  background: rgba(5, 8, 17, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--lab-text-muted);
+  padding: 0.5rem 0.85rem;
+  border-radius: 8px;
+  font-size: 0.82rem;
+  font-family: var(--font-mono, monospace);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.ml-algo-tab-btn:hover {
+  border-color: rgba(0, 229, 255, 0.4);
+  color: var(--lab-text);
+}
+
+.ml-algo-tab-btn.active {
+  background: rgba(0, 229, 255, 0.15);
+  border-color: var(--lab-cyan);
+  color: var(--lab-cyan);
+  font-weight: 700;
+  box-shadow: 0 0 12px rgba(0, 229, 255, 0.2);
+}
+
+.ml-workspace-grid {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 1.5rem;
+  margin-top: 1.25rem;
+}
+
+@media (max-width: 960px) {
+  .ml-workspace-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.ml-canvas-wrapper {
+  position: relative;
+  width: 100%;
+  height: 420px;
+  background: radial-gradient(circle at 50% 50%, rgba(11, 18, 32, 0.95), rgba(5, 8, 17, 0.98));
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  cursor: crosshair;
+  overflow: hidden;
+}
+
+.ml-canvas-wrapper canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.ml-canvas-hint {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  background: rgba(5, 8, 17, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  padding: 0.35rem 0.65rem;
+  font-family: var(--font-mono, monospace);
+  font-size: 0.72rem;
+  color: var(--lab-text-muted);
+  pointer-events: none;
+}
+
+.ml-controls-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.ml-param-box {
+  background: rgba(5, 8, 17, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+.ml-param-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.4rem;
+}
+
+.ml-param-label {
+  font-family: var(--font-mono, monospace);
+  font-size: 0.75rem;
+  color: var(--lab-text-muted);
+}
+
+.ml-param-value {
+  font-family: var(--font-mono, monospace);
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--lab-cyan);
+}
+
+.ml-slider {
+  width: 100%;
+  accent-color: var(--lab-cyan);
+  cursor: pointer;
+}
+
+.ml-shape-btn-group {
+  display: flex;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+}
+
+.ml-data-shape-btn {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--lab-text-muted);
+  padding: 0.4rem;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.ml-data-shape-btn.active {
+  background: rgba(168, 85, 247, 0.2);
+  border-color: #a855f7;
+  color: #c084fc;
+}
+
+.ml-formula-panel {
+  background: rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(0, 229, 255, 0.2);
+  border-radius: 8px;
+  padding: 0.85rem;
+  font-family: var(--font-mono, monospace);
+  font-size: 0.82rem;
+  color: var(--lab-cyan);
+  word-break: break-all;
+}
+
+.ml-metrics-readout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+}
+
+.ml-metric-pill {
+  background: rgba(5, 8, 17, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  padding: 0.65rem 0.85rem;
+  text-align: center;
+}
+
+.ml-metric-pill .title {
+  font-family: var(--font-mono, monospace);
+  font-size: 0.68rem;
+  color: var(--lab-text-muted);
+  text-transform: uppercase;
+}
+
+.ml-metric-pill .score {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #10b981;
+  margin-top: 0.2rem;
+}
+
+/* --- Feature 3: Exploratory Data Analysis (EDA) Lab --- */
+.eda-lab-container {
+  background: rgba(11, 18, 32, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(41, 121, 255, 0.25);
+  border-radius: 16px;
+  padding: 1.75rem;
+  margin-top: 1.5rem;
+}
+
+.eda-telemetry-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.eda-stats-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.eda-pill {
+  background: rgba(5, 8, 17, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 0.35rem 0.85rem;
+  font-family: var(--font-mono, monospace);
+  font-size: 0.76rem;
+  color: var(--lab-text-muted);
+}
+
+.eda-pill strong {
+  color: var(--lab-cyan);
+}
+
+.eda-table-container {
+  overflow-x: auto;
+  margin-top: 1.25rem;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.eda-summary-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+  text-align: left;
+}
+
+.eda-summary-table th {
+  background: rgba(5, 8, 17, 0.9);
+  color: var(--lab-text-muted);
+  font-family: var(--font-mono, monospace);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.eda-summary-table td {
+  padding: 0.7rem 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+  color: var(--lab-text);
+}
+
+.eda-summary-table tr:hover td {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.eda-missing-matrix {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 0.75rem;
+  margin-top: 1.25rem;
+}
+
+.missing-col-indicator {
+  background: rgba(5, 8, 17, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  padding: 0.75rem;
+}
+
+.missing-col-indicator .col-head {
+  font-size: 0.72rem;
+  color: var(--lab-text-muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 0.4rem;
+}
+
+.missing-col-indicator .integrity-bar {
+  height: 6px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.missing-col-indicator .integrity-bar .fill {
+  background: #10b981;
+  height: 100%;
+}
+
+.missing-col-indicator .pct {
+  font-size: 0.7rem;
+  color: #10b981;
+  margin-top: 0.35rem;
+  text-align: right;
+}
+
+.eda-insights-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+  margin-top: 1.25rem;
+}
+
+.eda-insight-card {
+  background: rgba(5, 8, 17, 0.7);
+  border: 1px solid rgba(0, 229, 255, 0.15);
+  border-radius: 10px;
+  padding: 1rem 1.25rem;
+}
+
+.eda-insight-card .insight-badge {
+  display: inline-block;
+  background: rgba(0, 229, 255, 0.1);
+  color: var(--lab-cyan);
+  font-size: 0.68rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+}
+
+.eda-insight-card .insight-text {
+  font-size: 0.88rem;
+  color: var(--lab-text);
+  line-height: 1.5;
+}
+
+/* --- Feature 4: Data Stories from Sri Lanka --- */
+.data-stories-container {
+  margin-top: 1.5rem;
+}
+
+.data-story-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin-bottom: 1.5rem;
+}
+
+.data-story-tab {
+  background: rgba(11, 18, 32, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--lab-text-muted);
+  border-radius: 10px;
+  padding: 0.75rem 1.25rem;
+  font-size: 0.88rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.data-story-tab:hover {
+  border-color: rgba(0, 229, 255, 0.4);
+  color: var(--lab-text);
+}
+
+.data-story-tab.active {
+  background: rgba(0, 229, 255, 0.12);
+  border-color: var(--lab-cyan);
+  color: var(--lab-cyan);
+  font-weight: 700;
+  box-shadow: 0 0 16px rgba(0, 229, 255, 0.15);
+}
+
+.data-story-panel {
+  display: none;
+}
+
+.data-story-panel.active {
+  display: block;
+}
+
+.story-card-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+@media (max-width: 900px) {
+  .story-card-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.story-narrative-card {
+  background: rgba(11, 18, 32, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  padding: 1.75rem;
+}
+
+.story-narrative-card h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--lab-text);
+  margin-bottom: 0.75rem;
+}
+
+.story-narrative-card p {
+  color: var(--lab-text-muted);
+  font-size: 0.92rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.story-kpis-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+  gap: 0.75rem;
+  margin: 1.25rem 0;
+}
+
+.story-kpi-pill {
+  background: rgba(5, 8, 17, 0.8);
+  border: 1px solid rgba(0, 229, 255, 0.15);
+  border-radius: 8px;
+  padding: 0.65rem 0.85rem;
+}
+
+.story-kpi-pill .kpi-num {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--lab-cyan);
+}
+
+.story-kpi-pill .kpi-lbl {
+  font-family: var(--font-mono, monospace);
+  font-size: 0.68rem;
+  color: var(--lab-text-muted);
+  text-transform: uppercase;
+}
+
+.story-citation-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(5, 8, 17, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 6px;
+  padding: 0.5rem 0.85rem;
+  font-family: var(--font-mono, monospace);
+  font-size: 0.75rem;
+  color: var(--lab-text-muted);
+}
+
+/* --- Feature 5: Research & Model Experiments --- */
+.research-experiments-container {
+  margin-top: 1.5rem;
+}
+
+.research-filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.research-metric-btn {
+  background: rgba(11, 18, 32, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--lab-text-muted);
+  border-radius: 20px;
+  padding: 0.45rem 1rem;
+  font-family: var(--font-mono, monospace);
+  font-size: 0.78rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.research-metric-btn.active {
+  background: rgba(0, 229, 255, 0.15);
+  border-color: var(--lab-cyan);
+  color: var(--lab-cyan);
+  font-weight: 700;
+}
+
+.research-benchmarks-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  gap: 1.5rem;
+}
+
+.experiment-benchmark-card {
+  background: rgba(11, 18, 32, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.exp-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 0.75rem;
+}
+
+.exp-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--lab-text);
+}
+
+.exp-badge {
+  background: rgba(16, 185, 129, 0.15);
+  color: #10b981;
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  border-radius: 4px;
+  padding: 0.2rem 0.5rem;
+  font-family: var(--font-mono, monospace);
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+
+.exp-research-q {
+  font-size: 0.88rem;
+  color: var(--lab-text-muted);
+  line-height: 1.5;
+  margin-bottom: 1.25rem;
+}
+
+.benchmark-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.82rem;
+  margin-bottom: 1.25rem;
+}
+
+.benchmark-table th {
+  background: rgba(5, 8, 17, 0.8);
+  color: var(--lab-text-muted);
+  font-family: var(--font-mono, monospace);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  padding: 0.55rem 0.75rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.benchmark-table td {
+  padding: 0.55rem 0.75rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.benchmark-table tr.champion-row td {
+  background: rgba(0, 229, 255, 0.06);
+  color: var(--lab-cyan);
+  font-weight: 700;
+}
+
+.exp-conclusion-note {
+  background: rgba(5, 8, 17, 0.6);
+  border-left: 2px solid var(--lab-cyan);
+  border-radius: 0 6px 6px 0;
+  padding: 0.65rem 0.85rem;
+  font-size: 0.82rem;
+  color: var(--lab-text-muted);
+  line-height: 1.5;
+}

@@ -1,33 +1,76 @@
 /**
- * SAHIL KAVISHKA — THE INTELLIGENCE LAB 2.0
- * Interactive Technology Universe (10 Connected Domains)
- * Connected SVG knowledge graph linking Sahil's technical domains and verified projects.
+ * SAHIL KAVISHKA — DATA INTELLIGENCE STUDIO
+ * Interactive Scientific Knowledge Graph (13 Connected Nodes)
+ * End-to-end data science lifecycle: from Mathematics to Edge Robotics.
  */
 
 (function initDataUniverse() {
   const UNIVERSE_DATA = {
-    ai: {
-      id: 'ai',
-      title: 'Artificial Intelligence',
-      tag: 'COGNITIVE ARCHITECTURES',
-      desc: 'Developing agentic workflows, multimodal generative systems, and automated decision engines that bridge mathematical algorithms with real-world client workflows.',
-      stack: ['Gemini API', 'PyTorch', 'FastAPI', 'Agentic Systems', 'Deterministic Fail-safes'],
+    math: {
+      id: 'math',
+      title: 'Mathematics & Statistics',
+      tag: 'THEORETICAL FOUNDATION',
+      desc: 'Formulating rigorous mathematical frameworks: linear algebra, matrix decompositions (SVD, PCA), multivariable calculus, probability theory, hypothesis testing, and Bayesian inferential reasoning.',
+      stack: ['Probability Distributions', 'Linear Algebra', 'Multivariable Calculus', 'Hypothesis Testing', 'Bayesian Inference', 'Markov Chains'],
       projects: [
-        { name: 'SmartBuild AI (Flagship)', status: 'Active Lab Build · 25 Districts', filter: 'ai' },
-        { name: 'ResolvAI Copilot', status: 'Hutch AI Hackathon · FastAPI', filter: 'collab' },
-        { name: 'Salonora AI Platform', status: 'Gemini AI Voice & Vision', filter: 'web' }
+        { name: 'MSFT Stock Stochastic Study', status: '40-Year Distribution & Monte Carlo', filter: 'data' },
+        { name: 'Clinical Stacking Ensemble', status: 'Platt Calibration & Probability Mapping', filter: 'ai' }
+      ]
+    },
+    ingest: {
+      id: 'ingest',
+      title: 'Data Collection & Ingestion',
+      tag: 'DATA ACQUISITION',
+      desc: 'Engineering robust data extraction pipelines: automated web scraping, RESTful API pagination, telemetry polling, and high-throughput data extraction across heterogeneous sources.',
+      stack: ['BeautifulSoup', 'Requests', 'Selenium', 'REST APIs', 'YouTube Data API v3', 'Job Board Scraping'],
+      projects: [
+        { name: 'Sri Lanka Tech Market Scraper', status: 'Automated Job Board Pipeline', filter: 'data' },
+        { name: 'EdTech Market Pipeline', status: 'Published Kaggle Master Dataset (10.0)', filter: 'data' }
+      ]
+    },
+    cleaning: {
+      id: 'cleaning',
+      title: 'Data Cleaning & Preprocessing',
+      tag: 'DATA CURATION & QUALITY',
+      desc: 'Developing deterministic data sanitization: missing value imputation strategies, outlier detection via Tukey IQR and Z-scores, schema normalization, and categorical encoding.',
+      stack: ['Pandas', 'NumPy', 'Missingno', 'Tukey IQR', 'RobustScaler', 'One-Hot & Target Encoding'],
+      projects: [
+        { name: 'CropSafe AI Lab Harmonization', status: '2,002 Empirical Lab Certificates', filter: 'ai' },
+        { name: 'Pharma Supply Data Sanitization', status: 'Star Schema Foreign Exchange Cleaning', filter: 'data' }
+      ]
+    },
+    eda: {
+      id: 'eda',
+      title: 'Exploratory Data Analysis',
+      tag: 'PATTERN DISCOVERY',
+      desc: 'Uncovering latent empirical patterns: correlation matrices, multivariate feature distributions, density estimation, interaction effects, and statistical hypothesis verification.',
+      stack: ['Seaborn', 'Matplotlib', 'Plotly', 'Pairplots', 'Correlation Matrices', 'Kernel Density (KDE)'],
+      projects: [
+        { name: 'Interactive EDA Lab', status: 'Live Client-Side Profiling Engine', filter: 'all' },
+        { name: 'Ceylon Tourism Economic Study', status: 'Macroeconomic Sensitivity & Seasonality', filter: 'data' }
+      ]
+    },
+    feature: {
+      id: 'feature',
+      title: 'Feature Engineering',
+      tag: 'SIGNAL SYNTHESIS',
+      desc: 'Synthesizing high-predictive signals: domain-specific ratios, temporal lag features, rolling window aggregates, polynomial interactions, and recursive feature elimination.',
+      stack: ['Feature Scaling', 'Interaction Terms', 'Lag Operators', 'Rolling Aggregates', 'Recursive Feature Elimination'],
+      projects: [
+        { name: 'Clinical Risk Biomarkers', status: 'Kaggle Rank #3 🥉 Engineered Predictors', filter: 'ai' },
+        { name: 'CropSafe Degradation Indices', status: 'NPK Moisture Ratio Synthesizer', filter: 'ai' }
       ]
     },
     ml: {
       id: 'ml',
       title: 'Machine Learning',
-      tag: 'PREDICTIVE MODELING',
-      desc: 'Designing supervised, ensemble, and gradient-boosted algorithms (XGBoost, LightGBM, CatBoost) with strict cross-validation, threshold calibration, and fairness audits.',
-      stack: ['Scikit-learn', 'XGBoost', 'LightGBM', 'CatBoost', 'Stratified K-Fold', 'Threshold Calibration'],
+      tag: 'PREDICTIVE ENSEMBLES',
+      desc: 'Designing supervised, ensemble, and gradient-boosted algorithms (LightGBM, XGBoost, CatBoost) with strict cross-validation, hyperparameter tuning, and threshold calibration.',
+      stack: ['Scikit-learn', 'LightGBM', 'XGBoost', 'CatBoost', 'Stratified K-Fold', 'Ensemble Stacking'],
       projects: [
-        { name: 'CropSafe AI (Capstone)', status: 'LightGBM 94.6% Accuracy', filter: 'ai' },
-        { name: 'Clinical Readmission Predictor', status: 'Global Rank #3 🥉 Stacking', filter: 'ai' },
-        { name: 'Ceylon Tourism Forecast', status: 'Random Forest Macro Regressor', filter: 'data' }
+        { name: 'CropSafe AI Classifier', status: 'LightGBM 94.6% Accuracy & Loss Regressors', filter: 'ai' },
+        { name: 'Clinical Readmission Stacking', status: 'Global Rank #3 🥉 Lasso Meta-Learner', filter: 'ai' },
+        { name: 'Tech Salary Predictor', status: 'Random Forest Compensation Benchmark', filter: 'data' }
       ]
     },
     dl: {
@@ -37,8 +80,7 @@
       desc: 'Architecting deep residual backbones, transformer fine-tuning, and compound loss functions (Charbonnier + D-SSIM) for high-fidelity restoration and nuanced classification.',
       stack: ['PyTorch', 'NAFNet-APEX', 'Hugging Face', 'BERT', 'CUDA', 'Backbone Fine-Tuning'],
       projects: [
-        { name: 'Hybrid Image Denoising', status: 'IEEE Mora SP Cup 2026', filter: 'cv' },
-        { name: 'Clinical Readmission Predictor', status: 'Multi-Model Ensembles', filter: 'ai' },
+        { name: 'Hybrid Image Denoising', status: 'IEEE Mora SP Cup 2026 (32.42 dB PSNR)', filter: 'cv' },
         { name: 'AI Review Insight', status: 'Fine-Tuned BERT vs ML', filter: 'nlp' }
       ]
     },
@@ -50,7 +92,7 @@
       stack: ['Transformers', 'BERT', 'PyTorch', 'NLTK', 'FastAPI', 'Chrome Extension V3'],
       projects: [
         { name: 'AI Review Insight', status: 'Daraz Chrome Extension V3', filter: 'nlp' },
-        { name: 'ResolvAI Telecom Triage', status: 'Multi-Source Resolution', filter: 'collab' }
+        { name: 'Mini AI Laboratory NLP Engine', status: 'In-Browser Lexical Decomposition', filter: 'all' }
       ]
     },
     cv: {
@@ -61,109 +103,98 @@
       stack: ['OpenCV', 'Scikit-Image', 'NAFNet', 'Three.js / WebGL', 'Spatial Raycasting', 'Classical DSP'],
       projects: [
         { name: 'Hybrid Low-Light Denoising', status: 'NAFNet + Classical DSP (SP Cup)', filter: 'cv' },
-        { name: 'CropSafe AI Vision', status: 'Agricultural Anomaly Detection', filter: 'ai' },
-        { name: 'Sinharaja 3D Survival', status: 'Raycasting & Procedural Visuals', filter: 'cv' }
+        { name: 'Sinharaja 3D Survival', status: 'Raycasting & Procedural Visuals', filter: 'cv' },
+        { name: 'ITEX 2.0 Live Gesture AI', status: 'Live Computer Vision Demonstration', filter: 'all' }
+      ]
+    },
+    genai: {
+      id: 'genai',
+      title: 'Generative AI & LLMs',
+      tag: 'FOUNDATION MODELS & AGENTS',
+      desc: 'Orchestrating frontier LLM APIs, retrieval-augmented grounding, multimodal reasoning, voice assistants, and structured JSON tool-calling pipelines.',
+      stack: ['Google Gemini API', 'Function Calling', 'Multimodal Prompting', 'Structured Outputs', 'Context Grounding'],
+      projects: [
+        { name: 'SmartBuild AI Architecture', status: 'Gemini CAD Floor Plan Copilot', filter: 'ai' },
+        { name: 'Salonora AI Platform', status: 'Gemini Multimodal Voice & Vision', filter: 'web' }
+      ]
+    },
+    viz: {
+      id: 'viz',
+      title: 'Data Visualization & Storytelling',
+      tag: 'SCIENTIFIC VISUALIZATION',
+      desc: 'Engineering interactive scientific charts, high-DPI HTML5 canvases, and enterprise Power BI Star Schema dimensional dashboards with advanced DAX measures.',
+      stack: ['Power BI', 'Advanced DAX', 'Plotly.js', 'HTML5 Canvas', 'Star Schema', 'ArcGIS Maps'],
+      projects: [
+        { name: 'Data Visualization Studio', status: 'Interactive Multi-Chart Scientific Suite', filter: 'all' },
+        { name: 'Medicine Supply Chain BI', status: 'LKR 57.72B Import Star Schema', filter: 'data' },
+        { name: 'Champions Trophy Dashboard', status: 'Power BI Historical Sports Analytics', filter: 'data' }
+      ]
+    },
+    systems: {
+      id: 'systems',
+      title: 'Systems & Full-Stack Web',
+      tag: 'PRODUCTION DEPLOYMENT',
+      desc: 'Engineering robust, production-grade microservices and responsive frontends: FastAPI backends, Django relational platforms, Docker containers, and 60 FPS Three.js rendering.',
+      stack: ['FastAPI', 'Django', 'Docker', 'PostgreSQL / MySQL', 'Three.js', 'Bootstrap 5'],
+      projects: [
+        { name: 'MatchPoint Sports Management', status: 'Django/MySQL Role-Based System', filter: 'web' },
+        { name: 'Sinharaja 3D Survival Engine', status: 'Three.js WebGL 60 FPS Game Engine', filter: 'cv' }
       ]
     },
     robotics: {
       id: 'robotics',
-      title: 'Robotics',
-      tag: 'AUTONOMOUS SYSTEMS',
-      desc: 'Advancing from physical computing microcontrollers to autonomous sensor loops, edge AI inference, and future Robot Operating System (ROS) node communication.',
-      stack: ['BBC Micro:bit', 'Sensors & Actuators', 'Embedded Python', 'ROS (Roadmap)', 'Edge Inference'],
+      title: 'Intelligent Systems & Edge IoT',
+      tag: 'PHYSICAL COMPUTING',
+      desc: 'Deploying microcontroller telemetry, tactile sensor interaction, real-time input/output loops, and exploring edge machine learning on physical hardware.',
+      stack: ['BBC Micro:bit', 'Sensors & Actuators', 'Embedded Python', 'GPIO Telemetry', 'Edge Inference'],
       projects: [
-        { name: 'HOPE 2.0 Micro:bit Sessions', status: 'IEEE WIE STEM Outreach', filter: 'all' },
-        { name: 'Robotics & Edge Sensor Roadmap', status: 'Active Research Horizon', filter: 'all' }
-      ]
-    },
-    iot: {
-      id: 'iot',
-      title: 'Internet of Things (IoT)',
-      tag: 'CONNECTED SENSORS',
-      desc: 'Deploying microcontroller telemetry, tactile sensor interaction, real-time input/output loops, and environmental monitoring grids.',
-      stack: ['BBC Micro:bit', 'MicroPython', 'GPIO Telemetry', 'Sensor Matrices', 'MQTT / WebSockets'],
-      projects: [
-        { name: 'Physical Computing Lab', status: 'Hardware Interaction Loops', filter: 'all' },
-        { name: 'Sensor Telemetry Horizon', status: 'Microcontroller Roadmap', filter: 'all' }
-      ]
-    },
-    web: {
-      id: 'web',
-      title: 'Web Development',
-      tag: 'SYSTEMS ARCHITECTURE',
-      desc: 'Engineering responsive, high-performance web applications, 3D WebGL environments (60 FPS Three.js), and REST microservices backed by Django, FastAPI, and PHP/MySQL.',
-      stack: ['FastAPI', 'Django', 'Three.js / WebGL', 'React.js', 'JavaScript (ES6+)', 'Docker'],
-      projects: [
-        { name: 'Sinharaja 3D WebGL', status: '60 FPS Browser Game Engine', filter: 'cv' },
-        { name: 'Sports Manager', status: 'Django/MySQL Role-Based Suite', filter: 'web' },
-        { name: 'Salonora AI Platform', status: 'Full-Stack PHP/MySQL + Gemini', filter: 'web' }
-      ]
-    },
-    da: {
-      id: 'da',
-      title: 'Data Analytics',
-      tag: 'DECISION INTELLIGENCE',
-      desc: 'Structuring enterprise Star Schema dimensional models, advanced DAX measures, and interactive C-Level dashboards to model crisis supply shocks and sports performance.',
-      stack: ['Power BI', 'Star Schema', 'Advanced DAX', 'SQL', 'ArcGIS Maps', 'Plotly.js'],
-      projects: [
-        { name: 'Medicine Supply Chain BI', status: 'Star Schema · 2020–2026', filter: 'data' },
-        { name: 'ICC Champions Historical BI', status: '27-Year Sports Analytics', filter: 'data' },
-        { name: 'EdTech Market Pipeline', status: 'YouTube API Automation', filter: 'data' }
-      ]
-    },
-    ds: {
-      id: 'ds',
-      title: 'Data Science',
-      tag: 'STATISTICAL EXPLORATION',
-      desc: 'Extracting empirical ground truths from noisy multi-source datasets: stochastic modeling, Markov regime switching, Monte Carlo simulations, and macro-financial analytics.',
-      stack: ['Python', 'Pandas', 'NumPy', 'SciPy', 'Monte Carlo', 'Biostatistics'],
-      projects: [
-        { name: 'CropSafe AI Dataset', status: '2,002 Empirical Lab Certificates', filter: 'ai' },
-        { name: 'Microsoft Stock Probability', status: '40-Year Stochastic Study', filter: 'data' },
-        { name: 'Ceylon Tourism Predictor', status: 'Macroeconomic Sensitivity', filter: 'data' }
+        { name: 'HOPE 2.0 STEM Outreach', status: 'BBC Micro:bit School Workshops', filter: 'all' },
+        { name: 'Physical Computing Lab', status: 'Hardware Interaction Loops', filter: 'all' }
       ]
     }
   };
 
-  // Node positions on 580x480 SVG coordinate canvas (Symmetrical 10-node orbital ring)
-  const NODES = [
-    { id: 'ai',       x: 290, y: 65,  label: 'Artificial Intelligence',    short: 'AI / Agents' },
-    { id: 'ml',       x: 393, y: 98,  label: 'Machine Learning',           short: 'Machine Learning' },
-    { id: 'dl',       x: 456, y: 186, label: 'Deep Learning',              short: 'Deep Learning' },
-    { id: 'nlp',      x: 456, y: 294, label: 'Natural Language Processing', short: 'NLP & LLMs' },
-    { id: 'cv',       x: 393, y: 382, label: 'Computer Vision',            short: 'Computer Vision' },
-    { id: 'robotics', x: 290, y: 415, label: 'Robotics',                   short: 'Robotics' },
-    { id: 'iot',      x: 187, y: 382, label: 'Internet of Things',         short: 'IoT / Sensors' },
-    { id: 'web',      x: 124, y: 294, label: 'Web Development',            short: 'Web Platforms' },
-    { id: 'da',       x: 124, y: 186, label: 'Data Analytics',             short: 'Data Analytics' },
-    { id: 'ds',       x: 187, y: 98,  label: 'Data Science',               short: 'Data Science' }
-  ];
+  // 13-Node Circular Coordinates (Radius = 185px, Center = 290, 240)
+  const NODE_KEYS = Object.keys(UNIVERSE_DATA);
+  const cx = 290, cy = 240, r = 182;
+  const NODES = NODE_KEYS.map((k, idx) => {
+    const angle = (idx / NODE_KEYS.length) * 2 * Math.PI - Math.PI / 2;
+    return {
+      id: k,
+      x: Math.round(cx + r * Math.cos(angle)),
+      y: Math.round(cy + r * Math.sin(angle)),
+      label: UNIVERSE_DATA[k].title,
+      short: UNIVERSE_DATA[k].title
+    };
+  });
 
-  // Interconnected network conduits (Perimeter Ring + Synergistic Cross-Conduits)
+  // Interconnected lifecycle conduits
   const EDGES = [
-    // Perimeter Ring
-    ['ai', 'ml'],
+    // Lifecycle Sequence Ring
+    ['math', 'ingest'],
+    ['ingest', 'cleaning'],
+    ['cleaning', 'eda'],
+    ['eda', 'feature'],
+    ['feature', 'ml'],
     ['ml', 'dl'],
     ['dl', 'nlp'],
     ['nlp', 'cv'],
-    ['cv', 'robotics'],
-    ['robotics', 'iot'],
-    ['iot', 'web'],
-    ['web', 'da'],
-    ['da', 'ds'],
-    ['ds', 'ai'],
-    // Core Cross Conduits
-    ['ai', 'dl'],
-    ['ai', 'nlp'],
-    ['ai', 'cv'],
-    ['ml', 'ds'],
-    ['ml', 'da'],
+    ['cv', 'genai'],
+    ['genai', 'viz'],
+    ['viz', 'systems'],
+    ['systems', 'robotics'],
+    ['robotics', 'math'],
+    // Crucial Cross-Conduits
+    ['math', 'ml'],
+    ['math', 'dl'],
+    ['eda', 'viz'],
+    ['feature', 'dl'],
+    ['ml', 'systems'],
     ['dl', 'cv'],
-    ['cv', 'robotics'],
-    ['iot', 'robotics'],
-    ['web', 'ai'],
-    ['ds', 'da'],
-    ['web', 'cv']
+    ['nlp', 'genai'],
+    ['genai', 'systems'],
+    ['viz', 'eda'],
+    ['systems', 'robotics']
   ];
 
   const svg = document.getElementById('universe-svg');
@@ -176,22 +207,22 @@
   const panelProjects = document.getElementById('universe-telemetry-projects');
   const filterBtn = document.getElementById('universe-filter-projects-btn');
 
-  let activeDomainId = 'ai';
+  let activeDomainId = 'ml';
 
   function renderGraph() {
     svg.innerHTML = '';
     const center = { x: 290, y: 240 };
 
-    // SVG Defs: Gradients and glow filters
+    // SVG Defs
     const defs = document.createElementNS('http://www.w3.org/2000/svg', 'defs');
     defs.innerHTML = `
       <radialGradient id="centerGlow" cx="50%" cy="50%" r="50%">
-        <stop offset="0%" stop-color="#00f0ff" stop-opacity="0.32"/>
-        <stop offset="100%" stop-color="#00f0ff" stop-opacity="0"/>
+        <stop offset="0%" stop-color="#00e5ff" stop-opacity="0.32"/>
+        <stop offset="100%" stop-color="#00e5ff" stop-opacity="0"/>
       </radialGradient>
       <radialGradient id="nodeActiveGlow" cx="50%" cy="50%" r="50%">
-        <stop offset="0%" stop-color="#00f0ff" stop-opacity="0.85"/>
-        <stop offset="100%" stop-color="#38bdf8" stop-opacity="0.2"/>
+        <stop offset="0%" stop-color="#00e5ff" stop-opacity="0.85"/>
+        <stop offset="100%" stop-color="#2979ff" stop-opacity="0.2"/>
       </radialGradient>
       <filter id="glowFilter" x="-30%" y="-30%" width="160%" height="160%">
         <feGaussianBlur stdDeviation="3" result="blur" />
@@ -207,9 +238,9 @@
     const orbit = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
     orbit.setAttribute('cx', center.x);
     orbit.setAttribute('cy', center.y);
-    orbit.setAttribute('r', '175');
+    orbit.setAttribute('r', r.toString());
     orbit.setAttribute('fill', 'none');
-    orbit.setAttribute('stroke', 'rgba(56, 189, 248, 0.08)');
+    orbit.setAttribute('stroke', 'rgba(0, 229, 255, 0.08)');
     orbit.setAttribute('stroke-width', '1');
     orbit.setAttribute('stroke-dasharray', '3 6');
     svg.appendChild(orbit);
@@ -222,138 +253,132 @@
     hubGlow.setAttribute('fill', 'url(#centerGlow)');
     svg.appendChild(hubGlow);
 
-    const hubCircle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
-    hubCircle.setAttribute('cx', center.x);
-    hubCircle.setAttribute('cy', center.y);
-    hubCircle.setAttribute('r', '24');
-    hubCircle.setAttribute('fill', '#070d1d');
-    hubCircle.setAttribute('stroke', '#00f0ff');
-    hubCircle.setAttribute('stroke-width', '2');
-    hubCircle.setAttribute('filter', 'url(#glowFilter)');
-    svg.appendChild(hubCircle);
+    const hubCore = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+    hubCore.setAttribute('cx', center.x);
+    hubCore.setAttribute('cy', center.y);
+    hubCore.setAttribute('r', '22');
+    hubCore.setAttribute('fill', '#050811');
+    hubCore.setAttribute('stroke', '#00e5ff');
+    hubCore.setAttribute('stroke-width', '1.5');
+    svg.appendChild(hubCore);
 
-    const hubLabel = document.createElementNS('http://www.w3.org/2000/svg', 'text');
-    hubLabel.setAttribute('x', center.x);
-    hubLabel.setAttribute('y', center.y + 4);
-    hubLabel.setAttribute('text-anchor', 'middle');
-    hubLabel.setAttribute('fill', '#00f0ff');
-    hubLabel.setAttribute('font-family', 'var(--lab-font-mono)');
-    hubLabel.setAttribute('font-size', '9');
-    hubLabel.setAttribute('font-weight', '700');
-    hubLabel.textContent = 'CORE';
-    svg.appendChild(hubLabel);
+    const hubText = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+    hubText.setAttribute('x', center.x);
+    hubText.setAttribute('y', center.y + 4);
+    hubText.setAttribute('text-anchor', 'middle');
+    hubText.setAttribute('fill', '#00e5ff');
+    hubText.setAttribute('font-size', '9');
+    hubText.setAttribute('font-family', 'monospace');
+    hubText.setAttribute('font-weight', 'bold');
+    hubText.textContent = 'DATA·AI';
+    svg.appendChild(hubText);
 
-    // Edges Group
-    const edgesGroup = document.createElementNS('http://www.w3.org/2000/svg', 'g');
-    edgesGroup.setAttribute('id', 'universe-edges-group');
+    // Draw Edges (Conduits)
+    const nodeMap = {};
+    NODES.forEach(n => { nodeMap[n.id] = n; });
 
     EDGES.forEach(([fromId, toId]) => {
-      const fromNode = NODES.find(n => n.id === fromId);
-      const toNode = NODES.find(n => n.id === toId);
-      if (!fromNode || !toNode) return;
+      const from = nodeMap[fromId];
+      const to = nodeMap[toId];
+      if (!from || !to) return;
+
+      const isConnectedToActive = (fromId === activeDomainId || toId === activeDomainId);
 
       const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
-      line.setAttribute('x1', fromNode.x);
-      line.setAttribute('y1', fromNode.y);
-      line.setAttribute('x2', toNode.x);
-      line.setAttribute('y2', toNode.y);
-      line.setAttribute('class', 'universe-edge');
-      line.setAttribute('data-from', fromId);
-      line.setAttribute('data-to', toId);
-      edgesGroup.appendChild(line);
+      line.setAttribute('x1', from.x);
+      line.setAttribute('y1', from.y);
+      line.setAttribute('x2', to.x);
+      line.setAttribute('y2', to.y);
+      line.setAttribute('stroke', isConnectedToActive ? '#00e5ff' : 'rgba(255, 255, 255, 0.08)');
+      line.setAttribute('stroke-width', isConnectedToActive ? '2' : '1');
+      if (isConnectedToActive) {
+        line.setAttribute('filter', 'url(#glowFilter)');
+      }
+      svg.appendChild(line);
     });
-    svg.appendChild(edgesGroup);
 
-    // Nodes
+    // Draw Radial Conduits from Hub to Active Node
+    const activeNode = nodeMap[activeDomainId];
+    if (activeNode) {
+      const radialBeam = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+      radialBeam.setAttribute('x1', center.x);
+      radialBeam.setAttribute('y1', center.y);
+      radialBeam.setAttribute('x2', activeNode.x);
+      radialBeam.setAttribute('y2', activeNode.y);
+      radialBeam.setAttribute('stroke', '#00e5ff');
+      radialBeam.setAttribute('stroke-width', '2');
+      radialBeam.setAttribute('stroke-dasharray', '4 4');
+      radialBeam.setAttribute('filter', 'url(#glowFilter)');
+      svg.appendChild(radialBeam);
+    }
+
+    // Draw Nodes
     NODES.forEach(n => {
+      const isActive = n.id === activeDomainId;
       const g = document.createElementNS('http://www.w3.org/2000/svg', 'g');
-      g.setAttribute('class', 'universe-node');
-      g.setAttribute('data-id', n.id);
-      g.setAttribute('tabindex', '0');
+      g.style.cursor = 'pointer';
       g.setAttribute('role', 'button');
-      g.setAttribute('aria-label', `Domain: ${n.label}`);
-      g.style.transformOrigin = `${n.x}px ${n.y}px`;
+      g.setAttribute('aria-label', `Select ${n.label} domain`);
+      g.setAttribute('tabindex', '0');
 
-      // Outer ring
-      const ring = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
-      ring.setAttribute('cx', n.x);
-      ring.setAttribute('cy', n.y);
-      ring.setAttribute('r', '20');
-      ring.setAttribute('fill', '#070d1d');
-      ring.setAttribute('stroke', 'rgba(56, 189, 248, 0.35)');
-      ring.setAttribute('stroke-width', '1.5');
-      ring.setAttribute('class', 'node-ring');
-      g.appendChild(ring);
+      if (isActive) {
+        const glowCircle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+        glowCircle.setAttribute('cx', n.x);
+        glowCircle.setAttribute('cy', n.y);
+        glowCircle.setAttribute('r', '20');
+        glowCircle.setAttribute('fill', 'url(#nodeActiveGlow)');
+        glowCircle.setAttribute('filter', 'url(#glowFilter)');
+        g.appendChild(glowCircle);
+      }
 
-      // Inner dot
-      const dot = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
-      dot.setAttribute('cx', n.x);
-      dot.setAttribute('cy', n.y);
-      dot.setAttribute('r', '6');
-      dot.setAttribute('fill', '#00f0ff');
-      dot.setAttribute('class', 'node-dot');
-      g.appendChild(dot);
+      const circle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+      circle.setAttribute('cx', n.x);
+      circle.setAttribute('cy', n.y);
+      circle.setAttribute('r', isActive ? '12' : '9');
+      circle.setAttribute('fill', isActive ? '#00e5ff' : '#0b1220');
+      circle.setAttribute('stroke', isActive ? '#ffffff' : '#2979ff');
+      circle.setAttribute('stroke-width', isActive ? '2.5' : '1.5');
+      g.appendChild(circle);
 
-      // Text label
-      const text = document.createElementNS('http://www.w3.org/2000/svg', 'text');
-      text.setAttribute('x', n.x);
-      text.setAttribute('y', n.y + 32);
-      text.textContent = n.short;
-      g.appendChild(text);
+      // Label Positioning
+      const angle = Math.atan2(n.y - center.y, n.x - center.x);
+      const labelDist = isActive ? 24 : 18;
+      const lx = n.x + labelDist * Math.cos(angle);
+      const ly = n.y + labelDist * Math.sin(angle) + 4;
+      const textAnchor = Math.abs(Math.cos(angle)) < 0.2 ? 'middle' : Math.cos(angle) > 0 ? 'start' : 'end';
 
-      g.addEventListener('click', () => selectDomain(n.id));
+      const label = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+      label.setAttribute('x', lx);
+      label.setAttribute('y', ly);
+      label.setAttribute('text-anchor', textAnchor);
+      label.setAttribute('fill', isActive ? '#00e5ff' : '#94a3b8');
+      label.setAttribute('font-size', isActive ? '11' : '9.5');
+      label.setAttribute('font-family', 'Inter, system-ui, sans-serif');
+      label.setAttribute('font-weight', isActive ? 'bold' : 'normal');
+      label.textContent = n.short;
+      g.appendChild(label);
+
+      // Node Interaction
+      const activate = () => {
+        activeDomainId = n.id;
+        renderGraph();
+        updateTelemetryPanel(n.id);
+      };
+
+      g.addEventListener('click', activate);
       g.addEventListener('keydown', (e) => {
         if (e.key === 'Enter' || e.key === ' ') {
           e.preventDefault();
-          selectDomain(n.id);
+          activate();
         }
       });
 
       svg.appendChild(g);
     });
-
-    updateVisualSelection();
   }
 
-  function selectDomain(id) {
-    if (!UNIVERSE_DATA[id]) return;
-    activeDomainId = id;
-    updateVisualSelection();
-    updateTelemetryPanel(id);
-  }
-
-  function updateVisualSelection() {
-    const nodes = svg.querySelectorAll('.universe-node');
-    nodes.forEach(node => {
-      const isSelected = node.getAttribute('data-id') === activeDomainId;
-      node.classList.toggle('active-node', isSelected);
-      const ring = node.querySelector('.node-ring');
-      const dot = node.querySelector('.node-dot');
-      if (isSelected) {
-        ring.setAttribute('stroke', '#00f0ff');
-        ring.setAttribute('stroke-width', '2.5');
-        ring.setAttribute('filter', 'url(#glowFilter)');
-        dot.setAttribute('r', '8');
-      } else {
-        ring.setAttribute('stroke', 'rgba(56, 189, 248, 0.35)');
-        ring.setAttribute('stroke-width', '1.5');
-        ring.removeAttribute('filter');
-        dot.setAttribute('r', '6');
-      }
-    });
-
-    // Update connected edges
-    const edges = svg.querySelectorAll('.universe-edge');
-    edges.forEach(edge => {
-      const from = edge.getAttribute('data-from');
-      const to = edge.getAttribute('data-to');
-      const isConnected = from === activeDomainId || to === activeDomainId;
-      edge.classList.toggle('active-edge', isConnected);
-    });
-  }
-
-  function updateTelemetryPanel(id) {
-    const data = UNIVERSE_DATA[id];
+  function updateTelemetryPanel(domainId) {
+    const data = UNIVERSE_DATA[domainId];
     if (!data) return;
 
     if (panelTag) panelTag.textContent = data.tag;
@@ -363,10 +388,10 @@
     if (panelStack) {
       panelStack.innerHTML = '';
       data.stack.forEach(tech => {
-        const pill = document.createElement('span');
-        pill.className = 'telemetry-tag-pill';
-        pill.textContent = tech;
-        panelStack.appendChild(pill);
+        const span = document.createElement('span');
+        span.className = 'stack-pill mono';
+        span.textContent = tech;
+        panelStack.appendChild(span);
       });
     }
 
@@ -374,38 +399,30 @@
       panelProjects.innerHTML = '';
       data.projects.forEach(proj => {
         const item = document.createElement('div');
-        item.className = 'telemetry-project-item';
-        item.innerHTML = `<span>${proj.name}</span><span class="status-indicator">${proj.status}</span>`;
+        item.className = 'universe-project-item';
+        item.innerHTML = `
+          <div class="upi-title">${proj.name}</div>
+          <div class="upi-status mono">${proj.status}</div>
+        `;
         item.addEventListener('click', () => {
-          jumpToExplorer(proj.filter);
+          const filterBtn = document.querySelector(`.filter-btn[data-filter="${proj.filter}"]`);
+          if (filterBtn) {
+            filterBtn.click();
+            document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' });
+          }
         });
         panelProjects.appendChild(item);
       });
     }
 
     if (filterBtn) {
+      const activeFilter = data.projects[0]?.filter || 'all';
+      filterBtn.dataset.targetFilter = activeFilter;
       filterBtn.onclick = () => {
-        let filterKey = 'all';
-        if (id === 'ai' || id === 'ml' || id === 'dl') filterKey = 'ai';
-        else if (id === 'nlp') filterKey = 'nlp';
-        else if (id === 'cv') filterKey = 'cv';
-        else if (id === 'web') filterKey = 'web';
-        else if (id === 'da' || id === 'ds') filterKey = 'data';
-        jumpToExplorer(filterKey);
+        const btn = document.querySelector(`.filter-btn[data-filter="${activeFilter}"]`);
+        if (btn) btn.click();
+        document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' });
       };
-    }
-  }
-
-  function jumpToExplorer(filterKey) {
-    const explorerSec = document.getElementById('projects');
-    if (!explorerSec) return;
-
-    explorerSec.scrollIntoView({ behavior: 'smooth' });
-
-    // Activate tab in Project Explorer
-    const targetTab = document.querySelector(`.filter-btn[data-filter="${filterKey}"]`);
-    if (targetTab) {
-      targetTab.click();
     }
   }
 

@@ -1011,6 +1011,11 @@ const DETAILED_PROJECTS = {
   const paletteOpenBtns = document.querySelectorAll('.palette-trigger');
 
   const PALETTE_ENTRIES = [
+    { title: 'Data Visualization Studio', sub: 'Interactive time-series, scatter, histograms & correlation heatmaps', tag: 'STUDIO', action: () => { document.getElementById('laboratory').scrollIntoView({ behavior: 'smooth' }); document.querySelector('[data-demo-target="demo-viz-studio"]')?.click(); } },
+    { title: 'Machine Learning Playground (7 Algorithms)', sub: 'Explore real decision boundaries, regression, trees & K-means', tag: 'ML', action: () => { document.getElementById('laboratory').scrollIntoView({ behavior: 'smooth' }); document.querySelector('[data-demo-target="demo-ml-playground"]')?.click(); } },
+    { title: 'Exploratory Data Analysis (EDA) Lab', sub: 'Inspect 5-number summaries, missingness & Tukey outliers', tag: 'EDA', action: () => { document.getElementById('laboratory').scrollIntoView({ behavior: 'smooth' }); document.querySelector('[data-demo-target="demo-eda-lab"]')?.click(); } },
+    { title: 'Data Stories from Sri Lanka', sub: 'Empirical narratives: Tech salaries, medicine supply & CropSafe', tag: 'STORIES', action: () => document.getElementById('sri-lanka-stories')?.scrollIntoView({ behavior: 'smooth' }) },
+    { title: 'Research & Model Experiments', sub: 'Empirical benchmarks: Kaggle Rank #3, CropSafe LightGBM, SP Cup', tag: 'RESEARCH', action: () => document.getElementById('research-experiments')?.scrollIntoView({ behavior: 'smooth' }) },
     { title: 'Download Curriculum Vitae (CV / Resume)', sub: 'Official verified PDF document (Sahil_Kavishka_CV.pdf)', tag: 'PDF', action: () => { const a = document.createElement('a'); a.href = './Sahil_Kavishka_CV.pdf'; a.download = 'Sahil_Kavishka_CV.pdf'; a.target = '_blank'; a.rel = 'noopener noreferrer'; a.click(); showToast('Downloading Sahil Kavishka CV (PDF)...'); } },
     { title: 'Interactive Data Universe', sub: 'Explore connections between technical domains', tag: 'NAV', action: () => document.getElementById('universe').scrollIntoView({ behavior: 'smooth' }) },
     { title: 'Experimental Project Explorer', sub: 'Filter and inspect verified technical systems', tag: 'NAV', action: () => document.getElementById('projects').scrollIntoView({ behavior: 'smooth' }) },
